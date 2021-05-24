@@ -157,7 +157,7 @@ class Header2 extends Component{
 										</ul>
 									</li> */}
 									<li>
-										<Link to={'/'}>Order Online</Link>
+										<a href={this.props.online}>Order Online</a>
 										{/* <ul className="sub-menu">
 											<li><Link to={"/shop"}>Shop</Link></li>
 											<li><Link to={"/shop-sidebar"}>Shop Sidebar</Link></li>
@@ -178,7 +178,8 @@ class Header2 extends Component{
 								</ul>
 								<div className="dlab-social-icon">
 									<ul>
-										<li><Link className="site-button sharp-sm fa fa-facebook" to={'#'}></Link></li>
+										<li><a className="site-button sharp-sm fa fa-facebook" href={this.props.facebook}></a></li>
+										<li><a className="site-button sharp-sm fa fa-yelp" href={this.props.yelp}></a></li>
 									</ul>
 								</div>		
 							</div>

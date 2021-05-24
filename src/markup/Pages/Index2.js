@@ -10,7 +10,9 @@ import Owl2 from './../Element/Owl2';
 
 
 var img1 = require('./../../images/overlay/pt1.jpg');
-
+const onlineOrdering = 'https://onlineordering.rmpos.com/Order/?wci=54MBz6OB'
+const fb = 'https://www.facebook.com/pages/Masterpeace-Grill/844637945566646?fref=ts'
+const yelp = 'http://www.yelp.com/biz/masterpeace-grill-conshohocken-2'
 
 
 class Index2 extends Component{
@@ -19,9 +21,9 @@ class Index2 extends Component{
 			<div>
 				<div class="page-wraper font-barlow">
 					
-					<Header2 />
+					<Header2 facebook={fb} yelp={yelp} online={onlineOrdering}/>
 					
-					<Banner />
+					<Banner online={onlineOrdering}/>
 					
 						 					
 					<div class="section-full content-inner bg-white" style={{backgroundImage:"url(" + img1 + ")"}}>
@@ -36,17 +38,17 @@ class Index2 extends Component{
 									<div class="row">
 										<div class="col-lg-6 col-md-6">
 											<div class="adv-box">
-												<Link to={"/shop-sidebar"}><img src={require("./../../images/ads/adv2.jpg")} alt="" /></Link>
+												<Link to={"/shop-sidebar"}><img src={require("./../../images/food/loaded_burger.jpg")} alt="" /></Link>
 											</div>
 										</div>
 										<div class="col-lg-6 col-md-6">
 											<div class="adv-box">
-												<Link to={"/shop-sidebar"}><img src={require("./../../images/ads/adv3.jpg")} alt="" /></Link>
+												<Link to={"/shop-sidebar"}><img src={require("./../../images/food/loadedsteak.jpg")} alt="" /></Link>
 											</div>
 										</div>
 										<div class="col-lg-12 col-md-12">
 											<div class="adv-box">
-												<Link to={"/shop-sidebar"}><img src={require("./../../images/ads/adv4.jpg")} alt="" /></Link>
+												<Link to={"/shop-sidebar"}><img src={require("./../../images/food/vegburger.jpg")} alt="" /></Link>
 											</div>
 										</div>
 									</div>
@@ -257,7 +259,7 @@ class Index2 extends Component{
 					
 				</div>
 				
-				<Footer2 />
+				<Footer2 facebook={fb} yelp={yelp}/>
 			</div>	
 			
 		)	

@@ -23,7 +23,7 @@ class Banner extends Component{
 									
 									<p className="info">Conshohockens best sandwhich shop going on 7 years.</p>
 									
-									<Link to={''} className="btn red"  data-target="#exampleModal">Order Online</Link>
+									<a href={this.props.online} className="btn red"  data-target="#exampleModal">Order Online</a>
 								</div>
 							</div>
 						</div>

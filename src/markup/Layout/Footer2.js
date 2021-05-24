@@ -21,8 +21,8 @@ class Footer2 extends Component{
 								</div>
 								<p className="copyright">Copyright © 2021 John Glennan. all rights reserved.</p>
 								<ul className="dlab-social-icon">
-									<li><Link className="btn white outline circle mr-1"><i className="fa fa-facebook"></i></Link></li>
-									<li><Link className="btn white outline circle mr-1"><i className="fa fa-google-plus"></i></Link></li>
+									<li><a href={this.props.facebook} className="btn white outline circle mr-1"><i className="fa fa-facebook"></i></a></li>
+									<li><a href={this.props.yelp} className="btn white outline circle mr-1"><i className="fa fa-yelp"></i></a></li>
 								</ul>
 							</div>
 						</div>
