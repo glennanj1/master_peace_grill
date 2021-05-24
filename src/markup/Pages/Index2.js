@@ -38,7 +38,7 @@ class Index2 extends Component{
 									<div class="row">
 										<div class="col-lg-6 col-md-6">
 											<div class="adv-box">
-												<Link to={"/shop-sidebar"}><img src={require("./../../images/food/loaded_burger.jpg")} alt="" /></Link>
+												<Link to={"/shop-sidebar"}><img src={require("./../../images/food/loaded_buger.jpg")} alt="" /></Link>
 											</div>
 										</div>
 										<div class="col-lg-6 col-md-6">
@@ -223,7 +223,7 @@ class Index2 extends Component{
 						</div>
 					</div>
 					
-					<Tab />
+					{/* <Tab /> */}
 					
 					
 					<div class="section-full bg-white pizza-full-menu">

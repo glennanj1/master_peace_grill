@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import Header2 from './../Layout/Header2';
 import Footer2 from './../Layout/Footer2';
 
-var img = require('./../../images/banner/bnr1.jpg');
+var img = require('./../../images/food/cheesesteak_tray.jpg');
  
 class Ourmenustyle3 extends Component{
 
@@ -17,20 +17,20 @@ class Ourmenustyle3 extends Component{
 				<div className="dlab-bnr-inr overlay-black-middle no-line" style={{backgroundImage:"url(" + img + ")"}}>
 					<div className="container">
 						<div className="dlab-bnr-inr-entry">
-							<h1 className="text-white">Our Menu 3</h1>
+							<h1 className="text-white">Full Menu</h1>
 							
-							<div className="breadcrumb-row">
+							{/* <div className="breadcrumb-row">
 								<ul className="list-inline">
 									<li><Link to={'./'}><i className="fa fa-home"></i></Link></li>
 									<li>Our Menu 3</li>
 								</ul>
-							</div>
+							</div> */}
 							
 						</div>
 					</div>
 				</div>
 				
-				<div className="section-full bg-white">
+				{/* <div className="section-full bg-white">
 					<div className="row sp0">
 						<div className="col-lg-6">
 							<img src={require('./../../images/menu/pic1.jpg')} alt="" className="img-cover" />
@@ -157,7 +157,7 @@ class Ourmenustyle3 extends Component{
 							<img src={require('./../../images/menu/pic2.jpg')} alt="" className="img-cover" />
 						</div>
 					</div>
-				</div>
+				</div> */}
 			</div>
 			
 			<Footer2  />
