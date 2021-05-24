@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import Banner from './../Element/Ravslider';
 
 import Header2 from './../Layout/Header2';
