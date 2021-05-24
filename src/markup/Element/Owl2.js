@@ -70,7 +70,7 @@ As soon as you walk in, you can tell this place is legit. You can tell everythin
 										<p>I celebrated my graduation today in this fine place. happy to tell that we passed a enjoyable evening and the place was certainly one of the reasons for the outstanding evening. The waiters  contributed in a very nice manner, the cuisine was extremely good and my guests were so  overjoyed. We shall absolutely visit again for more events. thanks very much.</p>
 									</div>
 									{/* <div class="testimonial-pic radius"><img src={require("./../../images/testimonials/pic1.jpg")} style={{width:"100", height:"100"}} alt="" /></div> */}
-									<div class="testimonial-detail"> <strong class="testimonial-name">Daxton Mcgrath</strong> <span class="testimonial-position">Student</span> </div>
+									<div class="testimonial-detail"> <strong class="testimonial-name">Daxton Mcgrath</strong> <span class="testimonial-position">Customer</span> </div>
 								</div>
 						</Carousel>
 					</div>
