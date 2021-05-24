@@ -4,13 +4,16 @@ import Header2 from './../Layout/Header2';
 import Footer2 from './../Layout/Footer2';
 
 var img = require('./../../images/food/cheesesteak_tray.jpg');
+const onlineOrdering = 'https://onlineordering.rmpos.com/Order/?wci=54MBz6OB'
+const fb = 'https://www.facebook.com/pages/Masterpeace-Grill/844637945566646?fref=ts'
+const yelp = 'http://www.yelp.com/biz/masterpeace-grill-conshohocken-2'
  
 class Ourmenustyle3 extends Component{
 
 	render(){
 		return(
 			<>
-			<Header2 /> 
+			<Header2 facebook={fb} yelp={yelp} online={onlineOrdering} /> 
 			
 			<div className="page-content bg-white">
 				
