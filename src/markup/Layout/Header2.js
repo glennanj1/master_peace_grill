@@ -178,8 +178,8 @@ class Header2 extends Component{
 								</ul>
 								<div className="dlab-social-icon">
 									<ul>
-										<li><a className="site-button sharp-sm fa fa-facebook" href={this.props.facebook}></a></li>
-										<li><a className="site-button sharp-sm fa fa-yelp" href={this.props.yelp}></a></li>
+										<li><a className="site-button sharp-sm fa fa-facebook" href={this.props.facebook}>{null}</a></li>
+										<li><a className="site-button sharp-sm fa fa-yelp" href={this.props.yelp}>{null}</a></li>
 									</ul>
 								</div>		
 							</div>
