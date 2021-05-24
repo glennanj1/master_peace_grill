@@ -31,24 +31,24 @@ class Index2 extends Component{
 							<div class="row">
 								<div class="col-lg-6 col-md-12">
 									<div class="adv-box">
-										<Link to={"/shop-sidebar"}><img src={require("./../../images/food/cheesesteak_tray.jpg")} alt="" /></Link>
+										<img src={require("./../../images/food/cheesesteak_tray.jpg")} alt="" />
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-12">
 									<div class="row">
 										<div class="col-lg-6 col-md-6">
 											<div class="adv-box">
-												<Link to={"/shop-sidebar"}><img src={require("./../../images/food/loaded_buger.jpg")} alt="" /></Link>
+												<img src={require("./../../images/food/loaded_buger.jpg")} alt="" />
 											</div>
 										</div>
 										<div class="col-lg-6 col-md-6">
 											<div class="adv-box">
-												<Link to={"/shop-sidebar"}><img src={require("./../../images/food/loadedsteak.jpg")} alt="" /></Link>
+												<img src={require("./../../images/food/loadedsteak.jpg")} alt="" />
 											</div>
 										</div>
 										<div class="col-lg-12 col-md-12">
 											<div class="adv-box">
-												<Link to={"/shop-sidebar"}><img src={require("./../../images/food/vegburger.jpg")} alt="" /></Link>
+												<img src={require("./../../images/food/vegburger.jpg")} alt="" />
 											</div>
 										</div>
 									</div>
