@@ -67,7 +67,7 @@ class Header2 extends Component{
 						<div className="container clearfix">
 							
 							<div className="logo-header mostion">
-								<Link to="/peace"><img src={logo} alt="" /></Link>
+								<Link to="/"><img src={logo} alt="" /></Link>
 							</div>
 							
 							<button className="navbar-toggler collapsed navicon justify-content-end" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -107,10 +107,10 @@ class Header2 extends Component{
 							
 							<div className="header-nav navbar-collapse collapse myNavbar justify-content-end" id="navbarNavDropdown" >
 								<div className="logo-header">
-									<Link to={"/peace"}><img src={require('./../../images/mpglogo2.png')} alt="" /> </Link>
+									<Link to={"/"}><img src={require('./../../images/mpglogo2.png')} alt="" /> </Link>
 								</div>
 								<ul className="nav navbar-nav">	
-									{/* <li className="active"><Link to={'/peace'}>Home</Link></li>
+									{/* <li className="active"><Link to={'/'}>Home</Link></li>
 									<li><Link to={'#'}>Pages<i className="fa fa-chevron-down"></i></Link>
 										<ul className="sub-menu">
 											<li><Link to={"/about-1"}>About Us</Link></li>
@@ -157,7 +157,7 @@ class Header2 extends Component{
 										</ul>
 									</li> */}
 									<li>
-										<Link to={'/peace'}>Order Online</Link>
+										<Link to={'/'}>Order Online</Link>
 										{/* <ul className="sub-menu">
 											<li><Link to={"/shop"}>Shop</Link></li>
 											<li><Link to={"/shop-sidebar"}>Shop Sidebar</Link></li>
