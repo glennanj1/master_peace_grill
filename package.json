@@ -1,6 +1,6 @@
 {
   "name": "restaurant",
-  "homepage": "https://restaurant.dexignzone.com/peace",
+  "homepage": "/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
