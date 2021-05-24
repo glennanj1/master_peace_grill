@@ -15,7 +15,7 @@ class Banner extends Component{
 						<div class="row">
 							<div class="col-lg-6 text-center">
 								<div class="content">
-									<h2 className="title">Voted <br/> Best <br/> CheeseStakes</h2>
+									<h2 className="title">Voted <br/> Best <br/> CheeseSteaks</h2>
 									
 									<div className= "bnr-logo">
 										<img src ={require('./../../images/main-slider/slide5.png')}  alt="offer" />
