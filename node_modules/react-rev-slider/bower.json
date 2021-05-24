@@ -1,0 +1,29 @@
+{
+  "name": "react-rev-slider",
+  "version": "0.0.0",
+  "description": "React Rev Slider",
+  "main": "dist/react-rev-slider.min.js",
+  "homepage": "https://github.com/bodunadebiyi/react-rev-slider",
+  "authors": [
+    "Bodunde Adebiyi"
+  ],
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "react",
+    "react-component"
+  ],
+  "license": "MIT",
+  "ignore": [
+    ".editorconfig",
+    ".gitignore",
+    "package.json",
+    "src",
+    "node_modules",
+    "example",
+    "test"
+  ]
+}

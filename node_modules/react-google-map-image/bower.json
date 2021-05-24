@@ -1,0 +1,29 @@
+{
+  "name": "react-google-map-image",
+  "version": "0.0.0",
+  "description": "react-google-map-image",
+  "main": "dist/react-google-map-image.min.js",
+  "homepage": "https://github.com/bodunadebiyi/react-google-map-image",
+  "authors": [
+    "Adebiyi Bodunde"
+  ],
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "react",
+    "react-component"
+  ],
+  "license": "MIT",
+  "ignore": [
+    ".editorconfig",
+    ".gitignore",
+    "package.json",
+    "src",
+    "node_modules",
+    "example",
+    "test"
+  ]
+}
