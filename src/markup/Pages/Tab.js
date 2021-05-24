@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { TabContent, TabPane, } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import steak from '../../images/menu-icons/001-meat.png'
-import bun from '../../images/menu-icons/002-bun.png'
-import wrap from '../../images/menu-icons/burrito.png'
+// import bun from '../../images/menu-icons/002-bun.png'
+// import wrap from '../../images/menu-icons/burrito.png'
 import hoagie from '../../images/menu-icons/003-sandwich.png'
 
 
@@ -26,7 +26,7 @@ const Popupss = () => {
 								onClick={() => { toggle('1'); }}   >
 								<input type="radio"/>
 							   <Link className="item-icon-box nav-link active" id="pizza-tab" data-toggle="tab" href="#pizza" role="tab" aria-controls="pizza" aria-selected="true">
-									<i className="flaticon"><img src={steak} /></i>
+									<i className="flaticon"><img src={steak} alt=''/></i>
 									<span>CheeseSteak</span>
 								</Link>
 							</li>

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
 import Header2 from './../Layout/Header2';
 import Footer2 from './../Layout/Footer2';
 
