@@ -31,7 +31,7 @@ class Index2 extends Component{
 							<div class="row">
 								<div class="col-lg-6 col-md-12">
 									<div class="adv-box">
-										<Link to={"/shop-sidebar"}><img src={require("./../../images/ads/adv1.jpg")} alt="" /></Link>
+										<Link to={"/shop-sidebar"}><img src={require("./../../images/food/cheesesteak_tray.jpg")} alt="" /></Link>
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-12">
