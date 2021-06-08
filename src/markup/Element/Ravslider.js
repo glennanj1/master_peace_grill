@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 // import {Link} from 'react-router-dom';
 
-var bnr = require('./../../images/main-slider/cheesesteaks.jpg');
+var bnr = require('./../../images/main-slider/home.jpg');
 
 class Banner extends Component{
 	
@@ -15,7 +15,7 @@ class Banner extends Component{
 						<div class="row">
 							<div class="col-lg-6 text-center">
 								<div class="content">
-									<h2 className="title">Voted <br/> Best <br/> CheeseSteaks</h2>
+									<h2 className="title"> Voted Best <br/> CheeseSteaks</h2>
 									
 									<div className= "bnr-logo">
 										<img src ={require('./../../images/main-slider/slide5.png')}  alt="offer" />
