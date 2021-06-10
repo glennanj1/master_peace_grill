@@ -4,7 +4,7 @@ import Banner from './../Element/Ravslider';
 
 import Header2 from './../Layout/Header2';
 import Footer2 from './../Layout/Footer2';
-// import Tab from './../Pages/Tab';
+import Tab from './../Pages/Tab';
 import Owl2 from './../Element/Owl2';
 
 
@@ -57,7 +57,7 @@ class Index2 extends Component{
 						</div>
 					</div>	
 					
-					{/* <Tab /> */}
+					<Tab />
 					
 					
 					<div class="section-full bg-white pizza-full-menu">

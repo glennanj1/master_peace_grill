@@ -2056,6 +2056,7 @@ ol.comment-list li.comment .reply a {
 	display:flex;
 	flex-wrap:wrap;
 	border: 0;
+	justify-content: center;
 }
 .pizza-items .item{
     flex: 0 0 14.28%;
