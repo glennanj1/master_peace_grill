@@ -244,7 +244,7 @@ h4,
 h5,
 h6 {
     color: #282828;
-	font-family: 'Amita', sans-serif;
+	
 }
 h1 a,
 h2 a,
@@ -11111,7 +11111,7 @@ footer.footer-white .footer-bottom a {
 .section-head h2,
 .section-head h3 {
     margin-top: 0;
-	font-family: 'Amita', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 .title-small {
     display: block;
