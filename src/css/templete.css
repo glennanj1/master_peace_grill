@@ -103,7 +103,7 @@
 	padding-top: 70px;
 }
 .banner .info{
-	font-size: 20px;
+	font-size: 30px;
 	font-family: Barlow, sans-serif;
 	font-weight: 400;
 	line-height: 30px;
@@ -116,7 +116,7 @@
 }
 .banner .container{
 	position: absolute;
-	top: 50%;
+	top: 63%;
 	transform: translate(-50%,-50%);
 	left: 50%;
 }
@@ -1946,7 +1946,7 @@ ol.comment-list li.comment .reply a {
 	margin-right: 5px;	
 }
 .pizza-header .main-bar{
-	border-bottom: 1px solid rgba(255,255,255,0.2);	
+	
 }
 .adv-box{
 	margin-bottom:30px;
@@ -2900,6 +2900,10 @@ td.fc-event-container {
 	}
 	.logo-header {
 		width: 120px;
+	} 
+
+	.logo-header img {
+		display: none;
 	}
 	.header-style-2 .main-bar:after{
 	    bottom: -5px;
