@@ -57,18 +57,18 @@ class Index2 extends Component{
 						</div>
 					</div>	
 					
-					<Tab />
+					{/* <Tab /> */}
 					
 					
-					<div class="section-full bg-white pizza-full-menu">
+					{/* <div class="section-full bg-white pizza-full-menu">
 						<img src={require("./../../images/ads/adv.jpg")} alt="" />
-					</div>  
+					</div>   */}
 					
 					
 					<Owl2 />
 					
 					
-					<div class="section-full bg-red p-tb50 newslatter-area">
+					{/* <div class="section-full bg-red p-tb50 newslatter-area">
 						<div class="container">
 							<div class="row align-items-center">
 								<div class="col-md-6 text-white">
@@ -87,7 +87,7 @@ class Index2 extends Component{
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> */}
 					
 					
 					
