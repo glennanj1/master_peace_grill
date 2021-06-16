@@ -60,7 +60,7 @@ class Markup extends Component{
 				<Switch>
 					<Route path='/' exact component={Index2} />
 					
-					<Route path='/about-1' exact component ={About} />
+					<Route path='/about' exact component ={About} />
 					<Route path='/our-services' exact component ={Ourservices} />
 					<Route path='/faq' exact component ={Faq} />
 					<Route path='/booking' exact component ={Booking} />
