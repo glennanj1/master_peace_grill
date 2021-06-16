@@ -16,7 +16,7 @@ class Ourmenustyle3 extends Component{
 			<Header2 facebook={fb} yelp={yelp} online={onlineOrdering} /> 
 			
 			<div className="page-content bg-white">
-				<video style={{position: 'fixed'}} autoPlay loop muted>
+				<video style={{position: 'fixed', overflow: 'hidden'}} autoPlay loop playsInline muted>
 					<source src={video} type='video/mp4' />
 				</video>
 				
