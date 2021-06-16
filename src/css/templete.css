@@ -204,7 +204,7 @@
 /* dlab bnr inr */
 .dlab-bnr-inr{
 	text-align: left;
-	background-size: cover;
+	background-size: contain;
     background-position: center top;
 }
 .dlab-bnr-inr .dlab-bnr-inr-entry {
@@ -301,7 +301,7 @@
 .section-head {
     margin-bottom: 60px;
 }
-.dlab-bnr-inr:before {
+/* .dlab-bnr-inr:before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -319,7 +319,7 @@
     -ms-transform: rotate(180deg);
     -o-transform: rotate(180deg);
 	z-index:1;
-}
+} */
 .bg-line-top:before {
     content: "";
     position: absolute;
