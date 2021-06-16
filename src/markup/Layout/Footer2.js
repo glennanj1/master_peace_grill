@@ -15,7 +15,7 @@ class Footer2 extends Component{
 								<div className="widget-link"> 
 									<ul>
 										<li><Link to={"/"}>Home</Link></li> 
-										<li><Link to={"/about-2"}>About Us</Link></li>  
+										<li><Link to={"/about"}>About Us</Link></li>  
 									</ul>
 								</div>
 								<p className="copyright">Copyright © 2021 John Glennan. all rights reserved.</p>
