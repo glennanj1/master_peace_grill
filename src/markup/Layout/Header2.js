@@ -169,6 +169,9 @@ class Header2 extends Component{
 											<li><Link to={"/shop-register"}>Register</Link></li>
 										</ul> */}
 									</li>
+									<li>
+										<Link to={'/about'}>About Us</Link>
+									</li>
 									{/* <li><Link to={'#'}>Contact Us <i className="fa fa-chevron-down"></i></Link>
 										<ul className="sub-menu left">
 											<li><Link to={"/contact-1"}>Contact Us 1</Link></li>
