@@ -1,64 +1,65 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import Header from './../Layout/Header';
-import Footer from './../Layout/Footer';
-import OurPartners from './../Element/OurPartners';
-import CountUp from 'react-countup';
+// import Header from './../Layout/Header';
+// import Footer from './../Layout/Footer';
+// import OurPartners from './../Element/OurPartners';
+// import CountUp from 'react-countup';
+import Header2 from './../Layout/Header2'
+import Footer2 from './../Layout/Footer2'
 
-var img1 = require('./../../images/banner/bnr1.jpg');
-var img2 = require('./../../images/background/bg1.jpg');
-var img3 = require('./../../images/background/bg5.jpg');
-var img4 = require('./../../images/background/bg3.jpg');
+var img1 = 'https://media.giphy.com/media/C0Asg9I511EHe/giphy.gif';
+// var img2 = require('./../../images/background/bg1.jpg');
+// var img3 = require('./../../images/background/bg5.jpg');
+// var img4 = require('./../../images/background/bg3.jpg');
 
 
-const teamInfo = [
-	{
-		image: require('./../../images/our-team/member1.jpg'), 	
-		name :	'Nashid Martines',
-		post : 	'Founder',
-	},
-	{
-		image: require('./../../images/our-team/member2.jpg'), 	
-		name :	'Konne Backfiled',
-		post : 	'Sous Chef',
-	},
-	{
-		image: require('./../../images/our-team/member3.jpg'), 	
-		name :	'Valentino Morose',
-		post : 	'Ceo & Founder',
-	},
-	{
-		image: require('./../../images/our-team/member4.jpg'), 	
-		name :	'Hackson Willingham',
-		post : 	'Master Chef',
-	},
-]	
+// const teamInfo = [
+// 	{
+// 		image: require('./../../images/our-team/member1.jpg'), 	
+// 		name :	'Nashid Martines',
+// 		post : 	'Founder',
+// 	},
+// 	{
+// 		image: require('./../../images/our-team/member2.jpg'), 	
+// 		name :	'Konne Backfiled',
+// 		post : 	'Sous Chef',
+// 	},
+// 	{
+// 		image: require('./../../images/our-team/member3.jpg'), 	
+// 		name :	'Valentino Morose',
+// 		post : 	'Ceo & Founder',
+// 	},
+// 	{
+// 		image: require('./../../images/our-team/member4.jpg'), 	
+// 		name :	'Hackson Willingham',
+// 		post : 	'Master Chef',
+// 	},
+// ]	
 	
 class About extends Component{
 
 	render(){
 		return(
 			<>
-			<Header />
+			<Header2 />
 		
-			<div className="page-content bg-white">
+			 <div className="page-content bg-white">
 				
 				<div className="dlab-bnr-inr overlay-black-middle" style={{backgroundImage:"url(" + img1 + ")"}}>
 					<div className="container">
 						<div className="dlab-bnr-inr-entry">
 							<h1 className="text-white">About Us</h1>
-							
 							<div className="breadcrumb-row">
 								<ul className="list-inline">
 									<li><Link to={'/'}><i className="fa fa-home"></i></Link></li>
 									<li>About Us</li>
 								</ul>
 							</div>
-							
 						</div>
 					</div>
 				</div>
-				<div className="content-block ">	
+			</div>
+			{/*	<div className="content-block ">	
 					<div className="section-full bg-white content-inner bg-sm-none" style={{backgroundImage:"url(" + img3 + ")", backgroundSize:"100%" }}>
 						<div className="container">
 							<div className="row">
@@ -67,7 +68,7 @@ class About extends Component{
 										<div className="icon-bx icon-bx-xl">
 											<img src={require('./../../images/cake1.jpg')} alt="" />
 										</div>
-										<h3>About Our Restaurant King</h3>
+										<h3>About Our Shop</h3>
 										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 									</div>
 								</div>
@@ -182,8 +183,8 @@ class About extends Component{
 						</div>
 					</div>
 				</div>
-			</div>	
-			<Footer />
+			</div>	 */}
+			<Footer2 />
 			</>
 		)
 	}
