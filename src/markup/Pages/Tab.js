@@ -20,10 +20,7 @@ const Popupss = (props) => {
 
     return (
         <div class="section-full bg-white pizza-full-menu" style={{backgroundColor: 'rgba(0, 0, 0, 0.5)'}}>
-			<h1 style={{justifyContent: 'center', display: 'flex'}}>Sample menu items</h1>
-			<h2 style={{justifyContent: 'center', display: 'flex'}}>For full menu click here</h2>
             <div tabs>
-
                 <div className="bg-primary pizza-items">
 					<div className="container">
 						<ul className="nav nav-tabs pizza-items filters">
@@ -85,42 +82,61 @@ const Popupss = (props) => {
 					<TabContent activeTab={activeTab}>
 						<TabPane tabId="1">
 							<div className="row tab-pane fade show active" >
-								<div className="dz-col col m-b30">
-									<div className="item-box shop-item style2">
-										<div className="item-img">
-											<img src={require('./../../images/product/pizza/pic1.jpg')} alt="" />
-										</div>
-										<div className="item-info text-center">
-											<h4 className="item-title"><Link to={'/shop-product-details'}>Loaded Steak</Link></h4>
-											{/* <h5 className="price text-primary"><del>45</del><span>$40</span></h5>
-											<div className="cart-btn"><Link to={'/shop-product-details'} className="btn btnhover radius-xl"><i className="ti-shopping-cart"></i> Add To Cart</Link></div> */}
+							<div class="section-full bg-white">
+								<div class="row sp0">
+									<div class="col-lg-6">
+										<img src={require("./../../images/food/tiger_steak.jpg")} alt="" class="img-cover" />
+									</div>
+									<div class="col-lg-6">
+										<div class="menu-box">
+											<div class="section-head style-2">
+												<h4 class="sub-title">CheeseSteaks $10.99</h4>
+												<h2 class="title">Build Your Own</h2>
+												<p>
+													Pick Your Meat - Beef Steak of Chicken Steak<br />
+													Pick 1 Cheese - American, Provolone, Swiss, Cheddar, Wiz, Mozzerella<br /> 
+													(Extra Cheese Add $1)
+												</p>
+												<h2 class="title">Best Sellers</h2>
+											</div>
+											<ul class="menu-list-2">
+												<li>
+													<div class="info-price">
+														<h5 class="title">Tiger Steak</h5>
+														<div class="line"></div>
+														<span class="price">11.99</span>
+													</div>
+													<p>beef steak, chicken steak, bacon, american cheese, all mixed together</p>
+												</li>
+												<li>
+													<div class="info-price">
+														<h5 class="title">Buffalo Chicken CheeseSteak</h5>
+														<div class="line"></div>
+														<span class="price">11.99</span>
+													</div>
+													<p>hot sauce and american cheese with blue cheese or ranch</p>
+												</li>
+												<li>
+													<div class="info-price">
+														<h5 class="title">Philly Steak</h5>
+														<div class="line"></div>
+														<span class="price">10.99</span>
+													</div>
+													<p>beef steak with fried onions & real cheese wiz</p>
+												</li>
+												<li>
+													<div class="info-price">
+														<h5 class="title">Pizza Steak</h5>
+														<div class="line"></div>
+														<span class="price">11.99</span>
+													</div>
+													<p>beef steak mixed with marinara sauce & mozzerella cheese</p>
+												</li>
+											</ul>
 										</div>
 									</div>
 								</div>
-								<div className="dz-col col m-b30">
-									<div className="item-box shop-item style2">
-										<div className="item-img">
-											<img src={require('./../../images/product/pizza/pic2.jpg')} alt="" />
-										</div>
-										<div className="item-info text-center">
-											<h4 className="item-title"><Link to={'/shop-product-details'}>Tiger Steak</Link></h4>
-											{/* <h5 className="price text-primary"><del>45</del><span>$40</span></h5>
-											<div className="cart-btn"><Link to={'/shop-product-details'} className="btn btnhover radius-xl"><i className="ti-shopping-cart"></i> Add To Cart</Link></div> */}
-										</div>
-									</div>
-								</div>
-								<div className="dz-col col m-b30">
-									<div className="item-box shop-item style2">
-										<div className="item-img">
-											<img src={require('./../../images/product/pizza/pic3.jpg')} alt="" />
-										</div>
-										<div className="item-info text-center">
-											<h4 className="item-title"><Link to={'/shop-product-details'}>Apricot Chicken</Link></h4>
-											<h5 className="price text-primary"><del>45</del><span>$40</span></h5>
-											<div className="cart-btn"><Link to={'/shop-product-details'} className="btn btnhover radius-xl"><i className="ti-shopping-cart"></i> Add To Cart</Link></div>
-										</div>
-									</div>
-								</div>
+							</div>
 							</div>	
 						</TabPane>
 						<TabPane tabId="2">
