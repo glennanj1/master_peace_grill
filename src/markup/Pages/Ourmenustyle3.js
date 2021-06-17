@@ -34,6 +34,7 @@ class Ourmenustyle3 extends Component{
 				<div className="dlab-bnr-inr overlay-black-middle no-line">
 					<div className="container">
 						<div className="dlab-bnr-inr-entry">
+							<h1 className="text-white">Full Menu</h1>
 							<div className="breadcrumb-row">
 								<ul className="list-inline">
 									<li><Link to={'./'}><i className="fa fa-home"></i></Link></li>
