@@ -9,13 +9,20 @@ import Owl2 from './../Element/Owl2';
 // import steak from './../../images/loadedsteak.jpg'
 
 
-var img1 = 'https://media.giphy.com/media/ctztBl6WzyjMj3IRJi/giphy.gif';
+const img1 = 'https://media.giphy.com/media/ljHr2KCNI66wYcKPIm/giphy.gif';
+// var img2 = 'https://media.giphy.com/media/ctztBl6WzyjMj3IRJi/giphy.gif';
 const onlineOrdering = 'https://onlineordering.rmpos.com/Order/?wci=54MBz6OB'
 const fb = 'https://www.facebook.com/pages/Masterpeace-Grill/844637945566646?fref=ts'
 const yelp = 'http://www.yelp.com/biz/masterpeace-grill-conshohocken-2'
 
 
 class Index2 extends Component{
+
+	componentDidMount() {
+		window.scrollTo(0, 0)
+	}
+
+
 	render(){
 		return(
 			<div>
@@ -26,7 +33,7 @@ class Index2 extends Component{
 					<Banner online={onlineOrdering}/>
 					
 						 					
-					<div class="section-full content-inner bg-white" style={{backgroundImage:"url(" + img1 + ")"}}>
+					<div class="section-full content-inner bg-white" style={{backgroundImage:"url(" + img1 + ")", padding: '200px', backgroundSize: 'cover'}}>
 						<div class="container">
 							<div class="row">
 								<div class="col-lg-6 col-md-12">
