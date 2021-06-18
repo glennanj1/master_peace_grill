@@ -85,7 +85,7 @@ const Popupss = (props) => {
 							<div class="section-full bg-white">
 								<div class="row sp0">
 									<div class="col-lg-6">
-										<img src={require("./../../images/food/tiger_steak.jpg")} alt="" class="img-cover" />
+										<img src={require("./../../images/menu/steak.jpg")} alt="" class="img-cover" />
 									</div>
 									<div class="col-lg-6">
 										<div class="menu-box">
