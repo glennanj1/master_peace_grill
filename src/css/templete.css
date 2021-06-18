@@ -320,7 +320,7 @@
     -o-transform: rotate(180deg);
 	z-index:1;
 } */
-.bg-line-top:before {
+/* .bg-line-top:before {
     content: "";
     position: absolute;
     top: 0;
@@ -349,7 +349,7 @@
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     -o-transform: rotate(180deg);
-}
+} */
 /* Separator Style 1 */
 .dlab-separator.style1 {
     width: 60px;
