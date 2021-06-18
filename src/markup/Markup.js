@@ -71,7 +71,7 @@ class Markup extends Component{
 					
 					<Route path='/our-menu-1' exact component ={Ourmenustyle1} />
 					<Route path='/our-menu-2' exact component ={Ourmenustyle2} />
-					<Route path='/our-menu-3' exact component ={Ourmenustyle3} />
+					<Route path='/menu' exact component ={Ourmenustyle3} />
 					<Route path='/our-menu-4' exact component ={Ourmenustyle4} />
 					
 					

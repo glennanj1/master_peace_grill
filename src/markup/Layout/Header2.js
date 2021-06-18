@@ -122,7 +122,7 @@ class Header2 extends Component{
 											<li><Link to={"/team"}>Team</Link></li>
 										</ul>
 									</li> */}
-									<li><Link to={'/our-menu-3'}>Menu</Link></li>
+									<li><Link to={'/menu'}>Menu</Link></li>
 									{/* <li className="has-mega-menu"><Link to={'#'}>Reviews</Link>
 										<ul className="mega-menu">
 											<li> <Link to={'#'}>Blog Grid</Link>
