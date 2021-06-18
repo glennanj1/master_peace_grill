@@ -2239,6 +2239,9 @@ td.fc-event-container {
 
 
 @media only screen and (min-width: 991px){
+	.videoPlayer {
+		width: 100vw;
+	}
 	.pizza-header  .is-fixed .main-bar{
 		background:#e7272d;
 	}
@@ -2569,6 +2572,10 @@ td.fc-event-container {
 	}
 	.faq-area1 .m-r20{
 		margin-right:0;
+	}
+	.videoPlayer {
+		height: 100vh;
+		
 	}
 	.section-head .text-bold,
 	.about-area1 .about-bx .section-head p,
