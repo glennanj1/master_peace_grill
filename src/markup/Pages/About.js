@@ -12,6 +12,9 @@ var img1 = 'https://media.giphy.com/media/C0Asg9I511EHe/giphy.gif';
 // var img2 = require('./../../images/background/bg1.jpg');
 var img3 = require('./../../images/background/bg5.jpg');
 var img4 = require('./../../images/background/mpg_bg.jpg');
+const onlineOrdering = 'https://onlineordering.rmpos.com/Order/?wci=54MBz6OB'
+const fb = 'https://www.facebook.com/pages/Masterpeace-Grill/844637945566646?fref=ts'
+const yelp = 'http://www.yelp.com/biz/masterpeace-grill-conshohocken-2'
 
 
 // const teamInfo = [
@@ -42,7 +45,7 @@ class About extends Component{
 	render(){
 		return(
 			<>
-			<Header2 />
+			<Header2 facebook={fb} yelp={yelp} online={onlineOrdering}/>
 		
 			 <div className="page-content bg-white">
 				
@@ -70,13 +73,10 @@ class About extends Component{
 											<img src={require('./../../images/stealface.jpg')} alt="" />
 										</div>
 										<h3>Why Eat at MasterPeace Grill?</h3>
-										<p>That’s a simple question. We’re super friendly and we make really good food!
-
-At MasterPeace Grill, our food is fresher than your average sandwich shop. Our cheeseburgers are made of FRESH Certified Angus ground beef, NEVER FROZEN!
-
-People love our italian rolls that are delivered fresh daily from Liscios Bakery! On many sandwiches, like our amazing Southwest Turkey Burger, we use toasted Brioche Buns. If you are looking for an awesome sandwich, try our Tiger Steak: 50% Chicken, 50% Beef, BACON, choice of cheese and crafted with 100% Love.
-
-What do we do at MasterPeace that’s unique? We let you create your own MasterPeace sandwich, steak or wrap. Like we said above, our fries and chips are fresh cut and sliced in house.</p>
+										<p>That’s a simple question. We’re super friendly and we make really good food!<br /><br />
+											At MasterPeace Grill, our food is fresher than your average sandwich shop. Our cheeseburgers are made of FRESH Certified Angus ground beef, NEVER FROZEN!<br /><br />
+											People love our italian rolls that are delivered fresh daily from Liscios Bakery! On many sandwiches, like our amazing Southwest Turkey Burger, we use toasted Brioche Buns. If you are looking for an awesome sandwich, try our Tiger Steak: 50% Chicken, 50% Beef, BACON, choice of cheese and crafted with 100% Love.<br /><br />
+											What do we do at MasterPeace that’s unique? We let you create your own MasterPeace sandwich, steak or wrap. Like we said above, our fries and chips are fresh cut and sliced in house.</p>
 										<h3>Ever wonder where we got our name?</h3>
 										<p>Our name was inspired by a song performed by the Grateful Dead “When I paint my Masterpiece”. From that moment on, I wanted to open a shop that would let our customers build their own MasterPeace sandwiches. We wanted to be different than your average sandwich shop, so we came up with the concept that you choose the ingredients and we’ll build Your MasterPeace sandwich!</p>
 										<h3>It’s a Family Business</h3>
@@ -197,7 +197,7 @@ What do we do at MasterPeace that’s unique? We let you create your own MasterP
 					</div> */}
 				</div>
 			</div>	
-JG			<Footer2 />
+			<Footer2 facebook={fb} yelp={yelp}/>
 			</>
 		)
 	}
