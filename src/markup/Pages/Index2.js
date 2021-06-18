@@ -9,7 +9,7 @@ import Owl2 from './../Element/Owl2';
 // import steak from './../../images/loadedsteak.jpg'
 
 
-var img1 = require('./../../images/overlay/pt1.jpg');
+var img1 = 'https://media.giphy.com/media/ctztBl6WzyjMj3IRJi/giphy.gif';
 const onlineOrdering = 'https://onlineordering.rmpos.com/Order/?wci=54MBz6OB'
 const fb = 'https://www.facebook.com/pages/Masterpeace-Grill/844637945566646?fref=ts'
 const yelp = 'http://www.yelp.com/biz/masterpeace-grill-conshohocken-2'
