@@ -42,6 +42,10 @@ const yelp = 'http://www.yelp.com/biz/masterpeace-grill-conshohocken-2'
 	
 class About extends Component{
 
+	componentDidMount() {
+		window.scrollTo(0, 0)
+	}
+
 	render(){
 		return(
 			<>

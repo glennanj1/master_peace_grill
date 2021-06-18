@@ -21,13 +21,17 @@ const yelp = 'http://www.yelp.com/biz/masterpeace-grill-conshohocken-2'
  
 class Ourmenustyle3 extends Component{
 
+	componentDidMount() {
+		window.scrollTo(0, 0)
+	}
+
 	render(){
 		return(
 			<>
 			<Header2 facebook={fb} yelp={yelp} online={onlineOrdering} /> 
 			
 			<div className="page-content bg-white">
-				<video style={{position: 'fixed', overflow: 'hidden', width: '100vw'}} autoPlay loop playsInline muted>
+				<video className='videoPlayer' style={{position: 'fixed', overflow: 'hidden'}} autoPlay loop playsInline muted>
 					<source src={video} type='video/mp4' />
 				</video>
 				
@@ -54,8 +58,8 @@ class Ourmenustyle3 extends Component{
 							<div class="col-lg-6">
 								<div class="menu-box">
 									<div class="section-head style-2">
-										<h4 class="sub-title">CheeseSteaks $10.99</h4>
-										<h2 class="title">Build Your Own</h2>
+										<h4 class="sub-title">Build Your Own</h4>
+										<h2 class="title">CheeseSteaks $10.99</h2>
 										<p>
 											Pick Your Meat - Beef Steak of Chicken Steak<br />
 											Pick 1 Cheese - American, Provolone, Swiss, Cheddar, Wiz, Mozzerella<br /> 
@@ -101,104 +105,26 @@ class Ourmenustyle3 extends Component{
 							</div>
 						</div>
 						<div class="row manu-box-reverse sp0">
-							<div class="col-lg-6">
-								<div class="menu-box">
-									<div class="section-head style-2">
-										<h4 class="sub-title">Catering</h4>
-										<h4>You Create - Includes Chips, Drinks and Napkins</h4>
-										<h5>Pricing Per Person</h5>
-										
-									</div>
-									<ul class="menu-list-2">
-										<li>
-											<div class="info-price">
-												<h5 class="title">CheeseSteak Tray</h5>
-												<div class="line"></div>
-												<span class="price">14.99</span>
-											</div>
-											<p>Cheesesteak, Chicken Cheesesteak, Tiger Steak, Buffalo Steak or Pizza Steak</p>
-										</li>
-										<li>
-											<div class="info-price">
-												<h5 class="title">Wrap Tray</h5>
-												<div class="line"></div>
-												<span class="price">13.99</span>
-											</div>
-											<p>Southwest Turkey, Itailian, Chicken Salad, Cuban, Buffalo Tender, Tuna, Chicken Caesar, Turkey BLT, Ham, Roast Beef, Mediterranean</p>
-										</li>
-										<li>
-											<div class="info-price">
-												<h5 class="title">Hoagie Tray</h5>
-												<div class="line"></div>
-												<span class="price">13.99</span>
-											</div>
-											<p>Ham and Cheese, Turkey, Roast Beef, Chicken Salad, Tuna, Mixed Cheese, Buffalo Chicken Tender, Southwest Turky, Turkey BLT</p>
-										</li>
-										<li>
-											<div class="info-price">
-												<h5 class="title">Brioche Tray</h5>
-												<div class="line"></div>
-												<span class="price">12.99</span>
-											</div>
-											<p>Turkey, Ham, Chicken Salad, Tuna, Roast Beef, Mixed Cheese, Chumpy, Drizzle, Italian</p>
-										</li>
-										<li>
-											<div class="info-price">
-												<h5 class="title">Ceasar Salad</h5>
-												<div class="line"></div>
-												<span class="price">40.00 w/Chicken 60.00</span>							
-											</div>
-											<p>crisp romain with croutons parmesan cheese and dressing on the side</p>
-										</li>
-										<li>
-											<div class="info-price">
-												<h5 class="title">Small Garden Salad</h5>
-												<div class="line"></div>
-												<span class="price">50.00 w/Chicken 65.00</span>							
-											</div>
-											<p>crisp romain with croutons parmesan cheese and dressing on the side</p>
-											
-										</li>
-										<li>
-											<div class="info-price">
-												<h5 class="title">Large Garden Salad</h5>
-												<div class="line"></div>
-												<span class="price">80.00 w/Chicken 120.00</span>							
-											</div>
-											<p>crisp romain with croutons parmesan cheese and dressing on the side</p>
-											
-										</li>
-										<li>
-											<div class="info-price">
-												<h5 class="title">Wings - 25 Count</h5>
-												<div class="line"></div>
-												<span class="price">29.99</span>
-											</div>
-											<p>Choose from Hot, Mild or BBQ Sauce Includes Celery, Blue Cheese & Ranch</p>
-										</li>
-										<li>
-											<div class="info-price">
-												<h5 class="title">Wings - 50 Count</h5>
-												<div class="line"></div>
-												<span class="price">54.99</span>
-											</div>
-											<p>Choose from Hot, Mild or BBQ Sauce Includes Celery, Blue Cheese & Ranch</p>
-										</li>
-										<li>
-											<div class="info-price">
-												<h5 class="title">Wings - 100 Count</h5>
-												<div class="line"></div>
-												<span class="price">109.99</span>
-											</div>
-											<p>Choose from Hot, Mild or BBQ Sauce Includes Celery, Blue Cheese & Ranch</p>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-lg-6">
-								<img src={catering} alt="" class="img-cover" />
+						<div class="col-lg-6">
+							<div class="menu-box">
+								<div class="section-head style-2">
+									<h2 class="title">Grilled Cheese $4.99</h2>
+									<p>Served On Your choice Of White, Wheat or Rye</p>
+									<h4 class="sub-title">Build Your Own $7.49</h4>
+									<p>
+										Served On Your choice Of White, Wheat or Rye<br />
+										Served On Your choice Of White, Wheat or Rye Bread PICK 1 PROTEIN - turkey, ham, bacon, roast beef <br />
+										PICK 1 CHEESE - American, provolone, swiss, cheddar, mozzarella <br />
+										PICK YOUR SPREADS - mayo, southwest spread, mustard, spicy mustard, honey mustard, oil, vinegar, ranch <br />
+										PICK YOUR VEGGIES - lettuce, tomato, onion, roasted peppers, sweet pepper, hot pepper, pickle, cole slaw<br />
+									</p>
+								</div>	
 							</div>
 						</div>
+						<div class="col-lg-6">
+							<img src={require("./../../images/food/tiger_steak.jpg")} alt="" class="img-cover" />
+						</div>
+					</div>
 						<div class="row sp0">
 							<div class="col-lg-6">
 								<img src={wrap} alt="" class="img-cover" />
@@ -763,8 +689,12 @@ class Ourmenustyle3 extends Component{
 								</div>
 							</div>
 						</div>
+
 						
-						<div class="row manu-box-reverse sp0">
+						<div class="row sp0">
+							<div class="col-lg-6">
+								<img src={wings} alt="" class="img-cover" />
+							</div>
 							<div class="col-lg-6">
 								<div class="menu-box">
 									<div class="section-head style-2">
@@ -800,32 +730,107 @@ class Ourmenustyle3 extends Component{
 									</ul>
 								</div>
 							</div>
-							<div class="col-lg-6">
-								<img src={wings} alt="" class="img-cover" />
-							</div>
 						</div>
 					
-					<div class="row sp0">
-						<div class="col-lg-6">
-							<img src={require("./../../images/food/tiger_steak.jpg")} alt="" class="img-cover" />
-						</div>
-						<div class="col-lg-6">
-							<div class="menu-box">
-								<div class="section-head style-2">
-									<h2 class="title">Grilled Cheese $4.99</h2>
-									<p>Served On Your choice Of White, Wheat or Rye</p>
-									<h4 class="sub-title">Build Your Own $7.49</h4>
-									<p>
-										Served On Your choice Of White, Wheat or Rye<br />
-										Served On Your choice Of White, Wheat or Rye Bread PICK 1 PROTEIN - turkey, ham, bacon, roast beef <br />
-										PICK 1 CHEESE - American, provolone, swiss, cheddar, mozzarella <br />
-										PICK YOUR SPREADS - mayo, southwest spread, mustard, spicy mustard, honey mustard, oil, vinegar, ranch <br />
-										PICK YOUR VEGGIES - lettuce, tomato, onion, roasted peppers, sweet pepper, hot pepper, pickle, cole slaw<br />
-									</p>
-								</div>	
+					<div class="row manu-box-reverse sp0">
+							<div class="col-lg-6">
+								<div class="menu-box">
+									<div class="section-head style-2">
+										<h4 class="sub-title">Catering</h4>
+										<h4>You Create - Includes Chips, Drinks and Napkins</h4>
+										<h5>Pricing Per Person</h5>
+										
+									</div>
+									<ul class="menu-list-2">
+										<li>
+											<div class="info-price">
+												<h5 class="title">CheeseSteak Tray</h5>
+												<div class="line"></div>
+												<span class="price">14.99</span>
+											</div>
+											<p>Cheesesteak, Chicken Cheesesteak, Tiger Steak, Buffalo Steak or Pizza Steak</p>
+										</li>
+										<li>
+											<div class="info-price">
+												<h5 class="title">Wrap Tray</h5>
+												<div class="line"></div>
+												<span class="price">13.99</span>
+											</div>
+											<p>Southwest Turkey, Itailian, Chicken Salad, Cuban, Buffalo Tender, Tuna, Chicken Caesar, Turkey BLT, Ham, Roast Beef, Mediterranean</p>
+										</li>
+										<li>
+											<div class="info-price">
+												<h5 class="title">Hoagie Tray</h5>
+												<div class="line"></div>
+												<span class="price">13.99</span>
+											</div>
+											<p>Ham and Cheese, Turkey, Roast Beef, Chicken Salad, Tuna, Mixed Cheese, Buffalo Chicken Tender, Southwest Turky, Turkey BLT</p>
+										</li>
+										<li>
+											<div class="info-price">
+												<h5 class="title">Brioche Tray</h5>
+												<div class="line"></div>
+												<span class="price">12.99</span>
+											</div>
+											<p>Turkey, Ham, Chicken Salad, Tuna, Roast Beef, Mixed Cheese, Chumpy, Drizzle, Italian</p>
+										</li>
+										<li>
+											<div class="info-price">
+												<h5 class="title">Ceasar Salad</h5>
+												<div class="line"></div>
+												<span class="price">40.00 w/Chicken 60.00</span>							
+											</div>
+											<p>crisp romain with croutons parmesan cheese and dressing on the side</p>
+										</li>
+										<li>
+											<div class="info-price">
+												<h5 class="title">Small Garden Salad</h5>
+												<div class="line"></div>
+												<span class="price">50.00 w/Chicken 65.00</span>							
+											</div>
+											<p>crisp romain with croutons parmesan cheese and dressing on the side</p>
+											
+										</li>
+										<li>
+											<div class="info-price">
+												<h5 class="title">Large Garden Salad</h5>
+												<div class="line"></div>
+												<span class="price">80.00 w/Chicken 120.00</span>							
+											</div>
+											<p>crisp romain with croutons parmesan cheese and dressing on the side</p>
+											
+										</li>
+										<li>
+											<div class="info-price">
+												<h5 class="title">Wings - 25 Count</h5>
+												<div class="line"></div>
+												<span class="price">29.99</span>
+											</div>
+											<p>Choose from Hot, Mild or BBQ Sauce Includes Celery, Blue Cheese & Ranch</p>
+										</li>
+										<li>
+											<div class="info-price">
+												<h5 class="title">Wings - 50 Count</h5>
+												<div class="line"></div>
+												<span class="price">54.99</span>
+											</div>
+											<p>Choose from Hot, Mild or BBQ Sauce Includes Celery, Blue Cheese & Ranch</p>
+										</li>
+										<li>
+											<div class="info-price">
+												<h5 class="title">Wings - 100 Count</h5>
+												<div class="line"></div>
+												<span class="price">109.99</span>
+											</div>
+											<p>Choose from Hot, Mild or BBQ Sauce Includes Celery, Blue Cheese & Ranch</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<img src={catering} alt="" class="img-cover" />
 							</div>
 						</div>
-					</div>
 				</div> 
 			</div>
 			
