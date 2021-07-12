@@ -34,34 +34,7 @@ class Index2 extends Component{
 					
 						 					
 					<div class="section-full content-inner bg-white" style={{backgroundImage:"url(" + img1 + ")", padding: '200px', backgroundSize: 'cover'}}>
-						<div class="container">
-							<div class="row">
-								<div class="col-lg-6 col-md-12">
-									<div class="adv-box">
-										<img src={require("./../../images/food/cheesesteak_tray.jpg")} alt="" />
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-12">
-									<div class="row">
-										<div class="col-lg-6 col-md-6">
-											<div class="adv-box">
-												<img src={require("./../../images/food/loaded_buger.jpg")} alt="" />
-											</div>
-										</div>
-										<div class="col-lg-6 col-md-6">
-											<div class="adv-box">
-												<img src={require("./../../images/food/loadedsteak.jpg")} alt="" />
-											</div>
-										</div>
-										<div class="col-lg-12 col-md-12">
-											<div class="adv-box">
-												<img src={require("./../../images/food/vegburger.jpg")} alt="" />
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+						
 					</div>	
 					
 					{/* <Tab /> */}
