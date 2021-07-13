@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import logo from './../../images/mpglogo2.png'
+// import logo from './../../images/mpglogo2.png'
 // import hours from './../../images/icons/hours.png'
 
 
@@ -68,7 +68,19 @@ class Header2 extends Component{
 						<div className="container clearfix">
 							
 							<div className="logo-header mostion">
-								<Link to="/"><img src={logo} alt="" /></Link>
+										
+											<div className="header-phone-no">
+												{/* <img src={hours} alt=""/> */}
+												<h2>Hours:</h2>
+										
+												{/* <img src={hours} alt=""/> */}
+												<h4>Monday:  Closed</h4>
+												<h4>Tuesday: 11am - 4pm</h4>
+												<h4>Wed - Sat: 11am - 4pm</h4>
+												<h4>Sunday: 11am - 8pm</h4>
+											</div>
+									
+								{/* <Link to="/"><img src={logo} alt="" /></Link> */}
 							</div>
 							
 							<button className="navbar-toggler collapsed navicon justify-content-end" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -80,21 +92,6 @@ class Header2 extends Component{
 							<div className="extra-nav">
 								<div className="extra-cell">
 									<ul className="extra-info">
-										<li>
-											<div className="header-phone-no">
-												{/* <img src={hours} alt=""/> */}
-												<h3>Hours:</h3>
-											</div>
-										</li>
-										<li>
-											<div className="header-phone-no">
-												{/* <img src={hours} alt=""/> */}
-												<h4>Monday:  Closed</h4>
-												<h4>Tuesday: 11am - 4pm</h4>
-												<h4>Wed - Sat: 11am - 4pm</h4>
-												<h4>Sunday: 11am - 8pm</h4>
-											</div>
-										</li>
 										<li>
 											<div className="header-phone-no">
 												{/* <img src={hours} alt=""/> */}
