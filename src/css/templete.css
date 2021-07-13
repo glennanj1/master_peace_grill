@@ -1,6 +1,7 @@
 /*==========================
 	Custom css
 ==========================*/
+
 .fixedVideo {
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -1967,9 +1968,7 @@ ol.comment-list li.comment .reply a {
     height: 28px;
 	margin-right: 5px;	
 }
-.pizza-header .main-bar{
-	
-}
+
 .adv-box{
 	margin-bottom:30px;
 	position:relative;
@@ -2071,7 +2070,10 @@ ol.comment-list li.comment .reply a {
 .section-head.style-2 .title{
 	font-size: 50px;
     line-height: 1.3;
+	text-shadow: 3px 2px 0px red;
 }
+
+
 
 .section-head.style-2  p > b {
 	background-color: red;
@@ -2268,7 +2270,7 @@ td.fc-event-container {
 
 @media only screen and (min-width: 991px){
 	.videoPlayer {
-		width: 100vw;
+		width: 100%;
 		background-image: url('https://media.giphy.com/media/3o7Zeqm2M3rCWdounC/giphy.gif');
 	}
 	.pizza-header  .is-fixed .main-bar{
@@ -2605,6 +2607,7 @@ td.fc-event-container {
 	}
 	.videoPlayer {
 		height: 100vh;
+		background-image: url('https://media.giphy.com/media/3o7Zeqm2M3rCWdounC/giphy.gif');
 		
 	}
 	.section-head .text-bold,
