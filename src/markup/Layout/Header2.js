@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import logo from './../../images/mpglogo2.png'
+// import hours from './../../images/icons/hours.png'
 
 
 class Header2 extends Component{
@@ -81,8 +82,23 @@ class Header2 extends Component{
 									<ul className="extra-info">
 										<li>
 											<div className="header-phone-no">
-												<img src="images/icons/telephone.png" alt=""/>
-												<span>fast delivery</span>
+												{/* <img src={hours} alt=""/> */}
+												<h3>Hours:</h3>
+											</div>
+										</li>
+										<li>
+											<div className="header-phone-no">
+												{/* <img src={hours} alt=""/> */}
+												<h4>Monday:  Closed</h4>
+												<h4>Tuesday: 11am - 4pm</h4>
+												<h4>Wed - Sat: 11am - 4pm</h4>
+												<h4>Sunday: 11am - 8pm</h4>
+											</div>
+										</li>
+										<li>
+											<div className="header-phone-no">
+												{/* <img src={hours} alt=""/> */}
+												<span>fast delivery $10 minimum</span>
 												<h2>484-344-5250</h2>
 											</div>
 										</li>
