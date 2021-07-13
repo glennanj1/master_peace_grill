@@ -12,6 +12,7 @@
     "react-bootstrap": "^1.4.0",
     "react-countup": "^4.3.3",
     "react-dom": "^16.14.0",
+    "react-ga": "^3.3.0",
     "react-image-lightbox": "^5.1.1",
     "react-masonry-component": "^6.2.1",
     "react-masonry-css": "^1.0.14",
