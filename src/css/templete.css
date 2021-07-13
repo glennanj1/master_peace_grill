@@ -1,7 +1,10 @@
 /*==========================
 	Custom css
 ==========================*/
-
+.hoursContainer {
+	width: 350px;
+	margin-top: 15px;
+}
 .fixedVideo {
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -1882,8 +1885,9 @@ ol.comment-list li.comment .reply a {
 	margin: 0;
 	color: #fff;
 	font-weight: 500;
-	font-size: 12px;
-	line-height: 12px;
+	font-size: 20px;
+	line-height: 5px; 
+
 }
 .font-barlow h1,
 .font-barlow h2,
