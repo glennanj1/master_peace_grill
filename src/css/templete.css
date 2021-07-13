@@ -2274,6 +2274,9 @@ td.fc-event-container {
 
 
 @media only screen and (min-width: 991px){
+	.fixedVideo {
+		padding: 250px;
+	}
 	.videoPlayer {
 		width: 100%;
 		background-image: url('https://media.giphy.com/media/3o7Zeqm2M3rCWdounC/giphy.gif');
@@ -2820,6 +2823,9 @@ td.fc-event-container {
 }
 
 @media only screen and (max-width: 591px){
+	.fixedVideo {
+		height: 475px;
+	}
 	.subscribe-box .modal-header img{
 		width: 90px;	
 	}
