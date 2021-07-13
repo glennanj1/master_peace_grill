@@ -9,7 +9,7 @@ import Owl2 from './../Element/Owl2';
 // import steak from './../../images/loadedsteak.jpg'
 
 
-const img1 = 'https://media.giphy.com/media/ljHr2KCNI66wYcKPIm/giphy.gif';
+const img1 = 'https://media.giphy.com/media/xTiTnzZ9pJEyf7jPfq/giphy.gif';
 // var img2 = 'https://media.giphy.com/media/ctztBl6WzyjMj3IRJi/giphy.gif';
 const onlineOrdering = 'https://onlineordering.rmpos.com/Order/?wci=54MBz6OB'
 const fb = 'https://www.facebook.com/pages/Masterpeace-Grill/844637945566646?fref=ts'
@@ -33,7 +33,7 @@ class Index2 extends Component{
 					<Banner online={onlineOrdering}/>
 					
 						 					
-					<div class="section-full content-inner bg-white" style={{backgroundImage:"url(" + img1 + ")", padding: '200px', backgroundSize: 'cover'}}>
+					<div class="section-full content-inner bg-white fixedVideo" style={{backgroundImage:"url(" + img1 + ")", padding: '200px', backgroundSize: 'cover'}}>
 						
 					</div>	
 					
@@ -48,7 +48,7 @@ class Index2 extends Component{
 					<Owl2 />
 					
 					
-					{/* <div class="section-full bg-red p-tb50 newslatter-area">
+					<div class="section-full bg-red p-tb50 newslatter-area">
 						<div class="container">
 							<div class="row align-items-center">
 								<div class="col-md-6 text-white">
@@ -67,7 +67,7 @@ class Index2 extends Component{
 								</div>
 							</div>
 						</div>
-					</div> */}
+					</div>
 					
 					
 					
