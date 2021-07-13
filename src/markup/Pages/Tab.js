@@ -19,7 +19,7 @@ const Popupss = (props) => {
     }
 
     return (
-        <div class="section-full bg-white pizza-full-menu" style={{backgroundColor: 'rgba(0, 0, 0, 0.5)'}}>
+        <div className="section-full bg-white pizza-full-menu" style={{backgroundColor: 'rgba(0, 0, 0, 0.5)'}}>
             <div tabs>
                 <div className="bg-primary pizza-items">
 					<div className="container">
@@ -82,53 +82,53 @@ const Popupss = (props) => {
 					<TabContent activeTab={activeTab}>
 						<TabPane tabId="1">
 							<div className="row tab-pane fade show active" >
-							<div class="section-full bg-white">
-								<div class="row sp0">
-									<div class="col-lg-6">
-										<img src={require("./../../images/menu/steak.jpg")} alt="" class="img-cover" />
+							<div className="section-full bg-white">
+								<div className="row sp0">
+									<div className="col-lg-6">
+										<img src={require("./../../images/menu/steak.jpg")} alt="" className="img-cover" />
 									</div>
-									<div class="col-lg-6">
-										<div class="menu-box">
-											<div class="section-head style-2">
-												<h4 class="sub-title">CheeseSteaks $10.99</h4>
-												<h2 class="title">Build Your Own</h2>
+									<div className="col-lg-6">
+										<div className="menu-box">
+											<div className="section-head style-2">
+												<h4 className="sub-title">CheeseSteaks $10.99</h4>
+												<h2 className="title">Build Your Own</h2>
 												<p>
 													Pick Your Meat - Beef Steak of Chicken Steak<br />
 													Pick 1 Cheese - American, Provolone, Swiss, Cheddar, Wiz, Mozzerella<br /> 
 													(Extra Cheese Add $1)
 												</p>
-												<h2 class="title">Best Sellers</h2>
+												<h2 className="title">Best Sellers</h2>
 											</div>
-											<ul class="menu-list-2">
+											<ul className="menu-list-2">
 												<li>
-													<div class="info-price">
-														<h5 class="title">Tiger Steak</h5>
-														<div class="line"></div>
-														<span class="price">11.99</span>
+													<div className="info-price">
+														<h5 className="title">Tiger Steak</h5>
+														<div className="line"></div>
+														<span className="price">11.99</span>
 													</div>
 													<p>beef steak, chicken steak, bacon, american cheese, all mixed together</p>
 												</li>
 												<li>
-													<div class="info-price">
-														<h5 class="title">Buffalo Chicken CheeseSteak</h5>
-														<div class="line"></div>
-														<span class="price">11.99</span>
+													<div className="info-price">
+														<h5 className="title">Buffalo Chicken CheeseSteak</h5>
+														<div className="line"></div>
+														<span className="price">11.99</span>
 													</div>
 													<p>hot sauce and american cheese with blue cheese or ranch</p>
 												</li>
 												<li>
-													<div class="info-price">
-														<h5 class="title">Philly Steak</h5>
-														<div class="line"></div>
-														<span class="price">10.99</span>
+													<div className="info-price">
+														<h5 className="title">Philly Steak</h5>
+														<div className="line"></div>
+														<span className="price">10.99</span>
 													</div>
 													<p>beef steak with fried onions & real cheese wiz</p>
 												</li>
 												<li>
-													<div class="info-price">
-														<h5 class="title">Pizza Steak</h5>
-														<div class="line"></div>
-														<span class="price">11.99</span>
+													<div className="info-price">
+														<h5 className="title">Pizza Steak</h5>
+														<div className="line"></div>
+														<span className="price">11.99</span>
 													</div>
 													<p>beef steak mixed with marinara sauce & mozzerella cheese</p>
 												</li>

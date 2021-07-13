@@ -12,9 +12,9 @@ class Banner extends Component{
 				<div className="section-full content-inner bnr-bg" style={{backgroundImage: "url(" + bnr + ")", backgroundSize: "cover"}}>
 					<div className="container">
 						
-						<div class="row">
-							<div class="col-lg-6 text-center">
-								<div class="content">
+						<div className="row">
+							<div className="col-lg-6 text-center">
+								<div className="content">
 									<h2 className="title">Best CheeseSteaks</h2>
 									
 									{/* <div className= "bnr-logo">
