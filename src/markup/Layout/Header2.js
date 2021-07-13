@@ -5,6 +5,11 @@ import {Link} from 'react-router-dom';
 
 
 class Header2 extends Component{
+
+	state = {
+		isOpen: false
+	}
+	
 	componentDidMount() {
         // sidebar open/close
         var Navicon = document.querySelector('.navicon');
@@ -71,13 +76,20 @@ class Header2 extends Component{
 										
 											<div className="header-phone-no">
 												{/* <img src={hours} alt=""/> */}
-												<h2>Hours:</h2>
+												<button className="btn red" onMouseEnter={() => this.setState({isOpen: true})}
+													onMouseLeave={() => this.setState({isOpen: false})}><h3>Hours</h3></button>
+												{this.state.isOpen && (
+													<div className="hoursContainer">
+														<h4>Monday:  Closed</h4>
+														<h4>Tuesday: 11am - 4pm</h4>
+														<h4>Wed - Sat: 11am - 4pm</h4>
+														<h4>Sunday: 11am - 8pm</h4>
+													</div>
+												)}
+												
 										
 												{/* <img src={hours} alt=""/> */}
-												<h4>Monday:  Closed</h4>
-												<h4>Tuesday: 11am - 4pm</h4>
-												<h4>Wed - Sat: 11am - 4pm</h4>
-												<h4>Sunday: 11am - 8pm</h4>
+												
 											</div>
 									
 								{/* <Link to="/"><img src={logo} alt="" /></Link> */}
