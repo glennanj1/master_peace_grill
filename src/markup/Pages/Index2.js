@@ -18,6 +18,9 @@ class Index2 extends Component{
 		window.scrollTo(0, 0)
 	}
 
+	onSubmit = (e) => {
+		e.preventDefault();
+	}
 
 	render(){
 		return(
@@ -26,16 +29,13 @@ class Index2 extends Component{
 					
 					<Header2 facebook={fb} yelp={yelp} online={onlineOrdering}/>
 					
-					<Banner online={onlineOrdering}/>
-					
+					<Banner online={onlineOrdering}/>					
 						 					
-					<div className="section-full content-inner bg-white fixedVideo" style={{backgroundImage:"url(" + img1 + ")", padding: '200px', backgroundSize: 'cover'}}>
+					<div className="section-full content-inner bg-white fixedVideo" style={{backgroundImage:"url(" + img1 + ")", backgroundSize: 'cover'}}>
 						
 					</div>	
 				
-					
 					<Owl2 />
-					
 					
 					<div className="section-full bg-red p-tb50 newslatter-area">
 						<div className="container">
@@ -44,7 +44,7 @@ class Index2 extends Component{
 									<h5 className="m-b0">Love CheeseSteaks? Like deals? Be the first to know about our newest menu items and latest offers.</h5>
 								</div>
 								<div className="col-md-6">
-									<form className="dzSubscribe newslatter" action="script/mailchamp.php" method="post">
+									<form className="dzSubscribe newslatter" onSubmit={this.onSubmit}>
 										<div className="dzSubscribeMsg"></div>
 										<div className="input-group">
 											<input name="dzEmail" required="required" type="email" className="form-control" placeholder="Your Email"/>
