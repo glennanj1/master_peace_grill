@@ -31,7 +31,7 @@ class Index2 extends Component{
 					
 					<Banner online={onlineOrdering}/>					
 						 					
-					<div className="section-full content-inner bg-white fixedVideo" style={{backgroundImage:"url(" + img1 + ")", backgroundSize: 'cover'}}>
+					<div className="section-full content-inner bg-white fixedVideo" style={{backgroundImage:"url(" + img1 + ")", padding: '200px', backgroundSize: 'cover'}}>
 						
 					</div>	
 				
