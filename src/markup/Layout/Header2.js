@@ -9,7 +9,7 @@ class Header2 extends Component{
 	state = {
 		isOpen: false
 	}
-	
+
 	componentDidMount() {
         // sidebar open/close
         var Navicon = document.querySelector('.navicon');
@@ -80,19 +80,13 @@ class Header2 extends Component{
 													onMouseLeave={() => this.setState({isOpen: false})}><h3>Hours</h3></button>
 												{this.state.isOpen && (
 													<div className="hoursContainer">
-														<h4>Monday:  Closed</h4>
-														<h4>Tuesday: 11am - 4pm</h4>
-														<h4>Wed - Sat: 11am - 4pm</h4>
+														<h4>Monday: Closed</h4><br />
+														<h4>Tuesday: 11am - 4pm</h4><br />
+														<h4>Wednesday - Saturday: 11am - 9pm</h4><br />
 														<h4>Sunday: 11am - 8pm</h4>
 													</div>
 												)}
-												
-										
-												{/* <img src={hours} alt=""/> */}
-												
-											</div>
-									
-								{/* <Link to="/"><img src={logo} alt="" /></Link> */}
+											</div>	
 							</div>
 							
 							<button className="navbar-toggler collapsed navicon justify-content-end" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -135,74 +129,13 @@ class Header2 extends Component{
 									<Link to={"/"}><img src={require('./../../images/mpglogo2.png')} alt="" /> </Link>
 								</div>
 								<ul className="nav navbar-nav">	
-									{/* <li className="active"><Link to={'/'}>Home</Link></li>
-									<li><Link to={'#'}>Pages<i className="fa fa-chevron-down"></i></Link>
-										<ul className="sub-menu">
-											<li><Link to={"/about-1"}>About Us</Link></li>
-											<li><Link to={"/our-services"}>Our Services</Link></li>
-											<li><Link to={"/faq"}>FAQs</Link></li>
-											<li><Link to={"/booking"}>Booking</Link></li>
-											<li><Link to={"/error-404"}>404 Error</Link></li>
-											<li><Link to={"/calendar"}>Calendar</Link></li> 
-											<li><Link to={"/team"}>Team</Link></li>
-										</ul>
-									</li> */}
 									<li><Link to={'/menu'}>Menu</Link></li>
-									{/* <li className="has-mega-menu"><Link to={'#'}>Reviews</Link>
-										<ul className="mega-menu">
-											<li> <Link to={'#'}>Blog Grid</Link>
-												<ul>
-													<li><Link to={"/blog-grid-2"}>Grid 2</Link></li>
-													<li><Link to={"/blog-grid-2-sidebar"}>Grid 2 sidebar</Link></li>
-													<li><Link to={"/blog-grid-2-sidebar-left"}>Grid 2 sidebar left</Link></li>
-													<li><Link to={"/blog-grid-3"}>Grid 3</Link></li>
-												</ul>
-											</li>
-											<li> <Link to={'#'}>Blog Half Image</Link>
-												<ul>
-													<li><Link to ={"/blog-half-img"}>Half image</Link></li>
-													<li><Link to ={"/blog-half-img-sidebar"}>Half image sidebar</Link></li>
-													<li><Link to ={"/blog-half-img-left-sidebar"}>Half image sidebar left</Link></li>
-												</ul>
-											</li>
-											<li> <Link to={'#'}>Blog Large Image</Link>
-												<ul>
-													<li><Link to ={"/blog-large-img"}>Large image</Link></li>
-													<li><Link to ={"/blog-large-img-sidebar"}>Large image sidebar</Link></li>
-													<li><Link to ={"/blog-large-img-left-sidebar"}>Large image sidebar left</Link></li>
-												</ul>
-											</li>
-											<li> <Link to={'#'}>Blog Details</Link>
-												<ul>
-													<li><Link to ={"/blog-single"}>Single</Link></li>
-													<li><Link to ={"/blog-single-sidebar"}>Single sidebar</Link></li>
-													<li><Link to ={"/blog-single-left-sidebar"}>Single sidebar right</Link></li>
-												</ul>
-											</li>
-										</ul>
-									</li> */}
 									<li>
 										<a href={this.props.online}>Order Online</a>
-										{/* <ul className="sub-menu">
-											<li><Link to={"/shop"}>Shop</Link></li>
-											<li><Link to={"/shop-sidebar"}>Shop Sidebar</Link></li>
-											<li><Link to={"/shop-product-details"}>Product Details</Link></li>
-											<li><Link to={"/shop-cart"}>Cart</Link></li>
-											<li><Link to={"/shop-wishlist"}>Wishlist</Link></li>
-											<li><Link to={"/shop-checkout"}>Checkout</Link></li>
-											<li><Link to={"/shop-login"}>Login</Link></li>
-											<li><Link to={"/shop-register"}>Register</Link></li>
-										</ul> */}
 									</li>
 									<li>
 										<Link to={'/about'}>About Us</Link>
 									</li>
-									{/* <li><Link to={'#'}>Contact Us <i className="fa fa-chevron-down"></i></Link>
-										<ul className="sub-menu left">
-											<li><Link to={"/contact-1"}>Contact Us 1</Link></li>
-											<li><Link to={"/contact-2"}>Contact Us 2</Link></li>
-										</ul>
-									</li> */}
 								</ul>
 								<div className="dlab-social-icon">
 									<ul>
