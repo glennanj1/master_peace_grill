@@ -1897,6 +1897,7 @@ ol.comment-list li.comment .reply a {
 .pizza-header .logo-header{
 	height:90px;
     width: 200px;	
+	padding: 15px 0;
 }
 .pizza-header .extra-nav{
     height: 90px;
