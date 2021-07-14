@@ -1,6 +1,13 @@
 /*==========================
 	Custom css
 ==========================*/
+.catering {
+	font-size: 30px;
+	letter-spacing: 15px;
+	text-align: center;
+	width: 100vw;
+	border: 5px solid black;
+}
 .hoursContainer {
 	width: 350px;
 	margin-top: 15px;

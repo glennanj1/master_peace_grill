@@ -244,7 +244,7 @@ class Ourmenustyle3 extends Component{
 									<div className="section-head style-2">
 										<h2 className="title">Salads</h2>
 										<p>
-										Dressings: Ranch, Italian, Bleu Cheese, Honey Mustard, Caesars, Balsamic Vinaigrette, Oil & Vinegar or Thousand Island
+										<b>Dressings:</b> Ranch, Italian, Bleu Cheese, Honey Mustard, Caesars, Balsamic Vinaigrette, Oil & Vinegar or Thousand Island
 										</p>
 									</div>
 									<ul className="menu-list-2">
@@ -416,7 +416,7 @@ class Ourmenustyle3 extends Component{
 										• Chicken Salad • Ham & Cheese <br />
 										Add Cheese $1
 										</p>
-										<h4 className="sub-title">Best Sellers</h4>
+										<h2 className="title">Best Sellers</h2>
 									</div>
 									<ul className="menu-list-2">
 										<li>
@@ -750,20 +750,13 @@ class Ourmenustyle3 extends Component{
 						</div>
 					</div>
 						
-						
-						
-						
-
-						<h1>Catering</h1>
-						
-					
-						
+						<h1 className="catering">Catering</h1>
 					
 					<div className="row manu-box-reverse sp0">
 							<div className="col-lg-6">
 								<div className="menu-box">
 									<div className="section-head style-2">
-										<h4 className="sub-title">Catering</h4>
+										<h4 className="sub-title">à la carte</h4>
 										<h4>You Create - Includes Chips, Drinks and Napkins</h4>
 										<h5>Pricing Per Person</h5>
 										
