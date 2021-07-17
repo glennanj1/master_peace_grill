@@ -208,7 +208,7 @@ const Popupss = (props) => {
 								<div className="dz-col col m-b30">
 									<div className="item-box shop-item style2">
 										<div className="item-img">
-											<Link><img src={require('./../../images/product/item1.jpg')} alt="" /></Link>
+											<Link><img src={club} alt="" /></Link>
 										</div>
 										<div className="item-info text-center">
 											<h4 className="item-title"><Link to={'/shop-product-details'}>Biscuits</Link></h4>
@@ -220,7 +220,7 @@ const Popupss = (props) => {
 								<div className="dz-col col m-b30">
 									<div className="item-box shop-item style2">
 										<div className="item-img">
-											<Link><img src={require('./../../images/product/item2.jpg')} alt="" /></Link>
+											<Link><img src={wrap} alt="" /></Link>
 										</div>
 										<div className="item-info text-center">
 											<h4 className="item-title"><Link to={'/shop-product-details'}>Pancakes</Link></h4>
@@ -232,7 +232,7 @@ const Popupss = (props) => {
 								<div className="dz-col col m-b30">
 									<div className="item-box shop-item style2">
 										<div className="item-img">
-											<Link><img src={require('./../../images/product/item3.jpg')} alt="" /></Link>
+											<Link><img src={burger} alt="" /></Link>
 										</div>
 										<div className="item-info text-center">
 											<h4 className="item-title"><Link to={'/shop-product-details'}>Muffin</Link></h4>
@@ -244,7 +244,7 @@ const Popupss = (props) => {
 								<div className="dz-col col m-b30">
 									<div className="item-box shop-item style2">
 										<div className="item-img">
-											<Link><img src={require('./../../images/product/item4.jpg')} alt="" /></Link>
+											<Link><img src={steak} alt="" /></Link>
 										</div>
 										<div className="item-info text-center">
 											<h4 className="item-title"><Link to={'/shop-product-details'}>Pancakes</Link></h4>
@@ -256,7 +256,7 @@ const Popupss = (props) => {
 								<div className="dz-col col m-b30">
 									<div className="item-box shop-item style2">
 										<div className="item-img">
-											<Link><img src={require('./../../images/product/item5.jpg')} alt="" /></Link>
+											<Link><img src={steak} alt="" /></Link>
 										</div>
 										<div className="item-info text-center">
 											<h4 className="item-title"><Link to={'/shop-product-details'}>Pumpkin cakes</Link></h4>
@@ -272,7 +272,7 @@ const Popupss = (props) => {
 								<div className="dz-col col m-b30">
 									<div className="item-box shop-item style2">
 										<div className="item-img">
-											<Link><img src={require('./../../images/product/item5.jpg')} alt="" /></Link>
+											<Link><img src={steak} alt="" /></Link>
 										</div>
 										<div className="item-info text-center">
 											<h4 className="item-title"><Link to={'/shop-product-details'}>Muffin</Link></h4>
@@ -284,7 +284,7 @@ const Popupss = (props) => {
 								<div className="dz-col col m-b30">
 									<div className="item-box shop-item style2">
 										<div className="item-img">
-											<Link><img src={require('./../../images/product/item3.jpg')} alt="" /></Link>
+											<Link><img src={burger} alt="" /></Link>
 										</div>
 										<div className="item-info text-center">
 											<h4 className="item-title"><Link to={'/shop-product-details'}>Cupcakes</Link></h4>
@@ -296,7 +296,7 @@ const Popupss = (props) => {
 								<div className="dz-col col m-b30">
 									<div className="item-box shop-item style2">
 										<div className="item-img">
-											<Link><img src={require('./../../images/product/item2.jpg')} alt="" /></Link>
+											<Link><img src={hoagie} alt="" /></Link>
 										</div>
 										<div className="item-info text-center">
 											<h4 className="item-title"><Link to={'/shop-product-details'}>Birthday Cake</Link></h4>
@@ -308,7 +308,7 @@ const Popupss = (props) => {
 								<div className="dz-col col m-b30">
 									<div className="item-box shop-item style2">
 										<div className="item-img">
-											<Link><img src={require('./../../images/product/item7.jpg')} alt="" /></Link>
+											<Link><img src={fries} alt="" /></Link>
 										</div>
 										<div className="item-info text-center">
 											<h4 className="item-title"><Link to={'/shop-product-details'}>Biscuits</Link></h4>
@@ -320,7 +320,7 @@ const Popupss = (props) => {
 								<div className="dz-col col m-b30">
 									<div className="item-box shop-item style2">
 										<div className="item-img">
-											<Link><img src={require('./../../images/product/item8.jpg')} alt="" /></Link>
+											<Link><img src={fries} alt="" /></Link>
 										</div>
 										<div className="item-info text-center">
 											<h4 className="item-title"><Link to={'/shop-product-details'}>Pancakes</Link></h4>
@@ -336,7 +336,7 @@ const Popupss = (props) => {
 								<div className="dz-col col m-b30">
 									<div className="item-box shop-item style2">
 										<div className="item-img">
-											<Link><img src={require('./../../images/product/item3.jpg')} alt="" /></Link>
+											<Link><img src={burger} alt="" /></Link>
 										</div>
 										<div className="item-info text-center">
 											<h4 className="item-title"><Link to={'/shop-product-details'}>Muffin</Link></h4>
@@ -348,7 +348,7 @@ const Popupss = (props) => {
 								<div className="dz-col col m-b30">
 									<div className="item-box shop-item style2">
 										<div className="item-img">
-											<Link><img src={require('./../../images/product/item4.jpg')} alt="" /></Link>
+											<Link><img src={steak} alt="" /></Link>
 										</div>
 										<div className="item-info text-center">
 											<h4 className="item-title"><Link to={'/shop-product-details'}>Pancakes</Link></h4>
@@ -360,7 +360,7 @@ const Popupss = (props) => {
 								<div className="dz-col col m-b30">
 									<div className="item-box shop-item style2">
 										<div className="item-img">
-											<Link><img src={require('./../../images/product/item6.jpg')} alt="" /></Link>
+											<Link><img src={burger} alt="" /></Link>
 										</div>
 										<div className="item-info text-center">
 											<h4 className="item-title"><Link to={'shop-product-details'}>Pumpkin cakes</Link>></h4>
@@ -372,7 +372,7 @@ const Popupss = (props) => {
 								<div className="dz-col col m-b30">
 									<div className="item-box shop-item style2">
 										<div className="item-img">
-											<Link><img src={require('./../../images/product/item8.jpg')} alt="" /></Link>
+											<Link><img src={fries} alt="" /></Link>
 										</div>
 										<div className="item-info text-center">
 											<h4 className="item-title"><Link to={'/shop-product-details'}>Muffin</Link></h4>
@@ -384,7 +384,7 @@ const Popupss = (props) => {
 								<div className="dz-col col m-b30">
 									<div className="item-box shop-item style2">
 										<div className="item-img">
-											<Link><img src={require('./../../images/product/item2.jpg')} alt="" /></Link>
+											<Link><img src={hoagie} alt="" /></Link>
 										</div>
 										<div className="item-info text-center">
 											<h4 className="item-title"><Link to={'/shop-product-details'}>Cupcakes</Link></h4>
@@ -401,7 +401,7 @@ const Popupss = (props) => {
 								<div className="dz-col col m-b30">
 									<div className="item-box shop-item style2">
 										<div className="item-img">
-											<Link><img src={require('./../../images/product/item3.jpg')} alt="" /></Link>
+											<Link><img src={burger} alt="" /></Link>
 										</div>
 										<div className="item-info text-center">
 											<h4 className="item-title"><Link to={'/shop-product-details'}>Muffin</Link></h4>
@@ -413,7 +413,7 @@ const Popupss = (props) => {
 								<div className="dz-col col m-b30">
 									<div className="item-box shop-item style2">
 										<div className="item-img">
-											<Link><img src={require('./../../images/product/item4.jpg')} alt="" /></Link>
+											<Link><img src={steak} alt="" /></Link>
 										</div>
 										<div className="item-info text-center">
 											<h4 className="item-title"><Link to={'/shop-product-details'}>Pancakes</Link></h4>
@@ -425,7 +425,7 @@ const Popupss = (props) => {
 								<div className="dz-col col m-b30">
 									<div className="item-box shop-item style2">
 										<div className="item-img">
-											<Link><img src={require('./../../images/product/item6.jpg')} alt="" /></Link>
+											<Link><img src={burger} alt="" /></Link>
 										</div>
 										<div className="item-info text-center">
 											<h4 className="item-title"><Link to={'/shop-product-details'}>Pumpkin cakes</Link></h4>
@@ -437,7 +437,7 @@ const Popupss = (props) => {
 								<div className="dz-col col m-b30">
 									<div className="item-box shop-item style2">
 										<div className="item-img">
-											<Link><img src={require('./../../images/product/item8.jpg')} alt="" /></Link>
+											<Link><img src={fries} alt="" /></Link>
 										</div>
 										<div className="item-info text-center">
 											<h4 className="item-title"><Link to={'/shop-product-details'}>Muffin</Link></h4>
@@ -449,7 +449,7 @@ const Popupss = (props) => {
 								<div className="dz-col col m-b30">
 									<div className="item-box shop-item style2">
 										<div className="item-img">
-											<Link><img src={require('./../../images/product/item2.jpg')} alt="" /></Link>
+											<Link><img src={hoagie} alt="" /></Link>
 										</div>
 										<div className="item-info text-center">
 											<h4 className="item-title"><Link to={'/shop-product-details'}>Cupcakes</Link></h4>
@@ -467,7 +467,7 @@ const Popupss = (props) => {
 								<div className="dz-col col m-b30">
 									<div className="item-box shop-item style2">
 										<div className="item-img">
-											<Link><img src={require('./../../images/product/item3.jpg')} alt="" /></Link>
+											<Link><img src={burger} alt="" /></Link>
 										</div>
 										<div className="item-info text-center">
 											<h4 className="item-title"><Link to={'/shop-product-details'}>Pancakes</Link></h4>
@@ -479,7 +479,7 @@ const Popupss = (props) => {
 								<div className="dz-col col m-b30">
 									<div className="item-box shop-item style2">
 										<div className="item-img">
-											<Link><img src={require('./../../images/product/item4.jpg')} alt="" /></Link>
+											<Link><img src={steak} alt="" /></Link>
 										</div>
 										<div className="item-info text-center">
 											<h4 className="item-title"><Link to={'/shop-product-details'}>Pumpkin cakes</Link></h4>
@@ -491,7 +491,7 @@ const Popupss = (props) => {
 								<div className="dz-col col m-b30">
 									<div className="item-box shop-item style2">
 										<div className="item-img">
-											<Link><img src={require('./../../images/product/item5.jpg')} alt="" /></Link>
+											<Link><img src={steak} alt="" /></Link>
 										</div>
 										<div className="item-info text-center">
 											<h4 className="item-title"><Link to={'/shop-product-details'}>Muffin</Link></h4>
@@ -503,7 +503,7 @@ const Popupss = (props) => {
 								<div className="dz-col col m-b30">
 									<div className="item-box shop-item style2">
 										<div className="item-img">
-											<Link><img src={require('./../../images/product/item5.jpg')} alt="" /></Link>
+											<Link><img src={steak} alt="" /></Link>
 										</div>
 										<div className="item-info text-center">
 											<h4 className="item-title"><Link to={'/shop-product-details'}>Cupcakes</Link></h4>
@@ -515,7 +515,7 @@ const Popupss = (props) => {
 								<div className="dz-col col m-b30">
 									<div className="item-box shop-item style2">
 										<div className="item-img">
-											<Link><img src={require('./../../images/product/item7.jpg')} alt="" /></Link>
+											<Link><img src={fries} alt="" /></Link>
 										</div>
 										<div className="item-info text-center">
 											<h4 className="item-title"><Link to={'/shop-product-details'}>Birthday Cake</Link></h4>
