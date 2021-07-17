@@ -199,7 +199,7 @@ class Ourmenustyle3 extends Component{
 
 						<div className="row sp0">
 							<div className="col-lg-6">
-								<img src={wings} alt="" className="img-cover" />
+								<img src={wings} alt="by Erik Mclean on Unsplash" className="img-cover" />
 							</div>
 							<div className="col-lg-6">
 								<div className="menu-box">
