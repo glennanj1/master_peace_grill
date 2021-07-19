@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-// import logo from './../../images/mpglogo2.png'
+import logo from './../../images/mpglogo2.png'
 // import hours from './../../images/icons/hours.png'
 
 
@@ -126,7 +126,7 @@ class Header2 extends Component{
 							
 							<div className="header-nav navbar-collapse collapse myNavbar justify-content-end" id="navbarNavDropdown" >
 								<div className="logo-header">
-									<Link to={"/"}><img src={require('./../../images/mpglogo2.png')} alt="" /> </Link>
+									<Link to={"/"}><img src={logo} alt="logo2" /> </Link>
 								</div>
 								<ul className="nav navbar-nav">	
 									<li><Link to={'/menu'}>Menu</Link></li>
