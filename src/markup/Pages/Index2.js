@@ -4,8 +4,8 @@ import Header2 from './../Layout/Header2';
 import Footer2 from './../Layout/Footer2';
 // import Tab from './../Pages/Tab';
 import Owl2 from './../Element/Owl2';
-import video from './../../images/steak_loop.mp4';
 
+const video = 'https://res.cloudinary.com/dhtfgw8nm/video/upload/v1626726307/steak_loop_dbepcp.mov'
 const onlineOrdering = 'https://onlineordering.rmpos.com/Order/?wci=54MBz6OB'
 const fb = 'https://www.facebook.com/pages/Masterpeace-Grill/844637945566646?fref=ts'
 const yelp = 'http://www.yelp.com/biz/masterpeace-grill-conshohocken-2'
