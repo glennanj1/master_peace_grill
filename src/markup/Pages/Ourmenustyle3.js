@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import Header2 from './../Layout/Header2';
 import Footer2 from './../Layout/Footer2';
-import video from './../../images/steak_loop.mp4';
 import catering from './../../images/menu/catering.jpg';
 import steak from './../../images/menu/steak.jpg';
 import burger from './../../images/menu/burger.jpg'
@@ -12,9 +11,9 @@ import sandwhich from './../../images/menu/sandwhich.jpg';
 import app from './../../images/menu/app.jpg';
 import wings from './../../images/menu/wings.jpg';
 import club from './../../images/menu/club1.jpg';
-// import grillCheese from './../../images/steak_loop.mp4';
 import salad from './../../images/menu/salad.jpg';
 import grilledCheese from './../../images/food/grilled_cheese.jpg';
+import bg from './../../images/background/outdoor_bg.jpg'
 
 const onlineOrdering = 'https://onlineordering.rmpos.com/Order/?wci=54MBz6OB'
 const fb = 'https://www.facebook.com/pages/Masterpeace-Grill/844637945566646?fref=ts'
@@ -32,14 +31,9 @@ class Ourmenustyle3 extends Component{
 			<Header2 facebook={fb} yelp={yelp} online={onlineOrdering} /> 
 			
 			<div className="page-content bg-white">
-				<video className='videoPlayer' style={{position: 'fixed', overflow: 'hidden'}} autoPlay loop playsInline muted>
-					<source src={video} type='video/mp4' />
-				</video>
-
-				
 				
 				<div className="dlab-bnr-inr overlay-black-middle no-line">
-					<div className="container">
+					<div className="container" style={{backgroundImage: `url(${bg})`}}>
 						<div className="dlab-bnr-inr-entry">
 							<h1 className="text-white">Full Menu</h1>
 							<div className="breadcrumb-row">
@@ -151,14 +145,14 @@ class Ourmenustyle3 extends Component{
 											<div className="info-price">
 												<h5 className="title">Buffalo Chicken Tenders (3pc) <h6>Tossed in hot or mild sauce with choice of Ranch or Blue Cheese)</h6></h5>
 												<div className="line"></div>
-												<span className="price">5.49</span>
+												<span className="price">5.99</span>
 											</div>
 										</li>
 										<li>
 											<div className="info-price">
 												<h5 className="title">Buffalo Chicken Tenders (5pc) <h6>Tossed in hot or mild sauce with choice of Ranch or Blue Cheese)</h6></h5>
 												<div className="line"></div>
-												<span className="price">8.49</span>
+												<span className="price">8.99</span>
 											</div>
 										</li>
 										<li>
@@ -423,7 +417,7 @@ class Ourmenustyle3 extends Component{
 											<div className="info-price">
 												<h5 className="title">Cuban Club</h5>
 												<div className="line"></div>
-												<span className="price">9.49</span>
+												<span className="price">9.99</span>
 											</div>
 											<p>Pulled Pork, Black Forrest Ham, cheese, pickles, mustard, ham and swiss</p>
 										</li>
@@ -431,7 +425,7 @@ class Ourmenustyle3 extends Component{
 											<div className="info-price">
 												<h5 className="title">Chicken Tender Club</h5>
 												<div className="line"></div>
-												<span className="price">9.49</span>
+												<span className="price">9.99</span>
 											</div>
 											<p> Honey mustard, bacon and American cheese</p>
 										</li>
@@ -462,6 +456,8 @@ class Ourmenustyle3 extends Component{
 										<p>
 											<b>Pick Your Meat</b> - Beef Steak of Chicken Steak<br />
 											<b>Pick 1 Cheese</b> - American, Provolone, Swiss, Cheddar, Wiz, Mozzerella<br /> 
+											<b>Pick a Spread</b> - Mayo, Southwest Spread, Mustard, Spicy Mustard, Honey Mustard, Ranch, Hot Sauce, Humus<br />
+											<b>Pick Your Veggies</b> - Lettuce, Tomato, Onion, Roasted Peppers, Mushroom, Hot Peppers, Sweet Pepper, Pickle, Cole Slaw<br />
 											(Extra Cheese Add $1)
 											(Extra Pepperoni Add $1)
 										</p>
@@ -575,6 +571,7 @@ class Ourmenustyle3 extends Component{
 										Served On A Fresh Liscio's Roll<br />
 										<b>PICK 1 PROTEIN</b> - turkey, ham, roast beef, tuna salad, chicken salad, grilled chicken, chicken tenders<br />
 										<b>PICK 1 CHEESE</b> - American, provolone, swiss, cheddar, mozzarella PICK YOUR SPREADS - mayo, southwest spread, mustard, spicy mustard, honey mustard, oil, vinegar, ranch <br />
+										<b>Pick a Spread</b> - Mayo, Southwest Spread, Mustard, Spicy Mustard, Honey Mustard, Ranch, Hot Sauce, Humus<br />
 										<b>PICK YOUR VEGGIES</b> - lettuce, tomato, onion, roasted peppers,sweet pepper, hot pepper, pickle, cole slaw<br />
 										ADD LONG HOTS - $1.00
 										</p>
@@ -737,7 +734,8 @@ class Ourmenustyle3 extends Component{
 								<div className="menu-box">
 								<div className="section-head style-2">
 									<h2 className="title">Grilled Cheese $4.99</h2>
-									<h4 className="sub-title">Build Your Own $7.49</h4>
+									<p>Your choice of White, Wheat or Rye</p>
+									<h2 className="title">Build Your Own $7.49</h2>
 									<p>
 									Served On Your choice Of White, Wheat or Rye Bread <br />
 									 <b>PICK 1 PROTEIN</b> - turkey, ham, bacon, roast beef <br />
@@ -796,36 +794,27 @@ class Ourmenustyle3 extends Component{
 										</li>
 										<li>
 											<div className="info-price">
-												<h5 className="title">Ceasar Salad</h5>
+												<h5 className="title">Small Caesar Salad</h5>
 												<div className="line"></div>
-												<span className="price">40.00</span>							
+												<span className="price">50.00</span>							
 											</div>
-											<p>crisp romain with croutons parmesan cheese and dressing on the side</p>
+											<p>crisp romain with croutons parmesan cheese and dressing on the side <h6>(add chicken for $20.00)</h6></p>
 										</li>
 										<li>
 											<div className="info-price">
-												<h5 className="title">Chicken Ceasar Salad</h5>
+												<h5 className="title">Large Ceasar Salad</h5>
 												<div className="line"></div>
-												<span className="price">60.00</span>							
+												<span className="price">75.00</span>							
 											</div>
-											<p>crisp romain with croutons parmesan cheese and dressing on the side</p>
+											<p>crisp romain with croutons parmesan cheese and dressing on the side <h6>(add chicken for $40.00)</h6></p>
 										</li>
 										<li>
 											<div className="info-price">
 												<h5 className="title">Small Garden Salad</h5>
 												<div className="line"></div>
-												<span className="price">50.00</span>							
+												<span className="price">60.00</span>							
 											</div>
-											<p>crisp romain with croutons parmesan cheese and dressing on the side</p>
-											
-										</li>
-										<li>
-											<div className="info-price">
-												<h5 className="title">Small Chicken Garden Salad</h5>
-												<div className="line"></div>
-												<span className="price">65.00</span>							
-											</div>
-											<p>crisp romain with croutons parmesan cheese and dressing on the side</p>
+											<p>crisp romain with croutons parmesan cheese and dressing on the side <h6>(add chicken for $20.00)</h6></p>
 											
 										</li>
 										<li>
@@ -834,16 +823,7 @@ class Ourmenustyle3 extends Component{
 												<div className="line"></div>
 												<span className="price">80.00</span>						
 											</div>
-											<p>crisp romain with croutons parmesan cheese and dressing on the side</p>
-											
-										</li>
-										<li>
-											<div className="info-price">
-												<h5 className="title">Large Chicken Garden Salad</h5>
-												<div className="line"></div>
-												<span className="price">120.00</span>						
-											</div>
-											<p>crisp romain with croutons parmesan cheese and dressing on the side</p>
+											<p>crisp romain with croutons parmesan cheese and dressing on the side <h6>(add chicken for $40.00)</h6></p>
 											
 										</li>
 										<li>
