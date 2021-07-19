@@ -1,6 +1,11 @@
 /*==========================
 	Custom css
 ==========================*/
+
+.videoPlayer {
+	background: #e7272d;
+}
+
 .catering {
 	font-size: 30px;
 	letter-spacing: 15px;
@@ -117,8 +122,7 @@
 	text-align: center;
 	letter-spacing: 0px;
 	padding-top: 70px;
-	text-shadow: 10px 10px black;
-}
+	text-shadow: 6px 3px black;}
 .banner .info{
 	font-size: 30px;
 	font-family: Barlow, sans-serif;
@@ -2286,7 +2290,6 @@ td.fc-event-container {
 	}
 	.videoPlayer {
 		width: 100%;
-		background-image: url('https://media.giphy.com/media/3o7Zeqm2M3rCWdounC/giphy.gif');
 	}
 	.pizza-header  .is-fixed .main-bar{
 		background:#e7272d;
@@ -2389,8 +2392,7 @@ td.fc-event-container {
 	.banner .title{
 	    font-size: 80px;
 	    line-height: 1.1;
-		text-shadow: 10px 10px black;	
-	}
+		text-shadow: 6px 3px black;	}
 	.main-slider .sub-title{
 	    font-size: 18px;
 		margin-top: 10px;
@@ -2555,6 +2557,7 @@ td.fc-event-container {
 	.banner .title {
 		font-size: 50px;
 		line-height: 1.1;
+		text-shadow: 6px 3px black;
 	}
 	
 	.header-nav .logo-header {
@@ -2622,7 +2625,8 @@ td.fc-event-container {
 	}
 	.videoPlayer {
 		height: 100vh;
-		background-image: url('https://media.giphy.com/media/3o7Zeqm2M3rCWdounC/giphy.gif');
+		background: #e7272d;
+
 		
 	}
 	.section-head .text-bold,
@@ -2940,6 +2944,7 @@ td.fc-event-container {
 	.banner .title{
 		font-size: 34px;
 		line-height: 1.1;
+		text-shadow: 6px 3px black;
 	}
 	.main-slider .content span {
 		font-size: 16px;
@@ -2960,9 +2965,9 @@ td.fc-event-container {
 		width: 120px;
 	} 
 
-	.logo-header img {
+	/* .logo-header img {
 		display: none;
-	}
+	} */
 	.header-style-2 .main-bar:after{
 	    bottom: -5px;
 		width: 100%;
