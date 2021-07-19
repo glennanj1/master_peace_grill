@@ -13,3 +13,7 @@ Food brings people together. Visit 534 Fayette Street, Conshohocken, PA for a gr
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/bff4948a-056b-4416-b612-dee66dd5c600/deploy-status)](https://app.netlify.com/sites/masterpeacegrill/deploys)
 
+
+# Menu Cover Photo Credit
+Photo by <a href="https://freeimages.com/photographer/kalierin-47962">Erin Calaway</a> from <a href="https://freeimages.com">FreeImages</a>
+

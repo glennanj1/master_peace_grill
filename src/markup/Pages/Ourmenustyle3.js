@@ -13,7 +13,7 @@ import wings from './../../images/menu/wings.jpg';
 import club from './../../images/menu/club1.jpg';
 import salad from './../../images/menu/salad.jpg';
 import grilledCheese from './../../images/food/grilled_cheese.jpg';
-import bg from './../../images/background/outdoor_bg.jpg'
+import bg from './../../images/background/rainbow.jpeg'
 
 const onlineOrdering = 'https://onlineordering.rmpos.com/Order/?wci=54MBz6OB'
 const fb = 'https://www.facebook.com/pages/Masterpeace-Grill/844637945566646?fref=ts'
@@ -32,8 +32,8 @@ class Ourmenustyle3 extends Component{
 			
 			<div className="page-content bg-white">
 				
-				<div className="dlab-bnr-inr overlay-black-middle no-line">
-					<div className="container" style={{backgroundImage: `url(${bg})`}}>
+				<div className="dlab-bnr-inr overlay-black-middle no-line" style={{backgroundImage: `url(${bg})`, backgroundSize: 'cover'}}>
+					<div className="container">
 						<div className="dlab-bnr-inr-entry">
 							<h1 className="text-white">Full Menu</h1>
 							<div className="breadcrumb-row">
