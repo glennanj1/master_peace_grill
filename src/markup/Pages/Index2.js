@@ -4,9 +4,8 @@ import Header2 from './../Layout/Header2';
 import Footer2 from './../Layout/Footer2';
 // import Tab from './../Pages/Tab';
 import Owl2 from './../Element/Owl2';
+import video from './../../images/steak_loop.mp4';
 
-
-const img1 = 'https://media.giphy.com/media/xTiTnzZ9pJEyf7jPfq/giphy.gif';
 const onlineOrdering = 'https://onlineordering.rmpos.com/Order/?wci=54MBz6OB'
 const fb = 'https://www.facebook.com/pages/Masterpeace-Grill/844637945566646?fref=ts'
 const yelp = 'http://www.yelp.com/biz/masterpeace-grill-conshohocken-2'
@@ -25,13 +24,20 @@ class Index2 extends Component{
 	render(){
 		return(
 			<div>
+				
 				<div className="page-wraper font-barlow">
+
+					<video className='videoPlayer' style={{position: 'fixed', overflow: 'hidden'}} autoPlay loop playsInline muted>
+						<source src={video} type='video/mp4' />
+					</video>
+				
 					
 					<Header2 facebook={fb} yelp={yelp} online={onlineOrdering}/>
 					
-					<Banner online={onlineOrdering}/>					
+					<Banner online={onlineOrdering}/>	
+
 						 					
-					<div className="section-full content-inner bg-white fixedVideo" style={{backgroundImage:"url(" + img1 + ")", backgroundSize: 'cover'}}>
+					<div className="section-full content-inner fixedVideo" style={{backgroundColor: '#fffcfc00!important'}}>
 						
 					</div>	
 				

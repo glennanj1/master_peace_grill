@@ -2286,7 +2286,7 @@ td.fc-event-container {
 
 @media only screen and (min-width: 991px){
 	.fixedVideo {
-		padding: 250px;
+		padding: 200px;
 	}
 	.videoPlayer {
 		width: 100%;
@@ -2449,6 +2449,9 @@ td.fc-event-container {
 }
 
 @media only screen and (max-width: 991px){
+	.fixedVideo {
+		height: 475px;
+	}
 	.pizza-header .header-nav{
 		width: 280px;
 	}
@@ -2626,8 +2629,6 @@ td.fc-event-container {
 	.videoPlayer {
 		height: 100vh;
 		background: #e7272d;
-
-		
 	}
 	.section-head .text-bold,
 	.about-area1 .about-bx .section-head p,
@@ -2834,6 +2835,11 @@ td.fc-event-container {
 }
 
 @media only screen and (max-width: 591px){
+	.videoPlayer {
+		height: 100vh;
+		background: #e7272d;
+		left: -300px;
+	}
 	.fixedVideo {
 		height: 475px;
 	}
