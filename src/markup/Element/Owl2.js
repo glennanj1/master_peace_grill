@@ -29,7 +29,7 @@ const responsive = {
 class Owl2 extends Component{	
 	
 	componentDidMount(){
-		fetch('http://localhost:3000/reviews')
+		fetch('https://top-sports-book-rails.herokuapp.com/reviews')
 		.then(response => response.json())
 		.then(json => this.setState({data: [...json]}));
 	}
