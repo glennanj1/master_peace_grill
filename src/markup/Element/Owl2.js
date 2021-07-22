@@ -45,7 +45,7 @@ class Owl2 extends Component{
 			<div className="testimonial-detail"> <strong className="testimonial-name">{r.name}</strong> <span className="testimonial-position">Customer</span> </div>
 			<div className="testimonial-text">
 				<p>{r.text}</p>
-				<p><a href={r.url}>Link</a></p>
+				<button className="btn red"><a style={{color: 'white'}} href={r.url}>Review</a></button>
 			</div>
 
 		</div>)
