@@ -20,7 +20,7 @@ class Footer2 extends Component{
 									</ul>
 								</div>
 								<p className="copyright">Copyright © 2021 MasterPeaceGrill All Rights Reserved.</p>
-								<p className="copyright">Site Made by Glennan</p>
+								<p className="copyright">Site Made by <a href="https://johng.netlify.app">Glennan</a></p>
 								<ul className="dlab-social-icon">
 									<li><a href={this.props.facebook} className="btn white outline circle mr-1"><i className="fa fa-facebook"></i></a></li>
 									<li><a href={this.props.yelp} className="btn white outline circle mr-1"><i className="fa fa-yelp"></i></a></li>
