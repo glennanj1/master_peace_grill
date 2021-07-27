@@ -2343,7 +2343,12 @@ td.fc-event-container {
 	
 }
 
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: 1280px){
+	.img-cover{
+		object-fit: scale-down;
+		width: 100%;
+		height: 100%;
+	}
 	.pizza-header .header-nav{
 		width: 100%;
 	}
