@@ -17,20 +17,70 @@ class Index2 extends Component{
 		window.scrollTo(0, 0)
 	}
 
+
 	onSubmit = (e) => {
 		e.preventDefault();
+		const config =  {
+			method: 'POST',
+			headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({mpg_email: {
+				email: this.state.email
+				}
+			})
+		}
+		fetch('https://masterpeacegrill.netlify.app/mpg_emails', config)
+		.then(r => r.json())
+		.then(data => this.setState({status: data.status}))
+		.catch(err => console.log(err))
+		e.target.reset()
+	}
+
+	onChange = (e) => {
+		this.setState({ email: e.target.value });
+	}
+
+	state = { 
+		email: '',
+		status: ''
+	}
+
+	status = () => {
+		if (this.state.status === 'success') {
+			setTimeout(() => { 
+				this.setState({ status: '' })
+			}, 8000)
+			return (
+				<div className="alert alert-success" role="alert">
+					<strong>Success!</strong> You have been added to the mailing list.
+				</div>
+			)
+			
+		} else if (this.state.status === 'error') {
+			setTimeout(() => { 
+				this.setState({ status: '' })
+			}, 8000)
+			return (
+				<div className="alert alert-danger" role="alert">
+					<strong>Error!</strong> There was an error adding you to the mailing list.
+				</div>
+			)
+		} else {
+			return (
+				<div></div>
+			)
+		}
 	}
 
 	render(){
 		return(
 			<div>
-				
 				<div className="page-wraper font-barlow">
-
 					<video className='videoPlayer' style={{position: 'fixed', overflow: 'hidden'}} autoPlay loop playsInline muted>
 						<source src={video} type='video/mp4' />
 					</video>
-				
 					
 					<Header2 facebook={fb} yelp={yelp} online={onlineOrdering}/>
 					
@@ -38,19 +88,18 @@ class Index2 extends Component{
 
 						 					
 					<div className="section-full content-inner fixedVideo" style={{backgroundColor: '#fffcfc00!important'}}>
-						
 					</div>	
-				
 					<Owl2 />
 					
 					<div className="section-full bg-red p-tb50 newslatter-area">
+					{this.status()}
 						<div className="container">
 							<div className="row align-items-center">
 								<div className="col-md-6 text-white">
 									<h5 className="m-b0">Love CheeseSteaks? Like deals? Be the first to know about our newest menu items and latest offers.</h5>
 								</div>
 								<div className="col-md-6">
-									<form className="dzSubscribe newslatter" onSubmit={this.onSubmit}>
+									<form className="dzSubscribe newslatter" onChange={this.onChange} onSubmit={this.onSubmit}>
 										<div className="dzSubscribeMsg"></div>
 										<div className="input-group">
 											<input name="dzEmail" required="required" type="email" className="form-control" placeholder="Your Email"/>
