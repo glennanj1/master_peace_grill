@@ -2182,7 +2182,9 @@ li:last-child .item-icon-box:after{
     border-radius: 0 40px 40px 0;
 }
 .pizza-footer{
-	background:#2c2c2c;
+	background:#2c2c2ce3;
+	position: absolute;
+	width: 100%;
 }
 .pizza-footer .dlab-social-icon li a{
     width: 40px;
