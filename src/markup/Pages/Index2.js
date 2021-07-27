@@ -31,7 +31,7 @@ class Index2 extends Component{
 				}
 			})
 		}
-		fetch('https://masterpeacegrill.netlify.app/mpg_emails', config)
+		fetch('https://top-sports-book-rails.herokuapp.com/mpg_emails', config)
 		.then(r => r.json())
 		.then(data => this.setState({status: data.status}))
 		.catch(err => console.log(err))
