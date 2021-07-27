@@ -10,7 +10,7 @@ class Footer2 extends Component{
 						<div className="row">
 							<div className="col-md-12">
 								<div className="logo-footer">
-									<Link to={"./"}><img src={require("./../../images/mpgLogo.png")} alt="" /> </Link>
+									<Link to={"./"}><img src={require("./../../images/mpgLogo.png")} alt="logo" /> </Link>
 								</div>
 								<div className="widget-link"> 
 									<ul>

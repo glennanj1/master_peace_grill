@@ -52,7 +52,6 @@ class Owl2 extends Component{
 	}
 
 	render(){
-		console.log(this.state.data);
 		return(
 			<div className="section-full bg-white content-inner-2" style={{backgroundImage:"url(" + img + " )" }}>
 				<div className="container">
