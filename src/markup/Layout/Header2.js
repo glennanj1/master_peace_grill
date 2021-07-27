@@ -81,7 +81,7 @@ class Header2 extends Component{
 												{this.state.isOpen && (
 													<div className="hoursContainer">
 														<h4>Monday: Closed</h4><br />
-														<h4>Tuesday: 11am - 4pm</h4><br />
+														<h4>Tuesday: 11am - 3pm</h4><br />
 														<h4>Wednesday - Saturday: 11am - 9pm</h4><br />
 														<h4>Sunday: 11am - 8pm</h4>
 													</div>
