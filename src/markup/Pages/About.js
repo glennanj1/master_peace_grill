@@ -6,6 +6,8 @@ import {Link} from 'react-router-dom';
 import CountUp from 'react-countup';
 import Header2 from './../Layout/Header2'
 import Footer2 from './../Layout/Footer2'
+import VisibilitySensor from 'react-visibility-sensor';
+
 
 
 var img1 = 'https://media.giphy.com/media/C0Asg9I511EHe/giphy.gif';
@@ -16,35 +18,27 @@ const onlineOrdering = 'https://onlineordering.rmpos.com/Order/?wci=54MBz6OB'
 const fb = 'https://www.facebook.com/pages/Masterpeace-Grill/844637945566646?fref=ts'
 const yelp = 'http://www.yelp.com/biz/masterpeace-grill-conshohocken-2'
 
-
-// const teamInfo = [
-// 	{
-// 		image: require('./../../images/our-team/member1.jpg'), 	
-// 		name :	'Nashid Martines',
-// 		post : 	'Founder',
-// 	},
-// 	{
-// 		image: require('./../../images/our-team/member2.jpg'), 	
-// 		name :	'Konne Backfiled',
-// 		post : 	'Sous Chef',
-// 	},
-// 	{
-// 		image: require('./../../images/our-team/member3.jpg'), 	
-// 		name :	'Valentino Morose',
-// 		post : 	'Ceo & Founder',
-// 	},
-// 	{
-// 		image: require('./../../images/our-team/member4.jpg'), 	
-// 		name :	'Hackson Willingham',
-// 		post : 	'Master Chef',
-// 	},
-// ]	
 	
 class About extends Component{
 
 	componentDidMount() {
 		window.scrollTo(0, 0)
 	}
+
+	state = {
+		didViewCountUp: false
+	}
+
+	onVisibilityChange = (isVisible) => {
+
+        if (isVisible) {
+            this.setState({ didViewCountUp: true });
+        }
+    }
+ 
+
+
+
 
 	render(){
 		return(
@@ -115,10 +109,15 @@ class About extends Component{
 								</div>
 							</div>
 							<div className="row max-w900 m-auto">
+
 								<div className="col-lg-3 col-md-6 col-sm-6 col-6 m-b30">
 									<div className="counter-style-1 text-white text-center">
 										<div className="counter-num">
-											<span className="counter"><CountUp duration={5} end={40} /></span>
+											<span className="counter">
+												<VisibilitySensor scrollCheck={true} onChange={this.onVisibilityChange} delayedCall>
+													<CountUp duration={5} end={this.state.didViewCountUp ? 40 : 0} />
+												</VisibilitySensor>
+											</span>
 											<small>+</small>
 										</div>
 										<span className="counter-text">Years of Experience</span>
@@ -127,7 +126,11 @@ class About extends Component{
 								<div className="col-lg-3 col-md-6 col-sm-6 col-6 m-b30">
 									<div className="counter-style-1 text-white text-center">
 										<div className="counter-num">
-											<span className="counter"><CountUp duration={5} end={4} /></span>
+											<span className="counter">
+												<VisibilitySensor scrollCheck={true} onChange={this.onVisibilityChange} delayedCall>
+													<CountUp duration={5} end={this.state.didViewCountUp ? 7 : 0} />
+												</VisibilitySensor>
+											</span>
 										</div>
 										<span className="counter-text">Awards Won</span>
 									</div>
@@ -135,16 +138,24 @@ class About extends Component{
 								<div className="col-lg-3 col-md-6 col-sm-6 col-6 m-b30">
 									<div className="counter-style-1 text-white text-center">
 										<div className="counter-num">
-											<span className="counter"><CountUp duration={5} end={1000} /></span>
-
+											<span className="counter">
+												<VisibilitySensor scrollCheck={true} onChange={this.onVisibilityChange} delayedCall>
+													<CountUp duration={5} end={this.state.didViewCountUp ? 1000 : 0} separator={","}/>
+												</VisibilitySensor>
+											</span>
+											
 										</div>
-										<span className="counter-text">Happy Clients</span>
+										<span className="counter-text">+ Happy Clients</span>
 									</div>
 								</div>
 								<div className="col-lg-3 col-md-6 col-sm-6 col-6 m-b30">
 									<div className="counter-style-1 text-white text-center">
 										<div className="counter-num">
-											<span className="counter"><CountUp duration={5} end={4} /></span>
+											<span className="counter">
+												<VisibilitySensor scrollCheck={true} onChange={this.onVisibilityChange} delayedCall>
+													<CountUp duration={5} end={this.state.didViewCountUp ? 4.7 : 0} decimal={'.'} decimals={1} />
+												</VisibilitySensor>
+											</span>
 										</div>
 										<span className="counter-text">Stars on Yelp</span>
 									</div>
