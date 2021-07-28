@@ -16,19 +16,19 @@ const fb = 'https://www.facebook.com/pages/Masterpeace-Grill/844637945566646?fre
 const yelp = 'http://www.yelp.com/biz/masterpeace-grill-conshohocken-2'
 
 
-state = {
-	didViewCountUp: false
-}
 
-onVisibilityChange = (isVisible) => {
-
-	if (isVisible) {
-		this.setState({ didViewCountUp: true });
-	}
-}
-	
 class About extends Component{
-
+	
+	state = {
+		didViewCountUp: false
+	}
+	
+	onVisibilityChange = (isVisible) => {
+	
+		if (isVisible) {
+			this.setState({ didViewCountUp: true });
+		}
+	}
 	componentDidMount() {
 		window.scrollTo(0, 0)
 	}
