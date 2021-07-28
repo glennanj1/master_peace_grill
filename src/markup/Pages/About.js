@@ -118,7 +118,7 @@ class About extends Component{
 								<div className="col-lg-3 col-md-6 col-sm-6 col-6 m-b30">
 									<div className="counter-style-1 text-white text-center">
 										<div className="counter-num">
-											<span className="counter"><CountUp end={40} /></span>
+											<span className="counter"><CountUp duration={5} end={40} /></span>
 											<small>+</small>
 										</div>
 										<span className="counter-text">Years of Experience</span>
@@ -127,7 +127,7 @@ class About extends Component{
 								<div className="col-lg-3 col-md-6 col-sm-6 col-6 m-b30">
 									<div className="counter-style-1 text-white text-center">
 										<div className="counter-num">
-											<span className="counter"><CountUp end={4} /></span>
+											<span className="counter"><CountUp duration={5} end={4} /></span>
 										</div>
 										<span className="counter-text">Awards Won</span>
 									</div>
@@ -135,8 +135,8 @@ class About extends Component{
 								<div className="col-lg-3 col-md-6 col-sm-6 col-6 m-b30">
 									<div className="counter-style-1 text-white text-center">
 										<div className="counter-num">
-											<span className="counter"><CountUp end={1} /></span>
-											<small>k</small>
+											<span className="counter"><CountUp duration={5} end={1000} /></span>
+
 										</div>
 										<span className="counter-text">Happy Clients</span>
 									</div>
@@ -144,8 +144,7 @@ class About extends Component{
 								<div className="col-lg-3 col-md-6 col-sm-6 col-6 m-b30">
 									<div className="counter-style-1 text-white text-center">
 										<div className="counter-num">
-											<span className="counter"><CountUp end={4} /></span>
-											
+											<span className="counter"><CountUp duration={5} end={4} /></span>
 										</div>
 										<span className="counter-text">Stars on Yelp</span>
 									</div>
@@ -153,52 +152,6 @@ class About extends Component{
 							</div>
 						</div>
 					</div>
-					{/* <div className="section-full content-inner-1 bg-white"  style={{backgroundImage:"url(" + img2 + ")" }}>
-						 <div className="container">
-							<div className="row">
-								<div className="col-lg-12">
-									<div className="section-head text-center">
-										<h3>Our Expert Chefs</h3>
-										<p>Meet our professional team meambers</p>
-									</div>
-								</div>
-							</div>
-							<div className="row">
-								{teamInfo.map((item,index) =>(
-								
-								<div className="col-lg-3 col-md-6 col-sm-6 m-b30">
-									<div className="dlab-team1" key={index}>
-										<div className="thumb" >
-											<img src={item.image} alt="" />
-											<ul className="social-link">
-												<li><Link to = {''}><i className="fa fa-facebook"></i></Link></li>
-												<li><Link to = {''}><i className="fa fa-twitter"></i></Link></li>
-											</ul>
-										</div>
-										<div className="team-info text-center">
-											<h4 className="name">{item.name}</h4>
-											<p className="position">{item.post}</p>
-										</div>
-									</div>
-								</div>
-								))}
-								
-							</div>
-						</div>	
-						<div className="p-tb50">
-							<div className="container">	
-								<div class="row">
-									<div class="col-lg-12">
-										<div class="section-head text-center">
-											<h3>Our PARTNERS</h3>
-											<p>famous companies trusted us, why you are not</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<OurPartners />
-						</div> 
-					</div> */}
 				</div>
 			</div>	
 			<Footer2 facebook={fb} yelp={yelp}/>
