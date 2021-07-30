@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
-var img =require('./../../images/overlay/pt1.jpg');
+const img =require('./../../images/overlay/pt1.jpg');
+const img2 =require('./../../images/default_user_pic.png');
 
 
 const responsive = {
@@ -40,8 +41,8 @@ class Owl2 extends Component{
 
 	loadReviews = () => {
 		return this.state.data.map(r => 
-		<div className="testimonial-1">
-			<div className="testimonial-pic radius"><img src={r.image_url} style={{width:"100%", height:"100%"}} alt="profile picture" /></div>< br/>
+		<div key={r.id} className="testimonial-1">
+			<div className="testimonial-pic radius"><img src={r.image_url !== null ? r.image_url : img2 } style={{width:"100%", height:"100%"}} alt="profile" /></div>< br/>
 			<div className="testimonial-detail"> <strong className="testimonial-name">{r.name}</strong> <span className="testimonial-position">Customer</span> </div>
 			<div className="testimonial-text">
 				<p>{r.text}</p>
