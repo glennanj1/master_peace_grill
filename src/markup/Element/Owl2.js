@@ -41,7 +41,7 @@ class Owl2 extends Component{
 	loadReviews = () => {
 		return this.state.data.map(r => 
 		<div className="testimonial-1">
-			<div className="testimonial-pic radius"><img src={r.image_url} style={{width:"100%", height:"100%"}} alt="{r.name}" /></div>< br/>
+			<div className="testimonial-pic radius"><img src={r.image_url} style={{width:"100%", height:"100%"}} alt="profile picture" /></div>< br/>
 			<div className="testimonial-detail"> <strong className="testimonial-name">{r.name}</strong> <span className="testimonial-position">Customer</span> </div>
 			<div className="testimonial-text">
 				<p>{r.text}</p>
