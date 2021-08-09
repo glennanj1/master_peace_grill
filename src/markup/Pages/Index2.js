@@ -78,7 +78,7 @@ class Index2 extends Component{
 		return(
 			<div>
 				<div className="page-wraper font-barlow">
-					<video className='videoPlayer' style={{position: 'fixed', overflow: 'hidden'}} autoPlay loop playsInline muted>
+					<video className='videoPlayer' style={{position: 'fixed', overflow: 'hidden'}} autoPlay playsInline muted>
 						<source src={video} type='video/mp4' />
 					</video>
 					
