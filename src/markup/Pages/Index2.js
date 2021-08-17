@@ -5,7 +5,7 @@ import Footer2 from './../Layout/Footer2';
 // import Tab from './../Pages/Tab';
 import Owl2 from './../Element/Owl2';
 
-const video = 'https://media.giphy.com/media/pEtPlteqEFqqmf8Mrh/giphy.gif'
+const video = 'https://d3ddatyom1hv87.cloudfront.net/steak_final.mp4'
 const onlineOrdering = 'https://onlineordering.rmpos.com/Order/?wci=54MBz6OB'
 const fb = 'https://www.facebook.com/pages/Masterpeace-Grill/844637945566646?fref=ts'
 const yelp = 'http://www.yelp.com/biz/masterpeace-grill-conshohocken-2'
@@ -78,10 +78,9 @@ class Index2 extends Component{
 		return(
 			<div>
 				<div className="page-wraper font-barlow">
-					<img src={video} className="videoPlayer" style={{position: 'fixed', overflow: 'hidden'}} alt="steak" />
-					{/* <video className='videoPlayer' style={{position: 'fixed', overflow: 'hidden'}} autoPlay loop playsInline muted>
+					<video className='videoPlayer' style={{position: 'fixed', overflow: 'hidden'}} autoPlay loop playsInline muted>
 						<source src={video} type='video/mp4' />
-					</video> */}
+					</video>
 					
 					<Header2 facebook={fb} yelp={yelp} online={onlineOrdering}/>
 					
