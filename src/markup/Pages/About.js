@@ -131,7 +131,7 @@ class About extends Component{
 										<div className="counter-num">
 											<span className="counter">
 												<VisibilitySensor scrollCheck={true} onChange={this.onVisibilityChange} delayedCall>
-													<CountUp duration={5} end={this.state.didViewCountUp ? 1000 : 0} separator={","}/>
+													<CountUp duration={5} end={this.state.didViewCountUp ? 2000 : 0} separator={","}/>
 												</VisibilitySensor>
 											</span>
 
