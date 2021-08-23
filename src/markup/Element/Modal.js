@@ -23,7 +23,6 @@ export default class Modal extends React.Component {
 
   render() {
 
-    const grateful = 'https://d3ddatyom1hv87.cloudfront.net/grateful.mp4'
     return (
         <div>
             {this.state.isOpen ? (
