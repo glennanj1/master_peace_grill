@@ -2185,6 +2185,8 @@ li:last-child .item-icon-box:after{
 .testimonial-1 .testimonial-pic{
 	width: 90px;
     height: 90px;
+	border: solid;
+	border: black;
 }
 .testimonial-1 .testimonial-text p{
 	font-size: 28px;
