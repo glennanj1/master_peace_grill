@@ -3040,9 +3040,8 @@ td.fc-event-container {
 
 @media only screen and (max-width: 591px){
 	.videoPlayer {
-		height: 100vh;
-		background: #e7272d;
-		left: -300px;
+		width: 100vw;
+		background: url('https://media3.giphy.com/media/pEtPlteqEFqqmf8Mrh/giphy.gif');
 	}
 	.fixedVideo {
 		height: 475px;
