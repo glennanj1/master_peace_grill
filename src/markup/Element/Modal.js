@@ -32,8 +32,7 @@ export default class Modal extends React.Component {
                         <h4 className="__text">Thank you for your understanding.</h4>
                         <button className="__button" onClick={this.toggleModal}>Close</button>
                     </div>
-                </div> ) : null}
-            
+                </div> ) : null}      
         </div>
     )}
 }
