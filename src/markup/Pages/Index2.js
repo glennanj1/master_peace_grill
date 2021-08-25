@@ -13,10 +13,20 @@ const yelp = 'http://www.yelp.com/biz/masterpeace-grill-conshohocken-2'
 
 class Index2 extends Component{
 
-	componentDidMount() {
-		window.scrollTo(0, 0)
+	state = { 
+		email: '',
+		status: '',
+		isMobile: false
 	}
 
+	componentDidMount() {
+		window.scrollTo(0, 0);
+		this.updateViewPort();
+	}
+
+	updateViewPort = () => {
+		this.setState({ isMobile: window.innerWidth <= 480})
+	}
 
 	onSubmit = (e) => {
 		e.preventDefault();
@@ -42,10 +52,7 @@ class Index2 extends Component{
 		this.setState({ email: e.target.value });
 	}
 
-	state = { 
-		email: '',
-		status: ''
-	}
+	
 
 	status = () => {
 		if (this.state.status === 'success') {
@@ -74,13 +81,22 @@ class Index2 extends Component{
 		}
 	}
 
+
 	render(){
 		return(
 			<div>
 				<div className="page-wraper font-barlow">
+					
+					{this.state.isMobile ? 
+					
+						<div className="videoPlayer" style={{position: 'fixed', overflow: 'hidden'}}>
+						</div>
+					
+					: 
 					<video className='videoPlayer' style={{position: 'fixed', overflow: 'hidden'}} autoPlay loop playsInline defaultMuted muted>
 						<source src={video} type='video/mp4' />
-					</video>
+					</video>}
+					
 					
 					<Header2 facebook={fb} yelp={yelp} online={onlineOrdering}/>
 					
