@@ -8,7 +8,6 @@ const img2 =require('./../../images/default_user_pic.png');
 
 const responsive = {
   superLargeDesktop: {
-   
     breakpoint: { max: 4000, min: 3000 },
     items: 5
   },
@@ -66,8 +65,7 @@ class Owl2 extends Component{
 							autoPlay={true}
 							autoPlaySpeed={6000}
 							removeArrowOnDeviceType={['mobile', 'tablet']}
-							responsive={responsive}
-													
+							responsive={responsive}						
 						>
 								{this.loadReviews()}	
 						</Carousel>
