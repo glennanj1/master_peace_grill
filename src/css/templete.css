@@ -3346,15 +3346,14 @@ td.fc-event-container {
 		justify-content: space-around;
 		align-items: center;
 		align-content: center;
-		background-size: cover;
 		background: url(https://media.giphy.com/media/K9i1AnJdj2kUfay0Rm/giphy.gif) rgb(182, 21, 21);
-		background-size: cover;
 		flex-direction: column;
 		top: 10vh;
 		box-shadow: 20px 17px #212529;
 		flex-wrap: nowrap;
 		background-size: 100vw;
 		background-repeat: no-repeat;
+		background-position: center;
 
 	}
 	.__text {
