@@ -28,7 +28,7 @@ export default class Modal extends React.Component {
         <div>
             {this.state.isOpen ? (
                 <div className="__wrapper">
-                    <div className="__child" style={{background: `url(${background})`, backgroundSize: '100vh', backgroundPosition: 'center'}}>
+                    <div className="__child" >
                         <h4 className="__text">We are Sorry to Inform You</h4>
                         <h4 className="__text">That we are closed Today</h4>
                         <h4 className="__text">We apologize for the inconvienence</h4>
