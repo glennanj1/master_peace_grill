@@ -29,9 +29,9 @@ export default class Modal extends React.Component {
             {this.state.isOpen ? (
                 <div className="__wrapper">
                     <div className="__child" style={{background: `url(${background})`, backgroundSize: '100vh', backgroundPosition: 'center'}}>
-                        <h4 className="__text">We are Closed Sunday 09/05</h4>
-                        <h4 className="__text">Have a great Labor Day</h4>
-                        <h4 className="__text">See everyone on Tuesday 09/07</h4>
+                        <h4 className="__text">We are Sorry to Inform You</h4>
+                        <h4 className="__text">That we are closed Today</h4>
+                        <h4 className="__text">We apologize for the inconvienence</h4>
                         <button className="__button" onClick={this.toggleModal}>Close</button>
                     </div>
                 </div> ) : null}      

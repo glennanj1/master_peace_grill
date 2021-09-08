@@ -4,7 +4,7 @@ import Header2 from './../Layout/Header2';
 import Footer2 from './../Layout/Footer2';
 // import Tab from './../Pages/Tab';
 import Owl2 from './../Element/Owl2';
-// import Modal from './../Element/Modal';
+import Modal from './../Element/Modal';
 
 const video = 'https://d3ddatyom1hv87.cloudfront.net/steak_final.mp4'
 const onlineOrdering = 'https://onlineordering.rmpos.com/Order/?wci=54MBz6OB'
@@ -86,7 +86,7 @@ class Index2 extends Component{
 	render(){
 		return(
 			<div>
-				{/* <Modal /> */}
+				<Modal />
 				<div className="page-wraper font-barlow">
 					
 					{this.state.isMobile ? 
