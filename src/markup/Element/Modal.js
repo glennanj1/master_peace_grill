@@ -1,6 +1,6 @@
 import React from "react";
 
-const background = 'https://static.wonderfulunion.net/groundctrl/clients/groundctrl/media/09/06/media/release_images/assets/large.szVfY7CoJkgiZNQVDE8VdNzuUyAVZIJ8HsohHt2g17I.jpg'
+// const background = 'https://static.wonderfulunion.net/groundctrl/clients/groundctrl/media/09/06/media/release_images/assets/large.szVfY7CoJkgiZNQVDE8VdNzuUyAVZIJ8HsohHt2g17I.jpg'
 
 export default class Modal extends React.Component {
 
