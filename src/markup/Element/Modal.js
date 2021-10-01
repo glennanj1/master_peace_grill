@@ -1,6 +1,6 @@
 import React from "react";
 
-const background = 'https://media.giphy.com/media/K9i1AnJdj2kUfay0Rm/giphy.gif'
+// const background = 'https://media.giphy.com/media/K9i1AnJdj2kUfay0Rm/giphy.gif'
 
 export default class Modal extends React.Component {
 
