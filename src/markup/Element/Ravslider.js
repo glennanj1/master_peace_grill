@@ -1,15 +1,13 @@
 import React,{Component} from 'react';
 // import {Link} from 'react-router-dom';
 
-var bnr = require('./../../images/main-slider/home.jpg');
-
 class Banner extends Component{
 	
 	render(){
 		return(
 			
 			<div className= "banner">	
-				<div className="section-full content-inner bnr-bg" style={{backgroundImage: "url(" + bnr + ")", backgroundSize: "cover"}}>
+				<div className="section-full content-inner bnr-bg" style={{backgroundImage: "url(https://d3ddatyom1hv87.cloudfront.net/home.jpg)", backgroundSize: "cover"}}>
 					<div className="container">
 						
 						<div className="row">
