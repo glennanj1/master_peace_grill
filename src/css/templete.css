@@ -11,7 +11,7 @@
     border: 1px black solid;
     overflow: hidden;
 	box-shadow: 5px 5px;
-	padding: 10px !important;
+	padding: 2px !important;
 }
 
 .__button:hover {
