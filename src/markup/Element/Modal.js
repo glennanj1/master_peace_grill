@@ -42,12 +42,10 @@ export default class Modal extends React.Component {
                 <div className="__wrapper">
                     {/* <div className="__child" style={{background: `url(${background}) white`, backgroundSize: 'cover', backgroundPosition: 'center'}}> */}
                     <div className="__child" style={{borderRadius: '10px', backgroundImage: "url(" + steak + ")", backgroundSize: 'cover', backgroundPosition: 'center'}}>
-                        <h4 className="__text">Vote</h4>
                         <h4 className="__text">Master Peace Grill</h4>
-                        <h4 className="__text">For Best CheeseSteaks</h4>
+                        <h4 className="__text">Best</h4>
+                        <h4 className="__text">CheeseSteaks</h4>
                         <button className="__button" onClick={this.confettiLaunch}><a style={{color: 'inherit'}} href="https://morethanthecurve.com/best-of-conshy/">Vote Here</a></button>
-                        {/* <h4 className="__text">OR</h4> */}
-                        <h5 className="__text">or</h5>
                         <button className="__button" onClick={this.toggleModal}>Close</button>
                     </div>
                 </div> ) : null}      

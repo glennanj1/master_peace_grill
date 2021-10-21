@@ -1,8 +1,17 @@
 /*==========================
 	Custom css
 ==========================*/
+.banner:after {
+	content: 'HELLO';
+}
 .__text {
-	text-shadow: 4px 4px rgb(255 0 0 / 39%) !important;
+	/* text-shadow: 4px 4px rgb(255 0 0 / 39%) !important; */
+    background-color: rgb(255, 0, 0);
+    border-radius: 10px;
+    border: 1px black solid;
+    overflow: hidden;
+	box-shadow: 5px 5px;
+	padding: 10px !important;
 }
 
 .__button:hover {
