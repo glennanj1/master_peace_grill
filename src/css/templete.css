@@ -1,7 +1,13 @@
 /*==========================
 	Custom css
 ==========================*/
+.__text {
+	text-shadow: 4px 4px rgb(255 0 0 / 39%) !important;
+}
 
+.__button:hover {
+	background-color: red !important;
+}
 
 .videoPlayer {
 	background: #e7272d;
@@ -2343,7 +2349,7 @@ td.fc-event-container {
 
 	}
 	.__text {
-			text-shadow: 4px 4px white;
+			text-shadow: 4px 4px rgb(255, 255, 255);
 			color: rgb(0, 0, 0);
 			line-height: 1em;
 			word-wrap: break-word;
