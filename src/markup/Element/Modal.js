@@ -45,6 +45,8 @@ export default class Modal extends React.Component {
                         <h4 className="__text">Master Peace Grill</h4>
                         <h4 className="__text">Best</h4>
                         <h4 className="__text">CheeseSteaks</h4>
+                        <h4 className="__text">&</h4>
+                        <h4 className="__text">Take Out</h4>
                         <a style={{color: 'inherit'}} href="https://morethanthecurve.com/best-of-conshy/"><button className="__button" onClick={this.confettiLaunch}>Vote Here</button></a>
                         <button className="__button" onClick={this.toggleModal}>Close</button>
                     </div>
