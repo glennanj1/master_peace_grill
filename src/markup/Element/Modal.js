@@ -42,8 +42,8 @@ export default class Modal extends React.Component {
                 <div className="__wrapper">
                     {/* <div className="__child" style={{background: `url(${background}) white`, backgroundSize: 'cover', backgroundPosition: 'center'}}> */}
                     <div className="__child" style={{borderRadius: '10px', backgroundImage: "url(" + steak + ")", backgroundSize: 'cover', backgroundPosition: 'center'}}>
-                        <h4 className="__text">Master Peace Grill</h4>
-                        <h4 className="__text">Best</h4>
+                        <h4 className="__text">Master Peace</h4>
+                        <h4 className="__text">Grill Best</h4>
                         <h4 className="__text">CheeseSteaks</h4>
                         <h4 className="__text">&</h4>
                         <h4 className="__text">Take Out</h4>
