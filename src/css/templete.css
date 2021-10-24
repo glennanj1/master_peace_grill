@@ -1,9 +1,6 @@
 /*==========================
 	Custom css
 ==========================*/
-.banner:after {
-	content: 'HELLO';
-}
 .__text {
 	/* text-shadow: 4px 4px rgb(255 0 0 / 39%) !important; */
     background-color: rgb(255, 0, 0);
@@ -2345,14 +2342,14 @@ td.fc-event-container {
 		display: flex;
 		position: fixed;
 		width: 75%;
-		height: 75%;
+		height: 93%;
 		text-align: center;
 		justify-content: space-around;
 		align-items: center;
 		align-content: center;
 		background-size: cover;
 		flex-direction: column;
-		top: 10vh;
+		top: 3vh;
 		box-shadow: 20px 17px #212529;
 		flex-wrap: nowrap;
 
@@ -3377,6 +3374,7 @@ td.fc-event-container {
 			padding: 1px;
 			font-weight: 700;
 			font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			width: 85%;
 	}
 	.main-slider.style-1 .carousel-item img{
 		height: 500px;
