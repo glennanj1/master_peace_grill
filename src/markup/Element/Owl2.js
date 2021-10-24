@@ -31,7 +31,10 @@ class Owl2 extends Component{
 	componentDidMount(){
 		fetch('https://top-sports-book-rails.herokuapp.com/reviews')
 		.then(response => response.json())
-		.then(json => this.setState({data: [...json]}));
+		.then(json => this.setState({data: [...json]}))
+		.catch((error) => {
+			console.error.apply('Error with Yelp API (line 36)', error)
+		});
 	}
 
 	state = {
