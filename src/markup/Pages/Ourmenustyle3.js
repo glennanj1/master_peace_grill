@@ -335,7 +335,7 @@ class Ourmenustyle3 extends Component{
 											<b>Pick a Tortilla</b> - White, Whole Wheat, Sun Dried Tomato, Spinach<br />
 											<b>Pick a Spread</b> - Mayo, Southwest Spread, Mustard, Spicy Mustard, Honey Mustard, Ranch, Hot Sauce, Humus<br />
 											<b>Pick a Protein</b> - Grilled Chicken, Roast Beef, Chicken Salad, Tuna Salad, Turkey, Ham, Chicken Tenders<br />
-											<b>Pick 1 Cheese</b> - American, Provolone, Swiss, Cheddar, Wiz, Mozzerella<br /> 
+											<b>Pick 1 Cheese</b> - american, provolone, swiss, cheddar, wiz, mozzerella, pepperJack<br /> 
 											<b>Pick Your Veggies</b> - Lettuce, Tomato, Onion, Roasted Peppers, Mushroom, Hot Peppers, Sweet Pepper, Pickle, Cole Slaw<br />
 											<b>Add Long Hots</b> - $1<br />
 											Turn any CheeseSteak into a wrap 10.99
@@ -455,7 +455,7 @@ class Ourmenustyle3 extends Component{
 										<h4 className="sub-title">Build Your Own</h4>
 										<p>
 											<b>Pick Your Meat</b> - Beef Steak of Chicken Steak<br />
-											<b>Pick 1 Cheese</b> - American, Provolone, Swiss, Cheddar, Wiz, Mozzerella<br /> 
+											<b>Pick 1 Cheese</b> - american, provolone, swiss, cheddar, wiz, mozzerella, pepperjack<br /> 
 											<b>Pick a Spread</b> - Mayo, Southwest Spread, Mustard, Spicy Mustard, Honey Mustard, Ranch, Hot Sauce, Humus<br />
 											<b>Pick Your Veggies</b> - Lettuce, Tomato, Onion, Roasted Peppers, Mushroom, Hot Peppers, Sweet Pepper, Pickle, Cole Slaw<br />
 											(Extra Cheese Add $1)
@@ -570,7 +570,7 @@ class Ourmenustyle3 extends Component{
 										<p>
 										Served On A Fresh Liscio's Roll<br />
 										<b>PICK 1 PROTEIN</b> - turkey, ham, roast beef, tuna salad, chicken salad, grilled chicken, chicken tenders<br />
-										<b>PICK 1 CHEESE</b> - American, provolone, swiss, cheddar, mozzarella PICK YOUR SPREADS - mayo, southwest spread, mustard, spicy mustard, honey mustard, oil, vinegar, ranch <br />
+										<b>PICK 1 CHEESE</b> - american, provolone, swiss, cheddar, mozzarella, pepperjack PICK YOUR SPREADS - mayo, southwest spread, mustard, spicy mustard, honey mustard, oil, vinegar, ranch <br />
 										<b>Pick a Spread</b> - Mayo, Southwest Spread, Mustard, Spicy Mustard, Honey Mustard, Ranch, Hot Sauce, Humus<br />
 										<b>PICK YOUR VEGGIES</b> - lettuce, tomato, onion, roasted peppers,sweet pepper, hot pepper, pickle, cole slaw<br />
 										ADD LONG HOTS - $1.00
@@ -640,7 +640,7 @@ class Ourmenustyle3 extends Component{
 										<p>
 										<b>Served On Your choice Of White, Wheat, Rye Bread or a Brioche Bun</b><br />
 										<b>PICK 1 PROTEIN</b> - turkey, ham, roast beef, tuna salad, chicken salad, grilled chicken breast, chicken tender<br />
-										<b>PICK 1 CHEESE</b> - American, provolone, swiss, cheddar, mozzarella <br />
+										<b>PICK 1 CHEESE</b> - american, provolone, swiss, cheddar, mozzarella, pepperjack <br />
 										<b>PICK YOUR SPREADS</b> - mayo, southwest spread, mustard, spicy mustard, honey mustard, oil, vinegar, ranch <br />
 										<b>PICK YOUR VEGGIES</b> - lettuce, tomato, onion, roasted peppers. sweet pepper, hot pepper, pickle, cole slaw
 										</p>
@@ -685,7 +685,7 @@ class Ourmenustyle3 extends Component{
 												<div className="line"></div>
 												<span className="price">8.99</span>
 											</div>
-											<p>Chicken, Bacon & Cheddar cheese with Ranch dressing served on a brioche bun with lettuce and tomato </p>
+											<p>Chicken, Bacon & PepperJack cheese with Ranch dressing served on a brioche bun with lettuce and tomato </p>
 										</li>
 										<li>
 											<div className="info-price">
@@ -739,7 +739,7 @@ class Ourmenustyle3 extends Component{
 									<p>
 									Served On Your choice Of White, Wheat or Rye Bread <br />
 									 <b>PICK 1 PROTEIN</b> - turkey, ham, bacon, roast beef <br />
-									<b>PICK 1 CHEESE</b> - American, provolone, swiss, cheddar, mozzarella <br />
+									<b>PICK 1 CHEESE</b> - american, provolone, swiss, cheddar, mozzarella, pepperjack <br />
 										<b>PICK YOUR SPREADS</b> - mayo, southwest spread, mustard, spicy mustard, honey mustard, oil, vinegar, ranch <br />
 										<b>PICK YOUR VEGGIES</b> - lettuce, tomato, onion, roasted peppers, sweet pepper, hot pepper, pickle, cole slaw<br />
 									</p>
