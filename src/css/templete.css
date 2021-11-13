@@ -164,7 +164,7 @@
 .banner .info{
 	font-size: 30px;
 	font-family: Barlow, sans-serif;
-	font-weight: 400;
+	font-weight: 600;
 	line-height: 30px;
 	text-align: center;
 	margin: 0;
@@ -172,6 +172,8 @@
 	letter-spacing: 0;
 	color: rgb(255,255,255);
 	padding: 20px 0;
+	-webkit-text-stroke: 1px black;
+    -webkit-text-fill-color: white;
 }
 .banner .container{
 	position: absolute;
