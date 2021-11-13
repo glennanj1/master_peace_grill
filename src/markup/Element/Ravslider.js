@@ -19,7 +19,7 @@ class Banner extends Component{
 										<img src ={require('./../../images/main-slider/slide5.png')}  alt="offer" />
 									</div>	 */}
 									
-									<p className="info">7 Years Strong 💪</p>
+									<p className="info" >7 Years Strong <span role="img" aria-label="strong">💪</span></p>
 
 									<a href={this.props.online} className="btn red" style={{fontSize: '34px'}} data-target="#exampleModal">Order Online</a>
 								</div>
