@@ -131,56 +131,56 @@ class Ourmenustyle3 extends Component{
 											<div className="info-price">
 												<h5 className="title">Chicken Tenders (3pc) <h6>Choice of Sauce (Honey Mustard, Ranch, BBQ, Ketchup)</h6> </h5>
 												<div className="line"></div>
-												<span className="price">5.49</span>
+												<span className="price">5.99</span>
 											</div>
 										</li>
 										<li>
 											<div className="info-price">
 												<h5 className="title">Chicken Tenders (5pc) <h6>Choice of Sauce (Honey Mustard, Ranch, BBQ, Ketchup)</h6></h5>
 												<div className="line"></div>
-												<span className="price">7.99</span>
+												<span className="price">8.99</span>
 											</div>
 										</li>
 										<li>
 											<div className="info-price">
 												<h5 className="title">Buffalo Chicken Tenders (3pc) <h6>Tossed in hot or mild sauce with choice of Ranch or Blue Cheese)</h6></h5>
 												<div className="line"></div>
-												<span className="price">5.99</span>
+												<span className="price">6.49</span>
 											</div>
 										</li>
 										<li>
 											<div className="info-price">
 												<h5 className="title">Buffalo Chicken Tenders (5pc) <h6>Tossed in hot or mild sauce with choice of Ranch or Blue Cheese)</h6></h5>
 												<div className="line"></div>
-												<span className="price">8.99</span>
+												<span className="price">9.99</span>
 											</div>
 										</li>
 										<li>
 											<div className="info-price">
 												<h5 className="title">Chicken Tenders & Fries Combo (3pc) <h6>Choice of Sauce (Honey Mustard, Ranch, BBQ, Ketchup)</h6></h5>
 												<div className="line"></div>
-												<span className="price">7.99</span>							
+												<span className="price">8.99</span>							
 											</div>
 										</li>
 										<li>
 											<div className="info-price">
 												<h5 className="title">Chicken Tenders & Fries Combo (5pc) <h6>Choice of Sauce (Honey Mustard, Ranch, BBQ, Ketchup)</h6></h5>
 												<div className="line"></div>
-												<span className="price">10.99</span>
+												<span className="price">11.99</span>
 											</div>
 										</li>
 										<li>
 											<div className="info-price">
 												<h5 className="title">Buffalo Chicken Tenders & Fries Combo (3pc) <h6>Tossed in hot or mild sauce with choice of Ranch or Blue Cheese)</h6></h5>
 												<div className="line"></div>
-												<span className="price">8.49</span>
+												<span className="price">9.49</span>
 											</div>
 										</li>
 										<li>
 											<div className="info-price">
 												<h5 className="title">Buffalo Chicken Tenders & Fries Combo (5pc) <h6>Tossed in hot or mild sauce with choice of Ranch or Blue Cheese)</h6></h5>
 												<div className="line"></div>
-												<span className="price">11.99</span>
+												<span className="price">12.99</span>
 											</div>
 										</li>
 									</ul>
