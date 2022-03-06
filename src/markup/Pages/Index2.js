@@ -102,9 +102,9 @@ class Index2 extends Component{
 					
 					<Header2 facebook={fb} yelp={yelp} online={onlineOrdering}/>
 					
-					<Banner online={onlineOrdering}/>	
+					<Banner online={onlineOrdering} mobile={this.state.isMobile}/>	
 
-						 					
+				
 					<div className="section-full content-inner fixedVideo" style={{backgroundColor: '#fffcfc00!important'}}>
 					</div>	
 					<Owl2 />

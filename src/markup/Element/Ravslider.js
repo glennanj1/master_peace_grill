@@ -22,6 +22,12 @@ class Banner extends Component{
 									<p className="info" >7 Years Strong <span role="img" aria-label="strong">💪</span></p>
 
 									<a href={this.props.online} className="btn red" style={{fontSize: '34px'}} data-target="#exampleModal">Order Online</a>
+									{this.props.mobile ? (
+										<a href="tel:4843445250" className="btn red" style={{fontSize: '34px', margin: '5px'}} data-target="#exampleModal">Call Now!</a>
+									)
+									:
+									null
+									}
 								</div>
 							</div>
 						</div>
