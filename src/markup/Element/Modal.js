@@ -42,12 +42,9 @@ export default class Modal extends React.Component {
                 <div className="__wrapper">
                     {/* <div className="__child" style={{background: `url(${background}) white`, backgroundSize: 'cover', backgroundPosition: 'center'}}> */}
                     <div className="__child" style={{borderRadius: '10px', backgroundImage: "url(" + steak + ")", backgroundSize: 'cover', backgroundPosition: 'center'}}>
-                        <h4 className="__text">Master Peace</h4>
-                        <h4 className="__text">Grill Best</h4>
-                        <h4 className="__text">CheeseSteaks</h4>
-                        <h4 className="__text">&</h4>
-                        <h4 className="__text">Take Out</h4>
-                        <a style={{color: 'inherit'}} href="https://morethanthecurve.com/best-of-conshy/"><button className="__button" onClick={this.confettiLaunch}>Vote Here</button></a>
+                        <h4 className="__text">We are closing</h4>
+                        <h4 className="__text">Early @ 3PM Today</h4>
+                        <h4 className="__text">See Everyone Tomorrow</h4>
                         <button className="__button" onClick={this.toggleModal}>Close</button>
                     </div>
                 </div> ) : null}      
