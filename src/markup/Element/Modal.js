@@ -47,8 +47,8 @@ export default class Modal extends React.Component {
                         <h4 className="__text">Sunday Monday</h4>
                         <h4 className="__text">Tuesday</h4>
                         <h4 className="__text">Wednesday</h4>
-                        <h4 className="__text">Happy 4th of July</h4>
-                        <h4 className="__text"><span role="img" aria-label="peace">
+                        <h4 className="__text">Happy 4th Of</h4>
+                        <h4 className="__text">July<span role="img" aria-label="peace">
                             ✌️
                         </span></h4>
                         <button className="__button" onClick={this.toggleModal}>Close</button>
