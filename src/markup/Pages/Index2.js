@@ -86,7 +86,7 @@ class Index2 extends Component{
 	render(){
 		return(
 			<div>
-				<Modal />
+				{/* <Modal /> */}
 				<div className="page-wraper font-barlow">
 					
 					{this.state.isMobile ? 
