@@ -41,17 +41,22 @@ export default class Modal extends React.Component {
             {this.state.isOpen ? (
                 <div className="__wrapper">
                     {/* <div className="__child" style={{background: `url(${background}) white`, backgroundSize: 'cover', backgroundPosition: 'center'}}> */}
-                    <div className="__child" style={{borderRadius: '10px', backgroundImage: "url(https://d3ddatyom1hv87.cloudfront.net/4thOfJulyDeadHead.png)", backgroundSize: 'cover', backgroundPosition: 'center'}}>
-
-                        <h4 className="__text">We Are Closed</h4>
-                        <h4 className="__text">Sunday Monday</h4>
-                        <h4 className="__text">Tuesday</h4>
-                        <h4 className="__text">Wednesday</h4>
-                        <h4 className="__text">Happy 4th Of</h4>
-                        <h4 className="__text">July<span role="img" aria-label="peace">
-                            ✌️
-                        </span></h4>
-                        <button className="__button" onClick={this.toggleModal}>Close</button>
+                    <div className="__child" style={{borderRadius: '10px', background: 'white'}}>
+                        <div>
+                            <p style={{fontSize: '1em', padding: '50px'}}>
+                            Masterpeace Grill will be closed 
+                            Sunday through Wednesday 
+                            Reopening Thursday 07/07/2022
+                            Have a GRATEFUL 4th <span role="img" aria-label="peace">
+                            ✌️❤️🎼🎼🎼🎼
+                            </span>
+                            </p>
+                        </div>
+                        <div style={{height: '100%', width: '100%', backgroundImage: "url(https://d3ddatyom1hv87.cloudfront.net/4thOfJulyDeadHead.png)", backgroundSize: 'contain', backgroundPosition: 'center'}}>
+                        </div>
+                        <div style={{height: '100px', width: '100px'}}>
+                            <button className="__button" onClick={this.toggleModal} style={{bottom: '20px', position: 'relative'}}>Close</button>
+                        </div>
                     </div>
                 </div> ) : null}      
         </div>
