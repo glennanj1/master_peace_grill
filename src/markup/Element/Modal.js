@@ -44,10 +44,8 @@ export default class Modal extends React.Component {
                     <div className="__child" style={{borderRadius: '10px', background: 'white'}}>
                         <div>
                             <p style={{fontSize: '1em', padding: '50px'}}>
-                            Masterpeace Grill will be closed 
-                            Sunday through Wednesday 
-                            Reopening Thursday 07/07/2022
-                            Have a GRATEFUL 4th <span role="img" aria-label="peace">
+                            Masterpeace Grill will be closed today
+                            Have a GRATEFUL Day Reopening Tomorrow 7/11/2022 <span role="img" aria-label="peace">
                             ✌️❤️🎼🎼🎼🎼
                             </span>
                             </p>
