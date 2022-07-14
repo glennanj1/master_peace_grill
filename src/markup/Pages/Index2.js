@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 import Banner from './../Element/Ravslider';
 import Header2 from './../Layout/Header2';
 import Footer2 from './../Layout/Footer2';
@@ -12,12 +13,27 @@ const fb = 'https://www.facebook.com/pages/Masterpeace-Grill/844637945566646?fre
 const yelp = 'http://www.yelp.com/biz/masterpeace-grill-conshohocken-2'
 
 
+
 class Index2 extends Component{
+	
+	notify = () => { 
+		toast(
+		"We will be closed from tomorrow 07/15/2022 and then we reopen on Tuesday 07/19/2022",
+		{
+		  duration: 6000,
+		  position: 'top-right',
+	
+		}
+		  )
+		this.setState({isToast: false})
+		
+	};
 
 	state = { 
 		email: '',
 		status: '',
-		isMobile: false
+		isMobile: false,
+		isToast: true
 	}
 
 	componentDidMount() {
@@ -87,6 +103,10 @@ class Index2 extends Component{
 		return(
 			<div>
 				{/* <Modal /> */}
+				{this.state.isToast ? this.notify() : null}
+      			<Toaster  
+					
+				/>
 				<div className="page-wraper font-barlow">
 					
 					{this.state.isMobile ? 
