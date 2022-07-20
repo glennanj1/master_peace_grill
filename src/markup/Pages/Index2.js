@@ -33,7 +33,7 @@ class Index2 extends Component{
 		email: '',
 		status: '',
 		isMobile: false,
-		isToast: true
+		isToast: false
 	}
 
 	componentDidMount() {
