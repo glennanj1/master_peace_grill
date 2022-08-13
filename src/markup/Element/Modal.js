@@ -43,7 +43,7 @@ export default class Modal extends React.Component {
                     {/* <div className="__child" style={{background: `url(${background}) white`, backgroundSize: 'cover', backgroundPosition: 'center'}}> */}
                     <div className="__child" style={{borderRadius: '10px', background: 'white'}}>
                         <div>
-                            <p style={{fontSize: '1em', padding: '25px', background: 'white'}}>
+                            <p style={{fontSize: '1em', padding: '25px'}}>
                             Masterpeace Grill will be closed for Vacation 
                             8/14 threw 8/22<span role="img" aria-label="peace">
                             ✌️❤️🎼🎼🎼🎼
