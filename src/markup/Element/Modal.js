@@ -55,7 +55,7 @@ export default class Modal extends React.Component {
                         <div style={{height: '30%', width: '100px', marginBottom: '10px'}}>
                             <a href="https://morethanthecurve.com/best-of-conshy/" style={{textDecoration: 'none', color: 'white'}}><button className="__button" style={{bottom: '5px'}}>Vote Now</button></a>
                         </div>
-                        <div style={{height: '30%', width: '100px'}}>
+                        <div style={{height: '30%', width: '100px', marginBottom: '20px'}}>
                             <button className="__button" onClick={this.toggleModal} style={{top: '5px', position: 'relative'}}>Close</button>
                         </div>
                     </div>
