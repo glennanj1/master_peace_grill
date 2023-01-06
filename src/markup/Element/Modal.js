@@ -44,17 +44,17 @@ export default class Modal extends React.Component {
                     <div className="__child" style={{borderRadius: '10px', background: 'white'}}>
                         <div>
                             <p style={{fontSize: '1.5em', padding: '20px'}}>
-                            Vote for Master Peace Grill for Best CheeseSteak!
+                            We will be closed for Chirstmas Eve & Christmas Day. Re-Opening on Tuesday. Merry Christmas & Happy Holidays!
                             <span role="img" aria-label="peace">
-                            ✌️❤️
+                            ☃️🎄
                             </span>
                             </p>
                         </div>
-                        <div style={{height: '100%', width: '100%', backgroundImage: "url(https://storage.googleapis.com/burbcommunity-morethanthecurve/2022/09/best-of-finals-header-1.jpg)", backgroundSize: 'contain', backgroundPosition: 'center', marginBottom: '10px'}}>
+                        <div style={{height: '100%', width: '100%', backgroundImage: "url(https://media1.giphy.com/media/uhywdQKtrYzx7GBreZ/giphy.gif?cid=ecf05e478q7vy6fwwjporhe5jwchdnpsp1k3niq6bg744vcg&rid=giphy.gif&ct=g)", backgroundSize: 'contain', backgroundPosition: 'center', marginBottom: '10px'}}>
                         </div>
-                        <div style={{height: '30%', width: '100px', marginBottom: '10px'}}>
+                        {/* <div style={{height: '30%', width: '100px', marginBottom: '10px'}}>
                             <a href="https://morethanthecurve.com/best-of-conshy/" style={{textDecoration: 'none', color: 'white'}}><button className="__button" style={{bottom: '5px'}}>Vote Now</button></a>
-                        </div>
+                        </div> */}
                         <div style={{height: '30%', width: '100px', marginBottom: '20px'}}>
                             <button className="__button" onClick={this.toggleModal} style={{top: '5px', position: 'relative'}}>Close</button>
                         </div>
