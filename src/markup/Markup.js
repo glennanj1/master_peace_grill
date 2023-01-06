@@ -8,7 +8,7 @@ import About from './Pages/About';
 
 import NotFound from './Pages/NotFound';
 
-import Ourmenustyle3 from './Pages/Ourmenustyle3';
+import Menu from './Pages/Menu';
 
 
 
@@ -23,7 +23,7 @@ class Markup extends Component{
 			
 					<Route path='/about' exact component ={About} />
 
-					<Route path='/menu' exact component={Ourmenustyle3} />
+					<Route path='/menu' exact component={Menu} />
 					
 					<Route component={NotFound} />
 
