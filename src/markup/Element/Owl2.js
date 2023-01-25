@@ -47,7 +47,7 @@ function Owl2() {
 				<div key={r.id} className="testimonial-1">
 					<div className="testimonial-pic radius"><img src={r.image_url !== null ? r.image_url : img2} style={{ width: "100%", height: "100%" }} alt="profile" /></div>< br />
 					<div className="testimonial-detail"> <strong className="testimonial-name">{r.name}</strong> <span className="testimonial-position">Customer</span> </div>
-					<span>{"⭐".repeat(r.rating)}</span>
+					<span>{"⭐".repeat(Math.round(r.rating))}</span>
 					<div className="testimonial-text">
 						<p>{r.text}</p>
 						<button className="btn red"><a style={{ color: 'white' }} href={r.url}>Review</a></button>
