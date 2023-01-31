@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
@@ -10,28 +10,26 @@ import NotFound from './Pages/NotFound';
 
 import Menu from './Pages/Menu';
 
+import Login from './Pages/Login';
 
+function Markup() {
 
+	return (
+		<BrowserRouter>
+			<Switch>
+				<Route path='/' exact component={Index2} />
 
-class Markup extends Component{
-	
-	render(){
-		return(
-			<BrowserRouter>
-				<Switch>
-					<Route path='/' exact component={Index2} />
-			
-					<Route path='/about' exact component ={About} />
+				<Route path='/about' exact component={About} />
 
-					<Route path='/menu' exact component={Menu} />
-					
-					<Route component={NotFound} />
+				<Route path='/menu' exact component={Menu} />
 
-				</Switch>
-			</ BrowserRouter>
-		)
-		
-	}
+				<Route path='/login' exact component={Login} />
+
+				<Route component={NotFound} />
+
+			</Switch>
+		</ BrowserRouter>
+	)
 }
 
 export default Markup;
