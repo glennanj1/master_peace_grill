@@ -28,12 +28,16 @@ function Login() {
             headers: {
                 "Content-Type": "application/json"
             },
+            cache: "no-cache",
+            redirect: "follow",
+            referrerPolicy: "no-referrer",
+            credentials: "include",
             body: JSON.stringify(userData)
         })
             .then(res => {
                 if (res.ok) {
                     res.json().then(user => {
-                        loginUser(user)
+                        updateUser(user)
                     })
                     // history.push('/menu')
                 }
@@ -48,9 +52,9 @@ function Login() {
         })
     }
 
-    const loginUser = (user) => {
-        updateUser(user)
-    }
+    // const loginUser = (user) => {
+    //     updateUser(user)
+    // }
 
     if (user) {
         console.log(user)
