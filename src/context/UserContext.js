@@ -11,7 +11,13 @@ export const UserProvider = ({ children }) => {
     }
 
     useEffect(() => {
-        fetch('http://localhost:3000/me')
+        fetch('http://localhost:3000/me', {
+            method: "GET",
+            credentials: "include",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
             .then(res => {
                 if (res.ok) {
                     res.json()
