@@ -1,5 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { UserContext } from './../../context/UserContext';
+import './Login.css'
+
 // import { useHistory } from 'react-router-dom';
 
 function Login() {
@@ -61,12 +63,13 @@ function Login() {
     }
 
     return (
-        <div>
+        <div className="login-page" style={{backgroundImage: "url(https://d3ddatyom1hv87.cloudfront.net/home.jpg)", backgroundSize: "cover"}}>
             {user ?
 
                 <h3>Welcome, {user.email}</h3> :
-
-                <form onSubmit={handleLogin}>
+                                
+                <form className='login-form' onSubmit={handleLogin} >
+                <h3>Login</h3>
                     <label>Email</label>
                     <input
                         type="text"
