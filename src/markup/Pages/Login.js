@@ -1,6 +1,8 @@
 import React, { useState, useContext } from 'react';
 import { UserContext } from './../../context/UserContext';
-import './Login.css'
+import '../../css/login.css'
+import Header2 from '../Layout/Header2.js'
+
 
 // import { useHistory } from 'react-router-dom';
 
@@ -64,6 +66,7 @@ function Login() {
 
     return (
         <div className="login-page" style={{backgroundImage: "url(https://d3ddatyom1hv87.cloudfront.net/home.jpg)", backgroundSize: "cover"}}>
+            <Header2 />
             {user ?
 
                 <h3>Welcome, {user.email}</h3> :

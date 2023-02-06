@@ -52,8 +52,14 @@
 	border: 5px solid black;
 }
 .hoursContainer {
-	width: 350px;
+	max-width: 450px;
+	max-height: 400px;
 	margin-top: 15px;
+	/* margin: auto; */
+	text-align: center;
+	/* overflow: hidden; */
+	white-space: nowrap;
+	backdrop-filter: blur(10px);
 }
 .fixedVideo {
 	background-attachment: fixed;
