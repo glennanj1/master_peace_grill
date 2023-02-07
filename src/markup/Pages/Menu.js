@@ -24,8 +24,6 @@ const fb =
 const yelp = 'http://www.yelp.com/biz/masterpeace-grill-conshohocken-2';
 
 function Menu() {
-	//FIGURE OUT HOW TO MAKE THE CSS DYNAMIC 
-	const appCSSClass = true;
 
 	//filter menu categories to pass into each component
 	//APPETIZERS
@@ -76,11 +74,9 @@ function Menu() {
 				<div className="section-full bg-white">
 					<MenuCategory
 						menu={appMenu}
-						menuImg={app}>
-							
-					</MenuCategory>
-
-					<MenuCategory menu={wingMenu} menuImg={wings} />
+						menuImg={app} cssClass={true} />
+					<MenuCategory menu={wingMenu} menuImg={wings}/>
+					<MenuCategory menu={saladMenu} menuImg={salad} cssClass={true} />
 					{/* <div className="row manu-box-reverse sp0">
 						<div className="col-lg-6">
 							<div className="menu-box">
@@ -305,7 +301,7 @@ function Menu() {
 						</div>
 					</div> */}
 
-					<div className="row manu-box-reverse sp0">
+					{/* <div className="row manu-box-reverse sp0">
 						<div className="col-lg-6">
 							<div className="menu-box">
 								<div className="section-head style-2">
@@ -420,7 +416,7 @@ function Menu() {
 						<div className="col-lg-6">
 							<img src={salad} alt="" className="img-cover" />
 						</div>
-					</div>
+					</div> */}
 
 					<div className="row sp0">
 						<div className="col-lg-6">

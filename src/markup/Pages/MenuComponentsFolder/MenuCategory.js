@@ -1,12 +1,10 @@
 import React from 'react';
 
-const MenuCategory = ({ menu, menuImg, categoryCSSClass }) => {
-    console.log('css', categoryCSSClass)
-    
-    //if a special CSS class exists in addition to regular bootstrap for outermost div
-    const cssClass = categoryCSSClass ? 'row manu-box-reverse sp0' : 'row sp0';
+const MenuCategory = ({ menu, menuImg, cssClass }) => {
+	//pass in cssClass boolean value to render menu category section w/ image on corresponding side based on category
 
-	const appItemList = menu.map((item) => {
+	const appItemList = menu
+		.map((item) => {
 			//does the item have details?
 			let itemDetails = item.details ? <h6>{item.details}</h6> : '';
 			//does the item have details?
@@ -23,24 +21,43 @@ const MenuCategory = ({ menu, menuImg, categoryCSSClass }) => {
 					{itemAddOn}
 				</li>
 			);
-		}).sort((a,b) => {
-            return a.id > b.id
-        });
+		})
+		.sort((a, b) => {
+			return a.id > b.id;
+		});
 
 	return (
-		<div className={cssClass}>
-			<div className="col-lg-6">
-				<div className="menu-box">
-					<div className="section-head style-2">
-						<h2 className="title">{menu[0].category}</h2>
-					</div>
-					<ul className="menu-list-2">{appItemList}</ul>
-				</div>
-			</div>
-            <div className="col-lg-6">
-								<img src={menuImg} alt={menu[0].category} className="img-cover" />
+		<>
+			{cssClass ? (
+				<div className="row manu-box-reverse sp0">
+					<div className="col-lg-6">
+						<div className="menu-box">
+							<div className="section-head style-2">
+								<h2 className="title">{menu[0].category}</h2>
 							</div>
-		</div>
+							<ul className="menu-list-2">{appItemList}</ul>
+						</div>
+					</div>
+					<div className="col-lg-6">
+						<img src={menuImg} alt="appetizers" className="img-cover" />
+					</div>
+				</div>
+			) : (
+				<div className="row sp0">
+					<div className="col-lg-6">
+						<img src={menuImg} alt="appetizers" className="img-cover" />
+					</div>
+					<div className="col-lg-6">
+						<div className="menu-box">
+							<div className="section-head style-2">
+								<h2 className="title">{menu[0].category}</h2>
+							</div>
+							<ul className="menu-list-2">{appItemList}</ul>
+						</div>
+					</div>
+				</div>
+			)}
+		</>
 	);
 };
 
