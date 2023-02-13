@@ -27,7 +27,7 @@ function Login() {
     const handleLogin = (e) => {
         e.preventDefault()
 
-        fetch('http://localhost:3000/login', {
+        fetch('https://master-peace-grill-backend.herokuapp.com/login', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -56,23 +56,15 @@ function Login() {
         })
     }
 
-    // const loginUser = (user) => {
-    //     updateUser(user)
-    // }
-
-    if (user) {
-        console.log(user)
-    }
-
     return (
-        <div className="login-page" style={{backgroundImage: "url(https://d3ddatyom1hv87.cloudfront.net/home.jpg)", backgroundSize: "cover"}}>
+        <div className="login-page" style={{ backgroundImage: "url(https://d3ddatyom1hv87.cloudfront.net/home.jpg)", backgroundSize: "cover" }}>
             <Header2 />
             {user ?
 
                 <h3>Welcome, {user.email}</h3> :
-                                
+
                 <form className='login-form' onSubmit={handleLogin} >
-                <h3>Login</h3>
+                    <h3>Login</h3>
                     <label>Email</label>
                     <input
                         type="text"
