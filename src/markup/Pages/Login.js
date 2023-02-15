@@ -2,14 +2,13 @@ import React, { useState, useContext } from 'react';
 import { UserContext } from './../../context/UserContext';
 import '../../css/login.css'
 import Header2 from '../Layout/Header2.js'
+import PostLogin from './PostLogin.js'
 
 
 // import { useHistory } from 'react-router-dom';
 
 function Login() {
-
     const { updateUser, user } = useContext(UserContext)
-
     const [userData, setUserData] = useState({ email: "", password: "" })
     const [error, setError] = useState(null)
 
@@ -64,13 +63,12 @@ function Login() {
         console.log(user)
     }
 
+    if (user) return <PostLogin user={user} />
+
+ 
     return (
         <div className="login-page" style={{backgroundImage: "url(https://d3ddatyom1hv87.cloudfront.net/home.jpg)", backgroundSize: "cover"}}>
             <Header2 />
-            {user ?
-
-                <h3>Welcome, {user.email}</h3> :
-                                
                 <form className='login-form' onSubmit={handleLogin} >
                 <h3>Login</h3>
                     <label>Email</label>
@@ -90,8 +88,6 @@ function Login() {
                     <button type="submit">Submit</button>
                     {error && <p>{error}</p>}
                 </form>
-            }
-
         </div>
     )
 }

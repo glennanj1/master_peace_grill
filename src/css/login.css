@@ -1,3 +1,5 @@
+/* Login Page Custom CSS */
+
 .login-page {
     display: flex;
     flex-direction: column;
@@ -52,3 +54,40 @@
     cursor: pointer;
   }
   
+/* Post Login in Page Redirected CSS */
+
+.post-login-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height:100vh;
+  width:100vw;
+  margin-top:0px;    
+  overflow-y: scroll;
+  /* background: rgb(212, 91, 91); */
+}
+
+.post-login-header{
+  margin-top:100px;
+  padding: 1em;
+  /* padding: 3%; */
+  display:center;
+	/* margin: auto; */
+	text-align: center;
+	/* overflow: hidden; */
+	white-space: nowrap;
+	backdrop-filter: blur(10px);
+}
+
+.buttons-parent{
+  margin-top: 150px;
+  display:flex;
+}
+
+.jc-center{
+  justify-content:center;
+}
+
+button.margin-right{
+  margin-right: 20px
+}
