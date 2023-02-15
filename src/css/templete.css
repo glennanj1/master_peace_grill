@@ -53,8 +53,9 @@
 }
 .hoursContainer {
 	max-width: 450px;
-	max-height: 400px;
+	max-height: 500px;
 	margin-top: 15px;
+	padding: 1em;
 	/* margin: auto; */
 	text-align: center;
 	/* overflow: hidden; */
@@ -1941,7 +1942,7 @@ ol.comment-list li.comment .reply a {
 	font-family:Barlow, sans-serif;
 	margin: 0;
 	color: #fff;
-	font-weight: 500;
+	font-weight: 500px;
 	font-size: 20px;
 	line-height: 5px; 
 
