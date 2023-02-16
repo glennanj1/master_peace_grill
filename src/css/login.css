@@ -64,28 +64,43 @@
   width:100vw;
   margin-top:0px;    
   overflow-y: scroll;
-  /* background: rgb(212, 91, 91); */
 }
 
 .post-login-header{
-  margin-top:100px;
-  padding: 1em;
-  /* padding: 3%; */
-  display:center;
-	/* margin: auto; */
+  max-width: 100%;
+  padding: 1rem;  /* adjusts how big welcome header is */
+  border-radius: 25px;
+  display: flex;
 	text-align: center;
-	/* overflow: hidden; */
-	white-space: nowrap;
+	overflow: hidden;
+	white-space: normal;
 	backdrop-filter: blur(10px);
+  margin: 100px auto;
 }
+
 
 .buttons-parent{
   margin-top: 150px;
   display:flex;
+  width: 100%;
+  justify-content:center;
 }
 
-.jc-center{
-  justify-content:center;
+.buttons-parent button {
+  font-size: 1.5rem; /* adjust font size to make button text bigger */
+  padding: 30px 45px; /* adjust padding to increase button size */
+  border-radius: 15px;
+  background-color: #f8000071;; /* set a background color for the button */
+  color: #fff; /* set a text color for the button */
+  border: none; /* remove the button border */
+  cursor: pointer; /* set the cursor to pointer to indicate it's clickable */
+  transition: all 0.2s ease-in-out; /* add a transition effect for hover */
+  width: auto; /*makes it responsive*/
+  max-width: 100%;
+}
+
+.buttons-parent button:hover {
+  background-color: #ff0000a4; /* change the background color on hover */
 }
 
 button.margin-right{
