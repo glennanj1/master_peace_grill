@@ -55,23 +55,12 @@ function Menu() {
 
 	//filter menu categories to pass into each component
 	//APPETIZERS
-	const appMenu = menuInfo.filter((item) => {
-		if (item.category === 'Appetizers') {
-			return item;
-		}
-	});
+	const appMenu = menuInfo.filter((item) => item.category === 'Appetizers' ? item : false);
 	//WINGS
-	const wingMenu = menuInfo.filter((item) => {
-		if (item.category === 'Wings') {
-			return item;
-		}
-	});
+	const wingMenu = menuInfo.filter((item) => item.category === 'Wings' ? item : false);
 	//SALADS
-	const saladMenu = menuInfo.filter((item) => {
-		if (item.category === 'Salads') {
-			return item;
-		}
-	});
+	const saladMenu = menuInfo.filter((item) => item.category === 'Salads' ? item : false);
+
 	//WRAPS
 	// const wrapMenu = menuInfo.filter((item) => {
 	// 	if (item.category === 'Wraps') {
@@ -161,7 +150,7 @@ function Menu() {
 						menu={grilledCheeseMenu}
 						menuImg={grilledCheese}
 					/>  */}
-					<div className="row manu-box-reverse sp0">
+					{/* <div className="row manu-box-reverse sp0">
 						<div className="col-lg-6">
 							<div className="menu-box">
 								<div className="section-head style-2">
@@ -498,7 +487,7 @@ function Menu() {
 						<div className="col-lg-6">
 							<img src={salad} alt="" className="img-cover" />
 						</div>
-					</div> 
+					</div>  */}
 					<div className="row sp0">
 						<div className="col-lg-6">
 							<img src={wrap} alt="" className="img-cover" />
