@@ -6,14 +6,13 @@ import './menuEdit.css';
 
 const MenuEditForm = () => {
 	const [menuInfo, setMenuInfo] = useState([]);
-	const [errors, setErrors] = useState([]);
+	// const [errors, setErrors] = useState([]);
 
 	//get logged in user to make updates
 	const loggedInUser = useContext(UserContext);
-	const loggedInUserId = loggedInUser.user?.id
+	const loggedInUserId = loggedInUser.user?.id;
 
-	console.log(loggedInUserId)
-	
+	console.log(loggedInUserId);
 
 	let history = useHistory();
 
@@ -40,39 +39,35 @@ const MenuEditForm = () => {
 			setMenuInfo(menuData);
 		} catch (error) {
 			console.error('ERROR:', error);
-			setErrors(error);
 		}
 	}
 
 	// filter menu categories to pass into each component
 	// APPETIZERS
-	const appMenu = menuInfo.filter((item) => {
-		if (item.category === 'Appetizers') {
-			return item;
-		}
-	});
+	const appMenu = menuInfo.filter((item) =>
+		item.category === 'Appetizers' ? item : false
+	);
 
 	console.log('app menu:', appMenu);
 
 	//WINGS
-	const wingMenu = menuInfo.filter((item) => {
-		if (item.category === 'Wings') {
-			return item;
-		}
-	});
+	const wingMenu = menuInfo.filter((item) =>
+		item.category === 'Wings' ? item : false
+	);
+
 	//SALADS
-	const saladMenu = menuInfo.filter((item) => {
-		if (item.category === 'Salads') {
-			return item;
-		}
-	});
+	const saladMenu = menuInfo.filter((item) =>
+		item.category === 'Salads' ? item : false
+	);
 
 	return (
 		<div className="menu-edit-form-page">
-			<button className='return-home-btn ' onClick={() => history.push('/') }>Home</button>
-			<MenuCategoryEditForm menu={appMenu} userId={loggedInUserId}/>
-			<MenuCategoryEditForm menu={wingMenu} userId={loggedInUserId}/>
-			<MenuCategoryEditForm menu={saladMenu} userId={loggedInUserId}/>
+			<button className="return-home-btn " onClick={() => history.push('/')}>
+				Home
+			</button>
+			<MenuCategoryEditForm menu={appMenu} userId={loggedInUserId} />
+			<MenuCategoryEditForm menu={wingMenu} userId={loggedInUserId} />
+			<MenuCategoryEditForm menu={saladMenu} userId={loggedInUserId} />
 		</div>
 	);
 };
