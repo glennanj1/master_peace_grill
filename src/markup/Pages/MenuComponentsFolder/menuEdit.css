@@ -5,6 +5,13 @@
 	/* border: 2px solid orange; */
 }
 
+.return-home-btn{
+	border: 1px solid #f22c4e;
+	margin: 20px;
+	color: #f22c4e;
+	border-radius: 7px;
+}
+
 .menu-edit-category {
 	margin-bottom: 10vh;
 }

@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 
-const MenuItemEdit = ({ item }) => {
+
+
+const MenuItemEdit = ({ item, userId }) => {
 	const initialState = {
 		name: item.name,
 		price: item.price,
 		category: item.category,
 		details: item.details ? item.details : '',
-		add_ons: item.add_ons ? item.add_ons : ''
+		add_ons: item.add_ons ? item.add_ons : '',
+		user_id: userId
 	};
 	const [formData, setFormData] = useState(initialState);
 	const [errors, setErrors] = useState([]);

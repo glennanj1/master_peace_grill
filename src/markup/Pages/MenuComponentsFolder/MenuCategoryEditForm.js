@@ -1,11 +1,11 @@
 import React from 'react';
 import MenuItemEdit from './MenuItemEdit';
 
-const MenuCategoryEditForm = ({ menu }) => {
-
+const MenuCategoryEditForm = ({ menu, userId }) => {
+	
 	const itemEditForm = menu
 		.map((item) => {
-			return <MenuItemEdit item={item} key={item.id} />;
+			return <MenuItemEdit item={item} key={item.id} userId={userId} />;
 		})
 		.sort((a, b) => {
 			return a.id > b.id;

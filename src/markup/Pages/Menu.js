@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Header2 from '../Layout/Header2';
 import Footer2 from '../Layout/Footer2';
 import MenuCategory from './MenuComponentsFolder/MenuCategory';
+import MenuCategoryAndBYO from './MenuComponentsFolder/MenuCategoryAndBYO';
 
 import bg from './../../images/background/rainbow.jpeg';
 import app from './../../images/menu/app.jpg';
@@ -72,7 +73,51 @@ function Menu() {
 			return item;
 		}
 	});
-	//need to pass in menuDb info to components
+	//WRAPS
+	const wrapMenu = menuInfo.filter((item) => {
+		if (item.category === 'Wraps') {
+			return item;
+		}
+	});
+	//TripleDeckerClubs
+	const clubMenu = menuInfo.filter((item) => {
+		if (item.category === 'Triple Decker Clubs') {
+			return item;
+		}
+	});
+	//CheeseSteaks
+	const cheeseSteakMenu = menuInfo.filter((item) => {
+		if (item.category === 'Cheese Steaks') {
+			return item;
+		}
+	});
+	//Burgers
+	const burgerMenu = menuInfo.filter((item) => {
+		if (item.category === 'Burgers') {
+			return item;
+		}
+	});
+
+	//Hoagies and Grinders
+	const hoagieAndGrinderMenu = menuInfo.filter((item) => {
+		if (item.category === 'Hoagies & Grinders') {
+			return item;
+		}
+	});
+
+	//Sandwichees
+	const sandwichesMenu = menuInfo.filter((item) => {
+		if (item.category === 'Sandwiches') {
+			return item;
+		}
+	});
+
+	//Grilled Cheese
+	const grilledCheeseMenu = menuInfo.filter((item) => {
+		if (item.category === 'Grilled Cheese') {
+			return item;
+		}
+	});
 
 	return (
 		<div>
@@ -100,12 +145,24 @@ function Menu() {
 				</div>
 
 				<div className="section-full bg-white">
-					<MenuCategory
-						menu={appMenu}
-						menuImg={app} cssClass={true} />
-					<MenuCategory menu={wingMenu} menuImg={wings}/>
+					<MenuCategory menu={appMenu} menuImg={app} cssClass={true} />
+					<MenuCategory menu={wingMenu} menuImg={wings} />
 					<MenuCategory menu={saladMenu} menuImg={salad} cssClass={true} />
-					{/* <div className="row manu-box-reverse sp0">
+					 {/* <MenuCategoryAndBYO
+						menu={wrapMenu}
+						menuImg={wrap}>
+
+						</MenuCategoryAndBYO>
+					<MenuCategoryAndBYO menu={clubMenu} menuImg={club} />
+					<MenuCategoryAndBYO menu={cheeseSteakMenu} menuImg={steak} />
+					<MenuCategoryAndBYO menu={burgerMenu} menuImg={burger} />
+					<MenuCategoryAndBYO menu={hoagieAndGrinderMenu} menuImg={hoagie} />
+					<MenuCategoryAndBYO menu={sandwichesMenu} menuImg={sandwich} />
+					<MenuCategoryAndBYO
+						menu={grilledCheeseMenu}
+						menuImg={grilledCheese}
+					/>  */}
+					<div className="row manu-box-reverse sp0">
 						<div className="col-lg-6">
 							<div className="menu-box">
 								<div className="section-head style-2">
@@ -282,9 +339,8 @@ function Menu() {
 						<div className="col-lg-6">
 							<img src={app} alt="appetizers" className="img-cover" />
 						</div>
-					</div> */}
-
-					{/* <div className="row sp0">
+					</div>
+					<div className="row sp0">
 						<div className="col-lg-6">
 							<img
 								src={wings}
@@ -327,9 +383,8 @@ function Menu() {
 								</ul>
 							</div>
 						</div>
-					</div> */}
-
-					{/* <div className="row manu-box-reverse sp0">
+					</div> 
+					<div className="row manu-box-reverse sp0">
 						<div className="col-lg-6">
 							<div className="menu-box">
 								<div className="section-head style-2">
@@ -444,8 +499,7 @@ function Menu() {
 						<div className="col-lg-6">
 							<img src={salad} alt="" className="img-cover" />
 						</div>
-					</div> */}
-
+					</div> 
 					<div className="row sp0">
 						<div className="col-lg-6">
 							<img src={wrap} alt="" className="img-cover" />
@@ -550,7 +604,7 @@ function Menu() {
 								</ul>
 							</div>
 						</div>
-					</div>
+					</div> 
 
 					<div className="row manu-box-reverse sp0">
 						<div className="col-lg-6">
@@ -594,10 +648,10 @@ function Menu() {
 						</div>
 						<div className="col-lg-6">
 							<img src={club} alt="" className="img-cover" />
-						</div>
-					</div>
+						</div> 
+					</div> 
 
-					<div className="row sp0">
+					 <div className="row sp0">
 						<div className="col-lg-6">
 							<img src={steak} alt="" className="img-cover" />
 						</div>
@@ -667,7 +721,7 @@ function Menu() {
 								</ul>
 							</div>
 						</div>
-					</div>
+					</div> 
 					<div className="row manu-box-reverse sp0">
 						<div className="col-lg-6">
 							<div className="menu-box">
@@ -840,7 +894,7 @@ function Menu() {
 								</ul>
 							</div>
 						</div>
-					</div>
+					</div> 
 
 					<div className="row manu-box-reverse sp0">
 						<div className="col-lg-6">
@@ -986,7 +1040,7 @@ function Menu() {
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> 
 
 					<h1 className="catering">Catering</h1>
 

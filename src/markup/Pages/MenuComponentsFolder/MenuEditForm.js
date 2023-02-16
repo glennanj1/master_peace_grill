@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
-// import menuDb from '../../../menuDB.json';
+import React, { useContext, useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import { UserContext } from '../../../context/UserContext';
 import MenuCategoryEditForm from './MenuCategoryEditForm';
 import './menuEdit.css';
 
@@ -7,15 +8,24 @@ const MenuEditForm = () => {
 	const [menuInfo, setMenuInfo] = useState([]);
 	const [errors, setErrors] = useState([]);
 
+	//get logged in user to make updates
+	const loggedInUser = useContext(UserContext);
+	const loggedInUserId = loggedInUser.user?.id
+
+	console.log(loggedInUserId)
+	
+
+	let history = useHistory();
+
 	//fetch menu info from db to pre-populate form for editing
 	useEffect(() => {
 		fetchCurrentMenu();
 	}, []);
 
-	//function to get all menu data
+	//function to get all menu datan from food_model
 	async function fetchCurrentMenu() {
 		try {
-			// let res = await fetch('/https://master-peace-grill-backend.herokuapp.com/foods');
+			// let res = await fetch('https://master-peace-grill-backend.herokuapp.com/foods');
 			//for development run w/ ruby backend
 			let res = await fetch('http://localhost:3000/foods');
 
@@ -59,10 +69,10 @@ const MenuEditForm = () => {
 
 	return (
 		<div className="menu-edit-form-page">
-			<h1>menu edit </h1>
-			<MenuCategoryEditForm menu={appMenu} />
-			<MenuCategoryEditForm menu={wingMenu} />
-			<MenuCategoryEditForm menu={saladMenu} />
+			<button className='return-home-btn ' onClick={() => history.push('/') }>Home</button>
+			<MenuCategoryEditForm menu={appMenu} userId={loggedInUserId}/>
+			<MenuCategoryEditForm menu={wingMenu} userId={loggedInUserId}/>
+			<MenuCategoryEditForm menu={saladMenu} userId={loggedInUserId}/>
 		</div>
 	);
 };
