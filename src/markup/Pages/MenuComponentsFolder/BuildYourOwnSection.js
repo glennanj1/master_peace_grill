@@ -1,5 +1,5 @@
 import React from 'react';
-import menuBYO from '../../../menuBYO.json';
+// import menuBYO from '../../../menuBYO.json';
 
 const BuildYourOwnSection = () => {
 	//potentially recieve this data as an array of objects for build your own (byo) connected to a category
@@ -7,7 +7,6 @@ const BuildYourOwnSection = () => {
 	//we can bring this component into any menu component that needs it
     //see relative structure below
 
-	let byoOptions;
 	return (
 		<div>
 			<h4 className="sub-title">Build Your Own</h4>

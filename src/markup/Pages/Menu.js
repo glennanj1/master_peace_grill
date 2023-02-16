@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Header2 from '../Layout/Header2';
 import Footer2 from '../Layout/Footer2';
 import MenuCategory from './MenuComponentsFolder/MenuCategory';
-import MenuCategoryAndBYO from './MenuComponentsFolder/MenuCategoryAndBYO';
+// import MenuCategoryAndBYO from './MenuComponentsFolder/MenuCategoryAndBYO';
 
 import bg from './../../images/background/rainbow.jpeg';
 import app from './../../images/menu/app.jpg';
@@ -25,7 +25,6 @@ const yelp = 'http://www.yelp.com/biz/masterpeace-grill-conshohocken-2';
 
 function Menu() {
 	const [menuInfo, setMenuInfo] = useState([]);
-	const [errors, setErrors] = useState([]);
 
 	//fetch menu info from db
 	useEffect(() => {
@@ -50,9 +49,9 @@ function Menu() {
 			setMenuInfo(menuData);
 		} catch (error) {
 			console.error('ERROR:', error);
-			setErrors(error);
 		}
 	}
+
 
 	//filter menu categories to pass into each component
 	//APPETIZERS
@@ -74,50 +73,50 @@ function Menu() {
 		}
 	});
 	//WRAPS
-	const wrapMenu = menuInfo.filter((item) => {
-		if (item.category === 'Wraps') {
-			return item;
-		}
-	});
-	//TripleDeckerClubs
-	const clubMenu = menuInfo.filter((item) => {
-		if (item.category === 'Triple Decker Clubs') {
-			return item;
-		}
-	});
+	// const wrapMenu = menuInfo.filter((item) => {
+	// 	if (item.category === 'Wraps') {
+	// 		return item;
+	// 	}
+	// });
+	// //TripleDeckerClubs
+	// const clubMenu = menuInfo.filter((item) => {
+	// 	if (item.category === 'Triple Decker Clubs') {
+	// 		return item;
+	// 	}
+	// });
 	//CheeseSteaks
-	const cheeseSteakMenu = menuInfo.filter((item) => {
-		if (item.category === 'Cheese Steaks') {
-			return item;
-		}
-	});
-	//Burgers
-	const burgerMenu = menuInfo.filter((item) => {
-		if (item.category === 'Burgers') {
-			return item;
-		}
-	});
+	// const cheeseSteakMenu = menuInfo.filter((item) => {
+	// 	if (item.category === 'Cheese Steaks') {
+	// 		return item;
+	// 	}
+	// });
+	// //Burgers
+	// const burgerMenu = menuInfo.filter((item) => {
+	// 	if (item.category === 'Burgers') {
+	// 		return item;
+	// 	}
+	// });
 
-	//Hoagies and Grinders
-	const hoagieAndGrinderMenu = menuInfo.filter((item) => {
-		if (item.category === 'Hoagies & Grinders') {
-			return item;
-		}
-	});
+	// //Hoagies and Grinders
+	// const hoagieAndGrinderMenu = menuInfo.filter((item) => {
+	// 	if (item.category === 'Hoagies & Grinders') {
+	// 		return item;
+	// 	}
+	// });
 
-	//Sandwichees
-	const sandwichesMenu = menuInfo.filter((item) => {
-		if (item.category === 'Sandwiches') {
-			return item;
-		}
-	});
+	// //Sandwichees
+	// const sandwichesMenu = menuInfo.filter((item) => {
+	// 	if (item.category === 'Sandwiches') {
+	// 		return item;
+	// 	}
+	// });
 
-	//Grilled Cheese
-	const grilledCheeseMenu = menuInfo.filter((item) => {
-		if (item.category === 'Grilled Cheese') {
-			return item;
-		}
-	});
+	// //Grilled Cheese
+	// const grilledCheeseMenu = menuInfo.filter((item) => {
+	// 	if (item.category === 'Grilled Cheese') {
+	// 		return item;
+	// 	}
+	// });
 
 	return (
 		<div>

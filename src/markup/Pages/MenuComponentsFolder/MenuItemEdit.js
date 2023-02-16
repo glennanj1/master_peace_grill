@@ -51,8 +51,9 @@ const MenuItemEdit = ({ item, userId }) => {
 			})
           }
         })
-
     }
+	console.log(errors)
+	
 	return (
 		<div className='form-container'>
 			<form className="item-edit-form" onSubmit={handleSubmit}>

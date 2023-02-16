@@ -1,5 +1,5 @@
 import React from 'react';
-import BuildYourOwnSection from './BuildYourOwnSection';
+// import BuildYourOwnSection from './BuildYourOwnSection';
 
 const MenuCategoryAndBYO = ({ menu, menuImg, cssClass }) => {
 
