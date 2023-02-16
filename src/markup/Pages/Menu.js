@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header2 from '../Layout/Header2';
 import Footer2 from '../Layout/Footer2';
 import MenuCategory from './MenuComponentsFolder/MenuCategory';
-import menuDb from '../../menuDB.json';
 
 import bg from './../../images/background/rainbow.jpeg';
 import app from './../../images/menu/app.jpg';
@@ -24,22 +23,51 @@ const fb =
 const yelp = 'http://www.yelp.com/biz/masterpeace-grill-conshohocken-2';
 
 function Menu() {
+	const [menuInfo, setMenuInfo] = useState([]);
+	const [errors, setErrors] = useState([]);
+
+	//fetch menu info from db
+	useEffect(() => {
+		fetchCurrentMenu();
+	}, []);
+
+	//function to get all menu data - run on component mount w/ useEffect
+	async function fetchCurrentMenu() {
+		try {
+			// let res = await fetch('/https://master-peace-grill-backend.herokuapp.com/foods');
+			//for development run w/ ruby backend
+			let res = await fetch('http://localhost:3000/foods');
+
+			if (!res.ok) {
+				const message = `Error occurred: ${res.status}`;
+				throw new Error(message);
+			}
+
+			//set menu info w/ response from DB
+			const menuData = await res.json();
+			console.log('MENU INFO:', menuData);
+			setMenuInfo(menuData);
+		} catch (error) {
+			console.error('ERROR:', error);
+			setErrors(error);
+		}
+	}
 
 	//filter menu categories to pass into each component
 	//APPETIZERS
-	const appMenu = menuDb.filter((item) => {
+	const appMenu = menuInfo.filter((item) => {
 		if (item.category === 'Appetizers') {
 			return item;
 		}
 	});
 	//WINGS
-	const wingMenu = menuDb.filter((item) => {
+	const wingMenu = menuInfo.filter((item) => {
 		if (item.category === 'Wings') {
 			return item;
 		}
 	});
 	//SALADS
-	const saladMenu = menuDb.filter((item) => {
+	const saladMenu = menuInfo.filter((item) => {
 		if (item.category === 'Salads') {
 			return item;
 		}

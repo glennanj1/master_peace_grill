@@ -7,11 +7,11 @@ const MenuCategory = ({ menu, menuImg, cssClass }) => {
 		.map((item) => {
 			//does the item have details?
 			let itemDetails = item.details ? <h6>{item.details}</h6> : '';
-			//does the item have details?
+			//does the item have add_ons?
 			let itemAddOn = item.add_ons ? <h6>{item.add_ons}</h6> : '';
 
 			return (
-				<li>
+				<li key={item.id}>
 					<div className="info-price">
 						<h5 className="title">{item.name}</h5>
 						<div className="line"></div>
@@ -33,7 +33,7 @@ const MenuCategory = ({ menu, menuImg, cssClass }) => {
 					<div className="col-lg-6">
 						<div className="menu-box">
 							<div className="section-head style-2">
-								<h2 className="title">{menu[0].category}</h2>
+								<h2 className="title">{menu[0]?.category}</h2>
 							</div>
 							<ul className="menu-list-2">{appItemList}</ul>
 						</div>
@@ -50,7 +50,7 @@ const MenuCategory = ({ menu, menuImg, cssClass }) => {
 					<div className="col-lg-6">
 						<div className="menu-box">
 							<div className="section-head style-2">
-								<h2 className="title">{menu[0].category}</h2>
+								<h2 className="title">{menu[0]?.category}</h2>
 							</div>
 							<ul className="menu-list-2">{appItemList}</ul>
 						</div>

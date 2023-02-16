@@ -6,8 +6,7 @@ const MenuItemEdit = ({ item }) => {
 		price: item.price,
 		category: item.category,
 		details: item.details ? item.details : '',
-		add_ons: item.add_ons ? item.add_ons : '',
-        id: item.id
+		add_ons: item.add_ons ? item.add_ons : ''
 	};
 	const [formData, setFormData] = useState(initialState);
 	const [errors, setErrors] = useState([]);
@@ -27,25 +26,29 @@ const MenuItemEdit = ({ item }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         //send this form data in a PATCH request to update values in DB
-        console.log(formData)
+        console.log('form-data', formData)
 
-        // fetch(`/`, {
-        //     method: "PATCH",
-        //     headers: {
-        //         "Content-Type": "application/json",
-        //     },
-        //     body: JSON.stringify(formData)
-        // })
-        // .then((res) => {
-        //   if (res.ok) {
-        //     res.json().then((data) => {
-        //         console.log(data)
-        //     });
-        //   } else {
-        //     res.json().then((err) => setErrors(err.errors))
-        //   }
-        // })
-        
+		//for development run w/ ruby backend and request from localhost:3000/foods
+		// fetch('/https://master-peace-grill-backend.herokuapp.com/foods');
+        fetch(`http://localhost:3000/foods/${item.id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData)
+        })
+        .then((res) => {
+          if (res.ok) {
+            res.json().then((data) => {
+            });
+          } else {
+            res.json().then((err) => {
+				console.log('ERROR from PATCH', err)
+				setErrors(err.errors)
+			})
+          }
+        })
+
     }
 	return (
 		<div className='form-container'>
@@ -76,14 +79,19 @@ const MenuItemEdit = ({ item }) => {
 
 				<div className="single-item-input">
 					<label className="form-label">Category</label>
-					<input
-						type="text"
-						id="category"
-						name="category"
-						value={formData.category}
-						onChange={handleOnChange}
-						required
-					/>
+					<select id="category" name="category" value={formData.category} onChange={handleOnChange} required>
+                	<option value="Appetizers">Appetizers</option>
+                	<option value="Wings">Wings</option>
+                	<option value="Salads">Salads</option>
+                	<option value="Wraps">Wraps</option>
+                	<option value="Triple_Decker_Clubs">Triple Decker Clubs</option>
+                	<option value="CheeseSteaks">CheeseSteaks</option>
+                	<option value="Burgers">Burgers</option>
+                	<option value="Hoagies_Grinders">Hoagies/Grinders</option>
+                	<option value="Sandwiches">Sandwiches</option>
+                	<option value="Grilled_Cheese">Grilled Cheese</option>
+					</select>
+
 				</div>
 
 				<div className="single-item-input">
