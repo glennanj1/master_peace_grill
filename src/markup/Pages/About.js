@@ -97,7 +97,7 @@ class About extends Component{
 								<div className="col-lg-12">
 									<div className="section-head text-center text-white">
 										<h3 className="text-white">Best CheeseSteak in Town</h3>
-										<p>Going on 7 years of buisness</p>
+										<p>Going on 8 years of buisness</p>
 									</div>
 								</div>
 							</div>
