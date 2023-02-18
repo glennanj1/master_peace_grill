@@ -10,7 +10,7 @@ export const UserProvider = ({ children }) => {
 	};
 
 	useEffect(() => {
-		fetch('http://localhost:3000/me', {
+		fetch('https://master-peace-grill-backend.herokuapp.com/me', {
 			method: 'GET',
 			credentials: 'include',
 			headers: {
@@ -25,31 +25,19 @@ export const UserProvider = ({ children }) => {
 		});
 	}, []);
 
-    useEffect(() => {
-        fetch('https://master-peace-grill-backend.herokuapp.com/me', {
-            method: "GET",
-            credentials: "include",
-            headers: {
-                "Content-Type": "application/json"
-            }
-        })
-            .then(res => {
-                //debugger;
-                if (res.ok) {
-                    res.json()
-                        .then(user => setUser(user))
-                }
-                else {
-                    res.json().then(data => console.log(data.errors))
-                }
-            })
-    }, [])
-
     return (
         <UserContext.Provider
             value={{ user, updateUser }}
         >
             {children}
         </UserContext.Provider>
+    )
+}
+
+export const userProvider = (Component) => {
+    return (props) => (
+      <UserProvider>
+        <Component {...props} />
+      </UserProvider>
     )
 }
