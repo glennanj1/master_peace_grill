@@ -9,6 +9,7 @@ import About from './Pages/About';
 import NotFound from './Pages/NotFound';
 
 import Menu from './Pages/Menu';
+import MenuEditForm from './Pages/MenuComponentsFolder/MenuEditForm';
 
 import Login from './Pages/Login';
 
@@ -24,6 +25,7 @@ function Markup() {
 				<Route path='/menu' exact component={Menu} />
 
 				<Route path='/login' exact component={Login} />
+				<Route path='/menu/edit' exact component={MenuEditForm} />
 
 				<Route component={NotFound} />
 
