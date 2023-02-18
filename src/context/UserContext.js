@@ -11,7 +11,7 @@ export const UserProvider = ({ children }) => {
     }
 
     useEffect(() => {
-        fetch('https://master-peace-grill-backend.herokuapp.com/me', {
+        fetch('http://localhost:3000/me', {
             method: "GET",
             credentials: "include",
             headers: {
@@ -19,9 +19,10 @@ export const UserProvider = ({ children }) => {
             }
         })
             .then(res => {
+                debugger;
                 if (res.ok) {
                     res.json()
-                        .then(user => updateUser(user))
+                        .then(user => setUser(user))
                 }
                 else {
                     res.json().then(data => console.log(data.errors))

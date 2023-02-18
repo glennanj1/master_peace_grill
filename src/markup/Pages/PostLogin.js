@@ -12,7 +12,7 @@ function PostLogin({user}) {
                 <h3>Welcome, {user.email}</h3>
             </div>
             <div className="buttons-parent">
-                <button class=" margin-right">Edit Menu</button>
+                <button className=" margin-right">Edit Menu</button>
                 <button>Edit Modal</button>
             </div>
         </div>
