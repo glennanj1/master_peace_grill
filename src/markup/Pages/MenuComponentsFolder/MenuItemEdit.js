@@ -6,10 +6,10 @@ const MenuItemEdit = ({ item, userId }) => {
 	const initialState = {
 		name: item.name,
 		price: item.price,
-		category: item.category,
+		category: item.category.name,
 		details: item.details ? item.details : '',
 		add_ons: item.add_ons ? item.add_ons : '',
-		user_id: userId
+		//user_id: userId
 	};
 	const [formData, setFormData] = useState(initialState);
 	const [errors, setErrors] = useState([]);
@@ -29,12 +29,13 @@ const MenuItemEdit = ({ item, userId }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         //send this form data in a PATCH request to update values in DB
-        console.log('form-data', formData)
+        console.log('form-data', formData) 
 
 		//for development run w/ ruby backend and request from localhost:3000/foods
 		// fetch('/https://master-peace-grill-backend.herokuapp.com/foods');
         fetch(`http://localhost:3000/foods/${item.id}`, {
             method: "PATCH",
+			credentials: "include",
             headers: {
                 "Content-Type": "application/json",
             },
