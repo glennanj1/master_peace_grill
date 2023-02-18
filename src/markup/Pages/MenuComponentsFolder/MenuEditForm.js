@@ -13,8 +13,10 @@ const MenuEditForm = () => {
 	const loggedInUserId = loggedInUser.user?.id;
 
 	console.log(loggedInUserId);
-
+	debugger; 
 	let history = useHistory();
+
+	!loggedInUser.user ? history.push('/login') : console.log('welcome');
 
 	//fetch menu info from db to pre-populate form for editing
 	useEffect(() => {
