@@ -13,7 +13,7 @@ const MenuCategoryEditForm = ({ menu, userId }) => {
 
 	return (
 		<div className="menu-edit-category">
-			<h2>{menu[0]?.category}</h2>
+			<h2>{menu[0]?.category.name}</h2>
 			<div>{itemEditForm}</div>
 		</div>
 	);
