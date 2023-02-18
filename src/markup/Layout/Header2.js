@@ -182,9 +182,6 @@ class Header2 extends Component {
 						</div>
 					</div>
 				</div>
-				<Link to={'/menu/edit'}>
-					<span style={{ color: 'white', paddingLeft:'10px' }}>Edit Menu</span>
-				</Link>
 			</header>
 		);
 	}
