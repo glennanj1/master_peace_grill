@@ -27,12 +27,10 @@ const MenuEditForm = () => {
 			// let res = await fetch('https://master-peace-grill-backend.herokuapp.com/foods');
 			//for development run w/ ruby backend
 			let res = await fetch('http://localhost:3000/foods');
-
 			if (!res.ok) {
 				const message = `Error occurred: ${res.status}`;
 				throw new Error(message);
 			}
-
 			//set menu info w/ response from DB
 			const menuData = await res.json();
 			// console.log('MENU INFO:', menuData);
@@ -41,24 +39,32 @@ const MenuEditForm = () => {
 			console.error('ERROR:', error);
 		}
 	}
+	
+	
+		// filter menu categories to pass into each component
+		// APPETIZERS
+		if (menuInfo.length === 0) {
+			return <h1>Loading...</h1>;
+		}
+		const appMenu = menuInfo.filter((item) =>
+			item.category.name === 'Appetizers' ? item : false
+		);
 
-	// filter menu categories to pass into each component
-	// APPETIZERS
-	const appMenu = menuInfo.filter((item) =>
-		item.category === 'Appetizers' ? item : false
-	);
+		console.log('app menu:', appMenu);
 
-	console.log('app menu:', appMenu);
+		//WINGS
+		const wingMenu = menuInfo.filter((item) =>
+			item.category.name === 'Wings' ? item : false
+		);
 
-	//WINGS
-	const wingMenu = menuInfo.filter((item) =>
-		item.category === 'Wings' ? item : false
-	);
+		//SALADS
+		const saladMenu = menuInfo.filter((item) =>
+			item.category.name === 'Salads' ? item : false
+		);
 
-	//SALADS
-	const saladMenu = menuInfo.filter((item) =>
-		item.category === 'Salads' ? item : false
-	);
+		console.log(appMenu)
+	
+	//menuInfo.map((item) => console.log(item.category.name));
 
 	return (
 		<div className="menu-edit-form-page">
