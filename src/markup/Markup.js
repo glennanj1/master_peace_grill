@@ -1,17 +1,13 @@
 import React from 'react';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
 import Index2 from './Pages/Index2';
-
 import About from './Pages/About';
-
 import NotFound from './Pages/NotFound';
-
 import Menu from './Pages/Menu';
 import MenuEditForm from './Pages/MenuComponentsFolder/MenuEditForm';
-
 import Login from './Pages/Login';
+import { userProvider } from '../context/UserContext';
 
 function Markup() {
 
@@ -23,10 +19,10 @@ function Markup() {
 				<Route path='/about' exact component={About} />
 
 				<Route path='/menu' exact component={Menu} />
-
-				<Route path='/login' exact component={Login} />
-				<Route path='/menu/edit' exact component={MenuEditForm} />
-
+				
+				<Route path='/login' exact component={userProvider(Login)} />
+				<Route path='/menu/edit' exact component={userProvider(MenuEditForm)} />
+			
 				<Route component={NotFound} />
 
 			</Switch>
