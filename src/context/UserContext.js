@@ -25,13 +25,30 @@ export const UserProvider = ({ children }) => {
 		});
 	}, []);
 
-	if (user) {
-		console.log('user_id', user.id);
-	}
+    useEffect(() => {
+        fetch('https://master-peace-grill-backend.herokuapp.com/me', {
+            method: "GET",
+            credentials: "include",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+            .then(res => {
+                if (res.ok) {
+                    res.json()
+                        .then(user => updateUser(user))
+                }
+                else {
+                    res.json().then(data => console.log(data.errors))
+                }
+            })
+    }, [])
 
-	return (
-		<UserContext.Provider value={{ user, updateUser}}>
-			{children}
-		</UserContext.Provider>
-	);
-};
+    return (
+        <UserContext.Provider
+            value={{ user, updateUser }}
+        >
+            {children}
+        </UserContext.Provider>
+    )
+}
