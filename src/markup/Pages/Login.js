@@ -55,10 +55,6 @@ function Login() {
         })
     }
 
-    // const loginUser = (user) => {
-    //     updateUser(user)
-    // }
-
     if (user) {
         console.log(user)
     }
