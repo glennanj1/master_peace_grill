@@ -55,11 +55,11 @@ function Menu() {
 
 	//filter menu categories to pass into each component
 	//APPETIZERS
-	const appMenu = menuInfo.filter((item) => item.category === 'Appetizers' ? item : false);
+	const appMenu = menuInfo.filter((item) => item.category.name === 'Appetizers' ? item : false);
 	//WINGS
-	const wingMenu = menuInfo.filter((item) => item.category === 'Wings' ? item : false);
+	const wingMenu = menuInfo.filter((item) => item.category.name === 'Wings' ? item : false);
 	//SALADS
-	const saladMenu = menuInfo.filter((item) => item.category === 'Salads' ? item : false);
+	const saladMenu = menuInfo.filter((item) => item.category.name === 'Salads' ? item : false);
 
 	//WRAPS
 	// const wrapMenu = menuInfo.filter((item) => {
