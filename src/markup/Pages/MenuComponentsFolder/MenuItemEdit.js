@@ -6,7 +6,7 @@ const MenuItemEdit = ({ item, userId }) => {
 	const initialState = {
 		name: item.name,
 		price: item.price,
-		category: item.category.name,
+		category_id: item.category.id,
 		details: item.details ? item.details : '',
 		add_ons: item.add_ons ? item.add_ons : '',
 		//user_id: userId
@@ -17,6 +17,7 @@ const MenuItemEdit = ({ item, userId }) => {
 	// get values from user input/changes to form
 	const handleOnChange = (e) => {
 		const { name, value } = e.target;
+		//debugger;
 		setFormData((formData) => {
 			return {
 				...formData,
@@ -84,19 +85,18 @@ const MenuItemEdit = ({ item, userId }) => {
 
 				<div className="single-item-input">
 					<label className="form-label">Category</label>
-					<select id="category" name="category" value={formData.category} onChange={handleOnChange} required>
-                	<option value="Appetizers">Appetizers</option>
-                	<option value="Wings">Wings</option>
-                	<option value="Salads">Salads</option>
-                	<option value="Wraps">Wraps</option>
-                	<option value="Triple_Decker_Clubs">Triple Decker Clubs</option>
-                	<option value="CheeseSteaks">CheeseSteaks</option>
-                	<option value="Burgers">Burgers</option>
-                	<option value="Hoagies_Grinders">Hoagies/Grinders</option>
-                	<option value="Sandwiches">Sandwiches</option>
-                	<option value="Grilled_Cheese">Grilled Cheese</option>
+					<select id="category" name="category_id" value={formData.category_id} onChange={handleOnChange} required>
+                	<option label="Appetizers" value="1">Appetizers</option>
+                	<option label="Wings" value="Wings">Wings</option>
+                	<option label="Salads" value="Salads">Salads</option>
+                	<option label="Wraps" value="Wraps">Wraps</option>
+                	<option label="Triple_Decker_Clubs" value="Triple_Decker_Clubs">Triple Decker Clubs</option>
+                	<option label="CheeseSteaks" value="CheeseSteaks">CheeseSteaks</option>
+                	<option label="Burgers" value="Burgers">Burgers</option>
+                	<option label="Hoagies_Grinders" value="Hoagies_Grinders">Hoagies/Grinders</option>
+                	<option label="Sandwiches" value="Sandwiches">Sandwiches</option>
+                	<option label="Grilled_Cheese" value="Grilled_Cheese">Grilled Cheese</option>
 					</select>
-
 				</div>
 
 				<div className="single-item-input">
