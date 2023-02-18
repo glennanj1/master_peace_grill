@@ -33,7 +33,7 @@ const MenuCategory = ({ menu, menuImg, cssClass }) => {
 					<div className="col-lg-6">
 						<div className="menu-box">
 							<div className="section-head style-2">
-								<h2 className="title">{menu[0]?.category}</h2>
+								<h2 className="title">{menu[0]?.category.name}</h2>
 							</div>
 							<ul className="menu-list-2">{categoryItemList}</ul>
 						</div>
@@ -50,7 +50,7 @@ const MenuCategory = ({ menu, menuImg, cssClass }) => {
 					<div className="col-lg-6">
 						<div className="menu-box">
 							<div className="section-head style-2">
-								<h2 className="title">{menu[0]?.category}</h2>
+								<h2 className="title">{menu[0]?.category.name}</h2>
 							</div>
 							<ul className="menu-list-2">{categoryItemList}</ul>
 						</div>
