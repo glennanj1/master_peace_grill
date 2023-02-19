@@ -1,6 +1,5 @@
 import React, {useContext, useState} from 'react'
 import '../../css/login.css'
-import Header2 from '../Layout/Header2.js'
 import { useHistory } from "react-router-dom";
 import { UserContext } from './../../context/UserContext';
 import MenuEditForm from './MenuComponentsFolder/MenuEditForm';
@@ -20,7 +19,6 @@ function PostLogin() {
     
     return (
         <div className="post-login-page" style={{backgroundImage: "url(https://d3ddatyom1hv87.cloudfront.net/background.jpg)", backgroundSize: "cover"}} >
-            <Header2 />
             <div className="post-login-header">
                 <h3>Welcome, {user.email}</h3>
             </div>
