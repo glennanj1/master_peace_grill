@@ -1,18 +1,12 @@
 import React, { useState, useContext } from 'react';
 import { UserContext } from './../../context/UserContext';
 import '../../css/login.css'
-import Header2 from '../Layout/Header2.js'
 import PostLogin from './PostLogin.js'
-
-
-// import { useHistory } from 'react-router-dom';
 
 function Login() {
     const { updateUser, user } = useContext(UserContext)
     const [userData, setUserData] = useState({ email: "", password: "" })
     const [error, setError] = useState(null)
-
-    // let history = useHistory();
 
     const handleFormChange = (e) => {
         const key = e.target.name
@@ -55,15 +49,10 @@ function Login() {
         })
     }
 
-    if (user) {
-        console.log(user)
-    }
-
-    if (user) return <PostLogin user={user} />
+    if (user) return <PostLogin />
 
     return (
         <div className="login-page" style={{ backgroundImage: "url(https://d3ddatyom1hv87.cloudfront.net/home.jpg)", backgroundSize: "cover" }}>
-            <Header2 />
                 <form className='login-form' onSubmit={handleLogin} >
                     <h3>Login</h3>
                     <label>Email</label>
