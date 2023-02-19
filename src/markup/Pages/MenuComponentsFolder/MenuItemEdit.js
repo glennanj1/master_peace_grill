@@ -33,7 +33,7 @@ const MenuItemEdit = ({ item, userId }) => {
         console.log('form-data', formData) 
 
 		// fetch('/https://master-peace-grill-backend.herokuapp.com/foods');
-        fetch(`https://master-peace-grill-backend.herokuapp.com/${item.id}`, {
+        fetch(`https://master-peace-grill-backend.herokuapp.com/foods/${item.id}`, {
             method: "PATCH",
 			credentials: "include",
             headers: {
