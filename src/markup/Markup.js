@@ -21,7 +21,6 @@ function Markup() {
 				<Route path='/menu' exact component={Menu} />
 				
 				<Route path='/login' exact component={userProvider(Login)} />
-				<Route path='/menu/edit' exact component={userProvider(MenuEditForm)} />
 			
 				<Route component={NotFound} />
 
