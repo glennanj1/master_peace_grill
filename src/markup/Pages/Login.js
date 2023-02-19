@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import { UserContext } from './../../context/UserContext';
 import '../../css/login.css'
 import PostLogin from './PostLogin.js'
+import mpgLogo from '../../images/mpgLogo.png'
 
 function Login() {
     const { updateUser, user } = useContext(UserContext)
@@ -52,7 +53,8 @@ function Login() {
     if (user) return <PostLogin />
 
     return (
-        <div className="login-page" style={{ backgroundImage: "url(https://d3ddatyom1hv87.cloudfront.net/home.jpg)", backgroundSize: "cover" }}>
+        <div className="login-page" style={{ backgroundImage: "url(https://d3ddatyom1hv87.cloudfront.net/background.jpg)", backgroundSize: "cover" }}>
+                <img src={mpgLogo} alt="logo" />
                 <form className='login-form' onSubmit={handleLogin} >
                     <h3>Login</h3>
                     <label>Email</label>
