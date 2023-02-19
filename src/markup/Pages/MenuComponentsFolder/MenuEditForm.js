@@ -5,28 +5,21 @@ import MenuCategoryEditForm from './MenuCategoryEditForm';
 import './menuEdit.css';
 
 const MenuEditForm = () => {
+	let history = useHistory();
+	const {user} = useContext(UserContext);
+	!user ? history.push('/login') : console.log('welcome');
+
 	const [menuInfo, setMenuInfo] = useState([]);
 	// const [errors, setErrors] = useState([]);
-
-	//get logged in user to make updates
-	const loggedInUser = useContext(UserContext);
-	const loggedInUserId = loggedInUser.user?.id;
-
-	console.log(loggedInUserId);
-	debugger; 
-	let history = useHistory();
-
-	!loggedInUser.user ? history.push('/login') : console.log('welcome');
 
 	//fetch menu info from db to pre-populate form for editing
 	useEffect(() => {
 		fetchCurrentMenu();
 	}, []);
 
-	//function to get all menu datan from food_model
+	//function to get all menu data from food_model
 	async function fetchCurrentMenu() {
 		try {
-			// let res = await fetch('https://master-peace-grill-backend.herokuapp.com/foods');
 			//for development run w/ ruby backend
 			let res = await fetch('http://localhost:3000/foods');
 			if (!res.ok) {
@@ -41,7 +34,6 @@ const MenuEditForm = () => {
 			console.error('ERROR:', error);
 		}
 	}
-	
 	
 		// filter menu categories to pass into each component
 		// APPETIZERS
@@ -73,9 +65,9 @@ const MenuEditForm = () => {
 			<button className="return-home-btn " onClick={() => history.push('/')}>
 				Home
 			</button>
-			<MenuCategoryEditForm menu={appMenu} userId={loggedInUserId} />
-			<MenuCategoryEditForm menu={wingMenu} userId={loggedInUserId} />
-			<MenuCategoryEditForm menu={saladMenu} userId={loggedInUserId} />
+			<MenuCategoryEditForm menu={appMenu} />
+			<MenuCategoryEditForm menu={wingMenu} />
+			<MenuCategoryEditForm menu={saladMenu} />
 		</div>
 	);
 };
