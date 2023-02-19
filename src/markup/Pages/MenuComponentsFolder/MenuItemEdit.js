@@ -32,9 +32,8 @@ const MenuItemEdit = ({ item, userId }) => {
         //send this form data in a PATCH request to update values in DB
         console.log('form-data', formData) 
 
-		//for development run w/ ruby backend and request from localhost:3000/foods
 		// fetch('/https://master-peace-grill-backend.herokuapp.com/foods');
-        fetch(`http://localhost:3000/foods/${item.id}`, {
+        fetch(`https://master-peace-grill-backend.herokuapp.com/${item.id}`, {
             method: "PATCH",
 			credentials: "include",
             headers: {
