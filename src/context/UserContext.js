@@ -1,10 +1,10 @@
 import React, { useState, createContext, useEffect } from 'react';
-
+import { useHistory } from 'react-router-dom';
 export const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
 	const [user, setUser] = useState(null);
-
+    let history = useHistory();
 	const updateUser = (value) => {
 		setUser(value);
 	};
@@ -20,10 +20,13 @@ export const UserProvider = ({ children }) => {
 			if (res.ok) {
 				res.json().then((user) => updateUser(user));
 			} else {
-				res.json().then((data) => console.log(data.errors));
+				res.json().then((data) => {
+					console.log(data.errors);
+					history.push('/login');
+				});
 			}
 		});
-	}, []);
+	}, [history]);
 
     return (
         <UserContext.Provider
