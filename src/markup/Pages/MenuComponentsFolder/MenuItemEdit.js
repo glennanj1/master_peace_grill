@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 
-
-const MenuItemEdit = ({ item, userId }) => {
+const MenuItemEdit = ({ item }) => {
+	const history = useHistory();
 	const initialState = {
 		name: item.name,
 		price: item.price,
 		category_id: item.category.id,
 		details: item.details ? item.details : '',
 		add_ons: item.add_ons ? item.add_ons : '',
-		//user_id: userId
 	};
 	const [formData, setFormData] = useState(initialState);
 	const [errors, setErrors] = useState([]);
@@ -49,6 +49,7 @@ const MenuItemEdit = ({ item, userId }) => {
             res.json().then((err) => {
 				console.log('ERROR from PATCH', err)
 				setErrors(err.errors)
+				history.push('/');
 			})
           }
         })
