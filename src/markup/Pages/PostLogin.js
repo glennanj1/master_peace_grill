@@ -12,7 +12,7 @@ function PostLogin() {
 
     const handleEditMenu = () => {
         setEditMenu(true);
-        console.log(editMenu);
+        console.log('EditMenu clg on postLogin', editMenu);
     }
 
     if (editMenu) return <MenuEditForm /> 

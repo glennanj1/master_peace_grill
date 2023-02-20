@@ -12,7 +12,7 @@ const MenuItemEdit = ({ item }) => {
 		add_ons: item.add_ons ? item.add_ons : '',
 	};
 	const [formData, setFormData] = useState(initialState);
-	const [errors, setErrors] = useState([]);
+	// const [errors, setErrors] = useState([]);
 
 	// get values from user input/changes to form
 	const handleOnChange = (e) => {
@@ -32,8 +32,8 @@ const MenuItemEdit = ({ item }) => {
         //send this form data in a PATCH request to update values in DB
         console.log('form-data', formData) 
 
-		// fetch('/https://master-peace-grill-backend.herokuapp.com/foods');
-        fetch(`https://master-peace-grill-backend.herokuapp.com/foods/${item.id}`, {
+		// fetch(`https://master-peace-grill-backend.herokuapp.com/foods/${item.id}`
+        fetch(`http://localhost:3000/foods/${item.id}`, {
             method: "PATCH",
 			credentials: "include",
             headers: {
@@ -44,17 +44,18 @@ const MenuItemEdit = ({ item }) => {
         .then((res) => {
           if (res.ok) {
             res.json().then((data) => {
+				console.log('data after patch',data)
+				
             });
           } else {
             res.json().then((err) => {
 				console.log('ERROR from PATCH', err)
-				setErrors(err.errors)
+				// setErrors(err.errors)
 				history.push('/');
 			})
           }
         })
     }
-	console.log(errors)
 	
 	return (
 		<div className='form-container'>
