@@ -29,7 +29,7 @@ function Login() {
             cache: "no-cache",
             redirect: "follow",
             referrerPolicy: "no-referrer",
-            credentials: "include",
+            credentials: "same-origin",
             body: JSON.stringify(userData)
         })
             .then(res => {
