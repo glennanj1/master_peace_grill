@@ -26,10 +26,8 @@ function Login() {
             headers: {
                 "Content-Type": "application/json"
             },
-            cache: "no-cache",
             redirect: "follow",
-            referrerPolicy: "no-referrer",
-            credentials: "same-origin",
+            credentials: "include",
             body: JSON.stringify(userData)
         })
             .then(res => {
