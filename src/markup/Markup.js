@@ -18,13 +18,13 @@ function Markup() {
 				<Route path='/about' exact component={About} />
 
 				<Route path='/menu' exact component={Menu} />
-				
+
 				<Route path='/login' exact component={userProvider(Login)} />
-			
+
 				<Route component={NotFound} />
 
 			</Switch>
-		</ BrowserRouter>
+		</BrowserRouter>
 	)
 }
 

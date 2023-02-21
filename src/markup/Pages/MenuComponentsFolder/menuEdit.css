@@ -5,9 +5,10 @@
 	/* border: 2px solid orange; */
 }
 
-.return-home-btn{
+.return-home-btn, .logout-btn {
 	border: 1px solid #f22c4e;
-	margin: 20px;
+	margin: 20px 0 20px 20px;
+	/* margin: 20px; */
 	color: #f22c4e;
 	border-radius: 7px;
 }
@@ -52,9 +53,11 @@
 	padding: 5px;
 	height: 100%;
 }
+
 .single-item-input input {
 	font-size: 14px;
 }
+
 .single-item-input textarea {
 	height: 4rem;
 	font-size: 14px;
@@ -64,17 +67,18 @@
 
 @media screen and (max-width: 1100px) {
 	.form-container {
-        flex-direction: column;
-        border: 2px solid red;
-        justify-content: space-between;
-        width: 40%;
-      
-      
-    }
-    .item-edit-form {
 		flex-direction: column;
-        width: 50%;
-        /* flex-shrink: inherit; */
-        /* background-color: aqua; */
+		border: 2px solid red;
+		justify-content: space-between;
+		width: 40%;
+
+
+	}
+
+	.item-edit-form {
+		flex-direction: column;
+		width: 50%;
+		/* flex-shrink: inherit; */
+		/* background-color: aqua; */
 	}
 }
