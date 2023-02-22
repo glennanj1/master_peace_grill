@@ -20,8 +20,7 @@ const MenuEditForm = () => {
 	//function to get all menu data from food_model
 	async function fetchCurrentMenu() {
 		try {
-			//for development run w/ ruby backend https://master-peace-grill-backend.herokuapp.com/foods
-			let res = await fetch('http://localhost:3000/foods');
+			let res = await fetch('https://master-peace-grill-backend.herokuapp.com/foods');
 			if (!res.ok) {
 				const message = `Error occurred: ${res.status}`;
 				throw new Error(message);
