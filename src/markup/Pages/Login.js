@@ -34,6 +34,7 @@ function Login() {
                 if (res.ok) {
                     res.json().then(user => {
                         updateUser(user)
+                        setError(null)
                     })
                     // history.push('/menu')
                 }
@@ -52,26 +53,26 @@ function Login() {
 
     return (
         <div className="login-page" style={{ backgroundImage: "url(https://d3ddatyom1hv87.cloudfront.net/background.jpg)", backgroundSize: "cover" }}>
-                <img src={mpgLogo} alt="logo" />
-                <form className='login-form' onSubmit={handleLogin} >
-                    <h3>Login</h3>
-                    <label>Email</label>
-                    <input
-                        type="text"
-                        name="email"
-                        value={userData.email}
-                        onChange={handleFormChange}
-                    />
-                    <label>Password</label>
-                    <input
-                        type="password"
-                        name="password"
-                        value={userData.password}
-                        onChange={handleFormChange}
-                    />
-                    <button type="submit">Submit</button>
-                    {error && <p>{error}</p>}
-                </form>
+            <img src={mpgLogo} alt="logo" />
+            <form className='login-form' onSubmit={handleLogin} >
+                <h3>Login</h3>
+                <p className="error">{error}</p>
+                <label>Email</label>
+                <input
+                    type="text"
+                    name="email"
+                    value={userData.email}
+                    onChange={handleFormChange}
+                />
+                <label>Password</label>
+                <input
+                    type="password"
+                    name="password"
+                    value={userData.password}
+                    onChange={handleFormChange}
+                />
+                <button type="submit">Submit</button>
+            </form>
         </div>
     )
 }
