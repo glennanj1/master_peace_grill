@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { UserContext } from '../../../context/UserContext';
 import MenuCategoryEditForm from './MenuCategoryEditForm';
+import LogoutButton from '../../Element/LogoutButton';
 import './menuEdit.css';
 
 const MenuEditForm = () => {
@@ -87,11 +88,13 @@ const MenuEditForm = () => {
 
 	//menuInfo.map((item) => console.log(item.category.name));
 
+
 	return (
 		<div className="menu-edit-form-page">
 			<button className="return-home-btn " onClick={() => history.push('/')}>
 				Home
 			</button>
+			<LogoutButton css={'logout-btn'} />
 			<MenuCategoryEditForm menu={appMenu} />
 			<MenuCategoryEditForm menu={wingMenu} />
 			<MenuCategoryEditForm menu={saladMenu} />
