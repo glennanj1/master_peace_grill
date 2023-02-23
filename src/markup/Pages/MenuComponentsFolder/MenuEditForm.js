@@ -86,6 +86,10 @@ const MenuEditForm = () => {
 		item.category.name.includes('Grilled') ? item : false
 	);
 
+	const cateringMenu = menuInfo.filter((item) =>
+		item.category.name.includes('Catering') ? item : false
+	);
+
 	//menuInfo.map((item) => console.log(item.category.name));
 
 
@@ -105,6 +109,7 @@ const MenuEditForm = () => {
 			<MenuCategoryEditForm menu={hoagieAndGrinderMenu} />
 			<MenuCategoryEditForm menu={sandwichesMenu} />
 			<MenuCategoryEditForm menu={grilledCheeseMenu} />
+			<MenuCategoryEditForm menu={cateringMenu} />
 		</div>
 	);
 };
