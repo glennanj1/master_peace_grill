@@ -5,7 +5,8 @@
 	/* border: 2px solid orange; */
 }
 
-.return-home-btn, .logout-btn {
+.see-menu-btn,
+.logout-btn {
 	border: 1px solid #f22c4e;
 	margin: 20px 0 20px 20px;
 	/* margin: 20px; */
@@ -73,6 +74,7 @@
 		justify-content: center;
 		width: 90%;
 	}
+
 	.item-edit-form {
 		flex-direction: column;
 		width: 90%;
@@ -82,14 +84,16 @@
 		/* background-color: aqua; */
 	}
 
-	.single-item-input{
+	.single-item-input {
 		width: 90%;
 		margin: 0 auto;
 	}
-	.submit-btn{
+
+	.submit-btn {
 		margin: 0 auto;
-  	}
-  	/*
+	}
+
+	/*
 		border: 2px solid red;
 		justify-content: space-between;
 		width: 40%;
@@ -98,5 +102,14 @@
 		flex-direction: column;
 		width: 50%;
 		/* flex-shrink: inherit; */
-		/* background-color: aqua; */
+	/* background-color: aqua; */
+
+	.see-menu-btn, .logout-btn {
+		font-size: large;
+		border: 1px solid #f22c4e;
+		margin: 20px 0 20px 20px;
+		/* margin: 20px; */
+		color: #f22c4e;
+		border-radius: 7px;
+	}
 }

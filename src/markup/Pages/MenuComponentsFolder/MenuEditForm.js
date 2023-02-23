@@ -5,7 +5,7 @@ import MenuCategoryEditForm from './MenuCategoryEditForm';
 import LogoutButton from '../../Element/LogoutButton';
 import './menuEdit.css';
 
-const MenuEditForm = () => {
+const MenuEditForm = ({ setEditMenu }) => {
 	let history = useHistory();
 	const { user } = useContext(UserContext);
 	!user ? history.push('/login') : console.log('welcome');
@@ -95,8 +95,8 @@ const MenuEditForm = () => {
 
 	return (
 		<div className="menu-edit-form-page">
-			<button className="return-home-btn " onClick={() => history.push('/')}>
-				Home
+			<button className="see-menu-btn" onClick={() => setEditMenu(false)}>
+				Back
 			</button>
 			<LogoutButton css={'logout-btn'} />
 			<MenuCategoryEditForm menu={appMenu} />

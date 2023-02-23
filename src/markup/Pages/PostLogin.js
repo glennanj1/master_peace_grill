@@ -17,16 +17,17 @@ function PostLogin() {
         console.log('EditMenu clg on postLogin', editMenu);
     }
 
-    if (editMenu) return <MenuEditForm />
+    if (editMenu) return <MenuEditForm setEditMenu={setEditMenu} />
 
     return (
         <div className="post-login-page" style={{ backgroundImage: "url(https://d3ddatyom1hv87.cloudfront.net/background.jpg)", backgroundSize: "cover" }} >
             <div className="post-login-header">
-                <h3>Welcome, {user.email}</h3>
+                <p>Welcome, {user.email}</p>
             </div>
             <div className="buttons-parent">
                 <button className="margin-right" onClick={handleEditMenu}>Edit Menu</button>
                 <button className="margin-right" disabled='true'>Edit Modal</button>
+                <button className="margin-right" onClick={() => history.push('/menu')}>See Menu</button>
                 <LogoutButton />
             </div>
         </div>

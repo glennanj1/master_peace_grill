@@ -70,6 +70,7 @@
 .post-login-header {
   max-width: 100%;
   padding: 1rem;
+  font-size: x-large;
   /* adjusts how big welcome header is */
   border-radius: 25px;
   display: flex;
@@ -126,11 +127,12 @@ button.margin-right {
   margin-right: 20px
 }
 
-/* media query to adjust buttons layout on mobile */
 @media (max-width: 800px) {
+
+  /* adjust buttons layout on mobile */
   .buttons-parent {
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 0;
     width: fit-content;
   }
 
@@ -141,6 +143,14 @@ button.margin-right {
   .buttons-parent>button {
     margin-top: 10px;
   }
+
+  /* adjust header font size mobile */
+  .post-login-header {
+    font-size: x-large;
+  }
+
 }
+
+
 
 .mpgLogoLogin {}
