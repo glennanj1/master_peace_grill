@@ -26,7 +26,7 @@ function PostLogin() {
             </div>
             <div className="buttons-parent">
                 <button className="margin-right" onClick={handleEditMenu}>Edit Menu</button>
-                <button className="margin-right" disabled='true'>Edit Modal</button>
+                <button className="margin-right" disabled={true}>Edit Modal</button>
                 <button className="margin-right" onClick={() => history.push('/menu')}>See Menu</button>
                 <LogoutButton />
             </div>
