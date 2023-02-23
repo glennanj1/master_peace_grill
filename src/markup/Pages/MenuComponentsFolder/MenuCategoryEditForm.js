@@ -7,9 +7,9 @@ const MenuCategoryEditForm = ({ menu, userId }) => {
 		.map((item) => {
 			return <MenuItemEdit item={item} key={item.id} userId={userId} />;
 		})
-		.sort((a, b) => {
-			return a.id > b.id;
-		});
+		// .sort((a, b) => {
+		// 	return a.id > b.id;
+		// });
 
 	return (
 		<div className="menu-edit-category">
