@@ -3,7 +3,8 @@ import React from 'react';
 const MenuCategory = ({ menu, menuImg, cssClass }) => {
 	//pass in cssClass boolean value to render menu category section w/ image on corresponding side based
 
-	// console.log('menu category component info:', menu);
+	// console.log('menu category component info:', menu); 
+	debugger;
 
 	const categoryItemList = menu
 		.map((item) => {
@@ -24,9 +25,9 @@ const MenuCategory = ({ menu, menuImg, cssClass }) => {
 				</li>
 			);
 		})
-		.sort((a, b) => {
-			return a.id > b.id;
-		});
+		// .sort((a, b) => {
+		// 	return a.id > b.id;
+		// });
 
 
 	return (
