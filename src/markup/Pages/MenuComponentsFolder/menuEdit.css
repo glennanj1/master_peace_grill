@@ -88,8 +88,8 @@
 	}
 	.submit-btn{
 		margin: 0 auto;
-  }
-  /*
+  	}
+  	/*
 		border: 2px solid red;
 		justify-content: space-between;
 		width: 40%;
@@ -99,6 +99,4 @@
 		width: 50%;
 		/* flex-shrink: inherit; */
 		/* background-color: aqua; */
-	}
-  */
 }
