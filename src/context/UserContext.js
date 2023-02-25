@@ -1,16 +1,19 @@
 import React, { useState, createContext, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate, Outlet } from 'react-router-dom';
 export const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
+
+    let history = useNavigate();
+	
 	const [user, setUser] = useState(null);
-    let history = useHistory();
+
 	const updateUser = (value) => {
 		setUser(value);
 	};
 
 	useEffect(() => {
-		fetch('https://master-peace-grill-backend.herokuapp.com/me', {
+		fetch('http://localhost:3000/me', {
 			method: 'GET',
 			credentials: 'include',
 			headers: {
@@ -22,7 +25,7 @@ export const UserProvider = ({ children }) => {
 			} else {
 				res.json().then((data) => {
 					console.log(data.errors);
-					history.push('/login');
+					history('/login');
 				});
 			}
 		});
@@ -32,15 +35,8 @@ export const UserProvider = ({ children }) => {
         <UserContext.Provider
             value={{ user, updateUser }}
         >
-            {children}
+			<Outlet context={children} />
         </UserContext.Provider>
     )
 }
 
-export const userProvider = (Component) => {
-    return (props) => (
-      <UserProvider>
-        <Component {...props} />
-      </UserProvider>
-    )
-}
