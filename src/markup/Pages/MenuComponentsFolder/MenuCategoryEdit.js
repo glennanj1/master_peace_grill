@@ -2,13 +2,12 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
 
-export default function MenuCategoryEdit({ category }) {
+export default function MenuCategoryEdit({category, categoryNameChange}) {
 	const history = useNavigate();
-
 	const initialState = {
-		name: category.name,
-		description: category.description ? category.description : '',
-		add_ons: category.add_ons ? category.add_ons : '',
+		name: category?.name,
+		description: category?.description ? category.description : '',
+		add_ons: category?.add_ons ? category.add_ons : '',
 	};
 
 	const [formData, setFormData] = useState(initialState);
@@ -54,6 +53,7 @@ export default function MenuCategoryEdit({ category }) {
 		).then((res) => {
 			if (res.ok) {
 				res.json().then((data) => {
+                    categoryNameChange(data);
 					setLoading(false);
 					successNotify(data.name);
 				});
