@@ -30,11 +30,12 @@ const MenuItemEdit = ({ item, category }) => {
         e.preventDefault();
         //send this form data in a PATCH request to update values in DB
         console.log('form-data', formData) 
+		debugger;
 
 		//development fetch req
 		// fetch(` http://localhost:3000/foods/${item.id}`
 		
-        fetch(`https://master-peace-grill-backend.herokuapp.com/${item.id}`, {
+        fetch(`https://master-peace-grill-backend.herokuapp.com/foods/${item.id}`, {
             method: "PATCH",
 			credentials: "include",
             headers: {

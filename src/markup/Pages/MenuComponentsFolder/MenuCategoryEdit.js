@@ -30,7 +30,7 @@ export default function MenuCategoryEdit({category}) {
 		//development fetch req
 		// fetch(` http://localhost:3000/foods/${item.id}`
 		
-        fetch(`https://master-peace-grill-backend.herokuapp.com/${category.id}`, {
+        fetch(`https://master-peace-grill-backend.herokuapp.com/categories/${category.id}`, {
             method: "PATCH",
 			credentials: "include",
             headers: {
