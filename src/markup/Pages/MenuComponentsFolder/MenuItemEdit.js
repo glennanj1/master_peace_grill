@@ -34,7 +34,7 @@ const MenuItemEdit = ({ item, category }) => {
 		//development fetch req
 		// fetch(` http://localhost:3000/foods/${item.id}`
 		
-        fetch(`http://localhost:3000/foods/${item.id}`, {
+        fetch(`https://master-peace-grill-backend.herokuapp.com/${item.id}`, {
             method: "PATCH",
 			credentials: "include",
             headers: {

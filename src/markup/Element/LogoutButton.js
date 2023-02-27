@@ -9,7 +9,7 @@ function LogoutButton({ css }) {
     const { updateUser } = useContext(UserContext);
 
     const handleLogout = () => {
-        fetch('http://localhost:3000/logout', {
+        fetch('https://master-peace-grill-backend.herokuapp.com/logout', {
             method: 'delete',
             credentials: 'include',
             headers: {

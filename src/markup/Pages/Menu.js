@@ -24,7 +24,7 @@ function Menu() {
   async function fetchCurrentMenu() {
     try {
       let res = await fetch(
-        "http://localhost:3000/foods"
+        "https://master-peace-grill-backend.herokuapp.com/foods"
       );
       // for development run w/ ruby backend
       // let res = await fetch('http://localhost:3000/foods');
