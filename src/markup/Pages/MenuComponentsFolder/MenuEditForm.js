@@ -35,12 +35,9 @@ const MenuEditForm = ({ setEditMenu }) => {
 		}
 	}
 
-	// filter menu categories to pass into each component
-	// APPETIZERS
 	if (menuInfo.length === 0) {
 		return <h1>Loading...</h1>;
 	}
-
 	console.log('full-menu', menuInfo);
 
 	// categories
