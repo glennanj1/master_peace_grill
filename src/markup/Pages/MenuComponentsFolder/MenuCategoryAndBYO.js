@@ -1,22 +1,22 @@
 import React from 'react';
 // import BuildYourOwnSection from './BuildYourOwnSection';
 
-const MenuCategoryAndBYO = ({ menu, menuImg, cssClass }) => {
+const MenuCategoryAndBYO = ({ menu, menuImg, cssClass, category }) => {
 	console.log('menu passed to coponent w/ byo', menu);
 
 	const categoryItemList = menu
 		?.map((item) => {
 			//does the item have details?
-			let itemDetails = item.details ? <h6>{item.details}</h6> : '';
+			let itemDetails = item.details ? <h6>{item?.details}</h6> : '';
 			//does the item have add_ons?
-			let itemAddOn = item.add_ons ? <h6>{item.add_ons}</h6> : '';
+			let itemAddOn = item.add_ons ? <h6>{item?.add_ons}</h6> : '';
 
 			return (
-				<li key={item.id}>
+				<li key={item?.id}>
 					<div className="info-price">
-						<h5 className="title">{item.name}</h5>
+						<h5 className="title">{item?.name}</h5>
 						<div className="line"></div>
-						<span className="price">{item.price}</span>
+						<span className="price">{parseFloat(item?.price).toFixed(2)}</span>
 					</div>
 					{itemDetails}
 					{itemAddOn}
@@ -29,7 +29,7 @@ const MenuCategoryAndBYO = ({ menu, menuImg, cssClass }) => {
 
 	let byoVar = '';
 
-	switch (menu[0]?.category.name) {
+	switch (category?.name) {
 		case 'Wraps $10.99':
 			byoVar = (
 				<p>
@@ -178,11 +178,11 @@ const MenuCategoryAndBYO = ({ menu, menuImg, cssClass }) => {
 					<div className="col-lg-6">
 						<div className="menu-box">
 							<div className="section-head style-2">
-								<h2 className="title">{menu[0]?.category.name}</h2>
+								<h2 className="title">{category?.name}</h2>
 								<h4 class="sub-title">Build Your Own</h4>
 								<p>{byoVar}</p>
 								<h3 className="title">Best Sellers</h3>
-								<p>{menu[0]?.category.description}</p>
+								<p>{category?.description}</p>
 							</div>
 							<ul className="menu-list-2">{categoryItemList}</ul>
 						</div>
@@ -199,11 +199,11 @@ const MenuCategoryAndBYO = ({ menu, menuImg, cssClass }) => {
 					<div className="col-lg-6">
 						<div className="menu-box">
 							<div className="section-head style-2">
-								<h2 className="title">{menu[0]?.category.name}</h2>
+								<h2 className="title">{category?.name}</h2>
 								<h4 class="sub-title">Build Your Own</h4>
 								<p>{byoVar}</p>
 								<h3 className="title">Best Sellers</h3>
-								<p>{menu[0]?.category.description}</p>
+								<p>{category?.description}</p>
 							</div>
 							<ul className="menu-list-2">{categoryItemList}</ul>
 						</div>
