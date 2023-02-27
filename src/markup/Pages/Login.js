@@ -1,18 +1,25 @@
-import React, { useState, useContext } from 'react';
-import { UserContext } from './../../context/UserContext';
+import React, { useState, useContext, useEffect } from 'react';
 import '../../css/login.css'
-import PostLogin from './PostLogin.js'
 import mpgLogo from '../../images/mpgLogo.png'
+import { useNavigate } from "react-router-dom";
+import { UserContext } from './../../context/UserContext';
 
 function Login() {
-    const { updateUser, user } = useContext(UserContext)
+    const history = useNavigate();
+    const { user } = useContext(UserContext);
+
+    useEffect(() => {
+        !user ? console.log('not logged in') : history('/change/home');
+    }, [user, history])
+    
+
     const [userData, setUserData] = useState({ email: "", password: "" })
     const [error, setError] = useState(null)
+
 
     const handleFormChange = (e) => {
         const key = e.target.name
         const value = e.target.value
-
         setUserData({
             ...userData, [key]: value
         })
@@ -21,22 +28,21 @@ function Login() {
     const handleLogin = (e) => {
         e.preventDefault()
 
-        fetch('https://master-peace-grill-backend.herokuapp.com/login', {
+        fetch('http://localhost:3000/login', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            redirect: "follow",
             credentials: "include",
             body: JSON.stringify(userData)
         })
             .then(res => {
                 if (res.ok) {
                     res.json().then(user => {
-                        updateUser(user)
-                        setError(null)
-                    })
-                    // history.push('/menu')
+                    console.log(user);
+                    setError(null);
+                    history('/change/home');
+                })
                 }
                 else {
                     res.json().then(data => setError(data.errors))
@@ -48,8 +54,6 @@ function Login() {
             password: ""
         })
     }
-
-    if (user) return <PostLogin />
 
     return (
         <div className="login-page" style={{ backgroundImage: "url(https://d3ddatyom1hv87.cloudfront.net/background.jpg)", backgroundSize: "cover" }}>
