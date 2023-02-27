@@ -1,14 +1,14 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../../../context/UserContext';
 import MenuCategoryEditForm from './MenuCategoryEditForm';
 import LogoutButton from '../../Element/LogoutButton';
 import './menuEdit.css';
 
 const MenuEditForm = ({ setEditMenu }) => {
-	let history = useHistory();
+	let history = useNavigate();
 	const { user } = useContext(UserContext);
-	!user ? history.push('/login') : console.log('welcome');
+	!user ? history('/login') : console.log('welcome');
 
 	const [menuInfo, setMenuInfo] = useState([]);
 	// const [errors, setErrors] = useState([]);
@@ -21,7 +21,7 @@ const MenuEditForm = ({ setEditMenu }) => {
 	//function to get all menu data from food_model
 	async function fetchCurrentMenu() {
 		try {
-			let res = await fetch('https://master-peace-grill-backend.herokuapp.com/foods');
+			let res = await fetch('http://localhost:3000/foods');
 			if (!res.ok) {
 				const message = `Error occurred: ${res.status}`;
 				throw new Error(message);
@@ -43,73 +43,32 @@ const MenuEditForm = ({ setEditMenu }) => {
 
 	console.log('full-menu', menuInfo);
 
-	const appMenu = menuInfo.filter((item) =>
-		item.category.name.includes('Appetizers') ? item : false
-	);
-	//WINGS
-	const wingMenu = menuInfo.filter((item) =>
-		item.category.name.includes('Wings') ? item : false
-	);
-	//SALADS
-	const saladMenu = menuInfo.filter((item) =>
-		item.category.name.includes('Salads') ? item : false
-	);
-	//WRAPS
-	const wrapMenu = menuInfo.filter((item) =>
-		item.category.name.includes('Wraps') ? item : false
-	);
-	// //TripleDeckerClubs
-	const clubMenu = menuInfo.filter((item) =>
-		item.category.name.includes('Triple') ? item : false
-	);
-	//CheeseSteaks
-	const cheeseSteakMenu = menuInfo.filter((item) =>
-		item.category.name.includes('CheeseSteak') ? item : false
-	);
-	// //Burgers
-	const burgerMenu = menuInfo.filter((item) =>
-		item.category.name.includes('Burgers') ? item : false
-	);
-
-	// // //Hoagies and Grinders
-	const hoagieAndGrinderMenu = menuInfo.filter((item) =>
-		item.category.name.includes('Hoagies') ? item : false
-	);
-
-	// // //Sandwichees
-	const sandwichesMenu = menuInfo.filter((item) =>
-		item.category.name.includes('Sandwiches') ? item : false
-	);
-
-	// // //Grilled Cheese
-	const grilledCheeseMenu = menuInfo.filter((item) =>
-		item.category.name.includes('Grilled') ? item : false
-	);
-
-	const cateringMenu = menuInfo.filter((item) =>
-		item.category.name.includes('Catering') ? item : false
-	);
+	// categories
+	const categories = [];
+	const foods = [];
 
 	//menuInfo.map((item) => console.log(item.category.name));
-
+	for (const item in menuInfo){
+		if (item === 'categories') {
+			menuInfo[item].map(c => {
+				return categories.push(c)
+			}) 
+		} else if (item === 'foods') {
+			menuInfo[item].map(f => {
+			return foods.push(f)
+			}) 
+		}
+	}
 
 	return (
 		<div className="menu-edit-form-page">
-			<button className="see-menu-btn" onClick={() => setEditMenu(false)}>
+			<button className="see-menu-btn" onClick={() => history('/change/home')}>
 				Back
 			</button>
+			{categories.map(c => {
+				return <MenuCategoryEditForm menu={foods.filter(f => f.category_id === c.id)} category={c} />
+          	})}
 			<LogoutButton css={'logout-btn'} />
-			<MenuCategoryEditForm menu={appMenu} />
-			<MenuCategoryEditForm menu={wingMenu} />
-			<MenuCategoryEditForm menu={saladMenu} />
-			<MenuCategoryEditForm menu={wrapMenu} />
-			<MenuCategoryEditForm menu={clubMenu} />
-			<MenuCategoryEditForm menu={cheeseSteakMenu} />
-			<MenuCategoryEditForm menu={burgerMenu} />
-			<MenuCategoryEditForm menu={hoagieAndGrinderMenu} />
-			<MenuCategoryEditForm menu={sandwichesMenu} />
-			<MenuCategoryEditForm menu={grilledCheeseMenu} />
-			<MenuCategoryEditForm menu={cateringMenu} />
 		</div>
 	);
 };
