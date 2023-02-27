@@ -27,7 +27,7 @@ const MenuItemEdit = ({ item, category }) => {
 	};
 
 	//custom toast for successful update
-	const successNotify = () => toast.success('Sucess! Menu item updated.');
+	const successNotify = (item) => toast.success(`Sucess! ${item} updated.`);
 
 	//custom toast for error w/ update
 	const errorNotify = () =>
@@ -54,8 +54,7 @@ const MenuItemEdit = ({ item, category }) => {
 			if (res.ok) {
 				res.json().then((data) => {
 					setLoading(false);
-					setFormData(data);
-					successNotify();
+					successNotify(data.name);
 				});
 			} else {
 				res.json().then((err) => {
@@ -71,7 +70,7 @@ const MenuItemEdit = ({ item, category }) => {
 
 	return (
 		<div className="form-container">
-			<Toaster/>
+			<Toaster />
 			<form className="item-edit-form" onSubmit={handleSubmit}>
 				<div className="single-item-input">
 					<label className="form-label">Menu Item</label>
