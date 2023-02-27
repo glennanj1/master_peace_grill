@@ -24,6 +24,7 @@ export const UserProvider = ({ children }) => {
 				res.json().then((user) => updateUser(user));
 			} else {
 				res.json().then((data) => {
+					// toast to say please log in
 					console.log(data.errors);
 					history('/login');
 				});
