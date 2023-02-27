@@ -1,10 +1,9 @@
 import React from 'react';
 
-const MenuCategory = ({ menu, menuImg, cssClass }) => {
+const MenuCategory = ({ menu, menuImg, cssClass, category }) => {
 	//pass in cssClass boolean value to render menu category section w/ image on corresponding side based
 
 	// console.log('menu category component info:', menu); 
-	debugger;
 
 	const categoryItemList = menu
 		.map((item) => {
@@ -16,9 +15,9 @@ const MenuCategory = ({ menu, menuImg, cssClass }) => {
 			return (
 				<li key={item.id}>
 					<div className="info-price">
-						<h5 className="title">{item.name}</h5>
+						<h5 className="title">{item?.name}</h5>
 						<div className="line"></div>
-						<span className="price">{item.price}</span>
+						<span className="price">{parseFloat(item?.price).toFixed(2)}</span>
 					</div>
 					{itemDetails}
 					{itemAddOn}
@@ -28,8 +27,7 @@ const MenuCategory = ({ menu, menuImg, cssClass }) => {
 		// .sort((a, b) => {
 		// 	return a.id > b.id;
 		// });
-
-
+	
 	return (
 		<>
 			{cssClass ? (
@@ -37,8 +35,8 @@ const MenuCategory = ({ menu, menuImg, cssClass }) => {
 					<div className="col-lg-6">
 						<div className="menu-box">
 							<div className="section-head style-2">
-								<h2 className="title">{menu[0]?.category.name}</h2>
-								<p>{menu[0]?.category.description}</p>
+								<h2 className="title">{category?.name}</h2>
+								<p>{category?.description}</p>
 							</div>
 							<ul className="menu-list-2">{categoryItemList}</ul>
 						</div>
@@ -55,7 +53,7 @@ const MenuCategory = ({ menu, menuImg, cssClass }) => {
 					<div className="col-lg-6">
 						<div className="menu-box">
 							<div className="section-head style-2">
-								<h2 className="title">{menu[0]?.category.name}</h2>
+								<h2 className="title">{category?.name}</h2>
 							</div>
 							<ul className="menu-list-2">{categoryItemList}</ul>
 						</div>
