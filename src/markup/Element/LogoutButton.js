@@ -1,15 +1,15 @@
 import React, { useContext } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { UserContext } from './../../context/UserContext';
 
 function LogoutButton({ css }) {
 
-    let history = useHistory();
+    let history = useNavigate();
 
     const { updateUser } = useContext(UserContext);
 
     const handleLogout = () => {
-        fetch('https://master-peace-grill-backend.herokuapp.com/logout', {
+        fetch('http://localhost:3000/logout', {
             method: 'delete',
             credentials: 'include',
             headers: {
@@ -21,7 +21,7 @@ function LogoutButton({ css }) {
             } else {
                 res.json().then((data) => {
                     console.log(data.errors);
-                    history.push('/login');
+                    history('/login');
                 });
             }
         });
