@@ -1,11 +1,6 @@
 import React from 'react'
-import { Redirect } from 'react-router'
+import { Navigate } from 'react-router-dom'
 
 export default function NotFound() {
-   
-    return (
-        <>
-            <Redirect to="/" />
-        </>
-    )
+    return <Navigate to="/" replace />;
 }
