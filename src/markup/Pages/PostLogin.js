@@ -1,19 +1,27 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import '../../css/login.css'
-import Header2 from '../Layout/Header2.js'
+import { useNavigate } from "react-router-dom";
+import { UserContext } from './../../context/UserContext';
+import LogoutButton from '../Element/LogoutButton';
 
+function PostLogin() {
+    let history = useNavigate();
+    const { user } = useContext(UserContext);
 
-function PostLogin({user}) {
-
+    useEffect(() => {
+        !user ? history('/login') : console.log("welcome");
+    }, [user, history])
+    
     return (
-        <div className="post-login-page" style={{backgroundImage: "url(https://d3ddatyom1hv87.cloudfront.net/background.jpg)", backgroundSize: "cover"}} >
-            <Header2 />
+        <div className="post-login-page" style={{ backgroundImage: "url(https://d3ddatyom1hv87.cloudfront.net/background.jpg)", backgroundSize: "cover" }} >
             <div className="post-login-header">
-                <h3>Welcome, {user.email}</h3>
+                <p>Welcome, {user?.email}</p>
             </div>
             <div className="buttons-parent">
-                <button class=" margin-right">Edit Menu</button>
-                <button>Edit Modal</button>
+                <button className="margin-right" onClick={() => history('/change/menu/')}>Edit Menu</button>
+                <button className="margin-right" disabled="true">Edit Modal</button>
+                <button className="margin-right" onClick={() => history('/menu')}>See Menu</button>
+                <LogoutButton />
             </div>
         </div>
     )

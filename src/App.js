@@ -4,9 +4,6 @@ import './css/style.css';
 import './css/templete.css';
 import './css/skin/skin-2.css'; 
 
-
- 
-
 import Markup from './markup/Markup';
 
 function App() {

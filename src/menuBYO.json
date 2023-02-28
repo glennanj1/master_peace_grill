@@ -1,0 +1,65 @@
+[
+	{
+		"id": 1,
+		"name": "Build Your Own",
+		"category": "Wraps",
+		"served_on": "",
+		"pick": [
+			{ "Tortilla": ["White", "Whole Wheat", "Sun Dried Tomato", "Spinach"] },
+			{
+				"Spread": [
+					"Mayo",
+					"Southwest Spreaad",
+					"Mustard",
+					"Spicy Mustard",
+					"Honey Mustart",
+					"Ranch",
+					"Hot Sauce",
+					"Hummus"
+				]
+			},
+			{
+				"Protein": [
+					"Grilled Chicken",
+					"Roast Beef",
+					"Chicken Salad",
+					"Tuna Salad",
+					"Turkey",
+					"Ham",
+					"Chicken Tenders"
+				]
+			},
+			{
+				"Cheese (1)": [
+					"American",
+					"Provolone",
+					"Swiss",
+					"Cheddar",
+					"Wiz",
+					"Mozerella",
+					"Pepper Jack"
+				]
+			},
+			{
+				"Veggies": [
+					"Lettuce",
+					"Tomato",
+					"Onion",
+					"Roasted Peppers",
+					"Mushroom",
+					"Hot Peppers",
+					"Sweet Peppers",
+					"Pickles",
+					"Cole Slaw"
+				]
+			}
+		],
+		"combo": null,
+		"add_ons": [
+			{
+				"type": "Long Hots",
+				"price": 1.49
+			}
+		]
+	}
+]

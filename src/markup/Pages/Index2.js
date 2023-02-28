@@ -69,8 +69,6 @@ class Index2 extends Component{
 		this.setState({ email: e.target.value });
 	}
 
-	
-
 	status = () => {
 		if (this.state.status === 'success') {
 			setTimeout(() => { 
@@ -97,7 +95,6 @@ class Index2 extends Component{
 			)
 		}
 	}
-
 
 	render(){
 		return(
