@@ -1,12 +1,11 @@
-import React, { useState, useContext, useEffect } from 'react';
-import '../../css/login.css'
-import mpgLogo from '../../images/mpgLogo.png'
+import React, { useState, useEffect } from 'react';
+import '../../../css/login.css'
+import mpgLogo from '../../../images/mpgLogo.png'
 import { useNavigate } from "react-router-dom";
-import { UserContext } from './../../context/UserContext';
+import { Link } from "react-router-dom";
 
-function Login() {
+function Login({user}) {
     const history = useNavigate();
-    const { user } = useContext(UserContext);
 
     useEffect(() => {
         !user ? console.log('not logged in') : history('/change/home');
@@ -15,6 +14,7 @@ function Login() {
 
     const [userData, setUserData] = useState({ email: "", password: "" })
     const [error, setError] = useState(null)
+    const [isLoading, setIsLoading] = useState(false);
 
 
     const handleFormChange = (e) => {
@@ -27,6 +27,7 @@ function Login() {
 
     const handleLogin = (e) => {
         e.preventDefault()
+        setIsLoading(true)
 
         fetch('https://master-peace-grill-backend.herokuapp.com/login', {
             method: "POST",
@@ -37,6 +38,7 @@ function Login() {
             body: JSON.stringify(userData)
         })
             .then(res => {
+                setIsLoading(false)
                 if (res.ok) {
                     res.json().then(user => {
                     console.log(user);
@@ -55,6 +57,7 @@ function Login() {
         })
     }
 
+    console.log("we are only in the login component")
     return (
         <div className="login-page" style={{ backgroundImage: "url(https://d3ddatyom1hv87.cloudfront.net/background.jpg)", backgroundSize: "cover" }}>
             <img src={mpgLogo} alt="logo" />
@@ -75,7 +78,11 @@ function Login() {
                     value={userData.password}
                     onChange={handleFormChange}
                 />
-                <button type="submit">Submit</button>
+                <button type="submit">{isLoading ? "Loading..." : "Login"}</button>
+                <p>Don't have an account? </p>
+                <Link to='/signup'>
+                        <button >Sign Up!</button>
+                </Link>
             </form>
         </div>
     )

@@ -26,11 +26,13 @@ export const UserProvider = ({ children }) => {
 				res.json().then((data) => {
 					// toast to say please log in
 					console.log(data.errors);
+
 					history('/login');
 				});
 			}
 		});
-	}, [history]);
+	}, []);
+	// Removed history from ^^ to render signup page
 
     return (
         <UserContext.Provider

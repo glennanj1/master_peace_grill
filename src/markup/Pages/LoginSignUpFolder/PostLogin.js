@@ -1,8 +1,8 @@
 import React, { useContext, useEffect } from 'react'
-import '../../css/login.css'
+import '../../../css/login.css'
 import { useNavigate } from "react-router-dom";
-import { UserContext } from './../../context/UserContext';
-import LogoutButton from '../Element/LogoutButton';
+import { UserContext } from '../../../context/UserContext';
+import LogoutButton from '../../Element/LogoutButton';
 
 function PostLogin() {
     let history = useNavigate();
@@ -10,7 +10,8 @@ function PostLogin() {
 
     useEffect(() => {
         !user ? history('/login') : console.log("welcome");
-    }, [user, history])
+    }, [user])
+    // removed history from reload ^^
     
     return (
         <div className="post-login-page" style={{ backgroundImage: "url(https://d3ddatyom1hv87.cloudfront.net/background.jpg)", backgroundSize: "cover" }} >
