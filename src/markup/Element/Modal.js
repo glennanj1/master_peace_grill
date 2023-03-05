@@ -34,7 +34,7 @@ export default function Modal() {
     async function fetchModal() {
         try {
           let res = await fetch(
-            process.env.PROD_URL + "/modals"
+            process.env.REACT_APP_PROD_URL + "/modals"
           );
 
           if (!res.ok) {

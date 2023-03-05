@@ -9,7 +9,7 @@ function LogoutButton({ css }) {
     const { updateUser } = useContext(UserContext);
 
     const handleLogout = () => {
-        fetch(process.env.PROD_URL + '/logout', {
+        fetch(process.env.REACT_APP_PROD_URL + '/logout', {
             method: 'delete',
             credentials: 'include',
             headers: {

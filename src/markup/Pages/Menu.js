@@ -23,7 +23,7 @@ function Menu() {
   async function fetchCurrentMenu() {
     try {
       let res = await fetch(
-        process.env.PROD_URL + "/foods"
+        process.env.REACT_APP_PROD_URL + "/foods"
       );
 
       if (!res.ok) {

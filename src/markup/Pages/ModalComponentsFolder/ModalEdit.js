@@ -55,7 +55,7 @@ export default function ModalEditForm() {
     async function fetchModal() {
         try {
           let res = await fetch(
-            process.env.PROD_URL + "/modals/"
+            process.env.REACT_APP_PROD_URL + "/modals/"
           );
     
           if (!res.ok) {
@@ -76,7 +76,7 @@ export default function ModalEditForm() {
         e.preventDefault();
         //send this form data in a PATCH request to update values in DB
         setLoading(true);
-        fetch(process.env.PROD_URL + `/${modalInfo.id}`, {
+        fetch(process.env.REACT_APP_PROD_URL + `/${modalInfo.id}`, {
             method: 'PATCH',
             credentials: 'include',
             headers: {
