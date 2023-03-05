@@ -76,7 +76,7 @@ export default function ModalEditForm() {
         e.preventDefault();
         //send this form data in a PATCH request to update values in DB
         setLoading(true);
-        fetch(process.env.REACT_APP_PROD_URL + `/${modalInfo.id}`, {
+        fetch(process.env.REACT_APP_PROD_URL + `/modals/${modalInfo.id}`, {
             method: 'PATCH',
             credentials: 'include',
             headers: {
