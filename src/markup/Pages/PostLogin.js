@@ -19,7 +19,7 @@ function PostLogin() {
             </div>
             <div className="buttons-parent">
                 <button className="margin-right" onClick={() => history('/change/menu/')}>Edit Menu</button>
-                <button className="margin-right" disabled="true">Edit Modal</button>
+                <button className="margin-right" onClick={() => history('/change/modal/')}>Edit Modal</button>
                 <button className="margin-right" onClick={() => history('/menu')}>See Menu</button>
                 <LogoutButton />
             </div>
