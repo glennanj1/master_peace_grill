@@ -181,10 +181,16 @@ const MenuCategoryAndBYO = ({ menu, menuImg, cssClass, category }) => {
 								<h2 className="title">{category?.name}</h2>
 								<h4 class="sub-title">Build Your Own</h4>
 								<p>{byoVar}</p>
-								<h3 className="title">Best Sellers</h3>
-								<p>{category?.description}</p>
+								{category?.bestSeller ? 
+								(<>
+									<h3 className="title">Best Sellers</h3>
+									<p>{category?.description}</p>
+								</>) : null
+								}
 							</div>
-							<ul className="menu-list-2">{categoryItemList}</ul>
+							{category?.bestSeller ? 
+								(<ul className="menu-list-2">{categoryItemList}</ul>) : null
+							}
 						</div>
 					</div>
 					<div className="col-lg-6">
@@ -202,10 +208,16 @@ const MenuCategoryAndBYO = ({ menu, menuImg, cssClass, category }) => {
 								<h2 className="title">{category?.name}</h2>
 								<h4 class="sub-title">Build Your Own</h4>
 								<p>{byoVar}</p>
-								<h3 className="title">Best Sellers</h3>
-								<p>{category?.description}</p>
+								{category?.bestSeller ? 
+								(<>
+									<h3 className="title">Best Sellers</h3>
+									<p>{category?.description}</p>
+								</>) : null
+								}
 							</div>
-							<ul className="menu-list-2">{categoryItemList}</ul>
+							{category?.bestSeller ? 
+								(<ul className="menu-list-2">{categoryItemList}</ul>) : null
+							}
 						</div>
 					</div>
 				</div>
