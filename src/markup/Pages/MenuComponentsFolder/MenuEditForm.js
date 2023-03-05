@@ -8,7 +8,7 @@ import './menuEdit.css';
 const MenuEditForm = ({ setEditMenu }) => {
 	let history = useNavigate();
 	const { user } = useContext(UserContext);
-	!user ? history('/login') : console.log('welcome');
+	
 
 	const [menuInfo, setMenuInfo] = useState([]);
 	// const [errors, setErrors] = useState([]);
@@ -16,7 +16,8 @@ const MenuEditForm = ({ setEditMenu }) => {
 	//fetch menu info from db to pre-populate form for editing
 	useEffect(() => {
 		fetchCurrentMenu();
-	}, []);
+		!user ? history('/login') : console.log('welcome');
+	}, [user, history]);
 
 	//function to get all menu data from food_model
 	async function fetchCurrentMenu() {
