@@ -13,7 +13,7 @@ export const UserProvider = ({ children }) => {
 	};
 
 	useEffect(() => {
-		fetch('https://master-peace-grill-backend.herokuapp.com/me', {
+		fetch(process.env.URL + '/me', {
 			method: 'GET',
 			credentials: 'include',
 			headers: {

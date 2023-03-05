@@ -4,7 +4,6 @@ import Header2 from "../Layout/Header2";
 import Footer2 from "../Layout/Footer2";
 import MenuCategory from "./MenuComponentsFolder/MenuCategory";
 import MenuCategoryAndBYO from "./MenuComponentsFolder/MenuCategoryAndBYO";
-
 import bg from "./../../images/background/rainbow.jpeg";
 
 const onlineOrdering = "https://onlineordering.rmpos.com/Order/?wci=54MBz6OB";
@@ -24,10 +23,8 @@ function Menu() {
   async function fetchCurrentMenu() {
     try {
       let res = await fetch(
-        "https://master-peace-grill-backend.herokuapp.com/foods"
+        process.env.URL + "/foods"
       );
-      // for development run w/ ruby backend
-      // let res = await fetch('http://localhost:3000/foods');
 
       if (!res.ok) {
         const message = `Error occurred: ${res.status}`;

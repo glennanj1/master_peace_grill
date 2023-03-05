@@ -37,11 +37,8 @@ export default function MenuCategoryEdit({category, categoryNameChange}) {
 		//send this form data in a PATCH request to update values in DB
 		setLoading(true);
 
-		//development fetch req
-		// fetch(` http://localhost:3000/foods/${item.id}`
-
 		fetch(
-			`https://master-peace-grill-backend.herokuapp.com/categories/${category.id}`,
+			process.env.URL + `/${category.id}`,
 			{
 				method: 'PATCH',
 				credentials: 'include',

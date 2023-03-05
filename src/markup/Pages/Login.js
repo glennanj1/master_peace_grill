@@ -28,7 +28,7 @@ function Login() {
     const handleLogin = (e) => {
         e.preventDefault()
 
-        fetch('https://master-peace-grill-backend.herokuapp.com/login', {
+        fetch(process.env.URL + '/login', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

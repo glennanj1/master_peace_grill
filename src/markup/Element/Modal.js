@@ -34,11 +34,9 @@ export default function Modal() {
     async function fetchModal() {
         try {
           let res = await fetch(
-            "https://master-peace-grill-backend.herokuapp.com/modals"
+            process.env.URL + "/modals"
           );
-          // for development run w/ ruby backend
-          // let res = await fetch('http://localhost:3000/foods');
-    
+          
           if (!res.ok) {
             const message = `Error occurred: ${res.status}`;
             throw new Error(message);

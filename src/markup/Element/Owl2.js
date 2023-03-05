@@ -32,8 +32,6 @@ function Owl2() {
 
 	useEffect(() => {
 		fetch('https://top-sports-book-rails.herokuapp.com/reviews')
-			// start json server and use fetch below to test in local
-			// fetch("http://localhost:3000/reviews")
 			.then(response => response.json())
 			.then(json => setReviews(json))
 			.catch((error) => {
