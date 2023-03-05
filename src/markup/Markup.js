@@ -9,6 +9,7 @@ import Login from './Pages/Login';
 import PostLogin from './Pages/PostLogin';
 import { UserProvider } from '../context/UserContext';
 import MenuEditForm from './Pages/MenuComponentsFolder/MenuEditForm';
+import ModalEditForm from './Pages/ModalComponentsFolder/ModalEdit';
 
 function Markup() {
 	return (
@@ -23,6 +24,7 @@ function Markup() {
 					<Route path='/login' exact element={ <Login /> } />
 					<Route path="/change/home" element={<PostLogin/>} />
 					<Route path="/change/menu" element={<MenuEditForm/>} />
+					<Route path="/change/modal" element={<ModalEditForm/>} />
 				</Route>
 				{/* Need to fix this */}
 				<Route element={ <NotFound />} />
