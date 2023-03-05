@@ -38,7 +38,7 @@ export default function MenuCategoryEdit({category, categoryNameChange}) {
 		setLoading(true);
 
 		fetch(
-			process.env.URL + `/${category.id}`,
+			process.env.PROD_URL + `/${category.id}`,
 			{
 				method: 'PATCH',
 				credentials: 'include',

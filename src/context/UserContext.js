@@ -13,7 +13,7 @@ export const UserProvider = ({ children }) => {
 	};
 
 	useEffect(() => {
-		fetch(process.env.URL + '/me', {
+		fetch(process.env.PROD_URL + '/me', {
 			method: 'GET',
 			credentials: 'include',
 			headers: {

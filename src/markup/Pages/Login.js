@@ -28,7 +28,7 @@ function Login() {
     const handleLogin = (e) => {
         e.preventDefault()
 
-        fetch(process.env.URL + '/login', {
+        fetch(process.env.PROD_URL + '/login', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

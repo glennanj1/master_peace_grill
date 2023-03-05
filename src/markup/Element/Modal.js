@@ -34,9 +34,9 @@ export default function Modal() {
     async function fetchModal() {
         try {
           let res = await fetch(
-            process.env.URL + "/modals"
+            process.env.PROD_URL + "/modals"
           );
-          
+
           if (!res.ok) {
             const message = `Error occurred: ${res.status}`;
             throw new Error(message);

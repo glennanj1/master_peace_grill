@@ -39,7 +39,7 @@ const MenuItemEdit = ({ item, category }) => {
 		//send this form data in a PATCH request to update values in DB
 		setLoading(true);
 
-		fetch(process.env.URL + `/foods/${item.id}`, {
+		fetch(process.env.PROD_URL + `/foods/${item.id}`, {
 			method: 'PATCH',
 			credentials: 'include',
 			headers: {
