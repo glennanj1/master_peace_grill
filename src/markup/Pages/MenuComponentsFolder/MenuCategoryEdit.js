@@ -38,7 +38,7 @@ export default function MenuCategoryEdit({category, categoryNameChange}) {
 		setLoading(true);
 
 		fetch(
-			process.env.REACT_APP_PROD_URL + `/${category.id}`,
+			process.env.REACT_APP_PROD_URL + `/categories/${category.id}`,
 			{
 				method: 'PATCH',
 				credentials: 'include',
