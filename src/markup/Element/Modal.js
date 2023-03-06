@@ -34,7 +34,7 @@ export default function Modal() {
     async function fetchModal() {
         try {
           let res = await fetch(
-            'https://backend.glennan.cloud' + "/modals"
+            'https://backend.glennan.cloud/modals'
           );
 
           if (!res.ok) {

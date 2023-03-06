@@ -38,7 +38,7 @@ export default function MenuCategoryEdit({category, categoryNameChange}) {
 		setLoading(true);
 
 		fetch(
-			'https://backend.glennan.cloud' + `/categories/${category.id}`,
+			`https://backend.glennan.cloud/categories/${category.id}`,
 			{
 				method: 'PATCH',
 				credentials: 'include',

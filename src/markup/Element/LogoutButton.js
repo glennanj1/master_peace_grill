@@ -9,7 +9,7 @@ function LogoutButton({ css }) {
     const { updateUser } = useContext(UserContext);
 
     const handleLogout = () => {
-        fetch('https://backend.glennan.cloud' + '/logout', {
+        fetch('https://backend.glennan.cloud/logout', {
             method: 'delete',
             credentials: 'include',
             headers: {

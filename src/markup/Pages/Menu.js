@@ -23,7 +23,7 @@ function Menu() {
   async function fetchCurrentMenu() {
     try {
       let res = await fetch(
-        'https://backend.glennan.cloud' + "/foods"
+        'https://backend.glennan.cloud/foods'
       );
 
       if (!res.ok) {

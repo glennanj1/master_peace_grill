@@ -28,7 +28,7 @@ function Login() {
     const handleLogin = (e) => {
         e.preventDefault()
 
-        fetch('https://backend.glennan.cloud' + '/login', {
+        fetch('https://backend.glennan.cloud/login', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

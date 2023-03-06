@@ -13,7 +13,7 @@ export const UserProvider = ({ children }) => {
 	};
 
 	useEffect(() => {
-		fetch('https://backend.glennan.cloud' + '/me', {
+		fetch('https://backend.glennan.cloud/me', {
 			method: 'GET',
 			credentials: 'include',
 			headers: {
