@@ -39,7 +39,7 @@ const MenuItemEdit = ({ item, category }) => {
 		//send this form data in a PATCH request to update values in DB
 		setLoading(true);
 
-		fetch(process.env.REACT_APP_PROD_URL + `/foods/${item.id}`, {
+		fetch('https://backend.glennan.cloud' + `/foods/${item.id}`, {
 			method: 'PATCH',
 			credentials: 'include',
 			headers: {

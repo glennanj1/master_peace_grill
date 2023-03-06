@@ -28,7 +28,7 @@ function Login() {
     const handleLogin = (e) => {
         e.preventDefault()
 
-        fetch(process.env.REACT_APP_PROD_URL + '/login', {
+        fetch('https://backend.glennan.cloud' + '/login', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

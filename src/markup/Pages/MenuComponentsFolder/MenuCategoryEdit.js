@@ -38,7 +38,7 @@ export default function MenuCategoryEdit({category, categoryNameChange}) {
 		setLoading(true);
 
 		fetch(
-			process.env.REACT_APP_PROD_URL + `/categories/${category.id}`,
+			'https://backend.glennan.cloud' + `/categories/${category.id}`,
 			{
 				method: 'PATCH',
 				credentials: 'include',

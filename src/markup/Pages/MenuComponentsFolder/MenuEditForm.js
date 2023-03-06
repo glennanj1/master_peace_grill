@@ -22,7 +22,7 @@ const MenuEditForm = ({ setEditMenu }) => {
 	//function to get all menu data from food_model
 	async function fetchCurrentMenu() {
 		try {
-			let res = await fetch(process.env.REACT_APP_PROD_URL + '/foods');
+			let res = await fetch('https://backend.glennan.cloud' + '/foods');
 			if (!res.ok) {
 				const message = `Error occurred: ${res.status}`;
 				throw new Error(message);
