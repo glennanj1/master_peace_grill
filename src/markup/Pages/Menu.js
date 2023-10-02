@@ -337,7 +337,7 @@ function Menu() {
 											<b>Pick a Tortilla</b> - White, Whole Wheat, Sun Dried Tomato, Spinach<br />
 											<b>Pick a Spread</b> - Mayo, Southwest Spread, Mustard, Spicy Mustard, Honey Mustard, Ranch, Hot Sauce, Humus<br />
 											<b>Pick a Protein</b> - Grilled Chicken, Roast Beef, Chicken Salad, Tuna Salad, Turkey, Ham, Chicken Tenders<br />
-											<b>Pick 1 Cheese</b> - american, provolone, swiss, cheddar, wiz, mozzerella, pepperJack<br /> 
+											<b>Pick 1 Cheese</b> - american, provolone, swiss,  wiz, mozzerella, pepperJack<br /> 
 											<b>Pick Your Veggies</b> - Lettuce, Tomato, Onion, Roasted Peppers, Mushroom, Hot Peppers, Sweet Pepper, Pickle, Cole Slaw<br />
 											<b>Add Long Hots</b> - $1.49<br />
 											Turn any CheeseSteak into a wrap
@@ -388,11 +388,11 @@ function Menu() {
 										</li>
 										<li>
 											<div className="info-price">
-												<h5 className="title">Chicken Ceaser Wrap</h5>
+												<h5 className="title">Chicken Caesar Wrap</h5>
 												<div className="line"></div>
 												<span className="price">10.99</span>
 											</div>
-											<p>crisp romaine lettuce, grilled chicken, ceasar dressing and parmesan cheese</p>
+											<p>crisp romaine lettuce, grilled chicken, caesar dressing and parmesan cheese</p>
 										</li>
 									</ul>
 								</div>
@@ -453,7 +453,7 @@ function Menu() {
 										<h4 className="sub-title">Build Your Own</h4>
 										<p>
 											<b>Pick Your Meat</b> - Beef Steak of Chicken Steak<br />
-											<b>Pick 1 Cheese</b> - american, provolone, swiss, cheddar, wiz, mozzerella, pepperjack<br /> 
+											<b>Pick 1 Cheese</b> - american, provolone, swiss,  wiz, mozzerella, pepperjack<br /> 
 											<b>Pick a Spread</b> - Mayo, Southwest Spread, Mustard, Spicy Mustard, Honey Mustard, Ranch, Hot Sauce, Humus<br />
 											<b>Pick Your Veggies</b> - Lettuce, Tomato, Onion, Roasted Peppers, Mushroom, Hot Peppers, Sweet Pepper, Pickle, Cole Slaw<br />
 											(Extra Cheese Add $1)
@@ -507,7 +507,7 @@ function Menu() {
 										<p>
 											Served on brioche bun<br />
 										    <b>PICK A PATTY</b> - Short Rib Beef Angus, Fried Chicken Cutlet, Turkey Burger or Veggie Burger<br />
-										    <b>PICK A CHEESE</b> - American, Provolone, Swiss, Cheddar, Wiz, Mozzarella<br />
+										    <b>PICK A CHEESE</b> - American, Provolone, Swiss,  Wiz, Mozzarella<br />
 										    <b>PICK YOUR SPREADS</b> - Ketchup, Mayo, Southwest Spread, Mustard, Spicy Mustard<br />
 										    <b>PICK YOUR VEGGIES</b> - Lettuce, Tomato, Fried Onion, Raw Onion, Roasted Peppers, Mushroom, Pickle, Cole Slaw, Relish, Sweet or Hot Peppers<br />
 											Make it a combo add $3.99<br />
@@ -568,7 +568,7 @@ function Menu() {
 										<p>
 										Served On A Fresh Liscio's Roll<br />
 										<b>PICK 1 PROTEIN</b> - turkey, ham, roast beef, tuna salad, chicken salad, grilled chicken, chicken tenders<br />
-										<b>PICK 1 CHEESE</b> - american, provolone, swiss, cheddar, mozzarella, pepperjack PICK YOUR SPREADS - mayo, southwest spread, mustard, spicy mustard, honey mustard, oil, vinegar, ranch <br />
+										<b>PICK 1 CHEESE</b> - american, provolone, swiss,  mozzarella, pepperjack PICK YOUR SPREADS - mayo, southwest spread, mustard, spicy mustard, honey mustard, oil, vinegar, ranch <br />
 										<b>Pick a Spread</b> - Mayo, Southwest Spread, Mustard, Spicy Mustard, Honey Mustard, Ranch, Hot Sauce, Humus<br />
 										<b>PICK YOUR VEGGIES</b> - lettuce, tomato, onion, roasted peppers,sweet pepper, hot pepper, pickle, cole slaw<br />
 										ADD LONG HOTS - $1.49
@@ -638,7 +638,7 @@ function Menu() {
 										<p>
 										<b>Served On Your choice Of White, Wheat, Rye Bread or a Brioche Bun</b><br />
 										<b>PICK 1 PROTEIN</b> - turkey, ham, roast beef, tuna salad, chicken salad, grilled chicken breast, chicken tender<br />
-										<b>PICK 1 CHEESE</b> - american, provolone, swiss, cheddar, mozzarella, pepperjack <br />
+										<b>PICK 1 CHEESE</b> - american, provolone, swiss,  mozzarella, pepperjack <br />
 										<b>PICK YOUR SPREADS</b> - mayo, southwest spread, mustard, spicy mustard, honey mustard, oil, vinegar, ranch <br />
 										<b>PICK YOUR VEGGIES</b> - lettuce, tomato, onion, roasted peppers. sweet pepper, hot pepper, pickle, cole slaw
 										</p>
@@ -737,7 +737,7 @@ function Menu() {
 									<p>
 									Served On Your choice Of White, Wheat or Rye Bread <br />
 									 <b>PICK 1 PROTEIN</b> - turkey, ham, bacon, roast beef <br />
-									<b>PICK 1 CHEESE</b> - american, provolone, swiss, cheddar, mozzarella, pepperjack <br />
+									<b>PICK 1 CHEESE</b> - american, provolone, swiss,  mozzarella, pepperjack <br />
 										<b>PICK YOUR SPREADS</b> - mayo, southwest spread, mustard, spicy mustard, honey mustard, oil, vinegar, ranch <br />
 										<b>PICK YOUR VEGGIES</b> - lettuce, tomato, onion, roasted peppers, sweet pepper, hot pepper, pickle, cole slaw<br />
 									</p>

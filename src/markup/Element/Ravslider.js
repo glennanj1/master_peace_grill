@@ -2,7 +2,14 @@ import React,{Component} from 'react';
 // import {Link} from 'react-router-dom';
 
 class Banner extends Component{
-	
+	getYearDifference() {
+        const currentDate = new Date();
+        const currentYear = currentDate.getFullYear();
+        const startYear = 2014;
+        // If the current month is before November, subtract 1 from the year difference
+        const yearDifference = (currentDate.getMonth() < 10) ? (currentYear - startYear - 1) : (currentYear - startYear);
+        return yearDifference;
+    }
 	render(){
 		return(
 			
@@ -19,7 +26,7 @@ class Banner extends Component{
 										<img src ={require('./../../images/main-slider/slide5.png')}  alt="offer" />
 									</div>	 */}
 									
-									<p className="info" >7 Years Strong <span role="img" aria-label="strong">💪</span></p>
+									<p className="info" >{this.getYearDifference()} Years Strong <span role="img" aria-label="strong">💪</span></p>
 
 									<a href={this.props.online} className="btn red" style={{fontSize: '34px'}} data-target="#exampleModal">Order Online</a>
 									{this.props.mobile ? (

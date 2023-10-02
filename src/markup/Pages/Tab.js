@@ -94,7 +94,7 @@ const Popupss = (props) => {
 												<h2 className="title">Build Your Own</h2>
 												<p>
 													Pick Your Meat - Beef Steak of Chicken Steak<br />
-													Pick 1 Cheese - American, Provolone, Swiss, Cheddar, Wiz, Mozzerella<br /> 
+													Pick 1 Cheese - American, Provolone, Swiss, Wiz, Mozzerella<br /> 
 													(Extra Cheese Add $1)
 												</p>
 												<h2 className="title">Best Sellers</h2>
