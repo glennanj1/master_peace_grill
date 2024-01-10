@@ -44,7 +44,7 @@ export default class Modal extends React.Component {
                     <div className="__child" style={{borderRadius: '10px', background: 'white'}}>
                         <div>
                             <p style={{fontSize: '1.5em', padding: '20px'}}>
-                            We will be closed 1/11/24 - 1/17/24. Re-opening 1/18/24. 
+                            We will be closed 1/11/24 - 1/17/24. Re-opening 1/19/24. 
                             <span role="img" aria-label="peace">
                             ✌️☮️
                             </span>
