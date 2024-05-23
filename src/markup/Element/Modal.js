@@ -46,7 +46,7 @@ export default class Modal extends React.Component {
                             <p style={{fontSize: '1.5em', padding: '20px'}}>
                             Masterpeace Grill will be closed Friday through Wednesday
                             <span role="img" aria-label="peace">
-                            ✌️☮️🎶🎶🎶🎶🎶🎶🎶🎶
+                            ✌️❤️🎶🎶🎶🎶🎶🎶🎶🎶
                             </span>
                             </p>
                         </div>
