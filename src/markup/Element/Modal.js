@@ -43,7 +43,7 @@ export default class Modal extends React.Component {
                     {/* <div className="__child" style={{background: `url(${background}) white`, backgroundSize: 'cover', backgroundPosition: 'center'}}> */}
                     <div className="__child" style={{borderRadius: '10px', background: 'white'}}>
                         <div>
-                            <p style={{fontSize: '1.5em', padding: '20px'}}>
+                            <p style={{fontSize: '1.5em', padding: '20px', textAlign: 'left'}}>
                             Master Peace Grill will be closed 7-4-24 and 
                             reopening 7-11-24. 
                             We will be celebrating the Fourth of July with 20,000 of our FRIENDS. At the Spere
@@ -52,7 +52,7 @@ export default class Modal extends React.Component {
                             </span>
                             </p>
                         </div>
-                        <div style={{height: '100%', width: '100%', backgroundImage: "url(https://imagedelivery.net/VQh5-_xRHTXIspD07tbGiw/52422237-c346-4c21-1897-893e69e9a200/public", backgroundSize: 'cover', backgroundPosition: 'center', marginBottom: '10px'}}>
+                        <div style={{height: '100%', width: '100%', backgroundImage: "url(https://imagedelivery.net/VQh5-_xRHTXIspD07tbGiw/52422237-c346-4c21-1897-893e69e9a200/public", backgroundSize: 'contain', backgroundPosition: 'center', marginBottom: '10px'}}>
                         </div>
                         {/* <div style={{height: '30%', width: '100px', marginBottom: '10px'}}>
                             <a href="https://morethanthecurve.com/best-of-conshy/" style={{textDecoration: 'none', color: 'white'}}><button className="__button" style={{bottom: '5px'}}>Vote Now</button></a>
