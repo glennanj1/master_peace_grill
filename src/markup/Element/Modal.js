@@ -45,7 +45,7 @@ export default class Modal extends React.Component {
                         <div>
                             <p style={{fontSize: '1.5em', padding: '20px', textAlign: 'left'}}>
                             Master Peace Grill will be closed 7-4-24 and 
-                            reopening 7-11-24. 
+                            reopening 7-16-24. 
                             We will be celebrating the Fourth of July with 20,000 of our FRIENDS. At the Spere
                             <span role="img" aria-label="peace">
                             ✌️❤️🎶🎶🎶🎶🎶🎶🎶🎶
