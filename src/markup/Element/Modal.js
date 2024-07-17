@@ -45,7 +45,7 @@ export default class Modal extends React.Component {
                         <div>
                             <p style={{fontSize: '1.5em', padding: '20px', textAlign: 'left'}}>
                             Master Peace Grill will be closed 7-4-24 and 
-                            reopening 7-16-24. 
+                            reopening 7-18-24. 
                             We will be celebrating the Fourth of July with 20,000 of our FRIENDS. At the Spere
                             <span role="img" aria-label="peace">
                             ✌️❤️🎶🎶🎶🎶🎶🎶🎶🎶
@@ -56,7 +56,7 @@ export default class Modal extends React.Component {
                         </div>
                         {/* <div style={{height: '30%', width: '100px', marginBottom: '10px'}}>
                             <a href="https://morethanthecurve.com/best-of-conshy/" style={{textDecoration: 'none', color: 'white'}}><button className="__button" style={{bottom: '5px'}}>Vote Now</button></a>
-                        </div> */}
+                        </div> */}ƒ
                         <div style={{height: '30%', width: '100px', marginBottom: '20px'}}>
                             <button className="__button" onClick={this.toggleModal} style={{top: '5px', position: 'relative'}}>Close</button>
                         </div>
