@@ -2,7 +2,7 @@ import confetti from "canvas-confetti";
 import React from "react";
 // import steak from "../../images/steak_tray.jpg"
 // import logo from './../../images/mpg_logo.png'
-// const background = 'https://media.giphy.com/media/K9i1AnJdj2kUfay0Rm/giphy.gif'
+// const background = 'https://strapi.glennan.cloud/uploads/IMG_3628_4113ccde86.jpg'
 
 export default class Modal extends React.Component {
 
@@ -44,19 +44,17 @@ export default class Modal extends React.Component {
                     <div className="__child" style={{borderRadius: '10px', background: 'white'}}>
                         <div>
                             <p style={{fontSize: '1.5em', padding: '20px', textAlign: 'left'}}>
-                            Master Peace Grill will be closed 7-4-24 and 
-                            reopening 7-18-24. 
-                            We will be celebrating the Fourth of July with 20,000 of our FRIENDS. At the Spere
+                            MasterPeace Grill Voted best CheeseSteaks in Conshohocken. Thank you to all that voted!
                             <span role="img" aria-label="peace">
-                            ✌️❤️🎶🎶🎶🎶🎶🎶🎶🎶
+                            ✌️❤️🎶
                             </span>
                             </p>
                         </div>
-                        <div style={{height: '100%', width: '100%', backgroundImage: "url(https://imagedelivery.net/VQh5-_xRHTXIspD07tbGiw/52422237-c346-4c21-1897-893e69e9a200/public", backgroundSize: 'contain', backgroundPosition: 'center', marginBottom: '10px'}}>
+                        <div style={{height: '100%', width: '100%', backgroundImage: "url(https://strapi.glennan.cloud/uploads/IMG_3628_4113ccde86.jpg", backgroundSize: 'contain', backgroundPosition: 'center', marginBottom: '10px'}}>
                         </div>
                         {/* <div style={{height: '30%', width: '100px', marginBottom: '10px'}}>
                             <a href="https://morethanthecurve.com/best-of-conshy/" style={{textDecoration: 'none', color: 'white'}}><button className="__button" style={{bottom: '5px'}}>Vote Now</button></a>
-                        </div> */}ƒ
+                        </div> */}
                         <div style={{height: '30%', width: '100px', marginBottom: '20px'}}>
                             <button className="__button" onClick={this.toggleModal} style={{top: '5px', position: 'relative'}}>Close</button>
                         </div>
