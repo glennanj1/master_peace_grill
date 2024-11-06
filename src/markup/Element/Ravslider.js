@@ -26,7 +26,7 @@ class Banner extends Component{
 										<img src ={require('./../../images/main-slider/slide5.png')}  alt="offer" />
 									</div>	 */}
 									
-									<p className="info">Serving Conshohocken for a decade</p>
+									<p className="info">Serving Conshohocken for a Decade</p>
 
 									<a href={this.props.online} className="btn red" style={{fontSize: '34px'}} data-target="#exampleModal">Order Online</a>
 									{this.props.mobile ? (
