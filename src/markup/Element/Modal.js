@@ -12,11 +12,11 @@ export default class Modal extends React.Component {
 
     toggleModal = () => {
         if (this.state.isOpen) {
-            this.setState({isOpen: false});
+            this.setState({ isOpen: false });
         } else {
-        this.setState({
-            isOpen: true
-        });
+            this.setState({
+                isOpen: true
+            });
         }
     }
 
@@ -26,7 +26,7 @@ export default class Modal extends React.Component {
             spread: 70,
             origin: { y: 0.6 },
             zIndex: 100000,
-          });
+        });
     }
 
 
@@ -34,33 +34,33 @@ export default class Modal extends React.Component {
         this.toggleModal();
     }
 
-  render() {
+    render() {
 
-    return (
-        <div>
-            {this.state.isOpen ? (
-                <div className="__wrapper">
-                    {/* <div className="__child" style={{background: `url(${background}) white`, backgroundSize: 'cover', backgroundPosition: 'center'}}> */}
-                    <div className="__child" style={{borderRadius: '10px', background: 'white'}}>
-                        <div>
-                            <p style={{fontSize: '1.5em', padding: '20px', textAlign: 'left'}}>
-                            MasterPeace Grill Voted best CheeseSteaks in Conshohocken. Thank you to all that voted!
-                            <span role="img" aria-label="peace">
-                            ✌️❤️🎶
-                            </span>
-                            </p>
-                        </div>
-                        <div style={{height: '100%', width: '100%', backgroundImage: "url(https://strapi.glennan.cloud/uploads/IMG_3628_4113ccde86.jpg", backgroundSize: 'contain', backgroundPosition: 'center', marginBottom: '10px'}}>
-                        </div>
-                        {/* <div style={{height: '30%', width: '100px', marginBottom: '10px'}}>
+        return (
+            <div>
+                {this.state.isOpen ? (
+                    <div className="__wrapper">
+                        {/* <div className="__child" style={{background: `url(${background}) white`, backgroundSize: 'cover', backgroundPosition: 'center'}}> */}
+                        <div className="__child" style={{ borderRadius: '10px', background: 'white' }}>
+                            <div>
+                                <p style={{ fontSize: '1.5em', padding: '20px', textAlign: 'left' }}>
+                                    We will be closed for vacation - Reopening 1/16                            <span role="img" aria-label="peace">
+                                        ✌️❤️🎶
+                                    </span>
+                                </p>
+                            </div>
+                            <div style={{ height: '100%', width: '100%', backgroundImage: "url(https://strapi.glennan.cloud/uploads/Screenshot_2025_01_05_at_8_21_53_PM_ef586be5ed.png", backgroundSize: 'contain', backgroundPosition: 'center', marginBottom: '10px' }}>
+                            </div>
+                            {/* <div style={{height: '30%', width: '100px', marginBottom: '10px'}}>
                             <a href="https://morethanthecurve.com/best-of-conshy/" style={{textDecoration: 'none', color: 'white'}}><button className="__button" style={{bottom: '5px'}}>Vote Now</button></a>
                         </div> */}
-                        <div style={{height: '30%', width: '100px', marginBottom: '20px'}}>
-                            <button className="__button" onClick={this.toggleModal} style={{top: '5px', position: 'relative'}}>Close</button>
+                            <div style={{ height: '30%', width: '100px', marginBottom: '20px' }}>
+                                <button className="__button" onClick={this.toggleModal} style={{ top: '5px', position: 'relative' }}>Close</button>
+                            </div>
+                            {/* </div> */}
                         </div>
-                        {/* </div> */}
-                    </div>
-                </div> ) : null}      
-        </div>
-    )}
+                    </div>) : null}
+            </div>
+        )
+    }
 }
