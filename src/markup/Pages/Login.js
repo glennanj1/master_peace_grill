@@ -65,7 +65,7 @@ function Login() {
     }
 
     return (
-        <div className="login-page" style={{backgroundImage: "url(https://d3ddatyom1hv87.cloudfront.net/home.jpg)", backgroundSize: "cover"}}>
+        <div className="login-page" style={{backgroundImage: "url(" + require('./../../images/main-slider/home2.png') + ")", backgroundSize: "cover"}}>
             <Header2 />
             {user ?
 

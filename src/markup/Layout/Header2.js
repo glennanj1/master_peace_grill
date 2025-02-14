@@ -7,7 +7,8 @@ import logo from './../../images/mpglogo2.png'
 class Header2 extends Component{
 
 	state = {
-		isOpen: false
+		isOpen: false,
+		isMobileHoursOpen: false
 	}
 
 	componentDidMount() {
@@ -62,94 +63,127 @@ class Header2 extends Component{
 		/* Test */
 	}	
 	
-	
+	toggleMobileHours = () => {
+		this.setState({isMobileHoursOpen: !this.state.isMobileHoursOpen});
+	}
 	
 	render(){
 		return(
-			<header className="site-header mo-left header header-transparent pizza-header">
-			
-				<div className="sticky-header main-bar-wraper navbar-expand-lg">
-					<div className="main-bar clearfix ">
-						<div className="container clearfix">
-							
-							<div className="logo-header mostion">
+			<>
+				<header className="site-header mo-left header header-transparent pizza-header">
+					<div className="sticky-header main-bar-wraper navbar-expand-lg">
+						<div className="main-bar clearfix ">
+							<div className="container clearfix">
+								<div className="logo-header mostion">
+									<div className="header-phone-no">
+										{/* <img src={hours} alt=""/> */}
+										<button className="btn red" onMouseEnter={() => this.setState({isOpen: true})}
+											onMouseLeave={() => this.setState({isOpen: false})}><h3>Hours</h3></button>
+										{this.state.isOpen && (
+											<div className="hoursContainer">
+												<h4>Monday: Closed</h4><br />
+												<h4>Tuesday: 11am - 3pm</h4><br />
+												<h4>Wednesday - Saturday: 11am - 9pm</h4><br />
+												<h4>Sunday: 11am - 8pm</h4>
+											</div>
+										)}
+									</div>	
+								</div>
+								
+								<button className="navbar-toggler collapsed navicon justify-content-end" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+									<span></span>
+									<span></span>
+									<span></span>
+								</button>
+								
+								<div className="extra-nav">
+									<div className="extra-cell">
+										<ul className="extra-info">
+											<li>
+												<div className="header-phone-no">
+													{/* <img src={hours} alt=""/> */}
+													<span>fast delivery $10 minimum</span>
+													<h2>484-344-5250</h2>
+												</div>
+											</li>
+											<li>
+												<div className="menu-btn ">
+													<span></span>
+													<span></span>
+													<span></span>
+												</div>
+											</li>
+										</ul>
 										
-											<div className="header-phone-no">
-												{/* <img src={hours} alt=""/> */}
-												<button className="btn red" onMouseEnter={() => this.setState({isOpen: true})}
-													onMouseLeave={() => this.setState({isOpen: false})}><h3>Hours</h3></button>
-												{this.state.isOpen && (
-													<div className="hoursContainer">
-														<h4>Monday: Closed</h4><br />
-														<h4>Tuesday: 11am - 3pm</h4><br />
-														<h4>Wednesday - Saturday: 11am - 9pm</h4><br />
-														<h4>Sunday: 11am - 8pm</h4>
-													</div>
-												)}
-											</div>	
-							</div>
-							
-							<button className="navbar-toggler collapsed navicon justify-content-end" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-								<span></span>
-								<span></span>
-								<span></span>
-							</button>
-							
-							<div className="extra-nav">
-								<div className="extra-cell">
-									<ul className="extra-info">
+									</div>
+								</div>
+								
+								<div className="dlab-quik-search ">
+									<form action="#">
+										<input name="search" value="" type="text" className="form-control" placeholder="Type to search" />
+										<span id="quik-search-remove"><i className="ti-close"></i></span>
+									</form>
+								</div>
+								
+								<div className="header-nav navbar-collapse collapse myNavbar justify-content-end" id="navbarNavDropdown" >
+									<div className="logo-header">
+										<Link to={"/"}><img src={logo} alt="logo2" /> </Link>
+									</div>
+									<ul className="nav navbar-nav">	
+										<li><Link to={'/menu'}>Menu</Link></li>
 										<li>
-											<div className="header-phone-no">
-												{/* <img src={hours} alt=""/> */}
-												<span>fast delivery $10 minimum</span>
-												<h2>484-344-5250</h2>
-											</div>
+											<a href={this.props.online}>Order Online</a>
 										</li>
 										<li>
-											<div className="menu-btn ">
-												<span></span>
-												<span></span>
-												<span></span>
-											</div>
+											<Link to={'/about'}>About Us</Link>
 										</li>
 									</ul>
-									
+									<div className="sidebar-hours">
+										<h3 className="hours-title">Hours of Operation</h3>
+										<div className="hours-list">
+											<p>Monday: Closed</p>
+											<p>Tuesday: 11am - 3pm</p>
+											<p>Wednesday - Saturday: 11am - 9pm</p>
+											<p>Sunday: 11am - 8pm</p>
+										</div>
+									</div>
+									<div className="dlab-social-icon">
+										<ul>
+											<li><a className="site-button sharp-sm fa fa-facebook" href={this.props.facebook}>{null}</a></li>
+											<li><a className="site-button sharp-sm fa fa-yelp" href={this.props.yelp}>{null}</a></li>
+										</ul>
+									</div>		
 								</div>
-							</div>
-							
-							<div className="dlab-quik-search ">
-								<form action="#">
-									<input name="search" value="" type="text" className="form-control" placeholder="Type to search" />
-									<span id="quik-search-remove"><i className="ti-close"></i></span>
-								</form>
-							</div>
-							
-							<div className="header-nav navbar-collapse collapse myNavbar justify-content-end" id="navbarNavDropdown" >
-								<div className="logo-header">
-									<Link to={"/"}><img src={logo} alt="logo2" /> </Link>
-								</div>
-								<ul className="nav navbar-nav">	
-									<li><Link to={'/menu'}>Menu</Link></li>
-									<li>
-										<a href={this.props.online}>Order Online</a>
-									</li>
-									<li>
-										<Link to={'/about'}>About Us</Link>
-									</li>
-								</ul>
-								<div className="dlab-social-icon">
-									<ul>
-										<li><a className="site-button sharp-sm fa fa-facebook" href={this.props.facebook}>{null}</a></li>
-										<li><a className="site-button sharp-sm fa fa-yelp" href={this.props.yelp}>{null}</a></li>
-									</ul>
-								</div>		
 							</div>
 						</div>
 					</div>
-				</div>
-				
-			</header>
-			
+				</header>
+
+				{/* Mobile Hours Button */}
+				<button 
+					className="hours-btn-mobile d-md-none" 
+					onClick={this.toggleMobileHours}
+				>
+					<i className="fa fa-clock-o"></i>
+				</button>
+
+				{/* Mobile Hours Modal */}
+				{this.state.isMobileHoursOpen && (
+					<div className="hoursContainer-mobile">
+						<button 
+							className="hours-close-btn"
+							onClick={this.toggleMobileHours}
+						>
+							×
+						</button>
+						<h3 style={{color: 'white', marginBottom: '20px'}}>Hours</h3>
+						<h4>Monday: Closed</h4>
+						<h4>Tuesday: 11am - 3pm</h4>
+						<h4>Wednesday - Saturday: 11am - 9pm</h4>
+						<h4>Sunday: 11am - 8pm</h4>
+					</div>
+				)}
+			</>
 		)
 	}
 

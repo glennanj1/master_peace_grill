@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 // import {Link} from 'react-router-dom';
+import mpgLogo from './../../images/mpgLogo.png'; // Import the logo
 
 class Banner extends Component{
 	getYearDifference() {
@@ -14,13 +15,16 @@ class Banner extends Component{
 		return(
 			
 			<div className= "banner">	
-				<div className="section-full content-inner bnr-bg" style={{backgroundImage: "url(https://d3ddatyom1hv87.cloudfront.net/home.jpg)", backgroundSize: "cover"}}>
+				<div className="section-full content-inner bnr-bg" style={{backgroundImage: "url(" + require('./../../images/main-slider/home2.png') + ")", backgroundSize: "cover"}}>
 					<div className="container">
 						
-						<div className="row">
-							<div className="col-lg-6 text-center">
+						<div className="row justify-content-center">
+							<div className="col-lg-12 text-center">
 								<div className="content">
-									<h2 className="title">Best CheeseSteaks</h2>
+									<div className="banner-logo">
+										<img src={mpgLogo} alt="MPG Logo" />
+									</div>
+									<h2 className="title">Voted Best CheeseSteaks 2017 - 2025</h2>
 									
 									{/* <div className= "bnr-logo">
 										<img src ={require('./../../images/main-slider/slide5.png')}  alt="offer" />
