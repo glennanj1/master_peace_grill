@@ -373,7 +373,7 @@ class Header2 extends Component {
           </div>
         )}
 
-        {this.state.showHoursPopup && (
+        {/* {this.state.showHoursPopup && (
           <div style={{
             position: 'fixed',
             bottom: 0,
@@ -401,7 +401,7 @@ class Header2 extends Component {
             </button>
             <p>Sunday hours update: Now closing at 4pm</p>
           </div>
-        )}
+        )} */}
       </>
     );
   }

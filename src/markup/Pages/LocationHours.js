@@ -1,6 +1,6 @@
 import React from "react"
 import { useState, useEffect } from "react"
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api"
+import { GoogleMap, LoadScript } from "@react-google-maps/api"
 import "../../css/app.css"
 
 const center = {
@@ -22,6 +22,28 @@ const businessHours = [
   { day: "Saturday", hours: "10:00 AM - 2:00 PM" },
   { day: "Sunday", hours: "Closed" },
 ]
+
+const AdvancedMarker = ({ position, map }) => {
+  const [marker, setMarker] = useState(null);
+
+  useEffect(() => {
+    if (!window.google || !map) return;
+    
+    const newMarker = new window.google.maps.marker.AdvancedMarkerElement({
+      position,
+      map,
+    });
+    setMarker(newMarker);
+
+    return () => {
+      if (marker) {
+        marker.map = null;
+      }
+    };
+  }, [map, position]);
+
+  return null;
+};
 
 function App() {
   const [isHoursExpanded, setIsHoursExpanded] = useState(false)
@@ -47,9 +69,10 @@ function App() {
             googleMapsApiKey={process.env.REACT_APP_MAPS_API_KEY}
             onLoad={() => console.log("Google Maps script loaded successfully")}
             onError={(e) => console.error("Error loading Google Maps script:", e)}
+            libraries={["marker"]}
           >
             <GoogleMap mapContainerStyle={mapContainerStyle} center={center} zoom={13}>
-              <Marker position={center} />
+              <AdvancedMarker position={center} />
             </GoogleMap>
           </LoadScript>
         </div>
