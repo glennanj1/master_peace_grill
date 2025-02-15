@@ -65,7 +65,7 @@ function Login() {
     }
 
     return (
-        <div className="login-page" style={{backgroundImage: "url(" + require('./../../images/main-slider/home2.png') + ")", backgroundSize: "cover"}}>
+        <div className="login-page" style={{backgroundImage: "url(" + require('https://strapi.glennan.cloud/uploads/home2_f64d42ef8e.png') + ")", backgroundSize: "cover"}}>
             <Header2 />
             {user ?
 

@@ -61,8 +61,8 @@ class Header2 extends Component {
             className="sticky-header main-bar-wraper navbar-expand-lg"
             style={{
               backgroundColor: this.state.isScrolled 
-                ? (this.state.isMobile ? 'white' : 'red') 
-                : 'white',
+                ? (this.state.isMobile ? 'white' : 'transparent') 
+                : 'transparent',
               position: "fixed",
               top: 0,
               left: 0,
