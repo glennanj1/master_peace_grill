@@ -6,6 +6,7 @@
   "dependencies": {
     "@fullcalendar/daygrid": "^5.5.0",
     "@fullcalendar/react": "^5.5.0",
+    "@react-google-maps/api": "^2.20.6",
     "bootstrap": "^4.5.3",
     "canvas-confetti": "^1.4.0",
     "react": "^16.14.0",

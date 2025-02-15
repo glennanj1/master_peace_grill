@@ -1,3 +1,71 @@
-node_modules/
-node/
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Build files
+/build
+/dist
+/.next
+/out
+.cache
+
+# Production
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS generated files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Testing
+/coverage
+
+# Local development overrides
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Debug files
+*.log
+
+# IDE specific files
+.idea/
+.vscode/
+*.code-workspace
+
+# Temporary files
+*.tmp
+*.temp
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Optional sass cache
+.sass-cache/

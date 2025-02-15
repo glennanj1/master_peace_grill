@@ -14,8 +14,10 @@ class Banner extends Component{
 	render(){
 		return(
 			
-			<div className= "banner">	
-				<div className="section-full content-inner bnr-bg" style={{backgroundImage: "url(" + require('./../../images/main-slider/home2.png') + ")", backgroundSize: "cover"}}>
+			<div className= "banner" style={{background: ''}}>	
+			{/* want to move the background picture down 100px */}
+			<div className="section-full content-inner bnr-bg" style={{backgroundImage: "url(" + require('./../../images/main-slider/home2.png') + ")", backgroundSize: "cover", marginTop: "90px"}}>
+				{/* <div className="section-full content-inner bnr-bg" style={{backgroundImage: "url(" + require('./../../images/main-slider/home2.png') + ")", backgroundSize: "cover"}}> */}
 					<div className="container">
 						
 						<div className="row justify-content-center">
@@ -24,7 +26,7 @@ class Banner extends Component{
 									<div className="banner-logo">
 										<img src={mpgLogo} alt="MPG Logo" />
 									</div>
-									<h2 className="title">Voted Best CheeseSteaks 2017 - 2025</h2>
+									<h2 className="title">Voted Best of Conshy Best CheeseSteaks 2017 - 2024</h2>
 									
 									{/* <div className= "bnr-logo">
 										<img src ={require('./../../images/main-slider/slide5.png')}  alt="offer" />
