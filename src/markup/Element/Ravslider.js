@@ -16,7 +16,12 @@ class Banner extends Component{
 			
 			<div className= "banner" style={{background: ''}}>	
 			{/* want to move the background picture down 100px */}
-			<div className="section-full content-inner bnr-bg" style={{backgroundImage: "url(" + require('https://strapi.glennan.cloud/uploads/home2_f64d42ef8e.png') + ")", backgroundSize: "cover", marginTop: "90px"}}>
+			<div className="section-full content-inner bnr-bg" style={{
+				backgroundImage: "url(https://strapi.glennan.cloud/uploads/home2_f64d42ef8e.png)",
+				backgroundSize: "cover", 
+				marginTop: "90px",
+				minHeight: "120vh"
+			}}>
 				{/* <div className="section-full content-inner bnr-bg" style={{backgroundImage: "url(" + require('./../../images/main-slider/home2.png') + ")", backgroundSize: "cover"}}> */}
 					<div className="container">
 						

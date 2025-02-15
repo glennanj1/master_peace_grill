@@ -28,7 +28,7 @@ const ToastHoursContent = ({ t }) => {
 			<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
 				<div>
 					{/* we are closing at 4pm on Sunday */}
-					We are closing at 4pm on Sunday from now on! ✌️
+					We are closing at 4pm on Sundays from now on! ✌️
 				</div>
 				<button 
 					onClick={() => toast.dismiss(t.id)}
@@ -196,7 +196,7 @@ class Index2 extends Component{
 					: 
 					<video 
 						className='videoPlayer' 
-						style={{position: 'fixed', overflow: 'hidden', zIndex: -1, top: '-100px'}} 
+						style={{position: 'fixed', overflow: 'hidden', zIndex: -1, top: '-100px', height: '150vh'}} 
 						autoPlay 
 						loop 
 						playsInline 

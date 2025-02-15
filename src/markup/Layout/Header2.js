@@ -60,9 +60,9 @@ class Header2 extends Component {
           <div
             className="sticky-header main-bar-wraper navbar-expand-lg"
             style={{
-              backgroundColor: this.state.isScrolled 
-                ? (this.state.isMobile ? 'white' : 'transparent') 
-                : 'transparent',
+              backgroundColor: this.state.isMobile
+                ? (this.state.isScrolled ? 'white' : 'transparent')
+                : (this.state.isScrolled ? 'red' : 'white'), // White when not scrolled, red when scrolled on desktop
               position: "fixed",
               top: 0,
               left: 0,
