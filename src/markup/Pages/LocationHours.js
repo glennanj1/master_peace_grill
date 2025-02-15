@@ -4,8 +4,8 @@ import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api"
 import "../../css/app.css"
 
 const center = {
-  lat: 40.7128,
-  lng: -74.006,
+  lat: 40.0776189,
+  lng: -75.3021571,
 }
 
 const mapContainerStyle = {
@@ -44,7 +44,7 @@ function App() {
       <div className="layout">
         <div className="map-section">
           <LoadScript 
-            googleMapsApiKey="AIzaSyDSk6YM8Bc6KuxKo-JLJSDnf2J-DXrJswY"
+            googleMapsApiKey={process.env.REACT_APP_MAPS_API_KEY}
             onLoad={() => console.log("Google Maps script loaded successfully")}
             onError={(e) => console.error("Error loading Google Maps script:", e)}
           >
