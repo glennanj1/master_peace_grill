@@ -5,14 +5,71 @@ import Header2 from './../Layout/Header2';
 import Footer2 from './../Layout/Footer2';
 // import Tab from './../Pages/Tab';
 import Owl2 from './../Element/Owl2';
-import Modal from './../Element/Modal'; 
+// import Modal from './../Element/Modal'; 
+import LocationHours from './LocationHours';
 
 const video = 'https://d3ddatyom1hv87.cloudfront.net/steak_final.mp4'
 const onlineOrdering = 'https://onlineordering.rmpos.com/Order/?wci=54MBz6OB'
 const fb = 'https://www.facebook.com/pages/Masterpeace-Grill/844637945566646?fref=ts'
 const yelp = 'http://www.yelp.com/biz/masterpeace-grill-conshohocken-2'
 
-
+// Helper component for the custom toast content with a dynamic progress bar.
+const ToastHoursContent = ({ t }) => {
+	return (
+		<div
+			style={{
+				backgroundColor: '#bf1e2e',
+				color: 'white',
+				padding: '16px',
+				borderRadius: '5px',
+				boxShadow: '0 2px 8px rgba(0,0,0,0.3)'
+			}}
+		>
+			<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+				<div>
+					{/* we are closing at 4pm on Sunday */}
+					We are closing at 4pm on Sunday from now on! ✌️
+				</div>
+				<button 
+					onClick={() => toast.dismiss(t.id)}
+					style={{
+						background: 'transparent',
+						border: 'none',
+						color: 'white',
+						fontSize: '18px',
+						cursor: 'pointer',
+						borderRadius: '50%',
+						width: '24px',
+						height: '24px',
+						display: 'flex',
+						alignItems: 'center',
+						justifyContent: 'center'
+					}}
+				>
+					×
+				</button>
+			</div>
+			<div
+				style={{
+					marginTop: '8px',
+					height: '4px',
+					background: '#aa1b23',
+					borderRadius: '2px',
+					overflow: 'hidden'
+				}}
+			>
+				<div
+					style={{
+						height: '100%',
+						background: '#e53935',
+						width: '100%',
+						animation: `progressBarAnimation ${t.duration}ms linear forwards`
+					}}
+				/>
+			</div>
+		</div>
+	);
+};
 
 class Index2 extends Component{
 	
@@ -29,6 +86,13 @@ class Index2 extends Component{
 		
 	};
 
+	notifyHours = () => {
+		toast.custom((t) => <ToastHoursContent t={t} />, {
+			duration: 9000,
+			position: 'bottom-right'
+		});
+	};
+
 	state = { 
 		email: '',
 		status: '',
@@ -37,8 +101,23 @@ class Index2 extends Component{
 	}
 
 	componentDidMount() {
+		// Inject the keyframes for the progress bar animation if not already added
+		if (!document.getElementById('progress-bar-keyframes')) {
+			const styleEl = document.createElement('style');
+			styleEl.id = 'progress-bar-keyframes';
+			styleEl.innerHTML = `
+				@keyframes progressBarAnimation {
+					from { width: 100%; }
+					to { width: 0%; }
+				}
+			`;
+			document.head.appendChild(styleEl);
+		}
 		window.scrollTo(0, 0);
 		this.updateViewPort();
+		setTimeout(() => {
+			this.notifyHours();
+		}, 1000);
 	}
 
 	updateViewPort = () => {
@@ -108,11 +187,19 @@ class Index2 extends Component{
 					
 					{this.state.isMobile ? 
 					
-						<div className="videoPlayer" style={{position: 'fixed', overflow: 'hidden'}}>
+						<div className="videoPlayer" style={{position: 'fixed', overflow: 'hidden', zIndex: -1, top: '-100px'}}>
 						</div>
 					
 					: 
-					<video className='videoPlayer' style={{position: 'fixed', overflow: 'hidden'}} autoPlay loop playsInline defaultMuted muted>
+					<video 
+						className='videoPlayer' 
+						style={{position: 'fixed', overflow: 'hidden', zIndex: -1, top: '-100px'}} 
+						autoPlay 
+						loop 
+						playsInline 
+						defaultmuted 
+						muted
+					>
 						<source src={video} type='video/mp4' />
 					</video>}
 					
@@ -121,10 +208,28 @@ class Index2 extends Component{
 					
 					<Banner online={onlineOrdering} mobile={this.state.isMobile}/>	
 
-				
-					<div className="section-full content-inner fixedVideo" style={{backgroundColor: '#fffcfc00!important'}}>
+					<div 
+						className="section-full content-inner fixedVideo" 
+						style={{ backgroundColor: '#fffcfc00', position: 'relative' }}
+					>
+						<img 
+							src="https://strapi.glennan.cloud/uploads/Best_of_Conshy_2024_300_4cfaf548a8.png" 
+							alt="Best of Conshy 2024"
+							style={{ 
+								position: 'absolute', 
+								top: '50%', 
+								left: '50%', 
+								transform: 'translate(-50%, -50%)', 
+								maxWidth: '100%', 
+								height: 'auto' 
+							}} 
+						/>
 					</div>	
+					<div id="hours">
+						<LocationHours />
+					</div>
 					<Owl2 />
+					
 					
 					<div className="section-full bg-red p-tb50 newslatter-area">
 					{this.status()}

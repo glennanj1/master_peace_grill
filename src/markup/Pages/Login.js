@@ -56,9 +56,13 @@ function Login() {
     }
 
     return (
-        <div className="login-page" style={{ backgroundImage: "url(https://d3ddatyom1hv87.cloudfront.net/background.jpg)", backgroundSize: "cover" }}>
-            <img src={mpgLogo} alt="logo" />
-            <form className='login-form' onSubmit={handleLogin} >
+        <div className="login-page" style={{backgroundImage: "url(" + require('https://strapi.glennan.cloud/uploads/home2_f64d42ef8e.png') + ")", backgroundSize: "cover"}}>
+            <Header2 />
+            {user ?
+
+                <h3>Welcome, {user.email}</h3> :
+                                
+                <form className='login-form' onSubmit={handleLogin} >
                 <h3>Login</h3>
                 <p className="error">{error}</p>
                 <label>Email</label>

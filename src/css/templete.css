@@ -150,7 +150,7 @@
 /* Banner */
 
 .banner .bnr-bg{
-	height:100vh;
+	height: auto;
 	background-position:center;
 	position:relative;
     background-size: cover;	
@@ -167,7 +167,7 @@
 	margin: 0;
 	text-align: center;
 	letter-spacing: 0px;
-	padding-top: 70px;
+	padding-top: 20px;
 	text-shadow: 6px 3px black;}
 .banner .info{
 	font-size: 30px;
@@ -184,10 +184,12 @@
     -webkit-text-fill-color: white;
 }
 .banner .container{
-	position: absolute;
-	top: 63%;
-	transform: translate(-50%,-50%);
-	left: 50%;
+	position: relative;  /* Changed from absolute to relative */
+    width: 100vw;       /* Full viewport width */
+    max-width: 100%;    /* Ensure it doesn't overflow */
+    margin: 0 auto;     /* Center the container */
+    padding: 0 15px;    /* Add some padding on the sides */
+    transform: none;    /* Remove the transform */
 }
 .banner .bnr-logo{
 	display: inline-block;
@@ -3060,7 +3062,13 @@ td.fc-event-container {
 @media only screen and (max-width: 591px){
 	.videoPlayer {
 		width: 100vw;
+		height: 150vh;  /* Full viewport height */
+		min-height: 100vh; /* Prevent content from shrinking it */
 		background: url('https://media3.giphy.com/media/pEtPlteqEFqqmf8Mrh/giphy.gif');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		position: relative; /* Ensure proper positioning */
 	}
 	.fixedVideo {
 		height: 475px;
@@ -3184,7 +3192,7 @@ td.fc-event-container {
 	}
 	.banner .info{
 		font-size: 30px;
-		line-height: 18px;
+		line-height: 30px;
 	}
 	.main-slider .slide {
 		
@@ -3389,4 +3397,202 @@ td.fc-event-container {
 	.main-slider.style-1 .carousel-item img{
 		height: 500px;
 	}
+}
+
+.hoursContainer-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 9999;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hours-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.hours-btn-mobile {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #e7272d;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 999;
+}
+
+@media only screen and (min-width: 768px) {
+    .hours-btn-mobile,
+    .hoursContainer-mobile {
+        display: none;
+    }
+}
+
+.sidebar-hours {
+    padding: 25px;
+    margin: 20px 15px;
+    text-align: center;
+}
+
+.sidebar-hours .hours-title {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: Barlow, sans-serif;
+}
+
+.sidebar-hours .hours-list p {
+    color: #fff;
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 1.4;
+    font-family: Barlow, sans-serif;
+    font-weight: 500;
+}
+
+.sidebar-hours .hours-list p:last-child {
+    margin-bottom: 0;
+}
+
+/* Hide hours on desktop */
+.sidebar-hours {
+    display: none;
+}
+
+/* Only show hours on mobile */
+@media only screen and (max-width: 991px) {
+    .sidebar-hours {
+        display: block;
+        margin: 15px 20px;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+    
+    .sidebar-hours .hours-title {
+        color: #e7272d;
+        margin-bottom: 20px;
+        font-size: 22px;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-family: Barlow, sans-serif;
+    }
+    
+    .sidebar-hours .hours-list p {
+        color: #000;
+        margin-bottom: 12px;
+        font-size: 16px;
+        line-height: 1.4;
+        font-family: Barlow, sans-serif;
+        font-weight: 500;
+    }
+    
+    .sidebar-hours .hours-list p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* Banner Logo Styling */
+.banner-logo {
+    width: 600px;  /* Increased from 400px to 600px for desktop */
+    display: block;
+    margin: 0 auto;
+}
+
+.banner-logo img {
+    width: 100%;
+    height: auto;
+    max-width: none;  /* Remove max-width restriction */
+}
+
+/* Mobile Adjustments */
+@media only screen and (max-width: 767px) {
+    .banner-logo {
+        width: 300px;  /* Increased from 150px to 300px for mobile */
+        margin: 0 auto 20px;
+    }
+}
+
+/* Center the entire content section */
+.banner .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Center the content column */
+.banner .col-lg-6 {
+    margin: 0 auto;
+    float: none;
+}
+
+/* If there's a logo inside the banner, you might want to add this */
+.banner .container img {
+    max-width: none;    /* Remove max-width restriction */
+    width: auto;        /* Let the image maintain its aspect ratio */
+    height: auto;       /* Let the image maintain its aspect ratio */
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 90px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff4d4d;
+}
+
+/* Adjust header layout */
+.pizza-header .main-bar {
+    justify-content: space-between;
+}
+
+.pizza-header .logo-header {
+    margin-right: auto;
 }

@@ -1,0 +1,164 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Container */
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Layout */
+  .layout {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Map Section */
+  .map-section {
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  /* Hours Section */
+  .hours-section {
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .hours-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .hours-header h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .toggle-button {
+    display: none; /* Hidden by default, shown on mobile */
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #666;
+  }
+  
+  .hours-content {
+    display: block;
+  }
+  
+  .hours-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .hours-row:last-child {
+    border-bottom: none;
+  }
+  
+  .day {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .time {
+    color: #666;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .toggle-button {
+      display: block;
+    }
+  
+    .hours-content {
+      display: none;
+    }
+  
+    .hours-content.expanded {
+      display: block;
+    }
+  }
+  
+  /* Desktop Styles */
+  @media (min-width: 769px) {
+    .layout {
+      flex-direction: row;
+    }
+  
+    .map-section,
+    .hours-section {
+      flex: 1;
+    }
+  }
+  
+  /* Update hover styles */
+  .nav-link {
+    color: #333;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: color 0.3s ease;
+  }
+  
+  /* Desktop hover states */
+  @media (min-width: 1024px) {
+    .nav-link:hover {
+      color: #e53e3e; /* Red color for hover */
+      transform: translateY(-2px);
+    }
+  }
+  
+  /* Mobile menu - ensure hover doesn't affect mobile */
+  @media (max-width: 1023px) {
+    .nav-link:hover {
+      color: inherit; /* Disable hover effect on mobile */
+    }
+  }
+  
+  /* Adjust mobile menu sizing */
+  .mobile-menu {
+    max-height: 80vh; /* Limit height */
+    overflow-y: auto; /* Add scroll if needed */
+  }
+  
+  .mobile-menu-item {
+    @apply px-4 py-2 text-base; /* Smaller text and padding */
+  }
+  
+  .logo-header {
+    display: block !important;
+    float: left;
+    margin-right: 30px;
+  }
+  
+  @media (max-width: 768px) {
+    .logo-header {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10001;
+    }
+    
+    .logo-header img {
+      max-height: 50px !important;
+    }
+  }
+  
+  
