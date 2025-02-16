@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from "react";
 import "../../css/app.css";
 
-const businessHours = [
-  { day: "Monday", hours: "9:00 AM - 5:00 PM" },
-  { day: "Tuesday", hours: "9:00 AM - 5:00 PM" },
-  { day: "Wednesday", hours: "9:00 AM - 5:00 PM" },
-  { day: "Thursday", hours: "9:00 AM - 5:00 PM" },
-  { day: "Friday", hours: "9:00 AM - 4:00 PM" },
-  { day: "Saturday", hours: "10:00 AM - 2:00 PM" },
-  { day: "Sunday", hours: "Closed" },
-];
+function LocationHours() {
+  // Update the hours array to match the new schedule
+  const hours = [
+    { day: 'Monday', time: 'Closed' },
+    { day: 'Tuesday', time: '11:00 AM - 3:00 PM' },
+    { day: 'Wednesday', time: '11:00 AM - 9:00 PM' },
+    { day: 'Thursday', time: '11:00 AM - 9:00 PM' },
+    { day: 'Friday', time: '11:00 AM - 9:00 PM' },
+    { day: 'Saturday', time: '11:00 AM - 9:00 PM' },
+    { day: 'Sunday', time: '11:00 AM - 4:00 PM' },
+  ];
 
-function App() {
   const [isHoursExpanded, setIsHoursExpanded] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 480);
 
@@ -59,10 +60,10 @@ function App() {
             )}
           </div>
           <div className={`hours-content ${isHoursExpanded ? "expanded" : ""}`}>
-            {businessHours.map((schedule) => (
+            {hours.map((schedule) => (
               <div key={schedule.day} className="hours-row">
                 <span className="day" style={{ color: "red" }}>{schedule.day}</span>
-                <span className="time" style={{ color: "red" }}>{schedule.hours}</span>
+                <span className="time" style={{ color: "red" }}>{schedule.time}</span>
               </div>
             ))}
           </div>
@@ -72,7 +73,7 @@ function App() {
   );
 }
 
-export default App;
+export default LocationHours;
 
 function EmbeddedMap() {
   // Your business place ID
