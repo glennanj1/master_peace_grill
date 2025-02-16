@@ -15,10 +15,6 @@
 	background-color: red !important;
 }
 
-.videoPlayer {
-	background: #e7272d;
-}
-
 .__button {
 	background-color: #f8000071;
     border-radius: 15px;
@@ -2381,7 +2377,7 @@ td.fc-event-container {
 		padding: 200px;
 	}
 	.videoPlayer {
-		width: 100%;
+		width: 100vw;
 	}
 	.pizza-header  .is-fixed .main-bar{
 		background:#e7272d;
@@ -2851,7 +2847,6 @@ td.fc-event-container {
 	}
 	.videoPlayer {
 		height: 100vh;
-		background: #e7272d;
 	}
 	.section-head .text-bold,
 	.about-area1 .about-bx .section-head p,
@@ -3593,4 +3588,27 @@ td.fc-event-container {
 
 .pizza-header .logo-header {
     margin-right: auto;
+}
+
+.videoPlayer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 150vh;
+    min-height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    background: url('https://media3.giphy.com/media/pEtPlteqEFqqmf8Mrh/giphy.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* For mobile-specific adjustments */
+@media only screen and (max-width: 767px) {
+    .videoPlayer {
+        height: 100vh;
+        min-height: -webkit-fill-available; /* For mobile browsers */
+    }
 }
