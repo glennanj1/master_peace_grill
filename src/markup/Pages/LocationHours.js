@@ -1,17 +1,5 @@
-import React from "react"
-import { useState, useEffect } from "react"
-import { GoogleMap, LoadScript } from "@react-google-maps/api"
-import "../../css/app.css"
-
-const center = {
-  lat: 40.0776189,
-  lng: -75.3021571,
-}
-
-const mapContainerStyle = {
-  width: "100%",
-  height: "400px",
-}
+import React, { useState, useEffect } from "react";
+import "../../css/app.css";
 
 const businessHours = [
   { day: "Monday", hours: "9:00 AM - 5:00 PM" },
@@ -21,85 +9,88 @@ const businessHours = [
   { day: "Friday", hours: "9:00 AM - 4:00 PM" },
   { day: "Saturday", hours: "10:00 AM - 2:00 PM" },
   { day: "Sunday", hours: "Closed" },
-]
-
-const AdvancedMarker = ({ position, map }) => {
-  const [marker, setMarker] = useState(null);
-
-  useEffect(() => {
-    if (!window.google || !map) return;
-    
-    const newMarker = new window.google.maps.marker.AdvancedMarkerElement({
-      position,
-      map,
-    });
-    setMarker(newMarker);
-
-    return () => {
-      if (marker) {
-        marker.map = null;
-      }
-    };
-  }, [map, position]);
-
-  return null;
-};
+];
 
 function App() {
-  const [isHoursExpanded, setIsHoursExpanded] = useState(false)
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 480)
+  const [isHoursExpanded, setIsHoursExpanded] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 480);
 
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth <= 480)
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
+    const handleResize = () => setIsMobile(window.innerWidth <= 480);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     if (isMobile) {
-      setIsHoursExpanded(true)
+      setIsHoursExpanded(true);
     }
-  }, [isMobile])
+  }, [isMobile]);
 
   return (
-    <div className="section-full bg-white content-inner-2" style={{backgroundColor: 'white'}}>
-      <div className="layout">
+    <div className="section-full bg-white content-inner-2" style={{ backgroundColor: "white" }}>
+      <div className="layout" style={{ 
+        maxWidth: "82rem",
+        margin: "0 auto",
+        padding: "0 1rem"
+      }}>
+        {/* Map Section */}
         <div className="map-section">
-          <LoadScript 
-            googleMapsApiKey={process.env.REACT_APP_MAPS_API_KEY}
-            onLoad={() => console.log("Google Maps script loaded successfully")}
-            onError={(e) => console.error("Error loading Google Maps script:", e)}
-            libraries={["marker"]}
-          >
-            <GoogleMap mapContainerStyle={mapContainerStyle} center={center} zoom={13}>
-              <AdvancedMarker position={center} />
-            </GoogleMap>
-          </LoadScript>
+          <EmbeddedMap />
         </div>
-
+        
+        {/* Hours Section */}
         <div className="hours-section">
-          <div className="hours-header">
-            <h2 style={{ color: 'red', textAlign: 'center', marginBottom: '1rem' }}>Hours of Operation</h2>
+          <div className="hours-header" style={{ width: "100%" }}>
+            <h2 style={{ 
+              color: "red", 
+              textAlign: "center", 
+              marginBottom: "1rem",
+              textTransform: "uppercase",
+              width: "100%",
+              paddingTop: "0.5rem"
+            }}>
+              HOURS OF OPERATION
+            </h2>
             {!isMobile && (
               <button className="toggle-button" onClick={() => setIsHoursExpanded(!isHoursExpanded)}>
                 {isHoursExpanded ? "▼" : "▲"}
               </button>
             )}
           </div>
-
           <div className={`hours-content ${isHoursExpanded ? "expanded" : ""}`}>
             {businessHours.map((schedule) => (
               <div key={schedule.day} className="hours-row">
-                <span className="day" style={{ color: 'red' }}>{schedule.day}</span>
-                <span className="time" style={{ color: 'red' }}>{schedule.hours}</span>
+                <span className="day" style={{ color: "red" }}>{schedule.day}</span>
+                <span className="time" style={{ color: "red" }}>{schedule.hours}</span>
               </div>
             ))}
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
 
+function EmbeddedMap() {
+  // Your business place ID
+  const placeId = "ChIJiZi4DF6-xokRIouXKdqDT-Q";
+  // Build the embed URL
+  const googleMapsEmbedUrl = `https://www.google.com/maps/embed/v1/place?key=${process.env.REACT_APP_MAPS_API_KEY}&q=place_id:${placeId}`;
+
+  return (
+    <div style={{ width: "100%", height: "400px" }}>
+      <iframe
+        title="Business Location"
+        width="100%"
+        height="100%"
+        frameBorder="0"
+        style={{ border: 0 }}
+        src={googleMapsEmbedUrl}
+        allowFullScreen
+      ></iframe>
+    </div>
+  );
+}

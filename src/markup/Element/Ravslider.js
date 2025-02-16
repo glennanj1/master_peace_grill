@@ -31,13 +31,13 @@ class Banner extends Component{
 									<div className="banner-logo">
 										<img src={mpgLogo} alt="MPG Logo" />
 									</div>
-									<h2 className="title">Voted Best of Conshy Best CheeseSteaks 2017 - 2024</h2>
+									<h2 className="title">Serving Conshohocken for a Decade</h2>
 									
 									{/* <div className= "bnr-logo">
 										<img src ={require('./../../images/main-slider/slide5.png')}  alt="offer" />
 									</div>	 */}
 									
-									<p className="info">Serving Conshohocken for a Decade</p>
+									<p className="info"></p>
 
 									<a href={this.props.online} className="btn red" style={{fontSize: '34px'}} data-target="#exampleModal">Order Online</a>
 									{this.props.mobile ? (
