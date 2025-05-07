@@ -1,66 +1,92 @@
+import React, { Component } from "react";
 import confetti from "canvas-confetti";
-import React from "react";
-// import steak from "../../images/steak_tray.jpg"
-// import logo from './../../images/mpg_logo.png'
-// const background = 'https://strapi.glennan.cloud/uploads/IMG_3628_4113ccde86.jpg'
 
-export default class Modal extends React.Component {
+export default class Modal extends Component {
+  state = {
+    isOpen: false
+  };
 
-    state = {
-        isOpen: false
-    }
+  componentDidMount() {
+    this.setState({ isOpen: true });
+  }
 
-    toggleModal = () => {
-        if (this.state.isOpen) {
-            this.setState({ isOpen: false });
-        } else {
-            this.setState({
-                isOpen: true
-            });
-        }
-    }
+  toggleModal = () => {
+    this.setState(prevState => ({ isOpen: !prevState.isOpen }));
+  };
 
-    confettiLaunch = () => {
-        confetti({
-            particleCount: 100,
-            spread: 70,
-            origin: { y: 0.6 },
-            zIndex: 100000,
-        });
-    }
+  confettiLaunch = () => {
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
+      zIndex: 100000,
+    });
+  };
 
+  render() {
+    const { isOpen } = this.state;
+    
+    if (!isOpen) return null;
 
-    componentDidMount() {
-        this.toggleModal();
-    }
-
-    render() {
-
-        return (
-            <div>
-                {this.state.isOpen ? (
-                    <div className="__wrapper">
-                        {/* <div className="__child" style={{background: `url(${background}) white`, backgroundSize: 'cover', backgroundPosition: 'center'}}> */}
-                        <div className="__child" style={{ borderRadius: '10px', background: 'white' }}>
-                            <div>
-                                <p style={{ fontSize: '1.5em', padding: '20px', textAlign: 'left' }}>
-                                    We will be closed for vacation - Reopening 1/16                            <span role="img" aria-label="peace">
-                                        ✌️❤️🎶
-                                    </span>
-                                </p>
-                            </div>
-                            <div style={{ height: '100%', width: '100%', backgroundImage: "url(https://strapi.glennan.cloud/uploads/Screenshot_2025_01_05_at_8_21_53_PM_ef586be5ed.png", backgroundSize: 'contain', backgroundPosition: 'center', marginBottom: '10px' }}>
-                            </div>
-                            {/* <div style={{height: '30%', width: '100px', marginBottom: '10px'}}>
-                            <a href="https://morethanthecurve.com/best-of-conshy/" style={{textDecoration: 'none', color: 'white'}}><button className="__button" style={{bottom: '5px'}}>Vote Now</button></a>
-                        </div> */}
-                            <div style={{ height: '30%', width: '100px', marginBottom: '20px' }}>
-                                <button className="__button" onClick={this.toggleModal} style={{ top: '5px', position: 'relative' }}>Close</button>
-                            </div>
-                            {/* </div> */}
-                        </div>
-                    </div>) : null}
-            </div>
-        )
-    }
+    return (
+      <div className="__wrapper" style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        backgroundColor: 'rgba(0, 0, 0, 0.95)',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        zIndex: 999999,
+        width: '100vw',
+        height: '100vh',
+        overflow: 'hidden',
+        pointerEvents: 'all'
+      }}>
+        <div className="__child" style={{ 
+          margin: '10px', 
+          borderRadius: '10px', 
+          background: 'white', 
+          maxWidth: '90vw', 
+          maxHeight: '90vh', 
+          overflow: 'auto',
+          position: 'relative',
+          zIndex: 1000000
+        }}>
+          <div>
+            <p style={{ fontSize: '1.5em', padding: '20px', textAlign: 'center', fontWeight: 'bold' }}>
+              We will be closed 5-8 through 5-13
+              <br />
+              Reopening 5-14
+              <span role="img" aria-label="peace" style={{ marginLeft: '10px' }}>
+                ✌️❤️🎶
+              </span>
+            </p>
+          </div>
+          
+          <div style={{ 
+            width: '100%', 
+            height: '500px',
+            backgroundImage: "url(https://strapi.glennan.cloud/uploads/Screenshot_2025_05_07_at_7_20_36_AM_90357324ab.png)", 
+            backgroundSize: 'contain', 
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            marginBottom: '20px' 
+          }} />
+          
+          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
+            <button 
+              className="__button" 
+              onClick={this.toggleModal}
+              style={{ padding: '10px 20px', cursor: 'pointer' }}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
