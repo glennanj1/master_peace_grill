@@ -7,7 +7,7 @@
     "@fullcalendar/daygrid": "^5.5.0",
     "@fullcalendar/react": "^5.5.0",
     "@react-google-maps/api": "^2.20.6",
-    "bootstrap": "^4.5.3",
+    "bootstrap": "^5.3.6",
     "canvas-confetti": "^1.4.0",
     "react": "^16.14.0",
     "react-animated-slider": "^1.1.4",
@@ -20,16 +20,17 @@
     "react-masonry-component": "^6.2.1",
     "react-masonry-css": "^1.0.14",
     "react-multi-carousel": "^2.6.1",
-    "react-slider": "^2.0.6",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^5.0.1",
     "react-slick": "^0.25.2",
+    "react-slider": "^2.0.6",
     "react-visibility-sensor": "^5.1.1",
     "reactstrap": "^8.7.1",
     "simple-react-google-maps": "^1.1.2"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "npm-force-resolutions": "^0.0.10"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -38,7 +38,8 @@ export default class Modal extends Component {
         backgroundColor: 'rgba(0, 0, 0, 0.95)',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center',
+        alignItems: 'flex-start', // Changed from center to flex-start
+        paddingTop: '5vh', // Added padding at the top
         zIndex: 999999,
         width: '100vw',
         height: '100vh',
@@ -50,10 +51,12 @@ export default class Modal extends Component {
           borderRadius: '10px', 
           background: 'white', 
           maxWidth: '90vw', 
-          maxHeight: '90vh', 
+          maxHeight: '85vh', 
           overflow: 'auto',
           position: 'relative',
-          zIndex: 1000000
+          zIndex: 1000000,
+          top: '0 !important', // Force override any CSS classes
+          transform: 'none !important' // Ensure no transforms are applied
         }}>
           <div>
             <p style={{ fontSize: '1.5em', padding: '20px', textAlign: 'center', fontWeight: 'bold' }}>
