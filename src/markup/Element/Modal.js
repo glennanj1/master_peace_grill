@@ -60,11 +60,11 @@ export default class Modal extends Component {
         }}>
           <div>
             <p style={{ fontSize: '1.5em', padding: '20px', textAlign: 'center', fontWeight: 'bold' }}>
-              We will be closed 5-8 through 5-13
+              We will be closed 7/4 through 7/9
               <br />
-              Reopening 5-14
+              Reopening 7/10
               <span role="img" aria-label="peace" style={{ marginLeft: '10px' }}>
-                ✌️❤️🎶
+                Have a GRATEFUL HOLIDAY 
               </span>
             </p>
           </div>
@@ -72,7 +72,7 @@ export default class Modal extends Component {
           <div style={{ 
             width: '100%', 
             height: '500px',
-            backgroundImage: "url(https://strapi.glennan.cloud/uploads/Screenshot_2025_05_07_at_7_20_36_AM_90357324ab.png)", 
+            backgroundImage: "url(https://strapi.glennan.cloud/uploads/IMG_5602_5600aa4ab3.jpeg)", 
             backgroundSize: 'contain', 
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
