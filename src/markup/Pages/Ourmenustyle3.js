@@ -457,10 +457,12 @@ class Ourmenustyle3 extends Component{
 							<div className="col-lg-6">
 								<div className="menu-box">
 									<div className="section-head style-2">
-										<h2 className="title">CheeseSteaks $12.99</h2>
+										<h2 className="title">CheeseSteaks $13.99</h2>
 										<h4 className="sub-title">Build Your Own</h4>
 										<p>
 											<b>Pick Your Meat</b> - Beef Steak of Chicken Steak<br />
+											{/* add bold font to the style of the span */}
+											<span style={{fontWeight: 'bold'}}>*New* add cooper sharp for $1.00</span><br />
 											<b>Pick 1 Cheese</b> - american, provolone, swiss,  wiz, mozzerella, pepperjack<br /> 
 											<b>Pick a Spread</b> - Mayo, Southwest Spread, Mustard, Spicy Mustard, Honey Mustard, Ranch, Hot Sauce, Humus<br />
 											<b>Pick Your Veggies</b> - Lettuce, Tomato, Onion, Roasted Peppers, Mushroom, Hot Peppers, Sweet Pepper, Pickle, Cole Slaw<br />
@@ -474,7 +476,7 @@ class Ourmenustyle3 extends Component{
 											<div className="info-price">
 												<h5 className="title">Tiger Steak</h5>
 												<div className="line"></div>
-												<span className="price">13.99</span>
+												<span className="price">14.99</span>
 											</div>
 											<p>beef steak, chicken steak, bacon, american cheese, all mixed together</p>
 										</li>
@@ -482,7 +484,7 @@ class Ourmenustyle3 extends Component{
 											<div className="info-price">
 												<h5 className="title">Buffalo Chicken CheeseSteak</h5>
 												<div className="line"></div>
-												<span className="price">13.99</span>
+												<span className="price">14.99</span>
 											</div>
 											<p>hot sauce and american cheese with blue cheese or ranch</p>
 										</li>
@@ -490,7 +492,7 @@ class Ourmenustyle3 extends Component{
 											<div className="info-price">
 												<h5 className="title">Philly Steak</h5>
 												<div className="line"></div>
-												<span className="price">12.99</span>
+												<span className="price">13.99</span>
 											</div>
 											<p>beef steak with fried onions & real cheese wiz</p>
 										</li>
@@ -498,7 +500,7 @@ class Ourmenustyle3 extends Component{
 											<div className="info-price">
 												<h5 className="title">Pizza Steak</h5>
 												<div className="line"></div>
-												<span className="price">13.99</span>
+												<span className="price">14.99</span>
 											</div>
 											<p>beef steak mixed with marinara sauce & mozzerella cheese</p>
 										</li>
