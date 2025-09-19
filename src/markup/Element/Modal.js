@@ -97,15 +97,22 @@ export default class Modal extends Component {
               marginBottom: "20px",
             }}
           >
-            <button
+            <a
               href="https://morethanthecurve.com/best-of-conshy/?fbclid=IwY2xjawM6bKZleHRuA2FlbQIxMQBicmlkETFFNGZuMkJ4dzVnb0ZMRGZ5AR5J15-rPxH5S2jJRmNpkyE5QsrVtFQ_9PycL5KSDBNCEn1rXsHzmfo7HIfBPA_aem_qQRNfUBhyOam0Yetzi3GKQ"
               className="__button" 
               target="_blank"
               rel="noopener noreferrer"
-              style={{ padding: "10px 20px", marginRight: "10px", cursor: "pointer", textDecoration: "none" }}
+              style={{ 
+                padding: "10px 20px", 
+                marginRight: "10px", 
+                cursor: "pointer", 
+                textDecoration: "none",
+                display: "inline-block",
+                backgroundColor: "#f0526d",
+              }}
             >
               Vote Now
-            </button>
+            </a>
             <button
               className="__button"
               onClick={this.toggleModal}
