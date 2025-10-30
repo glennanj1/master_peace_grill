@@ -38,7 +38,7 @@ class About extends Component{
 			<>
 			<Header2 facebook={fb} yelp={yelp} online={onlineOrdering}/>
 		
-			 <div className="page-content bg-white">
+			 <div className="page-content bg-white" style={{paddingTop: '100px'}}>
 				
 				<div className="dlab-bnr-inr overlay-black-middle" style={{backgroundImage:"url(" + img1 + ")"}}>
 					<div className="container">
