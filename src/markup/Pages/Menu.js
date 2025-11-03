@@ -21,6 +21,50 @@ const onlineOrdering = 'https://onlineordering.rmpos.com/Order/?wci=54MBz6OB'
 const fb = 'https://www.facebook.com/pages/Masterpeace-Grill/844637945566646?fref=ts'
 const yelp = 'http://www.yelp.com/biz/masterpeace-grill-conshohocken-2'
 
+// Helper function to render Build Your Own instructions with proper formatting
+const renderBuildYourOwnInstructions = (instructions) => {
+	if (!instructions) return null;
+	
+	// Split by pipe separator and format each line
+	const lines = instructions.split(' | ');
+	return lines.map((line, index) => {
+		// Check if line has format "Label (content)" - most common pattern
+		const parenthesesMatch = line.match(/^(.+?)\s*\((.+)\)$/);
+		if (parenthesesMatch) {
+			const [, label, content] = parenthesesMatch;
+			return (
+				<span key={index}>
+					{index > 0 && <br />}
+					<b>{label}</b> - {content}
+					<br />
+				</span>
+			);
+		}
+		
+		// Check if line starts with a label followed by colon or dash
+		const colonDashMatch = line.match(/^([^:(]+)[:-]\s*(.+)$/);
+		if (colonDashMatch) {
+			const [, label, content] = colonDashMatch;
+			return (
+				<span key={index}>
+					{index > 0 && <br />}
+					<b>{label}</b> - {content}
+					<br />
+				</span>
+			);
+		}
+		
+		// For lines without a clear label (like "Turn any CheeseSteak into a wrap")
+		return (
+			<span key={index}>
+				{index > 0 && <br />}
+				{line}
+				{index < lines.length - 1 && <br />}
+			</span>
+		);
+	});
+};
+
 // Helper function to render menu items dynamically
 const renderMenuItem = (itemName, itemData) => {
 	// Skip special keys that aren't menu items
@@ -201,7 +245,7 @@ function Menu() {
 										<h2 className="title">Wraps ${wraps['Base Price']}</h2>
 										<h4 className="sub-title">Build Your Own</h4>
 										<p>
-											{wraps['Build Your Own Instructions']}
+											{renderBuildYourOwnInstructions(wraps['Build Your Own Instructions'])}
 											{wraps.addons && Object.keys(wraps.addons).map(addon => (
 												<span key={addon}><br /><b>Add {addon}</b> - ${wraps.addons[addon]}</span>
 											))}
@@ -237,7 +281,7 @@ function Menu() {
 										<h2 className="title">Triple Decker Clubs ${clubs['Base Price']}</h2>
 										<h4 className="sub-title">Build Your Own</h4>
 										<p>
-										{clubs['Build Your Own Instructions']}
+										{renderBuildYourOwnInstructions(clubs['Build Your Own Instructions'])}
 										{clubs.addons && Object.keys(clubs.addons).map(addon => (
 											<span key={addon}><br />Add {addon} ${clubs.addons[addon]}</span>
 										))}
@@ -280,7 +324,7 @@ function Menu() {
 										<h2 className="title">CheeseSteaks ${cheesesteaks['Base Price']}</h2>
 										<h4 className="sub-title">Build Your Own</h4>
 										<p>
-											{cheesesteaks['Build Your Own Instructions']}
+											{renderBuildYourOwnInstructions(cheesesteaks['Build Your Own Instructions'])}
 											{cheesesteaks.addons && (
 												<>
 													<br />
@@ -322,7 +366,7 @@ function Menu() {
 										<h2 className="title">Burgers ${burgers['Base Price']}</h2>
 										<h4 className="sub-title">Build Your Own</h4>
 										<p>
-											{burgers['Build Your Own Instructions']}
+											{renderBuildYourOwnInstructions(burgers['Build Your Own Instructions'])}
 											{burgers.addons && (
 												<>
 													<br />
@@ -370,7 +414,7 @@ function Menu() {
 										<h2 className="title">Hoagies & Grinders ${hoagies['Base Price']}</h2>
 										<h4 className="sub-title">Build Your Own</h4>
 										<p>
-										{hoagies['Build Your Own Instructions']}
+										{renderBuildYourOwnInstructions(hoagies['Build Your Own Instructions'])}
 										{hoagies.addons && Object.keys(hoagies.addons).map(addon => (
 											<span key={addon}><br />ADD {addon.toUpperCase()} - ${hoagies.addons[addon]}</span>
 										))}
@@ -405,7 +449,7 @@ function Menu() {
 										<h2 className="title">Sandwiches ${sandwiches['Base Price']}</h2>
 										<h4 className="sub-title">Build Your Own</h4>
 										<p>
-										{sandwiches['Build Your Own Instructions']}
+										{renderBuildYourOwnInstructions(sandwiches['Build Your Own Instructions'])}
 										</p>
 										<h2 className="title">Best Sellers</h2>
 									</div>
@@ -445,7 +489,7 @@ function Menu() {
 										<>
 											<h2 className="title">Build Your Own ${grilledCheeseMenu['Build Your Own'].price}</h2>
 											<p>
-											{grilledCheeseMenu['Build Your Own'].description}
+											{renderBuildYourOwnInstructions(grilledCheeseMenu['Build Your Own'].description)}
 											</p>
 										</>
 									)}

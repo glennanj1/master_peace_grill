@@ -220,19 +220,23 @@ class Index2 extends Component {
           <Banner online={onlineOrdering} mobile={this.state.isMobile} />
 
           <div
-            className="section-full content-inner fixedVideo"
-            style={{ backgroundColor: "#fffcfc00", position: "relative" }}
+            className="section-full content-inner"
+            style={{ 
+              backgroundColor: "#fffcfc00", 
+              padding: "30px 15px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center"
+            }}
           >
             <img
-              src="https://strapi.glennan.cloud/uploads/Best_of_Conshy_2024_300_4cfaf548a8.png"
+              src="https://strapi.glennan.cloud/uploads/Best_Of_Conshy_50e539c5c0.png"
               alt="Best of Conshy 2025"
               style={{
-                position: "absolute",
-                top: "50%",
-                left: "50%",
-                transform: "translate(-50%, -50%)",
-                maxWidth: "100%",
+                maxWidth: "600px",
+                width: "100%",
                 height: "auto",
+                display: "block"
               }}
             />
           </div>

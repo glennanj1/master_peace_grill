@@ -26,6 +26,50 @@ class Ourmenustyle3 extends Component{
 		window.scrollTo(0, 0)
 	}
 
+	// Helper function to render Build Your Own instructions with proper formatting
+	renderBuildYourOwnInstructions = (instructions) => {
+		if (!instructions) return null;
+		
+		// Split by pipe separator and format each line
+		const lines = instructions.split(' | ');
+		return lines.map((line, index) => {
+			// Check if line has format "Label (content)" - most common pattern
+			const parenthesesMatch = line.match(/^(.+?)\s*\((.+)\)$/);
+			if (parenthesesMatch) {
+				const [, label, content] = parenthesesMatch;
+				return (
+					<span key={index}>
+						{index > 0 && <br />}
+						<b>{label}</b> - {content}
+						<br />
+					</span>
+				);
+			}
+			
+			// Check if line starts with a label followed by colon or dash
+			const colonDashMatch = line.match(/^([^:(]+)[:-]\s*(.+)$/);
+			if (colonDashMatch) {
+				const [, label, content] = colonDashMatch;
+				return (
+					<span key={index}>
+						{index > 0 && <br />}
+						<b>{label}</b> - {content}
+						<br />
+					</span>
+				);
+			}
+			
+			// For lines without a clear label (like "Turn any CheeseSteak into a wrap")
+			return (
+				<span key={index}>
+					{index > 0 && <br />}
+					{line}
+					{index < lines.length - 1 && <br />}
+				</span>
+			);
+		});
+	};
+
 	// Helper function to render menu items dynamically
 	renderMenuItem = (itemName, itemData) => {
 		// Skip special keys that aren't menu items
@@ -207,7 +251,7 @@ class Ourmenustyle3 extends Component{
 										<h2 className="title">Wraps ${wraps['Base Price']}</h2>
 										<h4 className="sub-title">Build Your Own</h4>
 										<p>
-											{wraps['Build Your Own Instructions']}
+											{this.renderBuildYourOwnInstructions(wraps['Build Your Own Instructions'])}
 											{wraps.addons && Object.keys(wraps.addons).map(addon => (
 												<span key={addon}><br /><b>Add {addon}</b> - ${wraps.addons[addon]}</span>
 											))}
@@ -243,7 +287,7 @@ class Ourmenustyle3 extends Component{
 										<h2 className="title">Triple Decker Clubs ${clubs['Base Price']}</h2>
 										<h4 className="sub-title">Build Your Own</h4>
 										<p>
-											{clubs['Build Your Own Instructions']}
+											{this.renderBuildYourOwnInstructions(clubs['Build Your Own Instructions'])}
 											{clubs.addons && Object.keys(clubs.addons).map(addon => (
 												<span key={addon}><br />Add {addon} ${clubs.addons[addon]}</span>
 											))}
@@ -286,7 +330,7 @@ class Ourmenustyle3 extends Component{
 										<h2 className="title">CheeseSteaks ${cheesesteaks['Base Price']}</h2>
 										<h4 className="sub-title">Build Your Own</h4>
 										<p>
-											{cheesesteaks['Build Your Own Instructions']}
+											{this.renderBuildYourOwnInstructions(cheesesteaks['Build Your Own Instructions'])}
 											{cheesesteaks.addons && (
 												<>
 													<br />
@@ -329,7 +373,7 @@ class Ourmenustyle3 extends Component{
 										<h2 className="title">Burgers ${burgers['Base Price']}</h2>
 										<h4 className="sub-title">Build Your Own</h4>
 										<p>
-											{burgers['Build Your Own Instructions']}
+											{this.renderBuildYourOwnInstructions(burgers['Build Your Own Instructions'])}
 											{burgers.addons && (
 												<>
 													<br />
@@ -378,7 +422,7 @@ class Ourmenustyle3 extends Component{
 										<h2 className="title">Hoagies & Grinders ${hoagies['Base Price']}</h2>
 										<h4 className="sub-title">Build Your Own</h4>
 										<p>
-											{hoagies['Build Your Own Instructions']}
+											{this.renderBuildYourOwnInstructions(hoagies['Build Your Own Instructions'])}
 											{hoagies.addons && Object.keys(hoagies.addons).map(addon => (
 												<span key={addon}><br />ADD {addon.toUpperCase()} - ${hoagies.addons[addon]}</span>
 											))}
@@ -413,7 +457,7 @@ class Ourmenustyle3 extends Component{
 										<h2 className="title">Sandwiches ${sandwiches['Base Price']}</h2>
 										<h4 className="sub-title">Build Your Own</h4>
 										<p>
-											{sandwiches['Build Your Own Instructions']}
+											{this.renderBuildYourOwnInstructions(sandwiches['Build Your Own Instructions'])}
 										</p>
 										<h2 className="title">Best Sellers</h2>
 									</div>
@@ -453,7 +497,7 @@ class Ourmenustyle3 extends Component{
 									{grilledCheese['Build Your Own'] && (
 										<>
 											<h2 className="title">Build Your Own ${grilledCheese['Build Your Own'].price}</h2>
-											<p>{grilledCheese['Build Your Own'].description}</p>
+											<p>{this.renderBuildYourOwnInstructions(grilledCheese['Build Your Own'].description)}</p>
 										</>
 									)}
 								</div>	
