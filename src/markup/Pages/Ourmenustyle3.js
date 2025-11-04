@@ -148,7 +148,7 @@ class Ourmenustyle3 extends Component{
 			
 			<div className="page-content bg-white">
 				
-				<div className="dlab-bnr-inr overlay-black-middle no-line" style={{backgroundImage: `url(${bg})`, backgroundSize: 'cover'}}>
+				<div className="dlab-bnr-inr overlay-black-middle no-line" style={{backgroundImage: `url(${bg})`, backgroundSize: 'cover', marginTop: '100px'}}>
 					<div className="container">
 						<div className="dlab-bnr-inr-entry">
 							<h1 className="text-white">Full Menu</h1>
