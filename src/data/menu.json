@@ -278,10 +278,6 @@
       "Tuna Melt": {
         "price": "10.99",
         "description": "Open face on rye with tomato, provolone cheese"
-      },
-      "Roast Beef Melt": {
-        "price": "10.99",
-        "description": "Open face on rye with tomato, swiss cheese, Thousand Island dressing"
       }
     },
     "Grilled Cheese": {
