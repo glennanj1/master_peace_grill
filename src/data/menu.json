@@ -1,335 +1,351 @@
 {
-    "Appetizers": {
-      "House Made Potato Chips": "3.00",
-      "French Fries": "5.99",
-      "Old Bay Fries": "6.49",
-      "Sweet Potato Fries": "7.49",
-      "Cheese Fries": "7.99",
-      "Bacon Ranch Cheese Fries": "8.99",
-      "Beer Battered Onion Rings": {
-        "price": "7.99",
-        "description": "side of Southwest Sauce"
-      },
-      "Mozzarella Sticks": {
-        "price": "7.99",
-        "description": "side of Marinara Sauce"
-      },
-      "Mac & Cheese Wedges": {
-        "price": "7.99",
-        "description": "side of Marinara Sauce"
-      },
-      "Broccoli Bites": {
-        "price": "7.99",
-        "description": "side of Marinara Sauce"
-      },
-      "Fried Pickles": {
-        "price": "7.99",
-        "description": "side of Ranch or Southwest Sauce"
-      },
-      "Chicken Tenders": {
-        "description": "Choice of sauce (Honey Mustard, Ranch, BBQ, Ketchup)",
-        "variants": {
-          "3pc": "6.99",
-          "5pc": "11.49"
-        }
-      },
-      "Buffalo Chicken Tenders": {
-        "description": "Tossed in hot or mild sauce with choice of Ranch or Blue Cheese",
-        "variants": {
-          "3pc": "7.49",
-          "5pc": "11.99"
-        }
-      },
-      "Chicken Tenders & Fries Combo": {
-        "description": "Choice of sauce (Honey Mustard, Ranch, BBQ, Ketchup)",
-        "variants": {
-          "3pc": "11.99",
-          "5pc": "16.49"
-        }
-      },
-      "Buffalo Chicken Tenders & Fries Combo": {
-        "description": "Tossed in hot or mild sauce with choice of Ranch or Blue Cheese",
-        "variants": {
-          "3pc": "12.49",
-          "5pc": "16.99"
-        }
+  "General": {
+    "Delivery Charge": "3.00",
+    "Minimum Order (for Delivery)": "10.00"
+  },
+  "Appetizers": {
+    "House Made Potato Chips": "3.00",
+    "French Fries": "5.99",
+    "Old Bay Fries": "6.49",
+    "Sweet Potato Fries": "7.49",
+    "Cheese Fries": "7.99",
+    "Bacon Ranch Cheese Fries": "8.99",
+    "Beer Battered Onion Rings": {
+      "price": "7.99",
+      "description": "side of Southwest Sauce"
+    },
+    "Mozzarella Sticks": {
+      "price": "7.99",
+      "description": "side of Marinara Sauce"
+    },
+    "Mac & Cheese Wedges": {
+      "price": "7.99",
+      "description": "side of Marinara Sauce"
+    },
+    "Broccoli Bites": {
+      "price": "7.99",
+      "description": "side of Marinara Sauce"
+    },
+    "Fried Pickles": {
+      "price": "7.99",
+      "description": "side of Ranch or Southwest Sauce"
+    },
+    "Chicken Tenders": {
+      "description": "Choice of sauce (Honey Mustard, Ranch, BBQ, Ketchup)",
+      "variants": {
+        "3pc": "6.99",
+        "5pc": "11.49"
       }
     },
-    "Wings": {
-      "Base Price": "Tossed in sauce of your choice (Hot Honey, Mild, Hot, BBQ). Served with Celery & Bleu Cheese or Ranch",
-      "5 Wings": "7.99",
-      "10 Wings": "14.99",
-      "20 Wings": "27.99"
-    },
-    "Salads": {
-      "Base Price": "Dressings: Ranch, Italian, Bleu Cheese, Honey Mustard, Caesars, Balsamic Vinaigrette, Oil & Vinegar or Thousand Island",
-      "Caesar": {
-        "price": "10.99",
-        "description": "Crispy romaine lettuce, house made croutons and Parmesan cheese"
-      },
-      "Grilled Chicken Caesar": {
-        "price": "14.99",
-        "description": "Our Caesar salad topped with fresh marinated, grilled chicken"
-      },
-      "Garden": {
-        "price": "10.99",
-        "description": "Mixed greens, tomato, onion, roasted peppers, croutons, cucumbers and a hard boiled egg"
-      },
-      "Grilled Chicken Garden": {
-        "price": "14.99",
-        "description": "Our garden salad with marinated, fresh grilled chicken"
-      },
-      "Buffalo Chicken Garden": {
-        "price": "14.99",
-        "description": "Our garden salad with chicken tenders tossed with hot sauce"
-      },
-      "Chef Garden": {
-        "price": "14.99",
-        "description": "Our garden salad with ham, turkey, provolone and american cheese"
-      },
-      "Tuna Salad Garden": {
-        "price": "14.99",
-        "description": "Our garden salad with a scoop of our homemade tuna salad"
-      },
-      "Chicken Salad Garden": {
-        "price": "14.99",
-        "description": "Our garden salad with a scoop of our homemade chicken salad"
-      },
-      "Greek Garden": {
-        "price": "14.99",
-        "description": "Our garden salad with Kalamata olives and feta cheese"
-      },
-      "Chicken Tender Garden": {
-        "price": "14.99",
-        "description": "Our garden salad with crispy chicken tenders & american cheese"
+    "Buffalo Chicken Tenders": {
+      "description": "Tossed in hot or mild sauce with choice of Ranch or Blue Cheese",
+      "variants": {
+        "3pc": "7.49",
+        "5pc": "11.99"
       }
     },
-    "Wraps": {
-      "Base Price": "12.99",
-      "addons": {
-        "Extra Cheese": "1.49",
-        "Pepperoni": "1.49",
-        "Long Hots": "1.49",
-        "Bacon": "2.49",
-        "Make Combo (Fries)": "4.99",
-        "Make Combo (Cheese Fries)": "6.99"
-      },
-      "Build Your Own Instructions": "Pick a Tortilla (White, Whole Wheat, Sun Dried Tomato, Spinach) | Pick a Spread (Mayo, Hoagie Spread, Southwest Spread, Mustard, Spicy Mustard, Honey Mustard, Ranch, Hot Sauce, Humus, BBQ Sauce) | Pick a Protein (Grilled Chicken, Chicken Salad, Tuna Salad, Homemade Pulled Pork, Turkey, Ham, Chicken Tenders) | Pick 1 Cheese (American, Provolone, Swiss, Pepper Jack, Feta, Mozzarella) | Pick Your Veggies (Lettuce, Tomato, Onion, Roasted Peppers, Cucumber, Mushroom, Hot Peppers, Sweet Pepper, Pickle, Cole Slaw)",
-      "Cuban Wrap": {
-        "price": "12.99",
-        "description": "Pulled Pork, Black Forest ham, Swiss cheese, pickles and mustard"
-      },
-      "Southwestern Turkey Wrap": {
-        "price": "12.99",
-        "description": "Southwest Spread, turkey, lettuce, sweet peppers, and crispy tortilla strips (You Can Sub Grilled Chicken)"
-      },
-      "Buffalo Tender Wrap": {
-        "price": "12.99",
-        "description": "Chicken tenders tossed in hot sauce with lettuce, tomato, and blue cheese or ranch"
-      },
-      "Mediterranean Grilled Veggie Wrap": {
-        "price": "12.99",
-        "description": "Spring mix, kalamata olives, roasted peppers, tomato, feta cheese, onion, lettuce, oregano, oil and vinegar"
-      },
-      "Turkey BLT Wrap": {
-        "price": "12.99",
-        "description": "Sliced turkey, crispy bacon, lettuce, tomato, and mayo"
-      },
-      "Chicken Caesar Wrap": {
-        "price": "12.99",
-        "description": "Crisp Romaine lettuce, grilled chicken, Caesars dressing and Parmesan cheese (You Can Sub Crispy Chicken)"
+    "Chicken Tenders & Fries Combo": {
+      "description": "Choice of sauce (Honey Mustard, Ranch, BBQ, Ketchup)",
+      "variants": {
+        "3pc": "11.99",
+        "5pc": "16.49"
       }
     },
-    "Triple Decker Clubs": {
-      "Base Price": "12.99",
-      "addons": {
-        "Cheese": "1.49"
-      },
-      "Build Your Own Instructions": "Choice of bread (white, wheat or rye) | All served with lettuce, tomato, mayo, and crispy bacon | Grilled Chicken, Italian, Turkey, Tuna Salad, Chicken Salad, Ham & Cheese",
-      "The Cuban Club": {
-        "price": "12.99",
-        "description": "Pulled Pork, Black Forest ham, Swiss cheese, pickles and mustard only"
-      },
-      "Chicken Tender Club": {
-        "price": "12.99",
-        "description": "Honey mustard, bacon and American cheese"
+    "Buffalo Chicken Tenders & Fries Combo": {
+      "description": "Tossed in hot or mild sauce with choice of Ranch or Blue Cheese",
+      "variants": {
+        "3pc": "12.49",
+        "5pc": "16.99"
       }
-    },
-    "CheeseSteaks": {
-      "Base Price": "14.99",
-      "addons": {
-        "Cooper Sharp": "1.00",
-        "Extra Cheese": "1.49",
-        "Pepperoni": "1.49",
-        "Long Hots": "1.49",
-        "Bacon": "2.49",
-        "Make Combo (Fries)": "4.99",
-        "Make Combo (Cheese Fries)": "6.99"
-      },
-      "Build Your Own Instructions": "Pick Your Meat (Beef Steak or Chicken Steak) | Pick 1 Cheese (American, Provolone, Swiss, Pepper Jack, Wiz, Mozzarella, Cooper Sharp +$1.00) | Pick Your Spreads (Ketchup, Mayo, Southwest Spread, Mustard, Spicy Mustard, Honey Mustard, Hot Sauce, Marinara Sauce, Ranch) | Pick Your Veggies (Lettuce, Tomato, Fried Onion, Raw Onion, Hot Peppers, Sweet Peppers, Roasted Peppers, Mushroom, Pickle, Cole Slaw)",
-      "Tiger Steak": {
-        "price": "15.99",
-        "description": "Beef steak, chicken steak, bacon, American cheese, all mixed together"
-      },
-      "Buffalo Chicken CheeseSteak": {
-        "price": "15.99",
-        "description": "Hot sauce and American cheese with blue cheese or ranch"
-      },
-      "Philly Steak": {
-        "price": "15.99",
-        "description": "Beef steak with fried onions & real Cheese Wiz"
-      },
-      "Pizza Steak": {
-        "price": "15.99",
-        "description": "Beef steak mixed with marinara sauce & mozzarella cheese"
-      }
-    },
-    "Burgers": {
-      "Base Price": "12.99",
-      "addons": {
-        "Extra Cheese": "1.49",
-        "Pepperoni": "1.49",
-        "Long Hots": "1.49",
-        "Bacon": "1.99",
-        "Make Combo (Fries)": "4.99",
-        "Make Combo (Cheese Fries)": "6.99"
-      },
-      "Build Your Own Instructions": "Served on brioche bun | PICK A PATTY (Short Rib Beef Angus, Fried Chicken Cutlet, Turkey Burger or Veggie Burger) | PICK A CHEESE (American, Provolone, Swiss, Wiz, Mozzarella, Pepper Jack, Cooper Sharp +$1.00) | PICK YOUR SPREADS (Ketchup, Mayo, Southwest Spread, Mustard, Spicy Mustard, BBQ) | PICK YOUR VEGGIES (Lettuce, Tomato, Fried Onion, Raw Onion, Roasted Peppers, Mushroom, Pickle, Cole Slaw, Relish, Sweet or Hot Peppers)",
-      "Budz Burger": {
-        "price": "13.99",
-        "description": "Fried onions, lettuce, tomato, thousand island dressing, on a grilled cheese"
-      },
-      "Bacon Mushroom Swiss": {
-        "price": "13.99",
-        "description": "With lettuce tomato and fried onion"
-      },
-      "Master Chicken Burger": {
-        "price": "13.99",
-        "description": "Fried chicken cutlet, cole slaw, southwest spread on a grilled brioche bun"
-      }
-    },
-    "Hoagies & Grinders": {
-      "Base Price": "12.99",
-      "addons": {
-        "Extra Cheese": "1.49",
-        "Pepperoni": "1.49",
-        "Long Hots": "1.49",
-        "Bacon": "2.49",
-        "Make Combo (Fries)": "4.99",
-        "Make Combo (Cheese Fries)": "6.99"
-      },
-      "Build Your Own Instructions": "Served On A Fresh Liscio's Roll | PICK 1 PROTEIN (turkey, ham, tuna salad, chicken salad, grilled chicken, chicken tenders, homemade pulled pork) | PICK 1 CHEESE (American, Provolone, Swiss, Pepper Jack, Mozzarella) | Pick Your Spreads (Mayo, Southwest Spread, Mustard, Spicy Mustard, Honey Mustard, Oil, Vinegar, Ranch, BBQ Sauce) | PICK YOUR VEGGIES (Lettuce, Tomato, Onion, Roasted Peppers, Sweet Pepper, Hot Pepper, Pickle, Cole Slaw)",
-      "Italian Hoagie or Grinder": {
-        "price": "12.99",
-        "description": "Black Forest Ham, Capicola, Genoa Salami, Provolone, lettuce, tomato, onion, oil or mayo"
-      },
-      "Buffalo Chicken Tender Hoagie": {
-        "price": "12.99",
-        "description": "Lettuce, tomato, hot sauce and ranch or blue cheese"
-      },
-      "Turkey BLT Hoagie": {
-        "price": "12.99",
-        "description": "Sliced turkey, crispy bacon, lettuce, tomato and mayo"
-      },
-      "Chicken Tender Hoagie": {
-        "price": "12.99",
-        "description": "Chicken tenders, honey mustard, American cheese, lettuce and tomato"
-      },
-      "Chicken Parm Grinder": {
-        "price": "12.99",
-        "description": "With Marinara sauce and provolone cheese"
-      },
-      "Cuban Grinder": {
-        "price": "12.99",
-        "description": "Pulled Pork, Black Forest ham, Swiss cheese, pickles and mustard"
-      }
-    },
-    "Sandwiches": {
-      "Base Price": "10.49",
-      "Build Your Own Instructions": "Served On Your choice Of White, Wheat, Rye Bread or a Brioche Bun | PICK 1 PROTEIN (turkey, ham, tuna salad, chicken salad, grilled chicken breast, chicken tender) | PICK 1 CHEESE (American, Provolone, Swiss, Pepper Jack, Mozzarella) | PICK YOUR SPREADS (Mayo, Southwest Spread, Mustard, Spicy Mustard, Honey Mustard, Oil, Vinegar, Ranch) | PICK YOUR VEGGIES (Lettuce, Tomato, Onion, Roasted Peppers, Sweet Pepper, Hot Pepper, Pickle, Cole Slaw)",
-      "BLT": {
-        "price": "10.99",
-        "description": "Crispy bacon, lettuce, tomato and mayo"
-      },
-      "The Drizzle": {
-        "price": "10.99",
-        "description": "Chicken Salad on a brioche bun with crispy bacon and American cheese"
-      },
-      "BBQ Pork Sandwich": {
-        "price": "10.99",
-        "description": "With onion and provolone cheese on a brioche bun"
-      },
-      "Paisono Pork": {
-        "price": "10.99",
-        "description": "Slow roasted pork with long hot peppers & Provolone cheese on a grilled brioche bun"
-      },
-      "The Chumpy": {
-        "price": "12.49",
-        "description": "Chicken, Bacon & Pepper Jack, cheese with Ranch dressing served on a brioche bun with lettuce and tomato"
-      },
-      "Grilled Chicken Deluxe": {
-        "price": "12.49",
-        "description": "On a brioche bun with honey mustard, crispy bacon, American cheese, lettuce and tomato"
-      },
-      "Turkey Melt": {
-        "price": "10.99",
-        "description": "Open face on rye with tomato, provolone cheese"
-      },
-      "Tuna Melt": {
-        "price": "10.99",
-        "description": "Open face on rye with tomato, provolone cheese"
-      }
-    },
-    "Grilled Cheese": {
-      "Base Price": "6.99",
-      "Build Your Own": {
-        "price": "9.49",
-        "description": "Served On Your choice Of White, Wheat or Rye Bread | PICK 1 PROTEIN (turkey, ham, bacon) | PICK 1 CHEESE (American, Provolone, Swiss, Pepper Jack, Mozzarella) | PICK YOUR SPREADS (Mayo, Southwest Spread, Mustard, Spicy Mustard, Honey Mustard, Oil, Vinegar, Ranch, BBQ Sauce) | PICK YOUR VEGGIES (Lettuce, Tomato, Onion, Roasted Peppers, Sweet Pepper, Hot Pepper, Pickle, Cole Slaw)"
-      }
-    },
-    "Catering": {
-      "Base Price": "Pricing Per Person - Includes Chips, Drinks and Napkins",
-      "CheeseSteak Tray": {
-        "price": "18.99",
-        "description": "Cheesesteak, Chicken Cheesesteak, Tiger Steak, Buffalo Chicken Cheesesteak or Pizza Steak"
-      },
-      "Wrap Tray": {
-        "price": "16.99",
-        "description": "Southwestern Turkey, Italian, Chicken Salad, Cuban, Buffalo Tender, Tuna Salad, Chicken Caesar, Turkey BLT, Ham & Cheese, Mediterranean Grilled Veggie or Honey Chicken Tender"
-      },
-      "Hoagie Tray": {
-        "price": "16.99",
-        "description": "Italian, Ham and Cheese, Turkey, Chicken Salad, Tuna, Mixed Cheese, Buffalo Chicken Tender, Southwest Turkey, Turkey BLT, Honey Chicken Tender"
-      },
-      "Brioche Tray": {
-        "price": "15.99",
-        "description": "Turkey & Cheese, Ham & Cheese, Chicken Salad, Tuna Salad, Mixed Cheese, The 'Chumpy', The 'Drizzle', Italian or Honey Chicken Tender"
-      },
-      "Caesar Salad": {
-        "description": "Crisp Romaine Lettuce, Croutons, Parmesan Cheese, Caesar Dressing on the Side (Can Sub Crispy Chicken)",
-        "variants": {
-          "Small": "50.00",
-          "Large": "75.00"
-        },
-        "addons": {
-          "Add Grilled Chicken (Small)": "25.00",
-          "Add Grilled Chicken (Large)": "50.00"
-        }
-      },
-      "Garden Salad": {
-        "description": "Mixed Greens, Cucumber, Onions, Roasted Peppers, Tomatoes, Hard Boiled Egg, Homemade Croutons, Choice of Mixed Dressings on the side - Includes Plates, Napkins, Utensils & Serving Spoon",
-        "variants": {
-          "Small": "60.00",
-          "Large": "80.00"
-        },
-        "addons": {
-          "Add Grilled Chicken (Small)": "15.00",
-          "Add Grilled Chicken (Large)": "70.00"
-        }
-      }
-    },
-    "Drinks": {
-      "20oz Bottle": "3.00",
-      "2 Liter": "5.00"
     }
+  },
+  "Wings": {
+    "Base Price": "Tossed in sauce of your choice (Hot Honey, Mild, Hot, BBQ). Served with Celery & Bleu Cheese or Ranch",
+    "5 Wings": "7.99",
+    "10 Wings": "14.99",
+    "20 Wings": "27.99"
+  },
+  "Salads": {
+    "Base Price": "Dressings: Ranch, Italian, Bleu Cheese, Honey Mustard, Caesars, Balsamic Vdinaigrette, Oil & Vinegar or Thousand Island",
+    "Caesar": {
+      "price": "10.99",
+      "description": "Crispy romaine lettuce, house made croutons and Parmesan cheese"
+    },
+    "Grilled Chicken Caesar": {
+      "price": "14.99",
+      "description": "Our Caesar salad topped with fresh marinated, grilled chicken"
+    },
+    "Garden": {
+      "price": "10.99",
+      "description": "Mixed greens, tomato, onion, roasted peppers, croutons, cucumbers and a hard boiled egg"
+    },
+    "Grilled Chicken Garden": {
+      "price": "14.99",
+      "description": "Our garden salad with marinated, fresh grilled chicken"
+    },
+    "Buffalo Chicken Garden": {
+      "price": "14.99",
+      "description": "Our garden salad with chicken tenders tossed with hot sauce"
+    },
+    "Chef Garden": {
+      "price": "14.99",
+      "description": "Our garden salad with ham, turkey, provolone and american cheese"
+    },
+    "Tuna Salad Garden": {
+      "price": "14.99",
+      "description": "Our garden salad with a scoop of our homemade tuna salad"
+    },
+    "Chicken Salad Garden": {
+      "price": "14.99",
+      "description": "Our garden salad with a scoop of our homemade chicken salad"
+    },
+    "Greek Garden": {
+      "price": "14.99",
+      "description": "Our garden salad with Kalamata olives and feta cheese"
+    },
+    "Chicken Tender Garden": {
+      "price": "14.99",
+      "description": "Our garden salad with crispy chicken tenders & american cheese"
+    }
+  },
+  "Wraps": {
+    "Base Price": "12.99",
+    "addons": {
+      "Extra Cheese": "1.49",
+      "Pepperoni": "1.49",
+      "Long Hots": "1.49",
+      "Bacon": "2.49",
+      "Make Combo (Fries)": "4.99",
+      "Make Combo (Cheese Fries)": "6.99"
+    },
+    "Build Your Own Instructions": "Pick a Tortilla (White, Whole Wheat, Sun Dried Tomato, Spinach) | Pick a Spread (Mayo, Hoagie Spread, Southwest Spread, Mustard, Spicy Mustard, Honey Mustard, Ranch, Hot Sauce, Humus, BBQ Sauce) | Pick a Protein (Grilled Chicken, Chicken Salad, Tuna Salad, Homemade Pulled Pork, Turkey, Ham, Chicken Tenders) | Pick 1 Cheese (American, Provolone, Swiss, Pepper Jack, Feta, Mozzarella) | Pick Your Veggies (Lettuce, Tomato, Onion, Roasted Peppers, Cucumber, Mushroom, Hot Peppers, Sweet Pepper, Pickle, Cole Slaw)",
+    "Cuban Wrap": {
+      "price": "12.99",
+      "description": "Pulled Pork, Black Forest ham, Swiss cheese, pickles and mustard"
+    },
+    "Southwestern Turkey Wrap": {
+      "price": "12.99",
+      "description": "Southwest Spread, turkey, lettuce, sweet peppers, and crispy tortilla strips (You Can Sub Grilled Chicken)"
+    },
+    "Buffalo Tender Wrap": {
+      "price": "12.99",
+      "description": "Chicken tenders tossed in hot sauce with lettuce, tomato, and blue cheese or ranch"
+    },
+    "Mediterranean Grilled Veggie Wrap": {
+      "price": "12.99",
+      "description": "Spring mix, kalamata olives, roasted peppers, tomato, feta cheese, onion, lettuce, oregano, oil and vinegar"
+    },
+    "Turkey BLT Wrap": {
+      "price": "12.99",
+      "description": "Sliced turkey, crispy bacon, lettuce, tomato, and mayo"
+    },
+    "Chicken Caesar Wrap": {
+      "price": "12.99",
+      "description": "Crisp Romaine lettuce, grilled chicken, Caesars dressing and Parmesan cheese (You Can Sub Crispy Chicken)"
+    }
+  },
+  "Triple Decker Clubs": {
+    "Base Price": "12.99",
+    "addons": {
+      "Cheese": "1.49"
+    },
+    "Build Your Own Instructions": "Choice of bread (white, wheat or rye) | All served with lettuce, tomato, mayo, and crispy bacon | Grilled Chicken, Italian, Turkey, Tuna Salad, Chicken Salad, Ham & Cheese",
+    "The Cuban Club": {
+      "price": "12.99",
+      "description": "Pulled Pork, Black Forest ham, Swiss cheese, pickles and mustard only"
+    },
+    "Chicken Tender Club": {
+      "price": "12.99",
+      "description": "Honey mustard, bacon and American cheese"
+    }
+  },
+  "CheeseSteaks": {
+    "Base Price": "14.99",
+    "addons": {
+      "Cooper Sharp": "1.00",
+      "Extra Cheese": "1.49",
+      "Pepperoni": "1.49",
+      "Long Hots": "1.49",
+      "Bacon": "2.49",
+      "Make Combo (Fries)": "4.99",
+      "Make Combo (Cheese Fries)": "6.99"
+    },
+    "Build Your Own Instructions": "Pick Your Meat (Beef Steak or Chicken Steak) | Pick 1 Cheese (American, Provolone, Swiss, Pepper Jack, Wiz, Mozzarella, Cooper Sharp +$1.00) | Pick Your Spreads (Ketchup, Mayo, Southwest Spread, Mustard, Spicy Mustard, Honey Mustard, Hot Sauce, Marinara Sauce, Ranch) | Pick Your Veggies (Lettuce, Tomato, Fried Onion, Raw Onion, Hot Peppers, Sweet Peppers, Roasted Peppers, Mushroom, Pickle, Cole Slaw)",
+    "Tiger Steak": {
+      "price": "15.99",
+      "description": "Beef steak, chicken steak, bacon, American cheese, all mixed together"
+    },
+    "Buffalo Chicken CheeseSteak": {
+      "price": "15.99",
+      "description": "Hot sauce and American cheese with blue cheese or ranch"
+    },
+    "Philly Steak": {
+      "price": "15.99",
+      "description": "Beef steak with fried onions & real Cheese Wiz"
+    },
+    "Pizza Steak": {
+      "price": "15.99",
+      "description": "Beef steak mixed with marinara sauce & mozzarella cheese"
+    }
+  },
+  "Burgers": {
+    "Base Price": "12.99",
+    "addons": {
+      "Extra Cheese": "1.49",
+      "Pepperoni": "1.49",
+      "Long Hots": "1.49",
+      "Bacon": "1.99",
+      "Make Combo (Fries)": "4.99",
+      "Make Combo (Cheese Fries)": "6.99"
+    },
+    "Build Your Own Instructions": "Served on brioche bun | PICK A PATTY (Short Rib Beef Angus, Fried Chicken Cutlet, Turkey Burger or Veggie Burger) | PICK A CHEESE (American, Provolone, Swiss, Wiz, Mozzarella, Pepper Jack, Cooper Sharp +$1.00) | PICK YOUR SPREADS (Ketchup, Mayo, Southwest Spread, Mustard, Spicy Mustard, BBQ) | PICK YOUR VEGGIES (Lettuce, Tomato, Fried Onion, Raw Onion, Roasted Peppers, Mushroom, Pickle, Cole Slaw, Relish, Sweet or Hot Peppers)",
+    "Budz Burger": {
+      "price": "13.99",
+      "description": "Fried onions, lettuce, tomato, thousand island dressing, on a grilled cheese"
+    },
+    "Bacon Mushroom Swiss": {
+      "price": "13.99",
+      "description": "With lettuce tomato and fried onion"
+    },
+    "Master Chicken Burger": {
+      "price": "13.99",
+      "description": "Fried chicken cutlet, cole slaw, southwest spread on a grilled brioche bun"
+    }
+  },
+  "Hoagies & Grinders": {
+    "Base Price": "12.99",
+    "addons": {
+      "Extra Cheese": "1.49",
+      "Pepperoni": "1.49",
+      "Long Hots": "1.49",
+      "Bacon": "2.49",
+      "Make Combo (Fries)": "4.99",
+      "Make Combo (Cheese Fries)": "6.99"
+    },
+    "Build Your Own Instructions": "Served On A Fresh Liscio's Roll | PICK 1 PROTEIN (turkey, ham, tuna salad, chicken salad, grilled chicken, chicken tenders, homemade pulled pork) | PICK 1 CHEESE (American, Provolone, Swiss, Pepper Jack, Mozzarella) | Pick Your Spreads (Mayo, Southwest Spread, Mustard, Spicy Mustard, Honey Mustard, Oil, Vinegar, Ranch, BBQ Sauce) | PICK YOUR VEGGIES (Lettuce, Tomato, Onion, Roasted Peppers, Sweet Pepper, Hot Pepper, Pickle, Cole Slaw)",
+    "Italian Hoagie or Grinder": {
+      "price": "12.99",
+      "description": "Black Forest Ham, Capicola, Genoa Salami, Provolone, lettuce, tomato, onion, oil or mayo"
+    },
+    "Buffalo Chicken Tender Hoagie": {
+      "price": "12.99",
+      "description": "Lettuce, tomato, hot sauce and ranch or blue cheese"
+    },
+    "Turkey BLT Hoagie": {
+      "price": "12.99",
+      "description": "Sliced turkey, crispy bacon, lettuce, tomato and mayo"
+    },
+    "Chicken Tender Hoagie": {
+      "price": "12.99",
+      "description": "Chicken tenders, honey mustard, American cheese, lettuce and tomato"
+    },
+    "Chicken Parm Grinder": {
+      "price": "12.99",
+      "description": "With Marinara sauce and provolone cheese"
+    },
+    "Cuban Grinder": {
+      "price": "12.99",
+      "description": "Pulled Pork, Black Forest ham, Swiss cheese, pickles and mustard"
+    }
+  },
+  "Sandwiches": {
+    "Base Price": "10.49",
+    "addons": {
+      "Make Combo (Fries)": "4.99",
+      "Make Combo (Cheese Fries)": "6.99"
+    },
+    "Build Your Own Instructions": "Served On Your choice Of White, Wheat, Rye Bread or a Brioche Bun | PICK 1 PROTEIN (turkey, ham, tuna salad, chicken salad, grilled chicken breast, chicken tender) | PICK 1 CHEESE (American, Provolone, Swiss, Pepper Jack, Mozzarella) | PICK YOUR SPREADS (Mayo, Southwest Spread, Mustard, Spicy Mustard, Honey Mustard, Oil, Vinegar, Ranch) | PICK YOUR VEGGIES (Lettuce, Tomato, Onion, Roasted Peppers, Sweet Pepper, Hot Pepper, Pickle, Cole Slaw)",
+    "BLT": {
+      "price": "10.99",
+      "description": "Crispy bacon, lettuce, tomato and mayo"
+    },
+    "The Drizzle": {
+      "price": "10.99",
+      "description": "Chicken Salad on a brioche bun with crispy bacon and American cheese"
+    },
+    "BBQ Pork Sandwich": {
+      "price": "10.99",
+      "description": "With onion and provolone cheese on a brioche bun"
+    },
+    "Paisono Pork": {
+      "price": "10.99",
+      "description": "Slow roasted pork with long hot peppers & Provolone cheese on a grilled brioche bun"
+    },
+    "The Chumpy": {
+      "price": "12.49",
+      "description": "Chicken, Bacon & Pepper Jack, cheese with Ranch dressing served on a brioche bun with lettuce and tomato"
+    },
+    "Grilled Chicken Deluxe": {
+      "price": "12.49",
+      "description": "On a brioche bun with honey mustard, crispy bacon, American cheese, lettuce and tomato"
+    },
+    "Turkey Melt": {
+      "price": "10.99",
+      "description": "Open face on rye with tomato, provolone cheese"
+    },
+    "Tuna Melt": {
+      "price": "10.99",
+      "description": "Open face on rye with tomato, provolone cheese"
+    }
+  },
+  "Grilled Cheese": {
+    "Base Price": "6.99",
+    "addons": {
+      "Extra Cheese": "1.49",
+      "Pepperoni": "1.49",
+      "Long Hots": "1.49",
+      "Bacon": "1.99",
+      "Make Combo (Fries)": "4.99",
+      "Make Combo (Cheese Fries)": "6.99"
+    },
+    "Build Your Own": {
+      "price": "9.49",
+      "description": "Served On Your choice Of White, Wheat or Rye Bread | PICK 1 PROTEIN (turkey, ham, bacon) | PICK 1 CHEESE (American, Provolone, Swiss, Pepper Jack, Mozzarella) | PICK YOUR SPREADS (Mayo, Southwest Spread, Mustard, Spicy Mustard, Honey Mustard, Oil, Vinegar, Ranch, BBQ Sauce) | PICK YOUR VEGGIES (Lettuce, Tomato, Onion, Roasted Peppers, Sweet Pepper, Hot Pepper, Pickle, Cole Slaw)"
+    }
+  },
+  "Catering": {
+    "Base Price": "Pricing Per Person - Includes Chips, Drinks and Napkins",
+    "CheeseSteak Tray": {
+      "price": "18.99",
+      "description": "Cheesesteak, Chicken Cheesesteak, Tiger Steak, Buffalo Chicken Cheesesteak or Pizza Steak"
+    },
+    "Wrap Tray": {
+      "price": "16.99",
+      "description": "Southwestern Turkey, Italian, Chicken Salad, Cuban, Buffalo Tender, Tuna Salad, Chicken Caesar, Turkey BLT, Ham & Cheese, Mediterranean Grilled Veggie or Honey Chicken Tender"
+    },
+    "Hoagie Tray": {
+      "price": "16.99",
+      "description": "Italian, Ham and Cheese, Turkey, Chicken Salad, Tuna, Mixed Cheese, Buffalo Chicken Tender, Southwest Turkey, Turkey BLT, Honey Chicken Tender"
+    },
+    "Brioche Tray": {
+      "price": "15.99",
+      "description": "Turkey & Cheese, Ham & Cheese, Chicken Salad, Tuna Salad, Mixed Cheese, The 'Chumpy', The 'Drizzle', Italian or Honey Chicken Tender"
+    },
+    "Caesar Salad": {
+      "description": "Crisp Romaine Lettuce, Croutons, Parmesan Cheese, Caesar Dressing on the Side (Can Sub Crispy Chicken)",
+      "variants": {
+        "Small": "50.00",
+        "Large": "75.00"
+      },
+      "addons": {
+        "Add Grilled Chicken (Small)": "25.00",
+        "Add Grilled Chicken (Large)": "50.00"
+      }
+    },
+    "Garden Salad": {
+      "description": "Mixed Greens, Cucumber, Onions, Roasted Peppers, Tomatoes, Hard Boiled Egg, Homemade Croutons, Choice of Mixed Dressings on the side - Includes Plates, Napkins, Utensils & Serving Spoon",
+      "variants": {
+        "Small": "60.00",
+        "Large": "80.00"
+      },
+      "addons": {
+        "Add Grilled Chicken (Small)": "15.00",
+        "Add Grilled Chicken (Large)": "70.00"
+      }
+    }
+  },
+  "Drinks": {
+    "20oz Bottle": "3.00",
+    "2 Liter": "5.00"
   }
+}

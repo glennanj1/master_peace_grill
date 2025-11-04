@@ -31,7 +31,7 @@ class Banner extends Component{
 									<div className="banner-logo">
 										<img src={mpgLogo} alt="MPG Logo" />
 									</div>
-									<h2 className="title">Voted Best of Conshy Best CheeseSteaks 2017 - 2024</h2>
+									<h2 className="title">Voted Best of Conshy Best CheeseSteaks 2017 - 2025</h2>
 									
 									{/* <div className= "bnr-logo">
 										<img src ={require('./../../images/main-slider/slide5.png')}  alt="offer" />
