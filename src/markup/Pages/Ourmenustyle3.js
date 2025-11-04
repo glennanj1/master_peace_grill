@@ -109,24 +109,21 @@ class Ourmenustyle3 extends Component{
 			);
 		}
 
-		// Handle items with variants (e.g., 3pc/5pc)
-		if (itemData.variants) {
-			return Object.keys(itemData.variants).map(variant => (
-				<li key={`${itemName}-${variant}`}>
-					<div className="info-price">
-						<h5 className="title">
-							{itemName} ({variant})
-							{itemData.description && <h6>{itemData.description}</h6>}
-						</h5>
-						<div className="line"></div>
-						<span className="price">{itemData.variants[variant]}</span>
-					</div>
-					{itemData.description && itemData.description.length > 50 && (
-						<p>{itemData.description}</p>
-					)}
-				</li>
-			));
-		}
+	// Handle items with variants (e.g., 3pc/5pc)
+	if (itemData.variants) {
+		return Object.keys(itemData.variants).map(variant => (
+			<li key={`${itemName}-${variant}`}>
+				<div className="info-price">
+					<h5 className="title">
+						{itemName} ({variant})
+						{itemData.description && <h6>({itemData.description})</h6>}
+					</h5>
+					<div className="line"></div>
+					<span className="price">{itemData.variants[variant]}</span>
+				</div>
+			</li>
+		));
+	}
 
 		return null;
 	};
@@ -175,14 +172,36 @@ class Ourmenustyle3 extends Component{
 									</ul>
 								</div>	
 							</div>
-							<div className="col-lg-6">
-								<img src={appImg} alt="appetizers" className="img-cover" />
+							<div className="col-lg-6" style={{
+								display: 'flex',
+								alignItems: 'center',
+								overflow: 'hidden'
+							}}>
+								<img src={appImg} alt="appetizers" className="img-cover" style={{
+									width: '100%',
+									height: '100%',
+									objectFit: 'cover',
+									objectPosition: 'center',
+									minHeight: '450px',
+									maxHeight: '800px'
+								}} />
 							</div>
 						</div>
 
 						<div className="row sp0">
-							<div className="col-lg-6">
-								<img src={wingsImg} alt="by Erik Mclean on Unsplash" className="img-cover" />
+							<div className="col-lg-6" style={{
+								display: 'flex',
+								alignItems: 'center',
+								overflow: 'hidden'
+							}}>
+								<img src={wingsImg} alt="by Erik Mclean on Unsplash" className="img-cover" style={{
+									width: '100%',
+									height: '100%',
+									objectFit: 'cover',
+									objectPosition: 'center',
+									minHeight: '450px',
+									maxHeight: '800px'
+								}} />
 							</div>
 							<div className="col-lg-6">
 								<div className="menu-box">
@@ -214,36 +233,58 @@ class Ourmenustyle3 extends Component{
 												if (typeof itemData === 'string') {
 													return (
 														<li key={item}>
-															<div className="info-price">
+											<div className="info-price">
 																<h5 className="title">{item}</h5>
-																<div className="line"></div>
+												<div className="line"></div>
 																<span className="price">{itemData}</span>
-															</div>
-														</li>
+											</div>
+										</li>
 													);
 												}
 												return (
 													<li key={item}>
-														<div className="info-price">
+											<div className="info-price">
 															<h5 className="title">{item}</h5>
-															<div className="line"></div>
+												<div className="line"></div>
 															<span className="price">{itemData.price}</span>
-														</div>
+											</div>
 														<p>{itemData.description}</p>
-													</li>
+										</li>
 												);
 											})}
 									</ul>
 								</div>
 							</div>
-							<div className="col-lg-6">
-								<img src={saladImg} alt="" className="img-cover" />
+							<div className="col-lg-6" style={{
+								display: 'flex',
+								alignItems: 'center',
+								overflow: 'hidden'
+							}}>
+								<img src={saladImg} alt="" className="img-cover" style={{
+									width: '100%',
+									height: '100%',
+									objectFit: 'cover',
+									objectPosition: 'center',
+									minHeight: '450px',
+									maxHeight: '800px'
+								}} />
 							</div>
 						</div>
 
 						<div className="row sp0">
-							<div className="col-lg-6">
-								<img src={wrapImg} alt="" className="img-cover" />
+							<div className="col-lg-6" style={{
+								display: 'flex',
+								alignItems: 'center',
+								overflow: 'hidden'
+							}}>
+								<img src={wrapImg} alt="" className="img-cover" style={{
+									width: '100%',
+									height: '100%',
+									objectFit: 'cover',
+									objectPosition: 'center',
+									minHeight: '450px',
+									maxHeight: '800px'
+								}} />
 							</div>
 							<div className="col-lg-6">
 								<div className="menu-box">
@@ -266,13 +307,13 @@ class Ourmenustyle3 extends Component{
 												const itemData = wraps[item];
 												return (
 													<li key={item}>
-														<div className="info-price">
+											<div className="info-price">
 															<h5 className="title">{item}</h5>
-															<div className="line"></div>
+												<div className="line"></div>
 															<span className="price">{itemData.price}</span>
-														</div>
+											</div>
 														<p>{itemData.description}</p>
-													</li>
+										</li>
 												);
 											})}
 									</ul>
@@ -301,26 +342,48 @@ class Ourmenustyle3 extends Component{
 												const itemData = clubs[item];
 												return (
 													<li key={item}>
-														<div className="info-price">
+											<div className="info-price">
 															<h5 className="title">{item}</h5>
-															<div className="line"></div>
+												<div className="line"></div>
 															<span className="price">{itemData.price}</span>
-														</div>
+											</div>
 														<p>{itemData.description}</p>
-													</li>
+										</li>
 												);
 											})}
 									</ul>
 								</div>
 							</div>
-							<div className="col-lg-6">
-								<img src={clubImg} alt="" className="img-cover" />
+							<div className="col-lg-6" style={{
+								display: 'flex',
+								alignItems: 'center',
+								overflow: 'hidden'
+							}}>
+								<img src={clubImg} alt="" className="img-cover" style={{
+									width: '100%',
+									height: '100%',
+									objectFit: 'cover',
+									objectPosition: 'center',
+									minHeight: '450px',
+									maxHeight: '800px'
+								}} />
 							</div>
 						</div>
 
 						<div className="row sp0">
-							<div className="col-lg-6">
-								<img src={steakImg} alt="" className="img-cover" />
+							<div className="col-lg-6" style={{
+								display: 'flex',
+								alignItems: 'center',
+								overflow: 'hidden'
+							}}>
+								<img src={steakImg} alt="" className="img-cover" style={{
+									width: '100%',
+									height: '100%',
+									objectFit: 'cover',
+									objectPosition: 'center',
+									minHeight: '450px',
+									maxHeight: '800px'
+								}} />
 							</div>
 
 							
@@ -352,13 +415,13 @@ class Ourmenustyle3 extends Component{
 												const itemData = cheesesteaks[item];
 												return (
 													<li key={item}>
-														<div className="info-price">
+											<div className="info-price">
 															<h5 className="title">{item}</h5>
-															<div className="line"></div>
+												<div className="line"></div>
 															<span className="price">{itemData.price}</span>
-														</div>
+											</div>
 														<p>{itemData.description}</p>
-													</li>
+										</li>
 												);
 											})}
 									</ul>
@@ -395,26 +458,48 @@ class Ourmenustyle3 extends Component{
 												const itemData = burgers[item];
 												return (
 													<li key={item}>
-														<div className="info-price">
+											<div className="info-price">
 															<h5 className="title">{item}</h5>
-															<div className="line"></div>
+												<div className="line"></div>
 															<span className="price">{itemData.price}</span>
-														</div>
+											</div>
 														<p>{itemData.description}</p>
-													</li>
+										</li>
 												);
 											})}
 									</ul>
 								</div>
 							</div>
-							<div className="col-lg-6">
-								<img src={burgerImg} alt="" className="img-cover" />
+							<div className="col-lg-6" style={{
+								display: 'flex',
+								alignItems: 'center',
+								overflow: 'hidden'
+							}}>
+								<img src={burgerImg} alt="" className="img-cover" style={{
+									width: '100%',
+									height: '100%',
+									objectFit: 'cover',
+									objectPosition: 'center',
+									minHeight: '450px',
+									maxHeight: '800px'
+								}} />
 							</div>
 						</div>
 
 						<div className="row sp0">
-							<div className="col-lg-6">
-								<img src={hoagieImg} alt="" className="img-cover" />
+							<div className="col-lg-6" style={{
+								display: 'flex',
+								alignItems: 'center',
+								overflow: 'hidden'
+							}}>
+								<img src={hoagieImg} alt="" className="img-cover" style={{
+									width: '100%',
+									height: '100%',
+									objectFit: 'cover',
+									objectPosition: 'center',
+									minHeight: '450px',
+									maxHeight: '800px'
+								}} />
 							</div>
 							<div className="col-lg-6">
 								<div className="menu-box">
@@ -436,13 +521,13 @@ class Ourmenustyle3 extends Component{
 												const itemData = hoagies[item];
 												return (
 													<li key={item}>
-														<div className="info-price">
+											<div className="info-price">
 															<h5 className="title">{item}</h5>
-															<div className="line"></div>
+												<div className="line"></div>
 															<span className="price">{itemData.price}</span>
-														</div>
+											</div>
 														<p>{itemData.description}</p>
-													</li>
+										</li>
 												);
 											})}
 									</ul>
@@ -468,26 +553,48 @@ class Ourmenustyle3 extends Component{
 												const itemData = sandwiches[item];
 												return (
 													<li key={item}>
-														<div className="info-price">
+											<div className="info-price">
 															<h5 className="title">{item}</h5>
-															<div className="line"></div>
+												<div className="line"></div>
 															<span className="price">{itemData.price}</span>
-														</div>
+											</div>
 														<p>{itemData.description}</p>
-													</li>
+										</li>
 												);
 											})}
 									</ul>
 								</div>
 							</div>
-							<div className="col-lg-6">
-								<img src={sandwhichImg} alt="" className="img-cover" />
+							<div className="col-lg-6" style={{
+								display: 'flex',
+								alignItems: 'center',
+								overflow: 'hidden'
+							}}>
+								<img src={sandwhichImg} alt="" className="img-cover" style={{
+									width: '100%',
+									height: '100%',
+									objectFit: 'cover',
+									objectPosition: 'center',
+									minHeight: '450px',
+									maxHeight: '800px'
+								}} />
 							</div>
 						</div>
 
 						<div className="row sp0">
-							<div className="col-lg-6">
-								<img src={grilledCheeseImg} alt="" className="img-cover" />
+							<div className="col-lg-6" style={{
+								display: 'flex',
+								alignItems: 'center',
+								overflow: 'hidden'
+							}}>
+								<img src={grilledCheeseImg} alt="" className="img-cover" style={{
+									width: '100%',
+									height: '100%',
+									objectFit: 'cover',
+									objectPosition: 'center',
+									minHeight: '450px',
+									maxHeight: '800px'
+								}} />
 							</div>
 							<div className="col-lg-6">
 								<div className="menu-box">
@@ -526,11 +633,11 @@ class Ourmenustyle3 extends Component{
 												if (itemData.variants) {
 													return Object.keys(itemData.variants).map(variant => (
 														<li key={`${item}-${variant}`}>
-															<div className="info-price">
+											<div className="info-price">
 																<h5 className="title">{variant} {item}</h5>
-																<div className="line"></div>
+												<div className="line"></div>
 																<span className="price">{itemData.variants[variant]}</span>							
-															</div>
+											</div>
 															<p>{itemData.description}</p>
 															{itemData.addons && Object.keys(itemData.addons)
 																.filter(addon => addon.includes(variant))
@@ -538,27 +645,38 @@ class Ourmenustyle3 extends Component{
 																	<h6 key={addon}>({addon.replace(`(${variant})`, '').trim()} for ${itemData.addons[addon]})</h6>
 																))
 															}
-														</li>
+										</li>
 													));
 												}
 												
 												// Handle simple items
 												return (
 													<li key={item}>
-														<div className="info-price">
+											<div className="info-price">
 															<h5 className="title">{item}</h5>
-															<div className="line"></div>
+												<div className="line"></div>
 															<span className="price">{itemData.price}</span>
-														</div>
+											</div>
 														<p>{itemData.description}</p>
-													</li>
+										</li>
 												);
 											})}
 									</ul>
 								</div>
 							</div>
-							<div className="col-lg-6">
-								<img src={cateringImg} alt="" className="img-cover" />
+							<div className="col-lg-6" style={{
+								display: 'flex',
+								alignItems: 'center',
+								overflow: 'hidden'
+							}}>
+								<img src={cateringImg} alt="" className="img-cover" style={{
+									width: '100%',
+									height: '100%',
+									objectFit: 'cover',
+									objectPosition: 'center',
+									minHeight: '450px',
+									maxHeight: '800px'
+								}} />
 							</div>
 						</div>
 						

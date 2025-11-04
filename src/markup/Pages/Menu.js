@@ -110,11 +110,13 @@ const renderMenuItem = (itemName, itemData) => {
 		return Object.keys(itemData.variants).map(variant => (
 			<li key={`${itemName}-${variant}`}>
 				<div className="info-price">
-					<h5 className="title">{itemName} ({variant})</h5>
+					<h5 className="title">
+						{itemName} ({variant})
+						{itemData.description && <h6>({itemData.description})</h6>}
+					</h5>
 					<div className="line"></div>
 					<span className="price">{itemData.variants[variant]}</span>
 				</div>
-				{itemData.description && <h6>{itemData.description}</h6>}
 			</li>
 		));
 	}
@@ -208,23 +210,23 @@ function Menu() {
 												if (typeof itemData === 'string') {
 													return (
 														<li key={item}>
-															<div className="info-price">
+											<div className="info-price">
 																<h5 className="title">{item}</h5>
-																<div className="line"></div>
+												<div className="line"></div>
 																<span className="price">{itemData}</span>
-															</div>
-														</li>
+											</div>
+										</li>
 													);
 												}
 												return (
 													<li key={item}>
-														<div className="info-price">
+											<div className="info-price">
 															<h5 className="title">{item}</h5>
-															<div className="line"></div>
+												<div className="line"></div>
 															<span className="price">{itemData.price}</span>
-														</div>
+											</div>
 														<p>{itemData.description}</p>
-													</li>
+										</li>
 												);
 											})}
 									</ul>
@@ -260,13 +262,13 @@ function Menu() {
 												const itemData = wraps[item];
 												return (
 													<li key={item}>
-														<div className="info-price">
+											<div className="info-price">
 															<h5 className="title">{item}</h5>
-															<div className="line"></div>
+												<div className="line"></div>
 															<span className="price">{itemData.price}</span>
-														</div>
+											</div>
 														<p>{itemData.description}</p>
-													</li>
+										</li>
 												);
 											})}
 									</ul>
@@ -295,13 +297,13 @@ function Menu() {
 												const itemData = clubs[item];
 												return (
 													<li key={item}>
-														<div className="info-price">
+											<div className="info-price">
 															<h5 className="title">{item}</h5>
-															<div className="line"></div>
+												<div className="line"></div>
 															<span className="price">{itemData.price}</span>
-														</div>
+											</div>
 														<p>{itemData.description}</p>
-													</li>
+										</li>
 												);
 											})}
 									</ul>
@@ -346,13 +348,13 @@ function Menu() {
 												const itemData = cheesesteaks[item];
 												return (
 													<li key={item}>
-														<div className="info-price">
+											<div className="info-price">
 															<h5 className="title">{item}</h5>
-															<div className="line"></div>
+												<div className="line"></div>
 															<span className="price">{itemData.price}</span>
-														</div>
+											</div>
 														<p>{itemData.description}</p>
-													</li>
+										</li>
 												);
 											})}
 									</ul>
@@ -388,13 +390,13 @@ function Menu() {
 												const itemData = burgers[item];
 												return (
 													<li key={item}>
-														<div className="info-price">
+											<div className="info-price">
 															<h5 className="title">{item}</h5>
-															<div className="line"></div>
+												<div className="line"></div>
 															<span className="price">{itemData.price}</span>
-														</div>
+											</div>
 														<p>{itemData.description}</p>
-													</li>
+										</li>
 												);
 											})}
 									</ul>
@@ -428,13 +430,13 @@ function Menu() {
 												const itemData = hoagies[item];
 												return (
 													<li key={item}>
-														<div className="info-price">
+											<div className="info-price">
 															<h5 className="title">{item}</h5>
-															<div className="line"></div>
+												<div className="line"></div>
 															<span className="price">{itemData.price}</span>
-														</div>
+											</div>
 														<p>{itemData.description}</p>
-													</li>
+										</li>
 												);
 											})}
 									</ul>
@@ -460,13 +462,13 @@ function Menu() {
 												const itemData = sandwiches[item];
 												return (
 													<li key={item}>
-														<div className="info-price">
+											<div className="info-price">
 															<h5 className="title">{item}</h5>
-															<div className="line"></div>
+												<div className="line"></div>
 															<span className="price">{itemData.price}</span>
-														</div>
+											</div>
 														<p>{itemData.description}</p>
-													</li>
+										</li>
 												);
 											})}
 									</ul>
@@ -519,11 +521,11 @@ function Menu() {
 												if (itemData.variants) {
 													return Object.keys(itemData.variants).map(variant => (
 														<li key={`${item}-${variant}`}>
-															<div className="info-price">
+											<div className="info-price">
 																<h5 className="title">{variant} {item}</h5>
-																<div className="line"></div>
+												<div className="line"></div>
 																<span className="price">{itemData.variants[variant]}</span>							
-															</div>
+											</div>
 															<p>{itemData.description}</p>
 															{itemData.addons && Object.keys(itemData.addons)
 																.filter(addon => addon.includes(variant))
@@ -531,20 +533,20 @@ function Menu() {
 																	<h6 key={addon}>({addon.replace(`(${variant})`, '').trim()} for ${itemData.addons[addon]})</h6>
 																))
 															}
-														</li>
+										</li>
 													));
 												}
 												
 												// Handle simple items
 												return (
 													<li key={item}>
-														<div className="info-price">
+											<div className="info-price">
 															<h5 className="title">{item}</h5>
-															<div className="line"></div>
+												<div className="line"></div>
 															<span className="price">{itemData.price}</span>
-														</div>
+											</div>
 														<p>{itemData.description}</p>
-													</li>
+										</li>
 												);
 											})}
 									</ul>
