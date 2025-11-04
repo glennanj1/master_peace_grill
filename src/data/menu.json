@@ -38,7 +38,7 @@
       }
     },
     "Buffalo Chicken Tenders": {
-      "description": "Tossed in hot or mild sauce with choice of Ranch or Blue Cheese",
+      "description": "Tossed in Hot, Mild, or Honey Hot (new) sauce with choice of Ranch or Blue Cheese",
       "variants": {
         "3pc": "7.49",
         "5pc": "11.99"
@@ -52,7 +52,7 @@
       }
     },
     "Buffalo Chicken Tenders & Fries Combo": {
-      "description": "Tossed in hot or mild sauce with choice of Ranch or Blue Cheese",
+      "description": "Tossed in Hot, Mild, or Honey Hot (new) sauce with choice of Ranch or Blue Cheese",
       "variants": {
         "3pc": "12.49",
         "5pc": "16.99"
@@ -60,7 +60,7 @@
     }
   },
   "Wings": {
-    "Base Price": "Tossed in sauce of your choice (Hot Honey, Mild, Hot, BBQ). Served with Celery & Bleu Cheese or Ranch",
+    "Base Price": "Tossed in sauce of your choice (Mild, Hot, BBQ, Honey Hot (new)). Served with Celery & Bleu Cheese or Ranch",
     "5 Wings": "7.99",
     "10 Wings": "14.99",
     "20 Wings": "27.99"
@@ -118,7 +118,7 @@
       "Make Combo (Fries)": "4.99",
       "Make Combo (Cheese Fries)": "6.99"
     },
-    "Build Your Own Instructions": "Pick a Tortilla (White, Whole Wheat, Sun Dried Tomato, Spinach) | Pick a Spread (Mayo, Hoagie Spread, Southwest Spread, Mustard, Spicy Mustard, Honey Mustard, Ranch, Hot Sauce, Humus, BBQ Sauce) | Pick a Protein (Grilled Chicken, Chicken Salad, Tuna Salad, Homemade Pulled Pork, Turkey, Ham, Chicken Tenders) | Pick 1 Cheese (American, Provolone, Swiss, Pepper Jack, Feta, Mozzarella) | Pick Your Veggies (Lettuce, Tomato, Onion, Roasted Peppers, Cucumber, Mushroom, Hot Peppers, Sweet Pepper, Pickle, Cole Slaw)",
+    "Build Your Own Instructions": "Pick a Tortilla (White, Whole Wheat, Sun Dried Tomato, Spinach) | Pick a Spread (Mayo, Hoagie Spread, Southwest Spread, Mustard, Spicy Mustard, Honey Mustard, Ranch, Hot Sauce, Honey Hot (new), Humus, BBQ Sauce) | Pick a Protein (Grilled Chicken, Chicken Salad, Tuna Salad, Homemade Pulled Pork, Turkey, Ham, Chicken Tenders) | Pick 1 Cheese (American, Provolone, Swiss, Pepper Jack, Feta, Mozzarella) | Pick Your Veggies (Lettuce, Tomato, Onion, Roasted Peppers, Cucumber, Mushroom, Hot Peppers, Sweet Pepper, Pickle, Cole Slaw)",
     "Cuban Wrap": {
       "price": "12.99",
       "description": "Pulled Pork, Black Forest ham, Swiss cheese, pickles and mustard"
@@ -170,7 +170,7 @@
       "Make Combo (Fries)": "4.99",
       "Make Combo (Cheese Fries)": "6.99"
     },
-    "Build Your Own Instructions": "Pick Your Meat (Beef Steak or Chicken Steak) | Pick 1 Cheese (American, Provolone, Swiss, Pepper Jack, Wiz, Mozzarella, Cooper Sharp +$1.00) | Pick Your Spreads (Ketchup, Mayo, Southwest Spread, Mustard, Spicy Mustard, Honey Mustard, Hot Sauce, Marinara Sauce, Ranch) | Pick Your Veggies (Lettuce, Tomato, Fried Onion, Raw Onion, Hot Peppers, Sweet Peppers, Roasted Peppers, Mushroom, Pickle, Cole Slaw)",
+    "Build Your Own Instructions": "Pick Your Meat (Beef Steak or Chicken Steak) | Pick 1 Cheese (American, Provolone, Swiss, Pepper Jack, Wiz, Mozzarella, Cooper Sharp +$1.00) | Pick Your Spreads (Ketchup, Mayo, Southwest Spread, Mustard, Spicy Mustard, Honey Mustard, Hot Sauce, Honey Hot (new), Marinara Sauce, Ranch) | Pick Your Veggies (Lettuce, Tomato, Fried Onion, Raw Onion, Hot Peppers, Sweet Peppers, Roasted Peppers, Mushroom, Pickle, Cole Slaw)",
     "Tiger Steak": {
       "price": "15.99",
       "description": "Beef steak, chicken steak, bacon, American cheese, all mixed together"
@@ -198,7 +198,7 @@
       "Make Combo (Fries)": "4.99",
       "Make Combo (Cheese Fries)": "6.99"
     },
-    "Build Your Own Instructions": "Served on brioche bun | PICK A PATTY (Short Rib Beef Angus, Fried Chicken Cutlet, Turkey Burger or Veggie Burger) | PICK A CHEESE (American, Provolone, Swiss, Wiz, Mozzarella, Pepper Jack, Cooper Sharp +$1.00) | PICK YOUR SPREADS (Ketchup, Mayo, Southwest Spread, Mustard, Spicy Mustard, BBQ) | PICK YOUR VEGGIES (Lettuce, Tomato, Fried Onion, Raw Onion, Roasted Peppers, Mushroom, Pickle, Cole Slaw, Relish, Sweet or Hot Peppers)",
+    "Build Your Own Instructions": "Served on brioche bun | PICK A PATTY (Short Rib Beef Angus, Fried Chicken Cutlet, Turkey Burger or Veggie Burger) | PICK A CHEESE (American, Provolone, Swiss, Wiz, Mozzarella, Pepper Jack, Cooper Sharp +$1.00) | PICK YOUR SPREADS (Ketchup, Mayo, Southwest Spread, Mustard, Spicy Mustard, Honey Hot (new), BBQ) | PICK YOUR VEGGIES (Lettuce, Tomato, Fried Onion, Raw Onion, Roasted Peppers, Mushroom, Pickle, Cole Slaw, Relish, Sweet or Hot Peppers)",
     "Budz Burger": {
       "price": "13.99",
       "description": "Fried onions, lettuce, tomato, thousand island dressing, on a grilled cheese"
@@ -222,7 +222,7 @@
       "Make Combo (Fries)": "4.99",
       "Make Combo (Cheese Fries)": "6.99"
     },
-    "Build Your Own Instructions": "Served On A Fresh Liscio's Roll | PICK 1 PROTEIN (turkey, ham, tuna salad, chicken salad, grilled chicken, chicken tenders, homemade pulled pork) | PICK 1 CHEESE (American, Provolone, Swiss, Pepper Jack, Mozzarella) | Pick Your Spreads (Mayo, Southwest Spread, Mustard, Spicy Mustard, Honey Mustard, Oil, Vinegar, Ranch, BBQ Sauce) | PICK YOUR VEGGIES (Lettuce, Tomato, Onion, Roasted Peppers, Sweet Pepper, Hot Pepper, Pickle, Cole Slaw)",
+    "Build Your Own Instructions": "Served On A Fresh Liscio's Roll | PICK 1 PROTEIN (turkey, ham, tuna salad, chicken salad, grilled chicken, chicken tenders, homemade pulled pork) | PICK 1 CHEESE (American, Provolone, Swiss, Pepper Jack, Mozzarella) | Pick Your Spreads (Mayo, Southwest Spread, Mustard, Spicy Mustard, Honey Mustard, Oil, Vinegar, Ranch, Honey Hot (new), BBQ Sauce) | PICK YOUR VEGGIES (Lettuce, Tomato, Onion, Roasted Peppers, Sweet Pepper, Hot Pepper, Pickle, Cole Slaw)",
     "Italian Hoagie or Grinder": {
       "price": "12.99",
       "description": "Black Forest Ham, Capicola, Genoa Salami, Provolone, lettuce, tomato, onion, oil or mayo"
@@ -254,7 +254,7 @@
       "Make Combo (Fries)": "4.99",
       "Make Combo (Cheese Fries)": "6.99"
     },
-    "Build Your Own Instructions": "Served On Your choice Of White, Wheat, Rye Bread or a Brioche Bun | PICK 1 PROTEIN (turkey, ham, tuna salad, chicken salad, grilled chicken breast, chicken tender) | PICK 1 CHEESE (American, Provolone, Swiss, Pepper Jack, Mozzarella) | PICK YOUR SPREADS (Mayo, Southwest Spread, Mustard, Spicy Mustard, Honey Mustard, Oil, Vinegar, Ranch) | PICK YOUR VEGGIES (Lettuce, Tomato, Onion, Roasted Peppers, Sweet Pepper, Hot Pepper, Pickle, Cole Slaw)",
+    "Build Your Own Instructions": "Served On Your choice Of White, Wheat, Rye Bread or a Brioche Bun | PICK 1 PROTEIN (turkey, ham, tuna salad, chicken salad, grilled chicken breast, chicken tender) | PICK 1 CHEESE (American, Provolone, Swiss, Pepper Jack, Mozzarella) | PICK YOUR SPREADS (Mayo, Southwest Spread, Mustard, Spicy Mustard, Honey Mustard, Oil, Vinegar, Ranch, Honey Hot (new)) | PICK YOUR VEGGIES (Lettuce, Tomato, Onion, Roasted Peppers, Sweet Pepper, Hot Pepper, Pickle, Cole Slaw)",
     "BLT": {
       "price": "10.99",
       "description": "Crispy bacon, lettuce, tomato and mayo"
@@ -300,7 +300,7 @@
     },
     "Build Your Own": {
       "price": "9.49",
-      "description": "Served On Your choice Of White, Wheat or Rye Bread | PICK 1 PROTEIN (turkey, ham, bacon) | PICK 1 CHEESE (American, Provolone, Swiss, Pepper Jack, Mozzarella) | PICK YOUR SPREADS (Mayo, Southwest Spread, Mustard, Spicy Mustard, Honey Mustard, Oil, Vinegar, Ranch, BBQ Sauce) | PICK YOUR VEGGIES (Lettuce, Tomato, Onion, Roasted Peppers, Sweet Pepper, Hot Pepper, Pickle, Cole Slaw)"
+      "description": "Served On Your choice Of White, Wheat or Rye Bread | PICK 1 PROTEIN (turkey, ham, bacon) | PICK 1 CHEESE (American, Provolone, Swiss, Pepper Jack, Mozzarella) | PICK YOUR SPREADS (Mayo, Southwest Spread, Mustard, Spicy Mustard, Honey Mustard, Oil, Vinegar, Ranch, Honey Hot (new), BBQ Sauce) | PICK YOUR VEGGIES (Lettuce, Tomato, Onion, Roasted Peppers, Sweet Pepper, Hot Pepper, Pickle, Cole Slaw)"
     }
   },
   "Catering": {
