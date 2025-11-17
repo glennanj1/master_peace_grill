@@ -11,7 +11,7 @@ import Footer2 from './../Layout/Footer2'
 const img1 = 'https://media.giphy.com/media/C0Asg9I511EHe/giphy.gif';
 const img3 = require('./../../images/background/bg5.jpg');
 const img4 = require('./../../images/background/mpg_bg.jpg');
-const onlineOrdering = 'https://onlineordering.rmpos.com/Order/?wci=54MBz6OB';
+const onlineOrdering = 'https://online.skytab.com/f117df8f79079535eaa7a295c5011345';
 
 const fb = 'https://www.facebook.com/pages/Masterpeace-Grill/844637945566646?fref=ts'
 const yelp = 'http://www.yelp.com/biz/masterpeace-grill-conshohocken-2'
