@@ -162,7 +162,6 @@
   "CheeseSteaks": {
     "Base Price": "14.99",
     "addons": {
-      "Cooper Sharp": "1.00",
       "Extra Cheese": "1.49",
       "Pepperoni": "1.49",
       "Long Hots": "1.49",
@@ -170,7 +169,7 @@
       "Make Combo (Fries)": "4.99",
       "Make Combo (Cheese Fries)": "6.99"
     },
-    "Build Your Own Instructions": "Pick Your Meat (Beef Steak or Chicken Steak) | Pick 1 Cheese (American, Provolone, Swiss, Pepper Jack, Wiz, Mozzarella, Cooper Sharp +$1.00) | Pick Your Spreads (Ketchup, Mayo, Southwest Spread, Mustard, Spicy Mustard, Honey Mustard, Hot Sauce, Honey Hot (new), Marinara Sauce, Ranch) | Pick Your Veggies (Lettuce, Tomato, Fried Onion, Raw Onion, Hot Peppers, Sweet Peppers, Roasted Peppers, Mushroom, Pickle, Cole Slaw)",
+    "Build Your Own Instructions": "Pick Your Meat (Beef Steak or Chicken Steak) | Pick 1 Cheese (American, Provolone, Swiss, Pepper Jack, Wiz, Mozzarella, Cooper Sharp) | Pick Your Spreads (Ketchup, Mayo, Southwest Spread, Mustard, Spicy Mustard, Honey Mustard, Hot Sauce, Honey Hot (new), Marinara Sauce, Ranch) | Pick Your Veggies (Lettuce, Tomato, Fried Onion, Raw Onion, Hot Peppers, Sweet Peppers, Roasted Peppers, Mushroom, Pickle, Cole Slaw)",
     "Tiger Steak": {
       "price": "15.99",
       "description": "Beef steak, chicken steak, bacon, American cheese, all mixed together"
@@ -198,7 +197,7 @@
       "Make Combo (Fries)": "4.99",
       "Make Combo (Cheese Fries)": "6.99"
     },
-    "Build Your Own Instructions": "Served on brioche bun | PICK A PATTY (Short Rib Beef Angus, Fried Chicken Cutlet, Turkey Burger or Veggie Burger) | PICK A CHEESE (American, Provolone, Swiss, Wiz, Mozzarella, Pepper Jack, Cooper Sharp +$1.00) | PICK YOUR SPREADS (Ketchup, Mayo, Southwest Spread, Mustard, Spicy Mustard, Honey Hot (new), BBQ) | PICK YOUR VEGGIES (Lettuce, Tomato, Fried Onion, Raw Onion, Roasted Peppers, Mushroom, Pickle, Cole Slaw, Relish, Sweet or Hot Peppers)",
+    "Build Your Own Instructions": "Served on brioche bun | PICK A PATTY (Short Rib Beef Angus, Fried Chicken Cutlet, Turkey Burger or Veggie Burger) | PICK A CHEESE (American, Provolone, Swiss, Wiz, Mozzarella, Pepper Jack, Cooper Sharp) | PICK YOUR SPREADS (Ketchup, Mayo, Southwest Spread, Mustard, Spicy Mustard, Honey Hot (new), BBQ) | PICK YOUR VEGGIES (Lettuce, Tomato, Fried Onion, Raw Onion, Roasted Peppers, Mushroom, Pickle, Cole Slaw, Relish, Sweet or Hot Peppers)",
     "Budz Burger": {
       "price": "13.99",
       "description": "Fried onions, lettuce, tomato, thousand island dressing, on a grilled cheese"
