@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Index2 from './Pages/Index2';
 
@@ -16,18 +16,18 @@ function Markup() {
 
 	return (
 		<BrowserRouter>
-			<Switch>
-				<Route path='/' exact component={Index2} />
+			<Routes>
+				<Route path='/' element={<Index2 />} />
 
-				<Route path='/about' exact component={About} />
+				<Route path='/about' element={<About />} />
 
-				<Route path='/menu' exact component={Menu} />
+				<Route path='/menu' element={<Menu />} />
 
-				<Route path='/login' exact component={Login} />
+				<Route path='/login' element={<Login />} />
 
-				<Route component={NotFound} />
+				<Route path='*' element={<NotFound />} />
 
-			</Switch>
+			</Routes>
 		</BrowserRouter>
 	)
 }

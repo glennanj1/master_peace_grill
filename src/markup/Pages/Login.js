@@ -3,6 +3,16 @@ import { UserContext } from './../../context/UserContext';
 import '../../css/login.css'
 import Header2 from '../Layout/Header2.js'
 
+// Input validation utilities
+const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+};
+
+const sanitizeInput = (input) => {
+    return input.trim().replace(/[<>]/g, '');
+};
+
 
 // import { useHistory } from 'react-router-dom';
 
@@ -17,7 +27,7 @@ function Login() {
 
     const handleFormChange = (e) => {
         const key = e.target.name
-        const value = e.target.value
+        const value = sanitizeInput(e.target.value)
 
         setUserData({
             ...userData, [key]: value
@@ -27,7 +37,18 @@ function Login() {
     const handleLogin = (e) => {
         e.preventDefault()
 
-        fetch('http://localhost:3000/login', {
+        // Validate inputs before sending
+        if (!validateEmail(userData.email)) {
+            setError('Please enter a valid email address')
+            return
+        }
+
+        if (userData.password.length < 6) {
+            setError('Password must be at least 6 characters long')
+            return
+        }
+
+        fetch(`${process.env.REACT_APP_API_URL || 'https://localhost:3000'}/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -65,7 +86,7 @@ function Login() {
     }
 
     return (
-        <div className="login-page" style={{backgroundImage: "url(" + require('https://strapi.glennan.cloud/uploads/home2_f64d42ef8e.png') + ")", backgroundSize: "cover"}}>
+        <div className="login-page" style={{backgroundImage: "url(https://strapi.glennan.cloud/uploads/home2_f64d42ef8e.png)", backgroundSize: "cover"}}>
             <Header2 />
             {user ?
 

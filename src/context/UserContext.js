@@ -11,7 +11,7 @@ export const UserProvider = ({ children }) => {
     }
 
     useEffect(() => {
-        fetch('http://localhost:3000/me', {
+        fetch(`${process.env.REACT_APP_API_URL || 'https://localhost:3000'}/me`, {
             method: "GET",
             credentials: "include",
             headers: {
