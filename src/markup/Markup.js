@@ -28,7 +28,7 @@ function Markup() {
 				<Route component={NotFound} />
 
 			</Switch>
-		</ BrowserRouter>
+		</BrowserRouter>
 	)
 }
 

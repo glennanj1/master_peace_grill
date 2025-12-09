@@ -1,29 +1,29 @@
 import React, { useEffect, useState } from 'react';
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+// import Carousel from 'react-multi-carousel';
+// import 'react-multi-carousel/lib/styles.css';
 
 const img = require('./../../images/overlay/pt1.jpg');
 const img2 = require('./../../images/default_user_pic.png');
 
-
-const responsive = {
-	superLargeDesktop: {
-		breakpoint: { max: 4000, min: 3000 },
-		items: 5
-	},
-	desktop: {
-		breakpoint: { max: 3000, min: 1024 },
-		items: 1
-	},
-	tablet: {
-		breakpoint: { max: 1024, min: 464 },
-		items: 1
-	},
-	mobile: {
-		breakpoint: { max: 464, min: 0 },
-		items: 1
-	}
-};
+// Commented out responsive config - uncomment if re-enabling Carousel
+// const responsive = {
+// 	superLargeDesktop: {
+// 		breakpoint: { max: 4000, min: 3000 },
+// 		items: 5
+// 	},
+// 	desktop: {
+// 		breakpoint: { max: 3000, min: 1024 },
+// 		items: 1
+// 	},
+// 	tablet: {
+// 		breakpoint: { max: 1024, min: 464 },
+// 		items: 1
+// 	},
+// 	mobile: {
+// 		breakpoint: { max: 464, min: 0 },
+// 		items: 1
+// 	}
+// };
 
 
 function Owl2() {
@@ -66,14 +66,18 @@ function Owl2() {
 				</div>
 
 				<div className="testimonial-one ">
-					<Carousel
+					{/* Temporarily disabled carousel due to build issues */}
+					{/* <Carousel
 						autoPlay={true}
 						autoPlaySpeed={6000}
 						removeArrowOnDeviceType={['mobile', 'tablet']}
 						responsive={responsive}
 					>
 						{loadReviews()}
-					</Carousel>
+					</Carousel> */}
+					<div className="reviews-container">
+						{loadReviews()}
+					</div>
 				</div>
 			</div>
 		</div>
