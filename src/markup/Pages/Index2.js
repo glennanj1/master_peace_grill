@@ -15,68 +15,68 @@ const fb =
 const yelp = "http://www.yelp.com/biz/masterpeace-grill-conshohocken-2";
 
 // Helper component for the custom toast content with a dynamic progress bar.
-const ToastHoursContent = ({ t }) => {
-  return (
-    <div
-      style={{
-        backgroundColor: "#bf1e2e",
-        color: "white",
-        padding: "16px",
-        borderRadius: "5px",
-        boxShadow: "0 2px 8px rgba(0,0,0,0.3)",
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
-        <div>
-          {/* we are closing at 4pm on Sunday */}
-          We are closing at 4pm on Sundays from now on! ✌️
-        </div>
-        <button
-          onClick={() => toast.dismiss(t.id)}
-          style={{
-            background: "transparent",
-            border: "none",
-            color: "white",
-            fontSize: "18px",
-            cursor: "pointer",
-            borderRadius: "50%",
-            width: "24px",
-            height: "24px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          ×
-        </button>
-      </div>
-      <div
-        style={{
-          marginTop: "8px",
-          height: "4px",
-          background: "#aa1b23",
-          borderRadius: "2px",
-          overflow: "hidden",
-        }}
-      >
-        <div
-          style={{
-            height: "100%",
-            background: "#e53935",
-            width: "100%",
-            animation: `progressBarAnimation ${t.duration}ms linear forwards`,
-          }}
-        />
-      </div>
-    </div>
-  );
-};
+// const ToastHoursContent = ({ t }) => {
+//   return (
+//     <div
+//       style={{
+//         backgroundColor: "#bf1e2e",
+//         color: "white",
+//         padding: "16px",
+//         borderRadius: "5px",
+//         boxShadow: "0 2px 8px rgba(0,0,0,0.3)",
+//       }}
+//     >
+//       <div
+//         style={{
+//           display: "flex",
+//           justifyContent: "space-between",
+//           alignItems: "center",
+//         }}
+//       >
+//         <div>
+//           {/* we are closing at 4pm on Sunday */}
+//           We are closing at 4pm on Sundays from now on! ✌️
+//         </div>
+//         <button
+//           onClick={() => toast.dismiss(t.id)}
+//           style={{
+//             background: "transparent",
+//             border: "none",
+//             color: "white",
+//             fontSize: "18px",
+//             cursor: "pointer",
+//             borderRadius: "50%",
+//             width: "24px",
+//             height: "24px",
+//             display: "flex",
+//             alignItems: "center",
+//             justifyContent: "center",
+//           }}
+//         >
+//           ×
+//         </button>
+//       </div>
+//       <div
+//         style={{
+//           marginTop: "8px",
+//           height: "4px",
+//           background: "#aa1b23",
+//           borderRadius: "2px",
+//           overflow: "hidden",
+//         }}
+//       >
+//         <div
+//           style={{
+//             height: "100%",
+//             background: "#e53935",
+//             width: "100%",
+//             animation: `progressBarAnimation ${t.duration}ms linear forwards`,
+//           }}
+//         />
+//       </div>
+//     </div>
+//   );
+// };
 
 class Index2 extends Component {
   notify = () => {
@@ -90,12 +90,12 @@ class Index2 extends Component {
     this.setState({ isToast: false });
   };
 
-  notifyHours = () => {
-    toast.custom((t) => <ToastHoursContent t={t} />, {
-      duration: 9000,
-      position: "bottom-right",
-    });
-  };
+  // notifyHours = () => {
+  //   toast.custom((t) => <ToastHoursContent t={t} />, {
+  //     duration: 9000,
+  //     position: "bottom-right",
+  //   });
+  // };
 
   state = {
     email: "",
@@ -104,25 +104,25 @@ class Index2 extends Component {
     isToast: false,
   };
 
-  componentDidMount() {
-    // Inject the keyframes for the progress bar animation if not already added
-    if (!document.getElementById("progress-bar-keyframes")) {
-      const styleEl = document.createElement("style");
-      styleEl.id = "progress-bar-keyframes";
-      styleEl.innerHTML = `
-				@keyframes progressBarAnimation {
-					from { width: 100%; }
-					to { width: 0%; }
-				}
-			`;
-      document.head.appendChild(styleEl);
-    }
-    window.scrollTo(0, 0);
-    this.updateViewPort();
-    setTimeout(() => {
-      this.notifyHours();
-    }, 1000);
-  }
+  // componentDidMount() {
+  //   // Inject the keyframes for the progress bar animation if not already added
+  //   if (!document.getElementById("progress-bar-keyframes")) {
+  //     const styleEl = document.createElement("style");
+  //     styleEl.id = "progress-bar-keyframes";
+  //     styleEl.innerHTML = `
+	// 			@keyframes progressBarAnimation {
+	// 				from { width: 100%; }
+	// 				to { width: 0%; }
+	// 			}
+	// 		`;
+  //     document.head.appendChild(styleEl);
+  //   }
+  //   window.scrollTo(0, 0);
+  //   this.updateViewPort();
+  //   setTimeout(() => {
+  //     this.notifyHours();
+  //   }, 1000);
+  // }
 
   updateViewPort = () => {
     this.setState({ isMobile: window.innerWidth <= 480 });
