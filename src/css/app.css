@@ -200,6 +200,265 @@
     margin: 0 auto 15px;
     overflow: hidden;
   }
+
+  .sb-modal__overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 20px;
+    background: radial-gradient(
+        circle at top,
+        rgba(255, 64, 69, 0.25),
+        rgba(15, 9, 12, 0.94) 55%
+      ),
+      rgba(12, 7, 9, 0.88);
+    animation: sbModalFade 320ms ease-out;
+    overflow-y: auto;
+  }
+
+  .sb-modal__card {
+    position: relative;
+    width: min(980px, 100%);
+    border-radius: 26px;
+    background: #170c12;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 25px 60px rgba(6, 4, 2, 0.7);
+    overflow: hidden;
+    animation: sbModalRise 420ms ease-out;
+  }
+
+  .sb-modal__content {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 0;
+  }
+
+  .sb-modal__text {
+    padding: 42px 44px 38px;
+    background: linear-gradient(160deg, rgba(32, 16, 22, 0.98), #1d1116 75%);
+  }
+
+  .sb-modal__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: #ffe1e2;
+    background: rgba(255, 64, 69, 0.2);
+    border: 1px solid rgba(255, 64, 69, 0.5);
+    padding: 8px 14px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+  }
+
+  .sb-modal__title {
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(2rem, 3.6vw, 3.2rem);
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #fff5e9;
+    margin-bottom: 14px;
+  }
+
+  .sb-modal__copy {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.78);
+    margin-bottom: 20px;
+  }
+
+  .sb-modal__meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 24px;
+  }
+
+  .sb-modal__meta-label {
+    padding: 6px 12px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .sb-modal__meta-phone {
+    color: #ff4045;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .sb-modal__meta-phone:hover {
+    color: #fff5e9;
+  }
+
+  .sb-modal__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .sb-modal__btn {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 12px 22px;
+    border-radius: 999px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 160ms ease, box-shadow 160ms ease, color 160ms ease;
+  }
+
+  .sb-modal__btn--primary {
+    background: linear-gradient(135deg, #ff4045, #f22d4e);
+    color: #2a0d14;
+    box-shadow: 0 12px 24px rgba(255, 64, 69, 0.35);
+  }
+
+  .sb-modal__btn--primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 18px 30px rgba(255, 64, 69, 0.45);
+    color: #2a0d14;
+  }
+
+  .sb-modal__btn--ghost {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #fff5e9;
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .sb-modal__btn--ghost:hover {
+    transform: translateY(-1px);
+    color: #fff5e9;
+    box-shadow: 0 10px 20px rgba(10, 8, 6, 0.35);
+  }
+
+  .sb-modal__subcopy {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.86rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+  }
+
+  .sb-modal__media {
+    position: relative;
+    min-height: 380px;
+  }
+
+  .sb-modal__media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(10, 7, 9, 0) 0%,
+      rgba(10, 7, 9, 0.6) 100%
+    );
+  }
+
+  .sb-modal__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .sb-modal__glow {
+    position: absolute;
+    left: 12%;
+    bottom: -20%;
+    width: 70%;
+    height: 60%;
+    background: radial-gradient(
+      circle,
+      rgba(255, 64, 69, 0.5),
+      rgba(255, 64, 69, 0)
+    );
+    filter: blur(30px);
+    opacity: 0.7;
+    pointer-events: none;
+  }
+
+  .sb-modal__close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 38px;
+    height: 38px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(8, 6, 4, 0.6);
+    color: #fff5e9;
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 150ms ease, border 150ms ease;
+    z-index: 2;
+  }
+
+  .sb-modal__close:hover {
+    transform: scale(1.05);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  @keyframes sbModalFade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes sbModalRise {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 860px) {
+    .sb-modal__content {
+      grid-template-columns: 1fr;
+    }
+
+    .sb-modal__media {
+      min-height: 280px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .sb-modal__text {
+      padding: 32px 26px;
+    }
+
+    .sb-modal__actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .sb-modal__btn {
+      width: 100%;
+    }
+  }
   
   .testimonial-pic.radius {
     border-radius: 50%;
