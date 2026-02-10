@@ -181,7 +181,7 @@ class Index2 extends Component {
   render() {
     return (
       <div>
-        <Modal online={onlineOrdering} />
+
         {this.state.isToast ? this.notify() : null}
         <Toaster />
         <div className="page-wraper font-barlow">
