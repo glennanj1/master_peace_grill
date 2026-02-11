@@ -7,6 +7,7 @@ import Footer2 from "./../Layout/Footer2";
 import Owl2 from "./../Element/Owl2";
 import Modal from "./../Element/Modal";
 import LocationHours from "./LocationHours";
+import { announcementModalConfig } from "../../config/announcementModal";
 
 const video = "https://d3ddatyom1hv87.cloudfront.net/steak_final.mp4";
 const onlineOrdering = "https://online.skytab.com/f117df8f79079535eaa7a295c5011345";
@@ -179,12 +180,17 @@ class Index2 extends Component {
   };
 
   render() {
+    const showAnnouncementModal = announcementModalConfig.enabled;
+
     return (
       <div>
 
         {this.state.isToast ? this.notify() : null}
         <Toaster />
         <div className="page-wraper font-barlow">
+          {showAnnouncementModal ? (
+            <Modal online={onlineOrdering} config={announcementModalConfig} />
+          ) : null}
           {this.state.isMobile ? (
             <div
               className="videoPlayer"
