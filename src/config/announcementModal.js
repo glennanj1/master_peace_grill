@@ -1,6 +1,3 @@
-const DEFAULT_ONLINE_URL =
-  "https://online.skytab.com/f117df8f79079535eaa7a295c5011345";
-
 export const announcementModalConfig = {
   enabled: true,
   badge: "On Vacation ✌️",
