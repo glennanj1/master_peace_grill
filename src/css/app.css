@@ -482,6 +482,14 @@
     .sb-modal__btn {
       width: 100%;
     }
+
+    .sb-modal__media {
+      min-height: 240px;
+    }
+
+    .sb-modal__video {
+      max-height: 260px;
+    }
   }
   
   .testimonial-pic.radius {

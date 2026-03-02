@@ -65,28 +65,29 @@ export default class Modal extends Component {
     if (!enabled || !isOpen) return null;
 
     const badge = safeText(config.badge, "Announcement");
-    const title = safeText(config.title, "Open and delivering until 7 PM.");
+    const title = safeText(config.title, "On Vacation ✌️");
     const copy = safeText(
       config.copy,
-      "Call ahead for the fastest pickup. We are ready for game day."
+      "We're taking a break! Reopening 3-10."
     );
     const phoneDisplay = safeText(config.phone, DEFAULT_PHONE_NUMBER);
     const phoneHref = phoneToHref(phoneDisplay) || phoneToHref(DEFAULT_PHONE_NUMBER);
     const subcopy = safeText(config.subcopy);
 
-    const primaryLabel = safeText(config.primaryCta?.label, "Order Online");
+    const primaryLabel = config.primaryCta?.label ? safeText(config.primaryCta.label) : null;
     const onlineUrl = isHttpUrl(online) ? online : DEFAULT_ONLINE_URL;
-    const primaryHref = isHttpUrl(config.primaryCta?.href)
+    const primaryHref = config.primaryCta?.href && isHttpUrl(config.primaryCta.href)
       ? config.primaryCta.href
       : onlineUrl;
 
-    const secondaryLabel = safeText(config.secondaryCta?.label, "Call Now");
-    const secondaryHref = isAllowedHref(config.secondaryCta?.href)
+    const secondaryLabel = config.secondaryCta?.label ? safeText(config.secondaryCta.label) : null;
+    const secondaryHref = config.secondaryCta?.href && isAllowedHref(config.secondaryCta.href)
       ? config.secondaryCta.href
       : phoneHref;
 
-    const imageSrc = safeText(config.image?.src);
-    const imageAlt = safeText(config.image?.alt, "Announcement image");
+    const mediaSrc = safeText(config.media?.src || config.image?.src);
+    const mediaAlt = safeText(config.media?.alt || config.image?.alt, "Announcement media");
+    const mediaType = config.media?.type || "image";
 
     return (
       <div
@@ -114,34 +115,55 @@ export default class Modal extends Component {
               <h2 id="sb-modal-title" className="sb-modal__title">
                 {title}
               </h2>
-              <p className="sb-modal__copy">{copy}</p>
-              <div className="sb-modal__meta">
-                <span className="sb-modal__meta-label">Call ahead</span>
-                <a className="sb-modal__meta-phone" href={phoneHref}>
-                  {phoneDisplay}
-                </a>
-              </div>
-              <div className="sb-modal__actions">
-                <a
-                  className="sb-modal__btn sb-modal__btn--primary"
-                  href={primaryHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {primaryLabel}
-                </a>
-                <a
-                  className="sb-modal__btn sb-modal__btn--ghost"
-                  href={secondaryHref}
-                >
-                  {secondaryLabel}
-                </a>
-              </div>
+              {copy ? <p className="sb-modal__copy">{copy}</p> : null}
+              {(primaryLabel || secondaryLabel || phoneDisplay) ? (
+                <div className="sb-modal__meta">
+                  <span className="sb-modal__meta-label">Call ahead</span>
+                  <a className="sb-modal__meta-phone" href={phoneHref}>
+                    {phoneDisplay}
+                  </a>
+                </div>
+              ) : null}
+              {(primaryLabel || secondaryLabel) ? (
+                <div className="sb-modal__actions">
+                  {primaryLabel ? (
+                    <a
+                      className="sb-modal__btn sb-modal__btn--primary"
+                      href={primaryHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {primaryLabel}
+                    </a>
+                  ) : null}
+                  {secondaryLabel ? (
+                    <a
+                      className="sb-modal__btn sb-modal__btn--ghost"
+                      href={secondaryHref}
+                    >
+                      {secondaryLabel}
+                    </a>
+                  ) : null}
+                </div>
+              ) : null}
               {subcopy ? <p className="sb-modal__subcopy">{subcopy}</p> : null}
             </div>
-            {imageSrc ? (
+            {mediaSrc ? (
               <div className="sb-modal__media">
-                <img className="sb-modal__image" src={imageSrc} alt={imageAlt} />
+                {mediaType === "video" ? (
+                  <video 
+                    className="sb-modal__video" 
+                    src={mediaSrc} 
+                    alt={mediaAlt}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    style={{width: "100%", height: "100%", objectFit: "cover", borderRadius: "inherit"}}
+                  />
+                ) : (
+                  <img className="sb-modal__image" src={mediaSrc} alt={mediaAlt} />
+                )}
                 <div className="sb-modal__glow" aria-hidden="true" />
               </div>
             ) : null}
