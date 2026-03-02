@@ -1,9 +1,9 @@
 export const announcementModalConfig = {
   enabled: true,
-  badge: "On Vacation ✌️",
+  badge: null,
   title: "On Vacation ✌️",
-  copy: "We're taking a break! Reopening 3-10.",
-  phone: "484-344-5250",
+  copy: "reopening 3-10",
+  phone: null,
   subcopy: null,
   primaryCta: null,
   secondaryCta: null,

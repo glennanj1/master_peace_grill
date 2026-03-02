@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 const DEFAULT_ONLINE_URL =
   "https://online.skytab.com/f117df8f79079535eaa7a295c5011345";
-const DEFAULT_PHONE_NUMBER = "484-344-5250";
 
 const safeText = (value, fallback = "") => {
   if (typeof value !== "string") {
@@ -64,15 +63,12 @@ export default class Modal extends Component {
 
     if (!enabled || !isOpen) return null;
 
-    const badge = safeText(config.badge, "Announcement");
+    const badge = config.badge ? safeText(config.badge) : null;
     const title = safeText(config.title, "On Vacation ✌️");
-    const copy = safeText(
-      config.copy,
-      "We're taking a break! Reopening 3-10."
-    );
-    const phoneDisplay = safeText(config.phone, DEFAULT_PHONE_NUMBER);
-    const phoneHref = phoneToHref(phoneDisplay) || phoneToHref(DEFAULT_PHONE_NUMBER);
-    const subcopy = safeText(config.subcopy);
+    const copy = config.copy ? safeText(config.copy) : null;
+    const phoneDisplay = config.phone ? safeText(config.phone) : null;
+    const phoneHref = phoneDisplay ? phoneToHref(phoneDisplay) : null;
+    const subcopy = config.subcopy ? safeText(config.subcopy) : null;
 
     const primaryLabel = config.primaryCta?.label ? safeText(config.primaryCta.label) : null;
     const onlineUrl = isHttpUrl(online) ? online : DEFAULT_ONLINE_URL;
@@ -116,7 +112,7 @@ export default class Modal extends Component {
                 {title}
               </h2>
               {copy ? <p className="sb-modal__copy">{copy}</p> : null}
-              {(primaryLabel || secondaryLabel || phoneDisplay) ? (
+              {phoneDisplay ? (
                 <div className="sb-modal__meta">
                   <span className="sb-modal__meta-label">Call ahead</span>
                   <a className="sb-modal__meta-phone" href={phoneHref}>

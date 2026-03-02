@@ -484,11 +484,11 @@
     }
 
     .sb-modal__media {
-      min-height: 240px;
+      min-height: 280px;
     }
 
     .sb-modal__video {
-      max-height: 260px;
+      max-height: 300px;
     }
   }
   
