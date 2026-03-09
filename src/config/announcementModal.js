@@ -1,5 +1,5 @@
 export const announcementModalConfig = {
-  enabled: true,
+  enabled: false,
   badge: "On Vacation ✌️",
   title: "We are closed reopening 3-10",
   copy: null,
