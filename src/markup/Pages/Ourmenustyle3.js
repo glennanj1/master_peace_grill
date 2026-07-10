@@ -613,6 +613,27 @@ class Ourmenustyle3 extends Component{
 					</div>
 						
 						<h1 className="catering">Catering</h1>
+
+						<div style={{ textAlign: 'center', marginBottom: '30px' }}>
+							{/* Plain anchor: /catering is served by the catering app via the
+							    Netlify proxy, not a react-router route. */}
+							<a
+								href="/catering"
+								style={{
+									display: 'inline-block',
+									background: 'linear-gradient(135deg, #ff4045, #f22d4e)',
+									color: '#fff',
+									fontWeight: 'bold',
+									fontSize: '1.1rem',
+									padding: '14px 32px',
+									borderRadius: '999px',
+									textDecoration: 'none',
+									boxShadow: '0 12px 24px rgba(255, 64, 69, 0.35)',
+								}}
+							>
+								Order Catering Online
+							</a>
+						</div>
 					
 					<div className="row manu-box-reverse sp0">
 							<div className="col-lg-6">
