@@ -1,6 +1,0 @@
-# https://www.robotstxt.org/robotstxt.html
-User-agent: *
-Disallow:
-
-Sitemap: https://www.masterpeacegrill.com/sitemap.xml
-Sitemap: https://www.masterpeacegrill.com/catering/sitemap.xml
