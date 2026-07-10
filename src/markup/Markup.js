@@ -12,10 +12,13 @@ import Menu from './Pages/Ourmenustyle3';
 
 import Login from './Pages/Login';
 
+import CateringPopup from './Element/CateringPopup';
+
 function Markup() {
 
 	return (
 		<BrowserRouter>
+			<CateringPopup />
 			<Routes>
 				<Route path='/' element={<Index2 />} />
 
