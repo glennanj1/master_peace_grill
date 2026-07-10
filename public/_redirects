@@ -1,1 +1,8 @@
-/* /index.html 200
+# Catering app (Next.js on Vercel) proxied under /catering.
+# These rules MUST stay above the SPA fallback (first match wins),
+# and the bare-path rule is required (splats do not match the bare path).
+/catering    https://masterpeacecatering.vercel.app/catering         200
+/catering/*  https://masterpeacecatering.vercel.app/catering/:splat  200
+
+# SPA fallback (must stay last)
+/*  /index.html  200
