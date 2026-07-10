@@ -223,6 +223,21 @@ class Header2 extends Component {
                         }}>Menu</Link>
                       </li>
                       <li>
+                        {/* Plain anchor: /catering is served by the catering app
+                            via Netlify proxy, not a react-router route. */}
+                        <a href="/catering" style={{
+                          textDecoration: 'none',
+                          color: this.state.isScrolled ? 'white' : 'black',
+                          fontSize: '1.1rem',
+                          fontWeight: 'bold',
+                          textShadow: '0 2px 4px rgba(0, 0, 0, 0.5)',
+                          transition: 'color 0.3s ease',
+                          ':hover': {
+                            color: 'red'
+                          }
+                        }}>Catering</a>
+                      </li>
+                      <li>
                         <a
                           href={this.props.online}
                           target="_blank"
@@ -299,6 +314,10 @@ class Header2 extends Component {
                   <ul className="nav navbar-nav">
                     <li>
                       <Link to={"/menu"}>Menu</Link>
+                    </li>
+                    <li>
+                      {/* Plain anchor: /catering is proxied to the catering app. */}
+                      <a href="/catering">Catering</a>
                     </li>
                     <li>
                       <a

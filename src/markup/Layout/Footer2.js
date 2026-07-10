@@ -20,8 +20,9 @@ class Footer2 extends Component{
 								<div className="widget-link"> 
 									<ul>
 										<li><Link to={"/"}>Home</Link></li> 
-										<li><Link to={"/menu"}>Menu</Link></li>  
-										<li><Link to={"/about"}>About Us</Link></li>  
+										<li><Link to={"/menu"}>Menu</Link></li>
+										<li><a href="/catering">Catering</a></li>
+										<li><Link to={"/about"}>About Us</Link></li>
 									</ul>
 								</div>
 								<p className="copyright">Copyright © {this.currentYear()} <a href="https://techbridge.dev">TechBridge Consulting LLC</a></p>
