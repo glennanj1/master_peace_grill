@@ -1,19 +1,30 @@
-# Master Peace Grill
+# MasterPeace Grill (masterpeacegrill.com)
 
-Thanks for visiting my repository! This features the create react app behind master peace grill's website. Check out the link below.
+Next.js 16 App Router site for MasterPeace Grill, 523 Fayette St, Conshohocken, PA. Owner operated for over 11 years. This replaces the old Create React App SPA.
 
+## Stack
 
-<a style="color: red; font-size: 54px; text-decoration: none; letter-spacing: 10px" href='https://masterpeacegrill.netlify.app'>Live Site</a>
+- Next.js 16 (App Router), React 19, TypeScript
+- Tailwind CSS 3.4 (dark theme, brand red, Bebas Neue display font), framer-motion, lucide-react
+- Package manager: pnpm
 
-# Peace Love & Food
+## Commands
 
-Food brings people together. Visit 534 Fayette Street, Conshohocken, PA for a great philly cheesesteak and some great music! Right in the heart of conshohocken this Restaurant has been awarded again and again for the best cheesesteak in town. Going on 7 years the owner and operator proudly continues to serve amazing food. 
+```
+pnpm install
+pnpm dev
+pnpm build
+```
 
-# Online Status 
+## Layout
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/bff4948a-056b-4416-b612-dee66dd5c600/deploy-status)](https://app.netlify.com/sites/masterpeacegrill/deploys)
+- `app/` - routes: `/` (home), `/menu`, `/about`, plus `robots.ts`, `sitemap.ts`, `not-found.tsx`
+- `components/` - shared chrome: `site-header.tsx`, `site-footer.tsx`, `catering-popup.tsx`
+- `lib/business.ts` - single source of truth for NAP, hours, links (never hardcode elsewhere)
+- `lib/menu.json` - verbatim menu data (never edit prices or names); read via `lib/menu.ts`
+- `lib/reviews.ts` - real Yelp reviews, verbatim (never invent reviews or ratings)
+- `public/images/` - photography and logos carried over from the old site
 
+## Catering
 
-# Menu Cover Photo Credit
-Photo by <a href="https://freeimages.com/photographer/kalierin-47962">Erin Calaway</a> from <a href="https://freeimages.com">FreeImages</a>
-
+`/catering` is a separate app. `next.config.mjs` rewrites `/catering` and `/catering/:path*` to the catering deployment so one domain serves both. Always link to it with a plain `<a href="/catering">`, never `next/link`.

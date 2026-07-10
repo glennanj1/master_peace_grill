@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    /* MasterPeace Grill Theme - dark near-black with brand red.
+       Token values mirror the catering site exactly. RED + dark + neutral only. */
+    --background: 235 25% 11%;
+    --foreground: 0 0% 98%;
+    --card: 235 20% 14%;
+    --card-foreground: 0 0% 98%;
+    --popover: 235 20% 14%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 355 84% 58%;
+    --primary-foreground: 0 0% 100%;
+    /* secondary + accent kept in the RED family (no orange / no green) */
+    --secondary: 352 72% 52%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 235 15% 20%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 356 78% 44%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 235 15% 22%;
+    --input: 235 15% 22%;
+    --ring: 355 84% 58%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom animations (shared with the catering site design language) */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px hsl(355 84% 58% / 0.4); }
+  50% { box-shadow: 0 0 40px hsl(355 84% 58% / 0.6); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Respect users who prefer reduced motion: stop infinite/looping animations
+   and instant-scroll instead of smooth. */
+@media (prefers-reduced-motion: reduce) {
+  .animate-pulse-glow {
+    animation: none !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}

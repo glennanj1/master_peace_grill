@@ -1,48 +1,30 @@
 {
-  "name": "restaurant",
-  "homepage": "/",
-  "version": "0.1.0",
+  "name": "masterpeace-grill-site",
+  "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint ."
+  },
   "dependencies": {
-    "bootstrap": "^5.3.8",
-    "react": "^18.2.0",
-    "react-bootstrap": "^2.10.10",
-    "react-countup": "^6.5.3",
-    "react-dom": "^18.2.0",
-    "react-hot-toast": "^2.3.0",
-    "react-multi-carousel": "^2.8.5",
-    "react-router-dom": "^7.10.1",
-    "react-scripts": "^5.0.1",
-    "react-visibility-sensor": "^5.1.1",
-    "reactstrap": "^9.2.3"
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.31.0",
+    "lucide-react": "^0.544.0",
+    "next": "^16.2.7",
+    "react": "^19",
+    "react-dom": "^19",
+    "tailwind-merge": "^2.5.5",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@craco/craco": "^5.9.0",
-    "postcss": "^8.5.6",
-    "svgo": "^4.0.0",
-    "webpack-dev-server": "^5.2.2"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      "chrome >= 87",
-      "edge >= 88",
-      "firefox >= 78",
-      "safari >= 14"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.24",
+    "postcss": "^8.5.10",
+    "tailwindcss": "^3.4.19",
+    "typescript": "5.7.3"
   }
 }
