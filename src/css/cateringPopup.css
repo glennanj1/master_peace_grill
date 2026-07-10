@@ -1,0 +1,115 @@
+/* Corner popup for online catering orders. Matches the sb-modal design
+   language (dark card, red accent, Poppins). Sits below the announcement
+   modal overlay (z-index 999999) so both can coexist. */
+
+.sb-toast {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 99999;
+  width: min(340px, calc(100vw - 32px));
+  background: #170c12;
+  border: 1px solid rgba(255, 64, 69, 0.35);
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(6, 4, 2, 0.55);
+  padding: 20px 22px 22px;
+  font-family: "Poppins", sans-serif;
+  animation: sbToastRise 420ms ease-out;
+}
+
+.sb-toast__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: #ffe1e2;
+  background: rgba(255, 64, 69, 0.2);
+  border: 1px solid rgba(255, 64, 69, 0.5);
+  padding: 5px 11px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+.sb-toast__title {
+  font-size: 1.15rem;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #fff5e9;
+  margin-bottom: 8px;
+}
+
+.sb-toast__copy {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 14px;
+}
+
+.sb-toast__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 11px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  background: linear-gradient(135deg, #ff4045, #f22d4e);
+  color: #2a0d14;
+  box-shadow: 0 12px 24px rgba(255, 64, 69, 0.35);
+  transition: transform 160ms ease, box-shadow 160ms ease, color 160ms ease;
+}
+
+.sb-toast__btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 30px rgba(255, 64, 69, 0.45);
+  color: #2a0d14;
+}
+
+.sb-toast__close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 160ms ease, color 160ms ease;
+}
+
+.sb-toast__close:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff5e9;
+}
+
+@keyframes sbToastRise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .sb-toast {
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    width: auto;
+  }
+}
