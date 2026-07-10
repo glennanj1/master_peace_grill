@@ -5,42 +5,62 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#e7272d" />
+
+    <title>Best Cheesesteaks in Conshohocken, PA | MasterPeace Grill</title>
+    <meta
+      name="description"
+      content="MasterPeace Grill serves Conshohocken's best cheesesteaks, hoagies, wings and wraps at 523 Fayette St. Owner operated. Dine in, take out, online ordering and catering."
+    />
+
     <meta property="og:url" content="https://www.masterpeacegrill.com" />
     <meta property="og:image" content="https://www.masterpeacegrill.com/mpg_meta.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:title" content="Master Peace Grill" />
-    <meta property="og:description" content="Conshohocken's Best Cheesesteak Shop! Serving unique, high-quality food. 100% family owned and operated." />
+    <meta property="og:title" content="Best Cheesesteaks in Conshohocken, PA | MasterPeace Grill" />
+    <meta property="og:description" content="Conshohocken's best cheesesteak shop. Cheesesteaks, hoagies, wings and wraps at 523 Fayette St. Owner operated. Online ordering and catering." />
     <meta property="og:type" content="website" />
-    
-    <meta
-      name="MasterPeaceGrill"
-      content="Conshohockens Best CheeseSteak Shop"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      <a target="_blank" href="undefined/icons/set/peace-symbol">Peace Symbol icon</a> icon by <a target="_blank" href="">Icons8</a>
-      <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <meta property="og:site_name" content="MasterPeace Grill" />
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    
-    <title>MasterPeaceGrill</title>
+    <!-- Restaurant entity for local search. No aggregateRating: Google's
+         review-snippet policy requires ratings collected on-site. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "@id": "https://www.masterpeacegrill.com/#restaurant",
+      "name": "MasterPeace Grill",
+      "url": "https://www.masterpeacegrill.com/",
+      "image": "https://www.masterpeacegrill.com/mpg_meta.jpg",
+      "telephone": "+14843445250",
+      "servesCuisine": ["Cheesesteaks", "Sandwiches", "American"],
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "523 Fayette St",
+        "addressLocality": "Conshohocken",
+        "addressRegion": "PA",
+        "postalCode": "19428",
+        "addressCountry": "US"
+      },
+      "hasMenu": "https://www.masterpeacegrill.com/menu",
+      "acceptsReservations": "False",
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "11:00", "closes": "15:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Wednesday", "Thursday", "Friday", "Saturday"], "opens": "11:00", "closes": "21:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "11:00", "closes": "16:00" }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/pages/Masterpeace-Grill/844637945566646",
+        "https://www.yelp.com/biz/masterpeace-grill-conshohocken-2"
+      ]
+    }
+    </script>
+
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    </script>
   </body>
-
 </html>
