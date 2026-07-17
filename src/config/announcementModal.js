@@ -1,8 +1,8 @@
 export const announcementModalConfig = {
-  enabled: false,
+  enabled: true,
   badge: "On Vacation ✌️",
-  title: "We are closed reopening 3-10",
-  copy: null,
+  title: "We'll be on vacation",
+  copy: "From Sunday, July 19 through Wednesday, July 22 — reopening Thursday, July 23!",
   phone: null,
   subcopy: null,
   primaryCta: null,
