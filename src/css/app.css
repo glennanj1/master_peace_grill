@@ -236,6 +236,20 @@
     gap: 0;
   }
 
+  /* Text-only announcement (no media): single centered column, narrower card. */
+  .sb-modal__card--compact {
+    width: min(520px, 100%);
+  }
+
+  .sb-modal__content--solo {
+    grid-template-columns: 1fr;
+  }
+
+  .sb-modal__content--solo .sb-modal__text {
+    text-align: center;
+    padding: 48px 44px 44px;
+  }
+
   .sb-modal__text {
     padding: 42px 44px 38px;
     background: linear-gradient(160deg, rgba(32, 16, 22, 0.98), #1d1116 75%);

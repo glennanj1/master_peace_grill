@@ -84,6 +84,16 @@ export default class Modal extends Component {
     const mediaSrc = safeText(config.media?.src || config.image?.src);
     const mediaAlt = safeText(config.media?.alt || config.image?.alt, "Announcement media");
     const mediaType = config.media?.type || "image";
+    const hasMedia = Boolean(mediaSrc);
+
+    // Without media, collapse the two-column grid to a single centered column
+    // and narrow the card so it reads as a clean text-only announcement.
+    const cardClass = hasMedia
+      ? "sb-modal__card"
+      : "sb-modal__card sb-modal__card--compact";
+    const contentClass = hasMedia
+      ? "sb-modal__content"
+      : "sb-modal__content sb-modal__content--solo";
 
     return (
       <div
@@ -97,7 +107,7 @@ export default class Modal extends Component {
           }
         }}
       >
-        <div className="sb-modal__card">
+        <div className={cardClass}>
           <button
             className="sb-modal__close"
             onClick={this.toggleModal}
@@ -105,9 +115,9 @@ export default class Modal extends Component {
           >
             ×
           </button>
-          <div className="sb-modal__content">
+          <div className={contentClass}>
             <div className="sb-modal__text">
-              <div className="sb-modal__badge">{badge}</div>
+              {badge ? <div className="sb-modal__badge">{badge}</div> : null}
               <h2 id="sb-modal-title" className="sb-modal__title">
                 {title}
               </h2>

@@ -5,18 +5,14 @@ export const announcementModalConfig = {
   // its own the day after endDate — no manual toggling needed.
   startDate: "2026-07-19", // Sunday — vacation begins
   endDate: "2026-07-22", // Wednesday — last closed day (reopening Thu 7/23)
-  badge: "On Vacation ✌️",
-  title: "We're on vacation",
-  copy: "Closed Sunday, July 19 through Wednesday, July 22 — reopening Thursday, July 23!",
+  badge: null,
+  title: "Closed for Vacation",
+  copy: "Sunday, July 19 – Wednesday, July 22. Reopening Thursday, July 23!",
   phone: null,
   subcopy: null,
   primaryCta: null,
   secondaryCta: null,
-  media: {
-    type: "video",
-    src: "https://masterpeacegrillconshy.techbridge.dev/vacation_video/IMG_6048.MOV",
-    alt: "Vacation video",
-  },
+  media: null,
 };
 
 // Local YYYY-MM-DD for a given date (in the visitor's own timezone).
