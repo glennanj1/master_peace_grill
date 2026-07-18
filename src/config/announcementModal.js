@@ -3,16 +3,20 @@ export const announcementModalConfig = {
   // The vacation modal only appears during this window (inclusive), by the
   // visitor's local date. It stays hidden before startDate and disappears on
   // its own the day after endDate — no manual toggling needed.
-  startDate: "2026-07-19", // Sunday — vacation begins
+  startDate: "2026-07-17", // shows now as an advance notice
   endDate: "2026-07-22", // Wednesday — last closed day (reopening Thu 7/23)
   badge: null,
   title: "Closed for Vacation",
-  copy: "Sunday, July 19 – Wednesday, July 22. Reopening Thursday, July 23!",
+  copy: "We will be on vacation from Sunday, July 19 through Wednesday, July 22. Reopening Thursday, July 23!",
   phone: null,
   subcopy: null,
   primaryCta: null,
   secondaryCta: null,
-  media: null,
+  media: {
+    type: "image",
+    src: "/vacation-2026.jpg",
+    alt: "Grateful Dead dancing bears surfing at a beach sunset",
+  },
 };
 
 // Local YYYY-MM-DD for a given date (in the visitor's own timezone).
