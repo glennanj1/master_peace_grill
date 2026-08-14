@@ -1,11 +1,12 @@
 // Corner popup promoting online catering orders (/catering).
 // Flip `enabled` to false to turn it off site-wide.
 export const cateringPopupConfig = {
-  // Temporarily off during the vacation announcement (see announcementModal.js).
-  // Flip back to true to bring the catering popup back after reopening.
-  enabled: false,
+  // Back on now that the July vacation is over and the big announcement
+  // modal has expired. This small corner popup is the main way visitors
+  // discover online catering — otherwise it's only in the nav menu.
+  enabled: true,
   badge: "NEW",
-  title: "Order Catering Online",
+  title: "Now: Order Catering Online",
   copy: "Build your tray in minutes. Cheesesteaks, hoagies, wraps, wings and more.",
   cta: {
     label: "Build Your Tray",
