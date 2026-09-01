@@ -56,7 +56,7 @@ const copyToClipboard = async (value) => {
       return true;
     }
   } catch (error) {
-    // Clipboard API refused (permissions, insecure context) — try the fallback.
+    // Clipboard API refused (permissions, insecure context), so try the fallback.
   }
 
   try {
@@ -86,13 +86,25 @@ export default class Modal extends Component {
 
   componentDidMount() {
     this.setState({ isOpen: true });
+    document.addEventListener("keydown", this.handleKeyDown);
   }
 
   componentWillUnmount() {
+    document.removeEventListener("keydown", this.handleKeyDown);
     if (this.copyResetTimer) {
       clearTimeout(this.copyResetTimer);
     }
   }
+
+  handleKeyDown = (event) => {
+    if (event.key === "Escape" || event.key === "Esc") {
+      this.closeModal();
+    }
+  };
+
+  closeModal = () => {
+    this.setState({ isOpen: false });
+  };
 
   handleCopy = async (value) => {
     const copied = await copyToClipboard(value);
@@ -105,10 +117,6 @@ export default class Modal extends Component {
     this.copyResetTimer = setTimeout(() => {
       this.setState({ copied: false });
     }, 2500);
-  };
-
-  toggleModal = () => {
-    this.setState((prevState) => ({ isOpen: !prevState.isOpen }));
   };
 
   render() {
@@ -143,6 +151,7 @@ export default class Modal extends Component {
     const copyLabel =
       copyValue && config.copyCta?.label ? safeText(config.copyCta.label) : null;
     const copiedLabel = safeText(config.copyCta?.copiedLabel, "Link copied!");
+    const dismissLabel = safeText(config.dismissLabel, "Maybe later");
 
     const mediaSrc = safeText(config.media?.src || config.image?.src);
     const mediaAlt = safeText(config.media?.alt || config.image?.alt, "Announcement media");
@@ -166,14 +175,14 @@ export default class Modal extends Component {
         aria-labelledby="sb-modal-title"
         onClick={(event) => {
           if (event.target === event.currentTarget) {
-            this.toggleModal();
+            this.closeModal();
           }
         }}
       >
         <div className={cardClass}>
           <button
             className="sb-modal__close"
-            onClick={this.toggleModal}
+            onClick={this.closeModal}
             aria-label="Close"
           >
             ×
@@ -226,6 +235,13 @@ export default class Modal extends Component {
                 </div>
               ) : null}
               {subcopy ? <p className="sb-modal__subcopy">{subcopy}</p> : null}
+              <button
+                type="button"
+                className="sb-modal__dismiss"
+                onClick={this.closeModal}
+              >
+                {dismissLabel}
+              </button>
             </div>
             {mediaSrc ? (
               <div className="sb-modal__media">
