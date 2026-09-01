@@ -27,6 +27,22 @@ Use these keys in your `.env` file:
 
 See `.env.example` for defaults.
 
+## Copy-link button (`copyCta`)
+
+`src/config/announcementModal.js` can add a "copy the link" button beside the
+primary CTA so visitors can paste the link to friends or their socials:
+
+```js
+copyCta: {
+  label: "Copy the Link",
+  copiedLabel: "Link Copied! ✌️", // shown for 2.5s after a successful copy
+  value: "https://example.com/",          // must be an http(s) URL
+},
+```
+
+Omit `copyCta` (or set it to `null`) and no button renders. A non-http(s)
+`value` is ignored the same way an invalid CTA href is.
+
 ## Safety and fallback behavior
 
 - Missing text fields fall back to safe defaults.

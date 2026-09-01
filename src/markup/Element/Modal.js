@@ -43,21 +43,76 @@ const phoneToHref = (value) => {
   return digitsOnly ? `tel:${digitsOnly}` : "";
 };
 
+// Copies text to the clipboard. Prefers the async Clipboard API (https only)
+// and falls back to a hidden textarea + execCommand so older mobile browsers
+// still work. Returns false when neither path succeeds.
+const copyToClipboard = async (value) => {
+  const text = safeText(value);
+  if (!text) return false;
+
+  try {
+    if (navigator.clipboard?.writeText) {
+      await navigator.clipboard.writeText(text);
+      return true;
+    }
+  } catch (error) {
+    // Clipboard API refused (permissions, insecure context) — try the fallback.
+  }
+
+  try {
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    textarea.setAttribute("readonly", "");
+    textarea.style.position = "fixed";
+    textarea.style.top = "-1000px";
+    textarea.style.opacity = "0";
+    document.body.appendChild(textarea);
+    textarea.select();
+    const copied = document.execCommand("copy");
+    document.body.removeChild(textarea);
+    return copied;
+  } catch (error) {
+    return false;
+  }
+};
+
 export default class Modal extends Component {
   state = {
     isOpen: false,
+    copied: false,
   };
+
+  copyResetTimer = null;
 
   componentDidMount() {
     this.setState({ isOpen: true });
   }
+
+  componentWillUnmount() {
+    if (this.copyResetTimer) {
+      clearTimeout(this.copyResetTimer);
+    }
+  }
+
+  handleCopy = async (value) => {
+    const copied = await copyToClipboard(value);
+    if (!copied) return;
+
+    this.setState({ copied: true });
+    if (this.copyResetTimer) {
+      clearTimeout(this.copyResetTimer);
+    }
+    this.copyResetTimer = setTimeout(() => {
+      this.setState({ copied: false });
+    }, 2500);
+  };
 
   toggleModal = () => {
     this.setState((prevState) => ({ isOpen: !prevState.isOpen }));
   };
 
   render() {
-    const { isOpen } = this.state;
+    const { isOpen, copied } = this.state;
     const { config = {}, online } = this.props;
     const enabled = Boolean(config.enabled);
 
@@ -80,6 +135,14 @@ export default class Modal extends Component {
     const secondaryHref = config.secondaryCta?.href && isAllowedHref(config.secondaryCta.href)
       ? config.secondaryCta.href
       : phoneHref;
+
+    const copyValue =
+      config.copyCta?.value && isHttpUrl(config.copyCta.value)
+        ? config.copyCta.value.trim()
+        : null;
+    const copyLabel =
+      copyValue && config.copyCta?.label ? safeText(config.copyCta.label) : null;
+    const copiedLabel = safeText(config.copyCta?.copiedLabel, "Link copied!");
 
     const mediaSrc = safeText(config.media?.src || config.image?.src);
     const mediaAlt = safeText(config.media?.alt || config.image?.alt, "Announcement media");
@@ -130,7 +193,7 @@ export default class Modal extends Component {
                   </a>
                 </div>
               ) : null}
-              {(primaryLabel || secondaryLabel) ? (
+              {(primaryLabel || secondaryLabel || copyLabel) ? (
                 <div className="sb-modal__actions">
                   {primaryLabel ? (
                     <a
@@ -149,6 +212,16 @@ export default class Modal extends Component {
                     >
                       {secondaryLabel}
                     </a>
+                  ) : null}
+                  {copyLabel ? (
+                    <button
+                      type="button"
+                      className="sb-modal__btn sb-modal__btn--ghost sb-modal__btn--copy"
+                      onClick={() => this.handleCopy(copyValue)}
+                      aria-live="polite"
+                    >
+                      {copied ? copiedLabel : copyLabel}
+                    </button>
                   ) : null}
                 </div>
               ) : null}

@@ -359,6 +359,15 @@
     box-shadow: 0 10px 20px rgba(10, 8, 6, 0.35);
   }
 
+  /* The copy-link action is a <button>, so undo the browser's button defaults
+     that the anchor-based .sb-modal__btn rules never had to fight. */
+  .sb-modal__btn--copy {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    line-height: inherit;
+  }
+
   .sb-modal__subcopy {
     font-family: "Poppins", sans-serif;
     font-size: 0.86rem;
