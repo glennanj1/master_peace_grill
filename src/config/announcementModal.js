@@ -1,16 +1,16 @@
 // Best of Conshy 2026 announcement modal (homepage).
 //
 // MoreThanTheCurve.com runs Best of Conshy in two rounds:
-//   • Nominations  — open through September 10, 2026
-//   • Final voting — September 14 through September 23, 2026
-//   • Winners announced September 25, 2026
+//   * Nominations  = open through September 10, 2026
+//   * Final voting = September 14 through September 23, 2026
+//   * Winners announced September 25, 2026
 //
 // The modal asks for the right thing on its own based on today's date, so
 // nobody has to remember to swap the copy mid-campaign:
-//   • now through Sep 10  -> "nominate us"
-//   • Sep 11 - Sep 13     -> "voting opens Sep 14" holding message
-//   • Sep 14 - Sep 23     -> "vote for us"
-//   • after Sep 23        -> isAnnouncementActive() turns the modal off
+//   * now through Sep 10  -> "nominate us"
+//   * Sep 11 - Sep 13     -> "voting opens Sep 14" holding message
+//   * Sep 14 - Sep 23     -> "vote for us"
+//   * after Sep 23        -> isAnnouncementActive() turns the modal off
 //
 // To reuse next year, update BEST_OF_CONSHY_URL and the four dates below.
 
@@ -36,7 +36,7 @@ const isVoting = today >= VOTING_START && today <= VOTING_END;
 
 const NOMINATE_COPY =
   "Best of Conshy 2026 is here, and nominations are open through September 10. " +
-  "You've made us Best Cheesesteak nine years running — help us go for ten! " +
+  "You've made us Best Cheesesteak nine years running. Help us go for ten! " +
   "It takes about a minute: head to MoreThanTheCurve.com and nominate " +
   "MasterPeace Grill for Best Cheesesteak.";
 
@@ -47,7 +47,7 @@ const BETWEEN_COPY =
 
 const VOTE_COPY =
   "Voting is open through September 23! You've made us Best Cheesesteak nine " +
-  "years running — help us go for ten. Head to MoreThanTheCurve.com and vote " +
+  "years running. Help us go for ten! Head to MoreThanTheCurve.com and vote " +
   "MasterPeace Grill for Best Cheesesteak.";
 
 const phase = isNominating
@@ -57,7 +57,7 @@ const phase = isNominating
       ctaLabel: "Nominate Us on MoreThanTheCurve",
     }
   : {
-      title: "Vote for Us \u2014 Best Cheesesteak!",
+      title: "Vote Us Best Cheesesteak!",
       copy: isVoting ? VOTE_COPY : BETWEEN_COPY,
       ctaLabel: "Vote on MoreThanTheCurve",
     };
@@ -66,7 +66,7 @@ export const announcementModalConfig = {
   enabled: true,
   // The modal only appears during this window (inclusive), by the visitor's
   // local date. It stays hidden before startDate and disappears on its own the
-  // day after endDate — no manual toggling needed.
+  // day after endDate, so no manual toggling is needed.
   startDate: "2026-09-01",
   endDate: VOTING_END,
   badge: "Best of Conshy 2026 ✌️",
