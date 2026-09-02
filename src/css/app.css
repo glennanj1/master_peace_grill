@@ -217,6 +217,8 @@
       rgba(12, 7, 9, 0.88);
     animation: sbModalFade 320ms ease-out;
     overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
   }
 
   .sb-modal__card {
@@ -488,12 +490,33 @@
   @media (max-width: 860px) {
     .sb-modal__overlay {
       align-items: flex-start;
-      padding: 20px 16px;
+      /* Clear the notch / home indicator where the browser reports insets.
+         Without viewport-fit=cover env() is 0, so max() keeps the old padding. */
+      padding: max(20px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right))
+        max(20px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
     }
 
+    /* The card used to scroll inside an already-scrolling overlay. Two nested
+       scrollers fight each other on touch, and because the close button is
+       absolutely positioned inside the card, scrolling carried it off screen.
+       Let the overlay be the only scroller so the whole card stays reachable. */
     .sb-modal__card {
-      max-height: calc(100vh - 40px);
-      overflow-y: auto;
+      max-height: none;
+      overflow: hidden;
+    }
+
+    /* Pin the close button to the viewport so it is always on screen, however
+       far down the announcement the reader has scrolled. */
+    .sb-modal__close {
+      position: fixed;
+      top: max(22px, calc(env(safe-area-inset-top) + 8px));
+      right: max(22px, calc(env(safe-area-inset-right) + 8px));
+      width: 48px;
+      height: 48px;
+      font-size: 26px;
+      background: #241118;
+      border-color: rgba(255, 255, 255, 0.55);
+      box-shadow: 0 6px 18px rgba(6, 4, 2, 0.65);
     }
 
     .sb-modal__content {
@@ -531,6 +554,12 @@
 
     .sb-modal__btn {
       width: 100%;
+    }
+
+    .sb-modal__dismiss {
+      width: 100%;
+      padding: 14px 16px;
+      font-size: 0.95rem;
     }
 
     .sb-modal__media {
