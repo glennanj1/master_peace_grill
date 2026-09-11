@@ -1,24 +1,22 @@
 // Best of Conshy 2026 announcement modal (homepage).
 //
 // MoreThanTheCurve.com runs Best of Conshy in two rounds:
-//   * Nominations  = open through September 10, 2026
+//   * Nominations  = closed September 10, 2026
 //   * Final voting = September 14 through September 23, 2026
 //   * Winners announced September 25, 2026
 //
-// The modal asks for the right thing on its own based on today's date, so
-// nobody has to remember to swap the copy mid-campaign:
-//   * now through Sep 10  -> "nominate us"
-//   * Sep 11 - Sep 13     -> "voting opens Sep 14" holding message
+// Nominations are closed, so the nominate ask and its link are down. The modal
+// stays dark until the final round opens, then turns itself off after it ends:
+//   * now through Sep 13  -> nothing shows
 //   * Sep 14 - Sep 23     -> "vote for us"
 //   * after Sep 23        -> isAnnouncementActive() turns the modal off
 //
-// To reuse next year, update BEST_OF_CONSHY_URL and the four dates below.
+// To reuse next year, update BEST_OF_CONSHY_URL and the two dates below.
 
 export const BEST_OF_CONSHY_URL = "https://morethanthecurve.com/best-of-conshy/";
 
 // Local YYYY-MM-DD comparisons, so every date below reads in the visitor's
 // own timezone the same way the start/end window does.
-const NOMINATIONS_END = "2026-09-10"; // last day to nominate
 const VOTING_START = "2026-09-14"; // final round opens
 const VOTING_END = "2026-09-23"; // final round closes
 
@@ -30,53 +28,26 @@ const toLocalYMD = (date) => {
   return `${y}-${m}-${d}`;
 };
 
-const today = toLocalYMD(new Date());
-const isNominating = today <= NOMINATIONS_END;
-const isVoting = today >= VOTING_START && today <= VOTING_END;
-
-const NOMINATE_COPY =
-  "Best of Conshy 2026 is here, and nominations are open through September 10. " +
-  "You've made us Best Cheesesteak nine years running. Help us go for ten! " +
-  "It takes about a minute: head to MoreThanTheCurve.com and nominate " +
-  "MasterPeace Grill for Best Cheesesteak.";
-
-const BETWEEN_COPY =
-  "Thank you for nominating us for Best Cheesesteak! Final voting opens " +
-  "September 14 and runs through September 23. Grab the link below so you're " +
-  "ready to vote for MasterPeace Grill the moment it starts.";
-
 const VOTE_COPY =
   "Voting is open through September 23! You've made us Best Cheesesteak nine " +
   "years running. Help us go for ten! Head to MoreThanTheCurve.com and vote " +
   "MasterPeace Grill for Best Cheesesteak.";
-
-const phase = isNominating
-  ? {
-      title: "Nominate Us for Best Cheesesteak!",
-      copy: NOMINATE_COPY,
-      ctaLabel: "Nominate Us on MoreThanTheCurve",
-    }
-  : {
-      title: "Vote Us Best Cheesesteak!",
-      copy: isVoting ? VOTE_COPY : BETWEEN_COPY,
-      ctaLabel: "Vote on MoreThanTheCurve",
-    };
 
 export const announcementModalConfig = {
   enabled: true,
   // The modal only appears during this window (inclusive), by the visitor's
   // local date. It stays hidden before startDate and disappears on its own the
   // day after endDate, so no manual toggling is needed.
-  startDate: "2026-09-01",
+  startDate: VOTING_START,
   endDate: VOTING_END,
   badge: "Best of Conshy 2026 ✌️",
-  title: phase.title,
-  copy: phase.copy,
+  title: "Vote Us Best Cheesesteak!",
+  copy: VOTE_COPY,
   phone: null,
   subcopy:
     "Best of Conshy is run by MoreThanTheCurve.com. Winners announced September 25.",
   primaryCta: {
-    label: phase.ctaLabel,
+    label: "Vote on MoreThanTheCurve",
     href: BEST_OF_CONSHY_URL,
   },
   secondaryCta: null,
