@@ -25,7 +25,7 @@ class Footer2 extends Component{
 										<li><Link to={"/about"}>About Us</Link></li>
 									</ul>
 								</div>
-								<p className="copyright">Copyright © {this.currentYear()} <a href="https://techbridge.dev">TechBridge Consulting LLC</a></p>
+								<p className="copyright">Copyright © {this.currentYear()} <a href="https://techbridge.dev">TechBridge Digital LLC</a></p>
 								<ul className="dlab-social-icon">
 									<li><a href={this.props.facebook} className="btn white outline circle mr-1"><i className="fa fa-facebook"></i></a></li>
 									<li><a href={this.props.yelp} className="btn white outline circle mr-1"><i className="fa fa-yelp"></i></a></li>
