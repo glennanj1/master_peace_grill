@@ -31,7 +31,7 @@ export default class CateringPopup extends Component {
     }, Number(config.delayMs) || 0);
 
     // Retire the game-day promo the moment it expires, even without a reload,
-    // so we are never telling someone to order from a shop that just closed.
+    // so the Sunday promo never bleeds into Monday.
     if (typeof cateringPopupRetireAt === "number") {
       const ms = cateringPopupRetireAt - Date.now();
       if (ms <= 0) return; // expired between load and mount; stay hidden

@@ -52,9 +52,10 @@ const CLOSURE_NOW = {
 /* ----------------------------------------------------------------- */
 /* GAME DAY PROMO (one-off, self-retiring)                            */
 /* Sunday game day: we cater, and we close at 4 PM, so order before   */
-/* kickoff. Retires itself at GAMEDAY_ENDS_AT with no deploy needed.  */
-/* To run another one, edit ONLY this block and bump storageKey so a  */
-/* previous dismissal doesn't suppress it.                            */
+/* kickoff. Runs through game night and retires itself at             */
+/* GAMEDAY_ENDS_AT with no deploy needed. To run another one, edit    */
+/* ONLY this block and bump storageKey so a previous dismissal        */
+/* doesn't suppress it.                                               */
 /*                                                                    */
 /* NOTE: deliberately says "Go Birds" and never the team name or mark */
 /* — those are NFL trademarks and this is a paid promo for the shop.  */
@@ -73,10 +74,10 @@ const GAMEDAY_PROMO = {
 };
 
 // The exact instant the promo retires, as an ISO string with an EXPLICIT
-// UTC offset. The offset is what makes this correct: it expires at 4 PM in
-// Conshohocken for every visitor, not 4 PM on the visitor's own clock.
-// -04:00 is EDT; use -05:00 once the shop is back on EST.
-const GAMEDAY_ENDS_AT = Date.parse("2026-09-13T16:00:00-04:00");
+// UTC offset. The offset is what makes this correct: it expires at midnight
+// in Conshohocken for every visitor, not midnight on the visitor's own
+// clock. -04:00 is EDT; use -05:00 once the shop is back on EST.
+const GAMEDAY_ENDS_AT = Date.parse("2026-09-14T00:00:00-04:00");
 
 const gamedayActive = Date.now() < GAMEDAY_ENDS_AT;
 
@@ -100,6 +101,7 @@ export const cateringPopupConfig = {
 
 // Absolute instant (ms epoch) the game-day promo retires, or null when the
 // game-day content is not the one showing. The component hides itself on a
-// timer, so a page left open across 4 PM stops advertising a closed shop.
+// timer, so a page left open across midnight never shows a Sunday promo
+// on Monday.
 export const cateringPopupRetireAt =
   content === GAMEDAY_PROMO ? GAMEDAY_ENDS_AT : null;
