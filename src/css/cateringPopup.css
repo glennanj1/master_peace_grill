@@ -113,3 +113,11 @@
     width: auto;
   }
 }
+
+/* Game-day badge: midnight green one-off (see config/cateringPopup.js
+   GAMEDAY). Scoped to this one element; the site palette stays red + dark. */
+.sb-toast__badge--gameday {
+  color: #3fd3b0;
+  background: rgba(14, 138, 114, 0.2);
+  border-color: rgba(18, 165, 138, 0.6);
+}
