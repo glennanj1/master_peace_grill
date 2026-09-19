@@ -8,7 +8,7 @@
 // Nominations are closed, so the nominate ask and its link are down. The modal
 // stays dark until the final round opens, then turns itself off after it ends:
 //   * now through Sep 13  -> nothing shows
-//   * Sep 14 - Sep 23     -> "vote for us"
+//   * Sep 14 - Sep 23     -> "vote for us" in both of our categories
 //   * after Sep 23        -> isAnnouncementActive() turns the modal off
 //
 // To reuse next year, update BEST_OF_CONSHY_URL and the two dates below.
@@ -28,10 +28,13 @@ const toLocalYMD = (date) => {
   return `${y}-${m}-${d}`;
 };
 
+// We made the final round in two categories. MoreThanTheCurve's ballot has
+// listed the second one as "Best Place for Takeout - Casual" in past years.
 const VOTE_COPY =
-  "Voting is open through September 23! You've made us Best Cheesesteak nine " +
-  "years running. Help us go for ten! Head to MoreThanTheCurve.com and vote " +
-  "MasterPeace Grill for Best Cheesesteak.";
+  "We're finalists for Best Cheesesteak and Best Takeout (Casual)! You've " +
+  "made us Best Cheesesteak nine years running. Help us go for ten! Voting " +
+  "is open through September 23. Head to MoreThanTheCurve.com and vote " +
+  "MasterPeace Grill in both categories.";
 
 export const announcementModalConfig = {
   enabled: true,
@@ -41,7 +44,7 @@ export const announcementModalConfig = {
   startDate: VOTING_START,
   endDate: VOTING_END,
   badge: "Best of Conshy 2026 ✌️",
-  title: "Vote Us Best Cheesesteak!",
+  title: "We're Up for Two Categories!",
   copy: VOTE_COPY,
   phone: null,
   subcopy:
