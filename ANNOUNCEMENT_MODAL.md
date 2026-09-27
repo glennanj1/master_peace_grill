@@ -43,6 +43,21 @@ copyCta: {
 Omit `copyCta` (or set it to `null`) and no button renders. A non-http(s)
 `value` is ignored the same way an invalid CTA href is.
 
+## Award badge (`award`)
+
+`src/config/announcementModal.js` can show award art centered at the top of
+the modal, with a caption under it in white:
+
+```js
+award: {
+  src: "/awards/best-of-conshy-2026.png", // served from public/awards/
+  alt: "Best of Conshy 2026",
+  caption: "Best Takeout Service",         // optional
+},
+```
+
+Omit `award` (or leave `src` empty) and nothing renders.
+
 ## Closing the modal
 
 Visitors can dismiss it four ways:

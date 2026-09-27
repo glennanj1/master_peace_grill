@@ -153,6 +153,10 @@ export default class Modal extends Component {
     const copiedLabel = safeText(config.copyCta?.copiedLabel, "Link copied!");
     const dismissLabel = safeText(config.dismissLabel, "Maybe later");
 
+    const awardSrc = safeText(config.award?.src);
+    const awardAlt = safeText(config.award?.alt, "Award badge");
+    const awardCaption = awardSrc ? safeText(config.award?.caption) : null;
+
     const mediaSrc = safeText(config.media?.src || config.image?.src);
     const mediaAlt = safeText(config.media?.alt || config.image?.alt, "Announcement media");
     const mediaType = config.media?.type || "image";
@@ -189,6 +193,20 @@ export default class Modal extends Component {
           </button>
           <div className={contentClass}>
             <div className="sb-modal__text">
+              {awardSrc ? (
+                <figure className="sb-modal__award">
+                  <img
+                    className="sb-modal__award-img"
+                    src={awardSrc}
+                    alt={awardAlt}
+                  />
+                  {awardCaption ? (
+                    <figcaption className="sb-modal__award-caption">
+                      {awardCaption}
+                    </figcaption>
+                  ) : null}
+                </figure>
+              ) : null}
               {badge ? <div className="sb-modal__badge">{badge}</div> : null}
               <h2 id="sb-modal-title" className="sb-modal__title">
                 {title}
