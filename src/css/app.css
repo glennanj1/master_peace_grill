@@ -250,9 +250,38 @@
     padding: 48px 44px 44px;
   }
 
+  .sb-modal__content--solo .sb-modal__actions {
+    justify-content: center;
+  }
+
   .sb-modal__text {
     padding: 42px 44px 38px;
     background: linear-gradient(160deg, rgba(32, 16, 22, 0.98), #1d1116 75%);
+  }
+
+  /* Award badge art with its category written under it in white. */
+  .sb-modal__award {
+    margin: -10px auto 18px;
+    text-align: center;
+  }
+
+  .sb-modal__award-img {
+    display: block;
+    width: min(260px, 70%);
+    height: auto;
+    margin: 0 auto;
+    filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.45));
+  }
+
+  .sb-modal__award-caption {
+    margin-top: 6px;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #fff;
   }
 
   .sb-modal__badge {
