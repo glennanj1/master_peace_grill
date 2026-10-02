@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "brandName": "MasterPeace Grill",
+  "voice": {
+    "tone": "warm-local",
+    "readingLevel": 7,
+    "bannedPhrases": [
+      "cheapest",
+      "guaranteed",
+      "world famous",
+      "—"
+    ],
+    "requiredPhrases": []
+  },
+  "colors": {
+    "locked": {
+      "brandRed": "#e7272d"
+    },
+    "palette": []
+  },
+  "typography": {
+    "lockedFonts": [
+      "Poppins",
+      "Roboto",
+      "Open Sans",
+      "Amita",
+      "Varela Round"
+    ]
+  },
+  "lockedSections": [
+    {
+      "pageGlob": "**/Pages/Login.js",
+      "reason": "owner login — wired to the reviews backend"
+    },
+    {
+      "selector": "a[href*='skytab.com']",
+      "reason": "online ordering link — changing it breaks orders"
+    }
+  ],
+  "lockedFiles": [
+    "**/*.config.*",
+    "craco.config.js",
+    "package.json",
+    "package-lock.json",
+    "renovate.json",
+    "db.json",
+    ".env*",
+    "build/**",
+    ".github/**",
+    "src/context/**",
+    "src/markup/Pages/Login.js",
+    "src/index.js",
+    "src/App.js"
+  ],
+  "riskClasses": {
+    "form": "escalate",
+    "integration": "escalate",
+    "config": "escalate"
+  },
+  "allow": {
+    "canEditCopy": true,
+    "canEditImages": true,
+    "canAddPages": false
+  }
+}
