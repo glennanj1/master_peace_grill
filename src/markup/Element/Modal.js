@@ -87,14 +87,31 @@ export default class Modal extends Component {
   componentDidMount() {
     this.setState({ isOpen: true });
     document.addEventListener("keydown", this.handleKeyDown);
+    this.lockBodyScroll();
   }
 
   componentWillUnmount() {
     document.removeEventListener("keydown", this.handleKeyDown);
+    this.unlockBodyScroll();
     if (this.copyResetTimer) {
       clearTimeout(this.copyResetTimer);
     }
   }
+
+  // While the overlay is up, stop the page underneath from scrolling. Without
+  // this a touch drag can scroll the body behind the modal, which makes the
+  // overlay feel stuck and the close button hard to get to.
+  lockBodyScroll = () => {
+    if (!document.body || this.previousBodyOverflow !== undefined) return;
+    this.previousBodyOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+  };
+
+  unlockBodyScroll = () => {
+    if (!document.body || this.previousBodyOverflow === undefined) return;
+    document.body.style.overflow = this.previousBodyOverflow;
+    this.previousBodyOverflow = undefined;
+  };
 
   handleKeyDown = (event) => {
     if (event.key === "Escape" || event.key === "Esc") {
@@ -103,6 +120,7 @@ export default class Modal extends Component {
   };
 
   closeModal = () => {
+    this.unlockBodyScroll();
     this.setState({ isOpen: false });
   };
 
