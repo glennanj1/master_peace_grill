@@ -236,8 +236,8 @@ class Index2 extends Component {
             }}
           >
             <img
-              src="/awards/best-of-conshy-2026-best-takeout-service.png"
-              alt="Best of Conshy 2026: Best Takeout Service"
+              src="https://strapi.glennan.cloud/uploads/Best_Of_Conshy_50e539c5c0.png"
+              alt="Best of Conshy 2025"
               style={{
                 maxWidth: "600px",
                 width: "100%",
